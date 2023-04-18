@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet, TextInput, FlatList } from 'react-native'
+import { View, Text, StyleSheet, TextInput, FlatList, ScrollView, SafeAreaView } from 'react-native'
 import React, { useState } from 'react'
 import FormInput from '../components/FormInput'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import Card from '../components/Card'
+
 
 
 export default function HomeScreen() {
@@ -54,42 +55,47 @@ export default function HomeScreen() {
   ]
 
   return (
-    <View style={styles.container}>
-      <View style={styles.inputWrapper}>
-        <FontAwesomeIcon style={styles.inpuIcon} icon={faSearch} />
-        <TextInput style={styles.input} value={search} placeholder={'search plants'} />
-      </View>
-      <Text style={{
-        width: '95%',
-        fontFamily: 'Poppins',
-        color: '#666666',
-        fontSize: 20,
-        marginVertical: 5
-      }}>
-        Good Afternoon, <Text style={{ color: '#000' }}>Adil</Text>
-      </Text>
-      <View style={{ width: '95%', marginVertical: 15 }}>
-        <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Get Started</Text>
-        {/* @TODO: REPLACE WITH SCROLLABLE LIST VIEW */}
-        <FlatList horizontal={true} data={guidData} renderItem={({ item }) => <Card text={item.text} imgSrc={item.img} width={260} height={130} />} />
-        {/* <Card
+    <ScrollView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <View style={styles.inputWrapper}>
+          <FontAwesomeIcon style={styles.inpuIcon} icon={faSearch} />
+          <TextInput style={styles.input} value={search} placeholder={'search plants'} />
+        </View>
+        <Text style={{
+          width: '95%',
+          fontFamily: 'Poppins',
+          color: '#666666',
+          fontSize: 20,
+          marginVertical: 5
+        }}>
+          Good Afternoon, <Text style={{ color: '#000' }}>Abdeslam</Text>
+        </Text>
+        <View style={{ width: '95%', marginVertical: 15 }}>
+          <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Get Started</Text>
+          {/* @TODO: REPLACE WITH SCROLLABLE LIST VIEW */}
+          <FlatList horizontal={true} data={guidData} renderItem={({ item }) => <Card text={item.text} imgSrc={item.img} width={260} height={130} />} />
+          {/* <Card
           imgSrc={require('../assets/cardBG1.png')}
           text={'How to identify plants easily with PlantAi'} width={260} height={130} /> */}
+        </View>
+        <View style={{ width: '95%' }}>
+          <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Popular Plants</Text>
+          {/* @TODO: REPLACE WITH SCROLLABLE LIST VIEW */}
+          <SafeAreaView style={{ flex: 1 }}>
+            <FlatList nestedScrollEnabled={true} style={{ paddingVertical: 15, marginTop: 10 }} scrollEnabled={true} numColumns={2} data={popularPlantsData} renderItem={({ item }) => <Card text={item.title} imgSrc={item.img} height={80} width={200} />} />
+          </SafeAreaView>
+        </View>
       </View>
-      <View style={{ width: '95%' }}>
-        <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Popular Plants</Text>
-        {/* @TODO: REPLACE WITH SCROLLABLE LIST VIEW */}
-        <FlatList numColumns={2} data={popularPlantsData} renderItem={({ item }) => <Card text={item.title} imgSrc={item.img} height={80} width={200} />} />
-      </View>
-
-    </View>
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     alignItems: 'center',
-    backgroundColor: '#EDFAF7'
+    backgroundColor: '#EDFAF7',
+
   },
   inputWrapper: {
     flexDirection: 'row',

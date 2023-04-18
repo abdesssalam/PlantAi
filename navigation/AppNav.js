@@ -15,7 +15,7 @@ const AppNav = () => {
     return (
         <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}
             screenOptions={{ headerShown: false, drawerLabelStyle: styles.labels, drawerActiveBackgroundColor: '#0c9353d4', }}>
-            <Drawer.Screen name="HomeNav" component={HomeNav}
+            <Drawer.Screen name="Home" component={HomeNav}
                 options={{ drawerIcon: () => <FontAwesomeIcon icon={faHouse} size={25} color="#06fe87" /> }}
             />
             <Drawer.Screen name="Account" component={AccountScreen}
