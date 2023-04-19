@@ -7,6 +7,7 @@ import SearchScreen from "../pages/SearchScreen";
 import MyPlantsScreen from "../pages/MyPlantsScreen";
 import ProfileScreen from "../pages/ProfileScreen";
 import CameraScreen from "../pages/CameraScreen";
+import PreviewScreen from "../pages/PreviewScreen";
 const Tab = createBottomTabNavigator();
 
 export default function HomeNav() {
@@ -30,33 +31,36 @@ export default function HomeNav() {
             }} />
             <Tab.Screen name="camera" component={CameraScreen} options={{
                 tabBarIcon: ({ focused }) => (
-                    <View style={{
-                        marginTop: 10,
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        width: 65,
-                        height: 65,
-                        borderRadius: 35,
-                        // backgroundColor: '#EDFAF7',
-                        borderColor: '#EDFAF7',
-                        borderWidth: 15,
-                        borderTopWidth: 0,
-                        position: 'absolute',
-                        top: -30
-                    }}
-                    >
+                    !focused && (
                         <View style={{
+                            marginTop: 10,
                             alignItems: 'center',
                             justifyContent: 'center',
-                            width: 60,
-                            height: 60,
-                            borderRadius: 30,
-                            backgroundColor: '#30C67F',
+                            width: 65,
+                            height: 65,
+                            borderRadius: 35,
+                            // backgroundColor: '#EDFAF7',
+                            borderColor: '#EDFAF7',
+                            borderWidth: 15,
+                            borderTopWidth: 0,
+                            position: 'absolute',
+                            top: -30
+                        }}
+                        >
+                            <View style={{
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                width: 60,
+                                height: 60,
+                                borderRadius: 30,
+                                backgroundColor: '#30C67F',
 
-                        }}>
-                            <FontAwesomeIcon icon={faCamera} size={25} color="#fff" />
+
+                            }}>
+                                <FontAwesomeIcon icon={faCamera} size={25} color="#fff" />
+                            </View>
                         </View>
-                    </View>
+                    )
 
                 )
             }} />
@@ -69,7 +73,7 @@ export default function HomeNav() {
                     </View>
                 )
             }} />
-            <Tab.Screen name="profile" component={ProfileScreen} options={{
+            <Tab.Screen name="profile" component={PreviewScreen} options={{
                 tabBarIcon: ({ focused }) => (
                     <View style={{ alignItems: 'center' }}>
                         <Image source={focused ? require('../assets/tabprofileClicked.png') : require('../assets/tabprofile.png')} />
