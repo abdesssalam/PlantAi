@@ -3,35 +3,57 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { TextInput } from 'react-native-gesture-handler'
-import FormBtn from '../components/FormBtn'
+
+import MyPlantEmpty from '../components/myplants/MyPlantEmpty'
+import MyPlantFilled from '../components/myplants/MyPlantFilled'
 
 export default function MyPlantsScreen() {
     const [search, setSearch] = useState('')
+    let myPlantData = [
+        {
+            id: 1,
+            src: require('../assets/previewImage.jpg'),
+            title: 'Lorem Ipsum 1',
+            name: 'Disease name 1',
+            date: 'April, 06 2023'
+        },
+        {
+            id: 2,
+            src: require('../assets/previewImage.jpg'),
+            title: 'Lorem Ipsum 2',
+            name: 'Disease name 2',
+            date: 'April, 06 2023'
+        },
+        {
+            id: 3,
+            src: require('../assets/previewImage.jpg'),
+            title: 'Lorem Ipsum 3',
+            name: 'Disease name 3',
+            date: 'April, 06 2023'
+        },
+        {
+            id: 4,
+            src: require('../assets/previewImage.jpg'),
+            title: 'Lorem Ipsum 4',
+            name: 'Disease name 4',
+            date: 'April, 06 2023'
+        },
+        {
+            id: 5,
+            src: require('../assets/previewImage.jpg'),
+            title: 'Lorem Ipsum 5',
+            name: 'Disease name 5',
+            date: 'April, 06 2023'
+        },
+    ]
+    // const RenderContent = () => 
     return (
         <View style={styles.container}>
             <View style={styles.inputWrapper}>
                 <FontAwesomeIcon style={styles.inpuIcon} icon={faSearch} />
                 <TextInput style={styles.input} value={search} placeholder={'search plants'} />
             </View>
-            <View style={{
-                width: '80%',
-                marginVertical: 20,
-                backgroundColor: '#fff',
-                elevation: 15,
-                alignItems: 'center',
-                borderRadius: 10,
-
-            }}>
-                <Image resizeMode='contain' style={{ width: 200, height: 300, }} source={require('../assets/myPlantHero.png')} />
-                <View style={{ paddingVertical: 15, alignItems: 'center' }}>
-                    <Text style={{ fontSize: 22, fontWeight: '700', color: '#000', marginBottom: 5 }}>
-                        This space is empty
-                    </Text>
-                    <Text style={{ color: '#666666', marginBottom: 10, fontSize: 18 }}>Add a plant to get a care plan!</Text>
-                    <FormBtn text={'add first plant'} />
-                </View>
-
-            </View>
+            {myPlantData.length === 0 ? <MyPlantEmpty /> : <MyPlantFilled myPlantData={myPlantData} />}
         </View >
     )
 }

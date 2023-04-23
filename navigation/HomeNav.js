@@ -81,6 +81,7 @@ export default function HomeNav() {
                     </View>
                 )
             }} />
+            {/* <Tab.Screen name="t" */}
         </Tab.Navigator>
     )
 }

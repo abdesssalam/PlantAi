@@ -53,7 +53,7 @@ export default function HomeScreen() {
       img: require('../assets/Guid2.png')
     },
   ]
-
+  const renderCard = ({ item }) => <Card text={item.title} imgSrc={item.img} height={80} width={200} />
   return (
     <ScrollView style={{ flex: 1 }}>
       <View style={styles.container}>
@@ -72,17 +72,15 @@ export default function HomeScreen() {
         </Text>
         <View style={{ width: '95%', marginVertical: 15 }}>
           <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Get Started</Text>
-          {/* @TODO: REPLACE WITH SCROLLABLE LIST VIEW */}
+
           <FlatList horizontal={true} data={guidData} renderItem={({ item }) => <Card text={item.text} imgSrc={item.img} width={260} height={130} />} />
-          {/* <Card
-          imgSrc={require('../assets/cardBG1.png')}
-          text={'How to identify plants easily with PlantAi'} width={260} height={130} /> */}
+
         </View>
         <View style={{ width: '95%' }}>
           <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Popular Plants</Text>
-          {/* @TODO: REPLACE WITH SCROLLABLE LIST VIEW */}
+
           <SafeAreaView style={{ flex: 1 }}>
-            <FlatList nestedScrollEnabled={true} style={{ paddingVertical: 15, marginTop: 10 }} scrollEnabled={true} numColumns={2} data={popularPlantsData} renderItem={({ item }) => <Card text={item.title} imgSrc={item.img} height={80} width={200} />} />
+            <FlatList nestedScrollEnabled={true} style={{ paddingVertical: 15, marginTop: 10 }} scrollEnabled={true} numColumns={2} data={popularPlantsData} renderItem={renderCard} />
           </SafeAreaView>
         </View>
       </View>
