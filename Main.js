@@ -8,16 +8,21 @@ import LoginScreen from './pages/LoginScreen';
 import Register from './pages/Register';
 import AuthNav from './navigation/AuthNav';
 import AppNav from './navigation/AppNav';
-
-
-
+import { Provider } from 'react-redux/es/exports';
+import { store } from './redux/store';
+// import { useDispatch } from 'react-redux/es/hooks/useDispatch';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 const Stack = createNativeStackNavigator();
 export default function App() {
+    const { user } = useSelector(state = state.userReducer);
+    const renderRoute = user === null ? <AuthNav /> : <AppNav />
     return (
-        <NavigationContainer>
-            <AppNav />
-            {/* <AuthNav /> */}
-        </NavigationContainer>
+        <Provider store={store}>
+            <NavigationContainer>
+
+                {renderRoute}
+            </NavigationContainer>
+        </Provider>
     )
 }
 
