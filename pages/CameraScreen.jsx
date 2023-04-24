@@ -52,6 +52,9 @@ export default class CameraScreen extends Component {
             const data = await this.camera.takePictureAsync(options);
             console.log(data.uri);
         }
+        setTimeout(() => {
+            this.props.navigation.navigate('preview')
+        }, 1500)
     };
 }
 const styles = StyleSheet.create({

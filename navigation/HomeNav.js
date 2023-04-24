@@ -73,7 +73,7 @@ export default function HomeNav() {
                     </View>
                 )
             }} />
-            <Tab.Screen name="profile" component={PreviewScreen} options={{
+            <Tab.Screen name="profile" component={ProfileScreen} options={{
                 tabBarIcon: ({ focused }) => (
                     <View style={{ alignItems: 'center' }}>
                         <Image source={focused ? require('../assets/tabprofileClicked.png') : require('../assets/tabprofile.png')} />
@@ -81,6 +81,7 @@ export default function HomeNav() {
                     </View>
                 )
             }} />
+            <Tab.Screen name="preview" component={PreviewScreen} options={{ tabBarButton: () => null }} />
             {/* <Tab.Screen name="t" */}
         </Tab.Navigator>
     )

@@ -53,7 +53,7 @@ export default function MyPlantsScreen() {
                 <FontAwesomeIcon style={styles.inpuIcon} icon={faSearch} />
                 <TextInput style={styles.input} value={search} placeholder={'search plants'} />
             </View>
-            {myPlantData.length === 0 ? <MyPlantEmpty /> : <MyPlantFilled myPlantData={myPlantData} />}
+            {myPlantData.length > 0 ? <MyPlantEmpty /> : <MyPlantFilled myPlantData={myPlantData} />}
         </View >
     )
 }
