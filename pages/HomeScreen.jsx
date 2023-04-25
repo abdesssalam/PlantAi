@@ -4,11 +4,22 @@ import FormInput from '../components/FormInput'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import Card from '../components/Card'
-
+import { useSelector } from 'react-redux'
 
 
 export default function HomeScreen() {
   const [search, setSearch] = useState('')
+  const user = useSelector(state => state.user)
+  var hours = new Date().getHours()
+
+  let message;
+  if (hours >= 4 && hours < 12) {
+    message = 'good morning'
+  } else if (hours < 16) {
+    message = 'good afternoon'
+  } else {
+    message = 'good evening'
+  }
 
   let popularPlantsData = [
     {
@@ -53,7 +64,7 @@ export default function HomeScreen() {
       img: require('../assets/Guid2.png')
     },
   ]
-  const renderCard = ({ item }) => <Card text={item.title} imgSrc={item.img} height={80} width={200} />
+
   return (
     <ScrollView style={{ flex: 1 }}>
       <View style={styles.container}>
@@ -68,7 +79,8 @@ export default function HomeScreen() {
           fontSize: 20,
           marginVertical: 5
         }}>
-          Good Afternoon, <Text style={{ color: '#000' }}>Abdeslam</Text>
+          {`${message}`}
+          , <Text style={{ color: '#000' }}>{user.firstName}</Text>
         </Text>
         <View style={{ width: '95%', marginVertical: 15 }}>
           <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Get Started</Text>
@@ -79,8 +91,9 @@ export default function HomeScreen() {
         <View style={{ width: '95%' }}>
           <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Popular Plants</Text>
 
-          <SafeAreaView style={{ flex: 1 }}>
-            <FlatList nestedScrollEnabled={true} style={{ paddingVertical: 15, marginTop: 10 }} scrollEnabled={true} numColumns={2} data={popularPlantsData} renderItem={renderCard} />
+          <SafeAreaView style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {popularPlantsData.map(item => <Card text={item.title} imgSrc={item.img} height={80} width={180} />)}
+
           </SafeAreaView>
         </View>
       </View>
@@ -100,8 +113,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#fff',
-    // borderColor: '#9b8f8f',
-    // borderWidth: 2,
+
     width: '80%',
     paddingHorizontal: 10,
     borderRadius: 15,

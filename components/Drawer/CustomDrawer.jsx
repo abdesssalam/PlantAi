@@ -3,9 +3,11 @@ import React from 'react'
 import { DrawerItemList, DrawerContentScrollView } from '@react-navigation/drawer'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { useSelector } from 'react-redux'
 // import { TouchableOpacity } from 'react-native-gesture-handler'
 // import { BlurView } from '@react-native-community/blur'
 export default function CustomDrawer(props) {
+    const user = useSelector(state => state.user)
     return (
         <View style={styles.container}>
             <DrawerContentScrollView {...props} >
@@ -17,12 +19,13 @@ export default function CustomDrawer(props) {
                     <View style={styles.info}>
                         <Text style={{
                             fontWeight: '700',
-                            color: '#fff'
+                            color: '#fff',
+                            textTransform: 'uppercase'
                         }}
-                        >AIT OMAR ABDESLAM</Text>
+                        >{`${user.firstName}  ${user.lastName}`}</Text>
                         <Text style={{
                             fontSize: 14
-                        }}>aitomarabdeslam@gmail.com</Text>
+                        }}>{user.email}</Text>
                     </View>
                 </View>
                 <DrawerItemList {...props} />

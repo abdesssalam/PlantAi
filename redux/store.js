@@ -1,4 +1,4 @@
-import { createStoreHook } from "react-redux";
-import { userReducer } from "./reducer";
+import { createStore } from "redux";
+import { PlantAiReducer } from "./reducer";
 
-export const store = createStoreHook(userReducer)
+export const store = createStore(PlantAiReducer)

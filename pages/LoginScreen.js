@@ -1,68 +1,90 @@
-import { useState } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
+import { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, ScrollView } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons';
-
+import { loginService } from '../services/AuthService';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    return (
-        <View style={styles.container}>
-            <Image
-                source={require('../assets/logo.png')}
-                style={styles.image}
-            />
-            <Text style={styles.text}>PlantAI</Text>
-            <Text style={styles.paragraph}>
-                Please enter your account information to login
-                or connect with Google or Facebook
-            </Text>
-            <View style={styles.inputWrapper}>
-                <FontAwesomeIcon style={styles.inpuIcon} icon={faEnvelope} />
-                <TextInput style={styles.input} defaultValue={email} placeholder='E-Mail' />
-            </View>
-            <View style={styles.inputWrapper}>
-                <FontAwesomeIcon style={styles.inpuIcon} icon={faLock} />
-                <TextInput secureTextEntry={true} style={styles.input} defaultValue={password} placeholder='Password' />
-            </View>
-            <TouchableOpacity style={styles.forgetWrapper} onPress={() => navigation.navigate('Home')}>
-                <Text style={styles.forget}>forget password ?</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Home')}>
-                <Text style={styles.btnText}>Login</Text>
-            </TouchableOpacity>
-            <View style={styles.loginWithWrapper}>
-                <Text style={styles.loginWith}> or login with</Text>
-            </View>
-            <View style={styles.socialWrapper}>
-                <View style={styles.faGoogleWrapper} >
-                    <FontAwesomeIcon style={styles.faGoogle} icon={faGoogle} size={30} />
-                </View>
-                <View style={styles.faFacebookWrapper} >
-                    <FontAwesomeIcon style={styles.faFacebook} icon={faFacebook} size={30} />
-                </View>
-            </View>
-            <View style={{
-                flexDirection: 'row',
-                marginTop: 10
+    const dispatch = useDispatch()
+    const auth = useSelector(state => state.isAuth)
 
-            }}>
-                <Text style={{
-                    fontSize: 18
-                }}
-                >Don't have account? </Text>
-                <TouchableOpacity onPress={() => { navigation.navigate('Register') }}>
-                    <Text style={{
-                        color: '#269460',
-                        fontSize: 18
-                    }}>register now</Text>
+    const handlLogin = () => {
+        console.log(email)
+        console.log(password)
+        console.log(auth)
+        console.log('start login')
+        loginService(email, password, dispatch)
+    }
+
+    useEffect(() => {
+        console.log('aaauuth')
+        if (auth) {
+            navigation.navigate('App')
+        }
+    }, [auth, navigation])
+
+    return (
+        <ScrollView>
+            <View style={styles.container}>
+                <Image
+                    source={require('../assets/LogoBlack.png')}
+                    style={styles.image}
+                    resizeMode='contain'
+                />
+                {/* <Text style={styles.text}>PlantAI</Text> */}
+                <Text style={styles.paragraph}>
+                    Please enter your account information to login
+                    or connect with Google or Facebook
+                </Text>
+                <View style={styles.inputWrapper}>
+                    <FontAwesomeIcon style={styles.inpuIcon} icon={faEnvelope} />
+                    <TextInput style={styles.input} defaultValue={email} placeholder='E-Mail' onChangeText={val => setEmail(val)} />
+                </View>
+                <View style={styles.inputWrapper}>
+                    <FontAwesomeIcon style={styles.inpuIcon} icon={faLock} />
+                    <TextInput secureTextEntry={true} style={styles.input} defaultValue={password} placeholder='Password' onChangeText={val => setPassword(val)} />
+                </View>
+                <TouchableOpacity style={styles.forgetWrapper} onPress={() => navigation.navigate('Home')}>
+                    <Text style={styles.forget}>forget password ?</Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={styles.btn} onPress={handlLogin}>
+                    <Text style={styles.btnText}>Login</Text>
+                </TouchableOpacity>
+                <View style={styles.loginWithWrapper}>
+                    <Text style={styles.loginWith}> or login with</Text>
+                </View>
+                <View style={styles.socialWrapper}>
+                    <View style={styles.faGoogleWrapper} >
+                        <FontAwesomeIcon style={styles.faGoogle} icon={faGoogle} size={30} />
+                    </View>
+                    <View style={styles.faFacebookWrapper} >
+                        <FontAwesomeIcon style={styles.faFacebook} icon={faFacebook} size={30} />
+                    </View>
+                </View>
+                <View style={{
+                    flexDirection: 'row',
+                    marginTop: 10
+
+                }}>
+                    <Text style={{
+                        fontSize: 18
+                    }}
+                    >Don't have account? </Text>
+                    <TouchableOpacity onPress={() => { navigation.navigate('Register') }}>
+                        <Text style={{
+                            color: '#269460',
+                            fontSize: 18
+                        }}>register now</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
-        </View>
+        </ScrollView>
     );
 }
 
@@ -77,9 +99,9 @@ const styles = StyleSheet.create({
     },
 
     image: {
-        width: wp('35%'),
-        height: hp('20%'),
-        marginTop: 32,
+        width: 150,
+        height: 150,
+        marginVertical: 22,
     },
     text: {
         fontSize: 32,

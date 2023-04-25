@@ -27,14 +27,17 @@ const DrawFooter = () => {
         </View>
     )
 }
-const PreviewScreen = () => {
+const PreviewScreen = ({ route, navigation }) => {
+
+    const item = route.params.item
+
     return (
         <ScrollView>
             <View style={styles.container}>
                 <Image source={require('../assets/previewImage.jpg')} style={{ borderRadius: 15, width: '95%' }} />
                 <View style={styles.card}>
-                    <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>Plant Name</Text>
-                    <Text style={{ textAlign: 'justify', fontSize: 14, lineHeight: 21, color: '#000' }}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quibusdam ut, deserunt dolor nesciunt fuga.</Text>
+                    <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>{item.general.name}</Text>
+                    <Text style={{ textAlign: 'justify', fontSize: 14, lineHeight: 21, color: '#000' }}>{item.Description}</Text>
                 </View>
                 <View style={styles.box}>
                     <DrawHeader src={require('../assets/ic_outline-monitor-heart.png')} text={'Plant Health'} />
@@ -44,31 +47,33 @@ const PreviewScreen = () => {
                     }}>
                         <Image source={require('../assets/previewImage.jpg')} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
                         <View>
-                            <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 18, marginBottom: 8 }}>This plant looks ! <Text style={{ color: '#FF0000' }}>sick</Text></Text>
-                            <TouchableOpacity style={styles.btn}>
-                                <Text style={{ color: '#30C67F' }}>Check for Solutions</Text>
-                            </TouchableOpacity>
+                            <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 18, marginBottom: 8 }}>This plant looks ! <Text style={{ color: item.plant_health.Health === 'Healthy' ? '#30C67F' : '#FF0000' }}>{item.plant_health.Health}</Text></Text>
+                            {item.plant_health.Health !== 'Healthy' &&
+                                <TouchableOpacity style={styles.btn}>
+                                    <Text style={{ color: '#30C67F' }}>Check for Solutions</Text>
+                                </TouchableOpacity>}
                         </View>
                     </View>
                 </View>
                 <View style={styles.box}>
                     <DrawHeader src={require('../assets/ic_key_features.png')} text={'Key Facts'} />
-                    <DrawFact title='Plant Type' text='Lorem ipsum' />
-                    <DrawFact title='Lifespan' text='Lorem ipsum' />
-                    <DrawFact title='Planting Time' text='Lorem ipsum' />
-                    <DrawFact title='Poisonous' text='Lorem ipsum' />
-                    <DrawFact title='Life expectancy' text='1-2 years' />
+                    {
+                        Object.keys(item.key_facts).map((key, idx) => {
+                            return <DrawFact title={key} text={item.key_facts[key].toString()} />
+                        })
+                    }
                 </View>
                 <View style={styles.box}>
                     <DrawHeader src={require('../assets/ic_characteristics.png')} text={'Characteristics'} />
-                    <DrawFact title='Plant Height' text='3 to 6 m' />
-                    <DrawFact title='Spread' text='3 to 8 m' />
-                    <DrawFact title='Leaf Color' text='Green, Blue, Red' />
-                    <DrawFact title='Bloom Time' text='Spring' />
-                    <DrawFact title='Flower size' text='2.5 to 5 cm' />
-                    <DrawFact title='Flower Color' text='Red, White' />
-                    <DrawFact title='Harvest Time' text='Fall' />
-                    <DrawFact title='Fruit Color' text='Green, Yellow' />
+                    {
+
+                        Object.keys(item.characteristics).map((key, idx) => {
+                            return Object.keys(item.characteristics[key]).map((kk, ii) => {
+                                return <DrawFact title={kk} text={item.characteristics[key][kk].toString()} />
+
+                            })
+                        })
+                    }
                 </View>
             </View>
         </ScrollView>

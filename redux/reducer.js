@@ -1,14 +1,17 @@
-import { SET_USER } from "./actions";
+import { LOGIN_SUCCESS, LOGIN_FAILURE } from "./actions";
 
 const initState = {
     user: null,
+    isAuth: false
 
 }
 
-export function userReducer(state = initState, action) {
+export function PlantAiReducer(state = initState, action) {
     switch (action.type) {
-        case SET_USER:
-            return { ...state, user: action.payload }
+        case LOGIN_SUCCESS:
+            return { ...state, user: action.payload, isAuth: true }
+        case LOGIN_FAILURE:
+            return { ...state, user: null, isAuth: false }
         default:
             return state
     }

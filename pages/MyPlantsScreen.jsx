@@ -1,51 +1,38 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { TextInput } from 'react-native-gesture-handler'
 
 import MyPlantEmpty from '../components/myplants/MyPlantEmpty'
 import MyPlantFilled from '../components/myplants/MyPlantFilled'
+import { plantsData } from '../data/Plants'
 
-export default function MyPlantsScreen() {
+export default function MyPlantsScreen({ navigation }) {
     const [search, setSearch] = useState('')
-    let myPlantData = [
-        {
-            id: 1,
-            src: require('../assets/previewImage.jpg'),
-            title: 'Lorem Ipsum 1',
-            name: 'Disease name 1',
-            date: 'April, 06 2023'
-        },
-        {
-            id: 2,
-            src: require('../assets/previewImage.jpg'),
-            title: 'Lorem Ipsum 2',
-            name: 'Disease name 2',
-            date: 'April, 06 2023'
-        },
-        {
-            id: 3,
-            src: require('../assets/previewImage.jpg'),
-            title: 'Lorem Ipsum 3',
-            name: 'Disease name 3',
-            date: 'April, 06 2023'
-        },
-        {
-            id: 4,
-            src: require('../assets/previewImage.jpg'),
-            title: 'Lorem Ipsum 4',
-            name: 'Disease name 4',
-            date: 'April, 06 2023'
-        },
-        {
-            id: 5,
-            src: require('../assets/previewImage.jpg'),
-            title: 'Lorem Ipsum 5',
-            name: 'Disease name 5',
-            date: 'April, 06 2023'
-        },
-    ]
+    let dataPlants = plantsData;
+
+    const goToPreview = (item) => {
+        // console.log(item)
+        console.log('go to preview')
+        navigation.navigate('preview', { item: item })
+    }
+    useEffect(() => {
+        plantsData.forEach(item => {
+
+
+
+            // console.log('facts : \n\n\n')
+            // console.log(Object.keys(item.key_facts))
+            // console.log('chara')
+            // console.log(Object.keys(item.characteristics))
+
+
+            console.log("-------")
+        })
+        // console.log(plantsData.length)
+    }, [])
+
     // const RenderContent = () => 
     return (
         <View style={styles.container}>
@@ -53,7 +40,7 @@ export default function MyPlantsScreen() {
                 <FontAwesomeIcon style={styles.inpuIcon} icon={faSearch} />
                 <TextInput style={styles.input} value={search} placeholder={'search plants'} />
             </View>
-            {myPlantData.length > 0 ? <MyPlantEmpty /> : <MyPlantFilled myPlantData={myPlantData} />}
+            {dataPlants.length === 0 ? <MyPlantEmpty /> : <MyPlantFilled myPlantData={dataPlants} goToPreview={goToPreview} />}
         </View >
     )
 }
