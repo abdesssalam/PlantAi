@@ -10,11 +10,11 @@ const DrawCard = ({ title, name, date, action, item }) => {
 
     const show = () => setVisible(true)
     const hide = () => setVisible(false)
-
+    // let path = '../../data/imgs/' + item.general.id + '.jpg'
 
     return (
         <TouchableOpacity onPress={() => action(item)} style={{ flexDirection: 'row', backgroundColor: '#fff', borderRadius: 10, width: '100%', padding: 10, marginTop: 15 }} >
-            <Image source={require('../../assets/previewImage.jpg')} style={{ width: 150, height: 150 }} />
+            <Image source={item.img} style={{ width: 150, height: 150 }} />
             <View style={{ marginLeft: 15 }}>
                 <Text style={{ flexWrap: 'wrap', fontSize: 22, color: '#30C67F', fontWeight: '800', textAlign: 'justify' }}>{title}</Text>
                 <Text style={{ fontSize: 16, color: '#A3A3A3' }}>{name}</Text>

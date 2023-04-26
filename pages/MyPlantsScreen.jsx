@@ -28,7 +28,7 @@ export default function MyPlantsScreen({ navigation }) {
             // console.log(Object.keys(item.characteristics))
 
 
-            console.log("-------")
+            console.log("d-------")
         })
         // console.log(plantsData.length)
     }, [])
