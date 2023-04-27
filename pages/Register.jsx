@@ -9,18 +9,33 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import FormHeader from '../components/FormHeader';
 import FormFooter from '../components/FormFooter';
 import FormBtn from '../components/FormBtn';
-
+import { useDispatch } from 'react-redux';
+import { registerService } from '../services/AuthService';
 // import FormHeader from '../components/FormHeader';
 // import FormBtn from '../components/FormBtn';
 // import FormFooter from '../components/FormFooter';
 
-function Register() {
+function Register({ navigation }) {
+    //proprties
+
     const [user, setUser] = useState({
         firstName: '',
         lastName: '',
         email: '',
         password: ''
     })
+    const dispatch = useDispatch()
+    //actions
+    const goToLogin = () => navigation.navigate('Login')
+    const handleChnge = (val, key) => {
+        let perm = {};
+        perm[key] = val
+        let u = { ...user, ...perm }
+        setUser(u)
+    }
+    const handleRegister = () => {
+        registerService(user, dispatch)
+    }
     return (
         <ScrollView>
             <FormHeader />
@@ -36,10 +51,10 @@ function Register() {
                     Please enter your account information to
                     register
                 </Text>
-                <FormInput icon={faUser} placeholder={"First name"} value={user.firstName} secure={false} />
-                <FormInput icon={faUser} placeholder={"Last name"} value={user.lastName} secure={false} />
-                <FormInput icon={faEnvelope} placeholder={"Email"} value={user.email} secure={false} />
-                <FormInput icon={faLock} placeholder={"Password"} value={user.password} secure={true} />
+                <FormInput icon={faUser} placeholder={"First name"} Objkey={'firstName'} value={user.firstName} secure={false} action={handleChnge} />
+                <FormInput icon={faUser} placeholder={"Last name"} Objkey={'lastName'} value={user.lastName} secure={false} action={handleChnge} />
+                <FormInput icon={faEnvelope} placeholder={"Email"} Objkey={'email'} value={user.email} secure={false} action={handleChnge} />
+                <FormInput icon={faLock} placeholder={"Password"} Objkey={'password'} value={user.password} secure={true} action={handleChnge} />
             </View>
             <View style={{
                 flex: 1,
@@ -47,11 +62,11 @@ function Register() {
                 alignItems: 'center',
                 // justifyContent: 'center',
             }}>
-                <FormBtn text={'register'} />
+                <FormBtn text={'register'} action={handleRegister} />
 
             </View>
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                <FormFooter text={'Alread  shave account? '} textAction={'login'} onPress={() => { }} />
+                <FormFooter text={'Alread  shave account? '} textAction={'login'} onPress={goToLogin} />
             </View>
 
         </ScrollView>

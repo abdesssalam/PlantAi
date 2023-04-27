@@ -3,11 +3,17 @@ import React from 'react'
 import { DrawerItemList, DrawerContentScrollView } from '@react-navigation/drawer'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { LOGIN_FAILURE, LoginFailure } from '../../redux/actions'
 // import { TouchableOpacity } from 'react-native-gesture-handler'
 // import { BlurView } from '@react-native-community/blur'
 export default function CustomDrawer(props) {
     const user = useSelector(state => state.user)
+    const dispatch = useDispatch();
+    const Logout = () => {
+        dispatch({ type: LOGIN_FAILURE })
+
+    }
     return (
         <View style={styles.container}>
             <DrawerContentScrollView {...props} >
@@ -22,10 +28,10 @@ export default function CustomDrawer(props) {
                             color: '#fff',
                             textTransform: 'uppercase'
                         }}
-                        >{`${user.firstName}  ${user.lastName}`}</Text>
+                        >{`${user?.firstName}  ${user?.lastName}`}</Text>
                         <Text style={{
                             fontSize: 14
-                        }}>{user.email}</Text>
+                        }}>{user?.email}</Text>
                     </View>
                 </View>
                 <DrawerItemList {...props} />
@@ -41,7 +47,7 @@ export default function CustomDrawer(props) {
                     borderBottomWidth: StyleSheet.hairlineWidth,
                     alignSelf: 'center'
                 }}></View>
-                <TouchableOpacity style={styles.btn}>
+                <TouchableOpacity onPress={Logout} style={styles.btn} >
                     <FontAwesomeIcon
 
                         icon={faRightFromBracket} size={30} color='#fff' />

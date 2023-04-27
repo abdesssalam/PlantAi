@@ -8,7 +8,7 @@ import MyPlantEmpty from '../components/myplants/MyPlantEmpty'
 import MyPlantFilled from '../components/myplants/MyPlantFilled'
 import { plantsData } from '../data/Plants'
 
-export default function MyPlantsScreen({ navigation }) {
+export default function MyPlantsScreen({ route, navigation }) {
     const [search, setSearch] = useState('')
     let dataPlants = plantsData;
 

@@ -7,27 +7,28 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { loginService } from '../services/AuthService';
 import { useDispatch, useSelector } from 'react-redux';
+import { Snackbar, Button } from '@react-native-material/core';
 
 export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const dispatch = useDispatch()
     const auth = useSelector(state => state.isAuth)
+    const [showSnack, setShowSnack] = useState(false)
 
     const handlLogin = () => {
-        console.log(email)
-        console.log(password)
-        console.log(auth)
-        console.log('start login')
+
         loginService(email, password, dispatch)
+
+        if (!auth) {
+            setShowSnack(true)
+            setTimeout(() => {
+                setShowSnack(false)
+            }, 3000)
+        }
     }
 
-    useEffect(() => {
-        console.log('aaauuth')
-        if (auth) {
-            navigation.navigate('App')
-        }
-    }, [auth, navigation])
+
 
     return (
         <ScrollView>
@@ -83,6 +84,16 @@ export default function LoginScreen({ navigation }) {
                         }}>register now</Text>
                     </TouchableOpacity>
                 </View>
+                {showSnack && <Snackbar
+
+                    message='inccorect'
+                    style={{ position: "absolute", start: 16, end: 16, bottom: 20 }}
+                    action={<TouchableOpacity
+                        style={{ backgroundColor: '#efefef', paddingVertical: 10, paddingHorizontal: 15, borderRadius: 15 }}
+                        onPress={() => setShowSnack(false)}><Text style={{ color: '#000', fontSize: 14, fontWeight: '700' }}>DISMISS</Text></TouchableOpacity>}
+                />}
+
+
             </View>
         </ScrollView>
     );
@@ -153,10 +164,12 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         paddingBottom: 10,
         paddingLeft: 0,
-        backgroundColor: '#fff',
+        // backgroundColor: 'red',
         color: '#424242',
         marginLeft: 10,
         fontSize: 18,
+        width: '90%',
+
     },
     forgetWrapper: {
         width: '80%',

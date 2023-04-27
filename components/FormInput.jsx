@@ -1,11 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { View, StyleSheet, TextInput } from 'react-native'
 
-function FormInput({ icon, value, placeholder, secure }) {
+function FormInput({ icon, value, placeholder, secure, action, Objkey }) {
+    const handleChange = (val) => {
+        action(val, Objkey)
+
+    }
     return (
         <View style={styles.inputWrapper}>
             <FontAwesomeIcon style={styles.inpuIcon} icon={icon} />
-            <TextInput secureTextEntry={secure} style={styles.input} value={value} placeholder={placeholder} />
+            <TextInput secureTextEntry={secure} style={styles.input} value={value} placeholder={placeholder} onChangeText={handleChange} />
         </View>
     )
 }
@@ -38,5 +42,7 @@ const styles = StyleSheet.create({
         color: '#424242',
         marginLeft: 10,
         fontSize: 18,
+        width: '90%',
+        // backgroundColor: 'red'
     },
 })

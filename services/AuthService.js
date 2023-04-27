@@ -43,3 +43,13 @@ export function loginService(email, password, dispatch) {
     }
 
 }
+
+export function registerService(user, dispatch) {
+
+    if (user.email !== 'aitomar@gmail.com') {
+        dispatch(loginSuccess(user))
+    } else {
+        dispatch(LoginFailure())
+    }
+
+}

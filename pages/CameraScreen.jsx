@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import React, { Component } from 'react'
 import { AppRegistry, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import { plantsData } from '../data/Plants';
 
 export default class CameraScreen extends Component {
     render() {
@@ -53,7 +54,9 @@ export default class CameraScreen extends Component {
             console.log(data.uri);
         }
         setTimeout(() => {
-            this.props.navigation.navigate('preview')
+            let data = plantsData;
+            let item = data[Math.floor(Math.random() * ((data.length - 1) + 1))]
+            this.props.navigation.navigate('preview', { item: item })
         }, 1500)
     };
 }

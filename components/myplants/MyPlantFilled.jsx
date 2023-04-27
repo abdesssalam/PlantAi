@@ -5,7 +5,7 @@ import MyPlantMenu from './MyPlantMenu';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const DrawCard = ({ title, name, date, action, item }) => {
+const DrawCard = ({ title, name, date, action, item, id }) => {
     const [visible, setVisible] = useState(false);
 
     const show = () => setVisible(true)
@@ -14,7 +14,8 @@ const DrawCard = ({ title, name, date, action, item }) => {
 
     return (
         <TouchableOpacity onPress={() => action(item)} style={{ flexDirection: 'row', backgroundColor: '#fff', borderRadius: 10, width: '100%', padding: 10, marginTop: 15 }} >
-            <Image source={item.img} style={{ width: 150, height: 150 }} />
+            {/* <Image source={require('../../assets/previewImage.jpg')} style={{ width: 150, height: 150 }} /> */}
+            <Image source={{ uri: `https://planntai.000webhostapp.com/imgs/${id}.JPG` }} style={{ width: 150, height: 150 }} />
             <View style={{ marginLeft: 15 }}>
                 <Text style={{ flexWrap: 'wrap', fontSize: 22, color: '#30C67F', fontWeight: '800', textAlign: 'justify' }}>{title}</Text>
                 <Text style={{ fontSize: 16, color: '#A3A3A3' }}>{name}</Text>
@@ -35,6 +36,6 @@ const DrawCard = ({ title, name, date, action, item }) => {
 export default function MyPlantFilled({ myPlantData, goToPreview }) {
 
     return (
-        <FlatList style={{ width: '95%' }} data={myPlantData} renderItem={({ item }) => <DrawCard title={item.general.name} name={item.general.scientific_name} date={item.general.species} item={item} action={goToPreview} />} />
+        <FlatList style={{ width: '95%' }} data={myPlantData} renderItem={({ item }) => <DrawCard title={item.general.name} name={item.general.scientific_name} date={item.general.species} item={item} id={item.general.id} action={goToPreview} />} />
     )
 }

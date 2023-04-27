@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput, FlatList, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TextInput, FlatList, ScrollView, SafeAreaView, TouchableOpacity, ImageBackground } from 'react-native'
 import React, { useState } from 'react'
 import FormInput from '../components/FormInput'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -6,10 +6,41 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import Card from '../components/Card'
 import { useSelector } from 'react-redux'
 
+const DrawCard = ({ text, width, height, imgSrc, handlePress }) => {
+  return (
+    <TouchableOpacity onPress={() => handlePress(text)}>
+      <ImageBackground
+        imageStyle={{ borderRadius: 6 }}
+        source={imgSrc} style={{ width: width, height: height, marginVertical: 10, marginRight: 8 }}>
+        <View style={[styles.overley, {
+          justifyContent: 'flex-end',
+          alignItems: 'center'
+        }]}>
+          <Text style={{ color: '#fff', width: '80%', fontSize: 20, margin: 8 }}>{text}</Text>
+        </View>
+      </ImageBackground>
+    </TouchableOpacity>
 
-export default function HomeScreen() {
+  )
+}
+
+export default function HomeScreen({ navigation }) {
+  //to test static
+
+  const handleClickedItem = (item) => {
+    navigation.navigate('my plnats')
+    console.log(item)
+  }
+
+
+  //end test static
+
+
   const [search, setSearch] = useState('')
   const user = useSelector(state => state.user)
+  //to debug
+
+  //end debug
   var hours = new Date().getHours()
 
   let message;
@@ -80,7 +111,7 @@ export default function HomeScreen() {
           marginVertical: 5
         }}>
           {`${message}`}
-          , <Text style={{ color: '#000' }}>{user.firstName}</Text>
+          , <Text style={{ color: '#000' }}>{user?.firstName}</Text>
         </Text>
         <View style={{ width: '95%', marginVertical: 15 }}>
           <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Get Started</Text>
@@ -92,7 +123,7 @@ export default function HomeScreen() {
           <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Popular Plants</Text>
 
           <SafeAreaView style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-            {popularPlantsData.map(item => <Card text={item.title} imgSrc={item.img} height={80} width={180} />)}
+            {popularPlantsData.map(item => <DrawCard key={item.id} text={item.title} imgSrc={item.img} height={80} width={180} handlePress={handleClickedItem} />)}
 
           </SafeAreaView>
         </View>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-export default function FormBtn({ text }) {
+export default function FormBtn({ text, action }) {
     return (
 
-        <TouchableOpacity style={styles.btn} >
+        <TouchableOpacity style={styles.btn} onPress={action} >
             <Text style={styles.btnText}>{text}</Text>
         </TouchableOpacity>
 

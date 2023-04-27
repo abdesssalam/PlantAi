@@ -12,7 +12,7 @@ export default function FormFooter({ onPress, textAction, text }) {
                 fontSize: 18
             }}
             >{text} </Text>
-            <TouchableOpacity onPress={() => { onPress }}>
+            <TouchableOpacity onPress={onPress}>
                 <Text style={{
                     color: '#269460',
                     fontSize: 18

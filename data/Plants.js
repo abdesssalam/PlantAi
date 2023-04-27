@@ -1,12 +1,11 @@
 export const plantsData = [
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 1,
             "name": "carrots",
             "species": "Daucus",
             "scientific_name": "Daucus carota",
-            img: require('./imgs/1.jpg')
+
         },
         "plant_health": {
             "Health": "Healthy"
@@ -69,7 +68,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/2.jpg'),
             "id": 2,
             "name": "tomatoes",
             "species": "Solanum lycopersicum",
@@ -140,7 +138,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/3.jpg'),
             "id": 3,
             "name": "bell pepper",
             "species": "Capsicum annuum",
@@ -209,7 +206,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/4.jpg'),
             "id": 4,
             "name": "cucumbers",
             "species": "Cucumis",
@@ -279,7 +275,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/5.jpg'),
             "id": 5,
             "name": "potatoes",
             "species": "Solanum",
@@ -349,7 +344,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/6.jpg'),
             "id": 6,
             "name": "apples",
             "species": "Malus domestica",
@@ -414,7 +408,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/7.jpg'),
             "id": 7,
             "name": "onions",
             "species": "Allium",
@@ -476,7 +469,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 8,
             "name": "zucchini",
             "species": "Cucurbita pepo",
@@ -540,7 +532,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 9,
             "name": "eggplants",
             "species": "Solanum melongena",
@@ -604,7 +595,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 10,
             "name": "cauliflower",
             "species": "Brassica oleracea var. botrytis",
@@ -668,7 +658,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 11,
             "name": "cabbage",
             "species": "Brassica oleracea",
@@ -729,7 +718,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 12,
             "name": "lemon",
             "species": "Citrus limon",
@@ -792,7 +780,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 13,
             "name": "pomegranate",
             "species": "Punica granatum",
@@ -853,7 +840,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 14,
             "name": "watermelon",
             "species": "Citrullus lanatus",
@@ -917,7 +903,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 15,
             "name": "melons",
             "species": "Cucumis melo",
@@ -986,7 +971,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 16,
             "name": "figs",
             "species": "Ficus carica",
@@ -1049,7 +1033,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 17,
             "name": "grapes",
             "species": "Vitis vinifera",
@@ -1113,7 +1096,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 18,
             "name": "bananas",
             "species": "Musa acuminata",
@@ -1176,7 +1158,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 19,
             "name": "strawberries",
             "species": "Fragaria x ananassa",
@@ -1239,7 +1220,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 20,
             "name": "tangerine",
             "species": "Citrus reticulata",
@@ -1301,7 +1281,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 21,
             "name": "kiwi",
             "species": "Actinidia deliciosa",
@@ -1363,7 +1342,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 22,
             "name": "mango",
             "species": "Mangifera indica",
@@ -1429,7 +1407,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 23,
             "name": "peaches",
             "species": "Prunus persica",
@@ -1493,7 +1470,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 24,
             "name": "pear",
             "species": "Pyrus",
@@ -1556,7 +1532,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 25,
             "name": "raspberries",
             "species": "Rubus idaeus",
@@ -1618,7 +1593,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 26,
             "name": "blueberries",
             "species": "Vaccinium corymbosum",
@@ -1679,7 +1653,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 27,
             "name": "avocado",
             "species": "Persea americana",
@@ -1740,7 +1713,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 28,
             "name": "olives",
             "species": "Olea europaea",
@@ -1801,7 +1773,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 29,
             "name": "green beans",
             "species": "Phaseolus vulgaris",
@@ -1862,7 +1833,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 30,
             "name": "broad beans",
             "species": "Vicia faba",
@@ -1923,7 +1893,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 31,
             "name": "pea",
             "species": "Pisum sativum",
@@ -1984,7 +1953,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 32,
             "name": "chickpea",
             "species": "Cicer arietinum",
@@ -2046,7 +2014,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 33,
             "name": "broccoli",
             "species": "Brassica oleracea",
@@ -2107,7 +2074,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 34,
             "name": "pineapple",
             "species": "Ananas comosus",
@@ -2166,7 +2132,6 @@ export const plantsData = [
     },
     {
         "general": {
-            img: require('./imgs/1.jpg'),
             "id": 35,
             "name": "Corn",
             "species": "Zea mays",

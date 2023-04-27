@@ -30,11 +30,13 @@ const DrawFooter = () => {
 const PreviewScreen = ({ route, navigation }) => {
 
     const item = route.params.item
+    let idItem = item.general.id;
 
     return (
         <ScrollView>
             <View style={styles.container}>
-                <Image source={require('../assets/previewImage.jpg')} style={{ borderRadius: 15, width: '95%' }} />
+
+                <Image source={{ uri: `https://planntai.000webhostapp.com/imgs/${idItem}.JPG` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
                 <View style={styles.card}>
                     <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>{item.general.name}</Text>
                     <Text style={{ textAlign: 'justify', fontSize: 14, lineHeight: 21, color: '#000' }}>{item.Description}</Text>
@@ -45,7 +47,7 @@ const PreviewScreen = ({ route, navigation }) => {
                         flexDirection: 'row',
                         marginVertical: 10
                     }}>
-                        <Image source={require('../assets/previewImage.jpg')} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
+                        <Image source={{ uri: `https://planntai.000webhostapp.com/imgs/${idItem}.JPG` }} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
                         <View>
                             <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 18, marginBottom: 8 }}>This plant looks ! <Text style={{ color: item.plant_health.Health === 'Healthy' ? '#30C67F' : '#FF0000' }}>{item.plant_health.Health}</Text></Text>
                             {item.plant_health.Health !== 'Healthy' &&
@@ -59,7 +61,7 @@ const PreviewScreen = ({ route, navigation }) => {
                     <DrawHeader src={require('../assets/ic_key_features.png')} text={'Key Facts'} />
                     {
                         Object.keys(item.key_facts).map((key, idx) => {
-                            return <DrawFact title={key} text={item.key_facts[key].toString()} />
+                            return <DrawFact key={idx} title={key} text={item.key_facts[key].toString()} />
                         })
                     }
                 </View>
@@ -69,7 +71,7 @@ const PreviewScreen = ({ route, navigation }) => {
 
                         Object.keys(item.characteristics).map((key, idx) => {
                             return Object.keys(item.characteristics[key]).map((kk, ii) => {
-                                return <DrawFact title={kk} text={item.characteristics[key][kk].toString()} />
+                                return <DrawFact key={`${idx}-${kk}`} title={kk} text={item.characteristics[key][kk].toString()} />
 
                             })
                         })
