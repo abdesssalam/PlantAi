@@ -31,7 +31,7 @@ const baseUrl = 'http://127.0.0.1:8000/api/'
 
 export function loginService(email, password, dispatch) {
 
-    if (email === 'aitomar@gmail.com' && password === 'admin123') {
+    if (email === 'admin@wehelp.ma' && password === 'admin123') {
         let user = users[0]
         dispatch(loginSuccess(user))
     } else {
