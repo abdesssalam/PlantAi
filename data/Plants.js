@@ -2141,7 +2141,7 @@ export const plantsData = [
             "Health": "Healthy"
         },
         "key_facts": {
-            "plant type": "Vegetable",
+            "plant type": "vegetable",
             "life span": "Annual",
             "Preferred conditions": [
                 "Full sun",

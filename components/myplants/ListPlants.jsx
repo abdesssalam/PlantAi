@@ -1,8 +1,10 @@
-import { View, Text, FlatList, Image, Modal, TouchableOpacity, Pressable, Dimensions } from 'react-native'
-import { useState } from 'react'
+import { View, Text, FlatList, Image, Modal, TouchableOpacity, Pressable, Dimensions, BackHandler } from 'react-native'
+import { useEffect, useState } from 'react'
 import MyPlantMenu from './MyPlantMenu';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
-const windowWidth = Dimensions.get('window').width;
+
 const windowHeight = Dimensions.get('window').height;
 
 const DrawCard = ({ title, name, date, handleItemClicked, item, id }) => {
@@ -32,10 +34,17 @@ const DrawCard = ({ title, name, date, handleItemClicked, item, id }) => {
         </TouchableOpacity >
     )
 }
+export default function ListPlants({ datalist, handleItemClicked, handleBackBtn }) {
+    if (datalist.length == 0) return (<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text style={{ fontSize: 34 }}>no data to show</Text></View>)
 
-export default function MyPlantFilled({ myPlantData, goToPreview }) {
-
+    // const handleBack = () => handleBackBtn
+    useEffect(() => {
+        BackHandler.addEventListener('hardwareBackPress', handleBackBtn)
+        return () => { BackHandler.removeEventListener("hardwareBackPress", handleBackBtn); }
+    }, [])
     return (
-        <FlatList style={{ width: '95%' }} data={myPlantData} renderItem={({ item }) => <DrawCard title={item.general.name} name={item.general.scientific_name} date={item.key_facts['plant type'].toString()} item={item} id={item.general.id} handleItemClicked={handleItemClicked} />} />
+
+        <FlatList style={{ width: '100%' }} data={datalist} renderItem={({ item }) => <DrawCard title={item.general.name} name={item.general.scientific_name} date={item.key_facts['plant type'].toString()} item={item} id={item.general.id} handleItemClicked={handleItemClicked} />} />
+
     )
 }

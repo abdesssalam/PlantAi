@@ -1,13 +1,14 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../pages/HomeScreen";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faCamera, faHome, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faHome, faPlantWilt, faSearch, faSunPlantWilt } from "@fortawesome/free-solid-svg-icons";
 import { StyleSheet, View, Image, Text } from "react-native";
-import SearchScreen from "../pages/SearchScreen";
+import SearchScreen from "../pages/HistoryScreen";
 import MyPlantsScreen from "../pages/MyPlantsScreen";
 import ProfileScreen from "../pages/ProfileScreen";
 import CameraScreen from "../pages/CameraScreen";
 import PreviewScreen from "../pages/PreviewScreen";
+import HistoryScreen from "../pages/HistoryScreen";
 const Tab = createBottomTabNavigator();
 
 export default function HomeNav() {
@@ -21,11 +22,11 @@ export default function HomeNav() {
                     </View>
                 )
             }} />
-            <Tab.Screen name="search" component={SearchScreen} options={{
+            <Tab.Screen name="Disease" component={HistoryScreen} options={{
                 tabBarIcon: ({ focused }) => (
                     <View style={{ alignItems: 'center' }}>
-                        <Image source={focused ? require('../assets/tabsearchClicked.png') : require('../assets/tabsearch.png')} />
-                        <Text style={{ color: focused ? '#30C67F' : '#666666', fontWeight: '600' }} >Search</Text>
+                        <FontAwesomeIcon icon={faPlantWilt} color={focused ? '#30C67F' : '#9DB2CE'} />
+                        <Text style={{ color: focused ? '#30C67F' : '#666666', fontWeight: '600' }} >Disease</Text>
                     </View>
                 )
             }} />

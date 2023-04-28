@@ -14,3 +14,13 @@ export const users = [
         password: 'user123'
     },
 ]
+export const UserPlants = [
+    {
+        user: 1,
+        plantID: 1
+    },
+    {
+        user: 1,
+        plantID: 1
+    },
+]
