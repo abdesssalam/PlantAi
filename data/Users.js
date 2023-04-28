@@ -1,9 +1,9 @@
 export const users = [
     {
         id: 1,
-        firstName: 'abdeslam',
-        lastName: 'ait omar',
-        email: 'aitomar@gmail.com',
+        firstName: 'WeHelp',
+        lastName: 'Groupe',
+        email: 'admin@wehelp.ma',
         password: 'admin123'
     },
     {
