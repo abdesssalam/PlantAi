@@ -4,7 +4,10 @@ export const users = [
         firstName: 'WeHelp',
         lastName: 'Groupe',
         email: 'admin@wehelp.ma',
-        password: 'admin123'
+        password: 'admin123',
+        username: 'wehelp',
+        phone: '052297854',
+        joined: '25/04/2022'
     },
     {
         id: 2,

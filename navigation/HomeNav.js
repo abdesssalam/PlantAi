@@ -9,6 +9,7 @@ import ProfileScreen from "../pages/ProfileScreen";
 import CameraScreen from "../pages/CameraScreen";
 import PreviewScreen from "../pages/PreviewScreen";
 import HistoryScreen from "../pages/HistoryScreen";
+
 const Tab = createBottomTabNavigator();
 
 export default function HomeNav() {

@@ -12,6 +12,9 @@ export const getUserGarden = () => {
     return plantsData
 }
 
-export const getgetSingleItem = (name) => {
-    return plantsData.find(plant => plant.general.name === name)
+export const getSingleItem = (name) => {
+
+    name = name.includes("_") ? name.replace("_", " ") : name
+    console.log(plantsData.length)
+    return plantsData.find(plant => plant.general.name.toLocaleLowerCase() === name.toLocaleLowerCase())
 }

@@ -344,6 +344,75 @@ export const plantsData = [
     },
     {
         "general": {
+            "id": 36,
+            "name": "potato",
+            "species": "Solanum",
+            "scientific_name": "Solanum tuberosum"
+        },
+        "plant_health": {
+            "Health": "Healthy"
+        },
+        "key_facts": {
+            "plant type": "vegetable",
+            "life span": [
+                "Annual",
+                "Perennial"
+            ],
+            "Life expectancy": "1-2 years",
+            "Preferred conditions": [
+                "Full sun",
+                "Well-drained soil"
+            ],
+            "Planting time": [
+                "Spring",
+                "Summer"
+            ]
+        },
+        "characteristics": {
+            "mature plant": {
+                "Plant_height": "60-100 cm",
+                "Spread": "45-90 cm",
+                "Leaf Color": [
+                    "Green"
+                ]
+            },
+            "flower": {
+                "Bloom Time": [
+                    "Summer"
+                ],
+                "Flower Size": "5-6 cm",
+                "Flower Color": [
+                    "White",
+                    "Pink",
+                    "Purple"
+                ]
+            },
+            "fruit": {
+                "Harvest Time": [
+                    "Late Summer to Early Fall"
+                ],
+                "Fruit Color": [
+                    "Brown",
+                    "Yellow",
+                    "Red",
+                    "Purple"
+                ]
+            }
+        },
+        "Description": "Potatoes are a starchy root vegetable that are a staple in many diets around the world. They can be cooked in a variety of ways, including boiled, baked, fried, and mashed.",
+        "care": {
+            "Planting depth": "10-15 cm",
+            "soil": [
+                "Loamy",
+                "Sandy loam"
+            ],
+            "Soil pH": "5.0 to 6.5",
+            "Watering requirements": "Regular watering, but not over-watering",
+            "Pest management strategies": "Potatoes can be prone to pests such as potato beetles and potato tuber moths. Crop rotation, using row covers, and removing any infected plants can help manage these pests."
+        }
+    },
+    {
+        "general": {
             "id": 6,
             "name": "apples",
             "species": "Malus domestica",
@@ -1097,7 +1166,7 @@ export const plantsData = [
     {
         "general": {
             "id": 18,
-            "name": "bananas",
+            "name": "banana",
             "species": "Musa acuminata",
             "scientific_name": "Musa"
         },
@@ -2134,6 +2203,67 @@ export const plantsData = [
         "general": {
             "id": 35,
             "name": "Corn",
+            "species": "Zea mays",
+            "scientific_name": "Zea mays"
+        },
+        "plant_health": {
+            "Health": "Healthy"
+        },
+        "key_facts": {
+            "plant type": "vegetable",
+            "life span": "Annual",
+            "Preferred conditions": [
+                "Full sun",
+                "Well-drained soil"
+            ],
+            "Planting time": [
+                "Spring",
+                "Summer"
+            ]
+        },
+        "characteristics": {
+            "mature plant": {
+                "Plant_height": "1.5-2.5 m",
+                "Spread": "0.6-0.9 m",
+                "Leaf Color": [
+                    "Green"
+                ]
+            },
+            "flower": {
+                "Bloom Time": [
+                    "Summer"
+                ],
+                "Flower Color": [
+                    "Yellow"
+                ]
+            },
+            "fruit": {
+                "Harvest Time": [
+                    "Late summer",
+                    "Early fall"
+                ],
+                "Fruit Color": [
+                    "Yellow",
+                    "White"
+                ]
+            }
+        },
+        "Description": "Corn is a tall, annual grass that is grown for its edible seeds, which are commonly known as corn or maize. It is used in a wide variety of food products and is also used as animal feed and for biofuel production. Corn is a good source of carbohydrates, fiber, and essential vitamins and minerals.",
+        "care": {
+            "Planting depth": "2.5 to 5 cm",
+            "soil": [
+                "Well-drained soil",
+                "Loamy soil"
+            ],
+            "Soil pH": "6.0 to 6.8",
+            "Watering requirements": "Regular watering",
+            "Pest management strategies": "Corn is susceptible to pests such as corn borers and corn earworms. Crop rotation, using natural predators such as parasitic wasps, and applying appropriate pesticides can help manage these pests."
+        }
+    },
+    {
+        "general": {
+            "id": 36,
+            "name": "Corn Maize",
             "species": "Zea mays",
             "scientific_name": "Zea mays"
         },

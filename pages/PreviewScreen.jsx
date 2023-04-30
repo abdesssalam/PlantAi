@@ -24,6 +24,9 @@ const DrawFact = ({ title, text }) => {
 const PreviewScreen = ({ route, navigation }) => {
 
     const item = route.params.item
+    if (item === 'undefined') {
+        return <View><Text>no data</Text></View>
+    }
     let idItem = item.general.id;
 
     return (

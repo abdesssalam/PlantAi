@@ -6,7 +6,7 @@ import { faClock, faEnvelope, faPhone, faTimes, faUser } from '@fortawesome/free
 
 
 const DrawHeader = ({ user }) => {
-    user = { ...user, ...{ username: 'wehelp' } }
+
     return (
         <View style={{
             width: '95%',
@@ -95,10 +95,10 @@ const DrawAccountBody = ({ user }) => {
 
             }}
         >
-            <DrawBodyItem Itemkey={'Name'} val={`${user.firstName} ${user.lastName}`} icon={faUser} />
-            <DrawBodyItem Itemkey={'email'} val={user.email} icon={faEnvelope} />
-            <DrawBodyItem Itemkey={'Phone'} val={'052297854'} icon={faPhone} />
-            <DrawBodyItem Itemkey={'Joined In'} val={'25/04/2022'} icon={faClock} />
+            <DrawBodyItem Itemkey={'Name'} val={`${user?.firstName} ${user?.lastName}`} icon={faUser} />
+            <DrawBodyItem Itemkey={'email'} val={user?.email} icon={faEnvelope} />
+            <DrawBodyItem Itemkey={'Phone'} val={user?.phone} icon={faPhone} />
+            <DrawBodyItem Itemkey={'Joined In'} val={user?.joined} icon={faClock} />
 
 
         </View>

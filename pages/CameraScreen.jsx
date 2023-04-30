@@ -6,6 +6,8 @@ import { RNCamera } from 'react-native-camera';
 import { plantsData } from '../data/Plants';
 
 import ImagePicker from 'react-native-image-crop-picker';
+import axios from 'axios';
+import { getSingleItem } from '../services/PlantsService';
 export default class CameraScreen extends Component {
 
     render() {
@@ -53,13 +55,15 @@ export default class CameraScreen extends Component {
         if (this.camera) {
             const options = { quality: 0.5, base64: true };
             const data = await this.camera.takePictureAsync(options);
-            console.log(data.uri);
+
+            this.uploadImage(data.uri, 'image/jpeg')
+
         }
-        setTimeout(() => {
-            let data = plantsData;
-            let item = data[Math.floor(Math.random() * ((data.length - 1) + 1))]
-            this.props.navigation.navigate('preview', { item: item })
-        }, 1500)
+        // setTimeout(() => {
+        //     let data = plantsData;
+        //     let item = data[Math.floor(Math.random() * ((data.length - 1) + 1))]
+        //     this.props.navigation.navigate('preview', { item: item })
+        // }, 1500)
     };
     handleOpenGallery = () => {
         ImagePicker.openPicker({
@@ -68,29 +72,39 @@ export default class CameraScreen extends Component {
             cropping: true
         }).then(img => {
 
-            console.log(img)
+            console.log('send data....')
+            this.uploadImage(img.path, img.mime)
         })
-        // let options = {
-        //     includeBase64: true,
-        //     storageOptions: {
-        //         skipBackup: true,
-        //         path: 'images',
-        //     },
-        // };
-        //  launchImageLibrary(options, (response) => {
-        //     console.log('Response = ', response);
+    }
 
-        //     if (response.didCancel) {
-        //         console.log('User cancelled image picker');
-        //     } else if (response.errorCode) {
-        //         console.log('ImagePicker Error: ', response.error);
-        //     } else {
-        //         const source = { uri: response.assets.uri };
-        //         console.log('response', JSON.stringify(response));
-        //         setFileData(response.assets[0].base64);
-        //         setFileUri(response.assets[0].uri)
-        //     }
-        // });
+    uploadImage = async (url, mime) => {
+
+        const formData = new FormData();
+        formData.append('remark', 'remark')
+        formData.append('file', {
+            uri: url,
+            name: `image-${new Date().getUTCMilliseconds().toString()}`,
+            type: mime,
+        })
+        try {
+
+
+            const res = await axios({
+                method: 'POST',
+                url: 'https://061f-160-176-197-152.ngrok-free.app/file/upload/',
+                data: formData,
+                headers: { "Content-Type": "multipart/form-data" },
+            })
+            let item = getSingleItem(res.data.Name);
+            if (item !== 'undefined') {
+                this.props.navigation.navigate('preview', { item: item })
+            }
+
+            console.log(res.data.Name)
+        } catch (err) {
+            console.log(err)
+        }
+
 
     }
 }
