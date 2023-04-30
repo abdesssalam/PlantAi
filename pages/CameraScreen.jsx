@@ -5,7 +5,9 @@ import { AppRegistry, Image, StyleSheet, Text, TouchableOpacity, View } from 're
 import { RNCamera } from 'react-native-camera';
 import { plantsData } from '../data/Plants';
 
+import ImagePicker from 'react-native-image-crop-picker';
 export default class CameraScreen extends Component {
+
     render() {
         return (
             <View style={{ flex: 1 }}>
@@ -30,7 +32,7 @@ export default class CameraScreen extends Component {
                 />
                 <Image source={require('../assets/cameraRectangle.png')} style={{ width: 350, height: 350, alignSelf: 'center', position: 'absolute', top: 50 }} />
                 <View style={styles.footer}>
-                    <TouchableOpacity style={styles.btn}>
+                    <TouchableOpacity style={styles.btn} onPress={this.handleOpenGallery}>
                         <Image source={require('../assets/cameraPhotos.png')} />
                         <Text style={{ fontSize: 16, marginTop: 5 }}>Photos</Text>
                     </TouchableOpacity>
@@ -59,6 +61,38 @@ export default class CameraScreen extends Component {
             this.props.navigation.navigate('preview', { item: item })
         }, 1500)
     };
+    handleOpenGallery = () => {
+        ImagePicker.openPicker({
+            width: 300,
+            height: 400,
+            cropping: true
+        }).then(img => {
+
+            console.log(img)
+        })
+        // let options = {
+        //     includeBase64: true,
+        //     storageOptions: {
+        //         skipBackup: true,
+        //         path: 'images',
+        //     },
+        // };
+        //  launchImageLibrary(options, (response) => {
+        //     console.log('Response = ', response);
+
+        //     if (response.didCancel) {
+        //         console.log('User cancelled image picker');
+        //     } else if (response.errorCode) {
+        //         console.log('ImagePicker Error: ', response.error);
+        //     } else {
+        //         const source = { uri: response.assets.uri };
+        //         console.log('response', JSON.stringify(response));
+        //         setFileData(response.assets[0].base64);
+        //         setFileUri(response.assets[0].uri)
+        //     }
+        // });
+
+    }
 }
 const styles = StyleSheet.create({
     container: {

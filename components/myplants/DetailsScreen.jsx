@@ -46,7 +46,8 @@ export default function DetailsScreen({ item, handleBack }) {
                     <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>{item.general.name}</Text>
                     <Text style={{ textAlign: 'justify', fontSize: 14, lineHeight: 21, color: '#000' }}>{item.Description}</Text>
                 </View>
-                <View style={styles.box}>
+                {/* plant health */}
+                {/* <View style={styles.box}>
                     <DrawHeader src={require('../../assets/ic_outline-monitor-heart.png')} text={'Plant Health'} />
                     <View style={{
                         flexDirection: 'row',
@@ -61,7 +62,8 @@ export default function DetailsScreen({ item, handleBack }) {
                                 </TouchableOpacity>}
                         </View>
                     </View>
-                </View>
+                </View> */}
+                {/* end plant health */}
                 <View style={styles.box}>
                     <DrawHeader src={require('../../assets/ic_key_features.png')} text={'Key Facts'} />
                     {

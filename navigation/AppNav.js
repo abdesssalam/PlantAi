@@ -5,9 +5,10 @@ import SettingsScreen from "../pages/SettingsScreen";
 import AboutScreen from "../pages/AboutScreen";
 import CustomDrawer from "../components/Drawer/CustomDrawer";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faCircleInfo, faGear, faHouse, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo, faGear, faHouse, faPlantWilt, faUser } from "@fortawesome/free-solid-svg-icons";
 import { StyleSheet } from "react-native";
 import HomeNav from "./HomeNav";
+import MyPlantsScreen from "../pages/MyPlantsScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -18,10 +19,11 @@ const AppNav = () => {
             <Drawer.Screen name="Home" component={HomeNav}
                 options={{ drawerIcon: () => <FontAwesomeIcon icon={faHouse} size={25} color="#06fe87" /> }}
             />
+            <Drawer.Screen name="My Plants" component={MyPlantsScreen}
+                options={{ drawerIcon: () => <FontAwesomeIcon icon={faPlantWilt} size={25} color="#06fe87" /> }} />
             <Drawer.Screen name="Account" component={AccountScreen}
                 options={{ drawerIcon: () => <FontAwesomeIcon icon={faUser} size={25} color="#06fe87" /> }} />
-            <Drawer.Screen name="Settings" component={SettingsScreen}
-                options={{ drawerIcon: () => <FontAwesomeIcon icon={faGear} size={25} color="#06fe87" /> }} />
+
             <Drawer.Screen name="About" component={AboutScreen}
                 options={{ drawerIcon: () => <FontAwesomeIcon icon={faCircleInfo} size={25} color="#06fe87" /> }} />
         </Drawer.Navigator>
