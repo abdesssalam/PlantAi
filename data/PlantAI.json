@@ -1,6 +1,5 @@
-export const plantsData = [
-
-    {
+{
+    "Apple": {
         "general": {
             "id": 39,
             "name": "Apple",
@@ -51,7 +50,7 @@ export const plantsData = [
         },
         "Description": "Apples are a popular fruit that come in a variety of colors and flavors. They are rich in fiber and antioxidants, and are often used in desserts, salads, and other dishes. Apples grow on trees that are typically small to medium in size and are native to Central Asia."
     },
-    {
+    "Avocado": {
         "general": {
             "id": 67,
             "name": "Avocado",
@@ -102,7 +101,7 @@ export const plantsData = [
         },
         "Description": "Avocado is a popular fruit that is high in healthy fats, fiber, and essential vitamins and minerals. It is commonly used in salads, sandwiches, and guacamole. Avocado trees are evergreen and can grow up to 12 meters tall. They are native to Central and South America, and are now cultivated in many parts of the world."
     },
-    {
+    "Banana": {
         "general": {
             "id": 12,
             "name": "Banana",
@@ -150,7 +149,7 @@ export const plantsData = [
         },
         "Description": "Bananas are a popular fruit that are high in potassium, fiber, and essential vitamins and minerals. They are commonly eaten fresh, but can also be used in baking and cooking. Banana plants are perennial herbs that grow up to 8 meters tall. They are native to tropical regions of Southeast Asia, but are now grown in many parts of the world."
     },
-    {
+    "Bell_Pepper": {
         "general": {
             "id": 17,
             "name": "Bell Pepper",
@@ -203,7 +202,7 @@ export const plantsData = [
         },
         "Description": "Bell peppers, also known as sweet peppers, are a popular vegetable that are rich in vitamins and antioxidants. They are typically eaten raw or cooked, and come in a range of colors, including green, red, yellow, and orange. Bell pepper plants are annuals that grow up to 75 cm tall, and are native to Central and South America."
     },
-    {
+    "Broad_Bean": {
         "general": {
             "id": 46,
             "name": "Broad Bean",
@@ -254,7 +253,7 @@ export const plantsData = [
         },
         "Description": "Broad beans, also known as fava beans, are a type of legume that are high in protein, fiber, and other nutrients. They are typically eaten cooked, and can be used in a variety of dishes, including soups, stews, and salads. Broad bean plants are annuals that grow up to 90 cm tall, and are native to the Mediterranean region."
     },
-    {
+    "Cabbage": {
         "general": {
             "id": 47,
             "name": "Cabbage",
@@ -304,7 +303,7 @@ export const plantsData = [
         },
         "Description": "Cabbage is a leafy green or purple biennial vegetable that is grown for its tightly packed clusters of leaves, which are eaten cooked or raw. Cabbage is a good source of vitamins C and K, and can be used in a variety of dishes, including salads, soups, and stews. Cabbage plants are biennials that can grow up to 90 cm tall, and are native to Europe and Asia."
     },
-    {
+    "Cantaloupe": {
         "general": {
             "id": 58,
             "name": "Cantaloupe",
@@ -353,7 +352,7 @@ export const plantsData = [
         },
         "Description": "Cantaloupe is a type of muskmelon that is grown for its sweet and juicy fruit. It is a good source of vitamins A and C, and is commonly eaten fresh or used in fruit salads, smoothies, and desserts. Cantaloupe plants are annuals that can grow up to 45 cm tall and spread up to 1.5 m wide, and are native to Africa and South Asia."
     },
-    {
+    "Carrot": {
         "general": {
             "id": 10,
             "name": "Carrot",
@@ -403,7 +402,7 @@ export const plantsData = [
         },
         "Description": "Carrots are root vegetables that are rich in vitamins and minerals, particularly vitamin A. They are commonly eaten raw or cooked, and can be used in a variety of dishes such as soups, stews, and salads. Carrots are biennial plants that can grow up to 60 cm tall and 30 cm wide, and are native to Europe and southwestern Asia."
     },
-    {
+    "Cauliflower": {
         "general": {
             "id": 11,
             "name": "Cauliflower",
@@ -455,7 +454,7 @@ export const plantsData = [
         },
         "Description": "Cauliflower is a cruciferous vegetable that is rich in vitamins and minerals, particularly vitamin C and folate. It is commonly eaten raw or cooked, and can be used in a variety of dishes such as stir-fries, soups, and salads. Cauliflower plants can grow up to 60 cm tall and 45 cm wide, and are native to the Mediterranean region."
     },
-    {
+    "Corn_Maize": {
         "general": {
             "id": 35,
             "name": "Corn",
@@ -504,56 +503,7 @@ export const plantsData = [
         },
         "Description": "Corn is a tall, annual grass that is grown for its edible seeds, which are commonly known as corn or maize. It is used in a wide variety of food products and is also used as animal feed and for biofuel production. Corn is a good source of carbohydrates, fiber, and essential vitamins and minerals."
     },
-    {
-        "general": {
-            "id": 35,
-            "name": "Corn Maize",
-            "species": "Zea mays",
-            "scientific_name": "Zea mays",
-            "image_url": "Corn_Maize.jpg"
-        },
-        "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
-            ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
-            ]
-        },
-        "characteristics": {
-            "Mature Plant": {
-                "Plant height": "1.5-2.5 m",
-                "Spread": "0.6-0.9 m",
-                "Leaf Color": [
-                    "Green"
-                ]
-            },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
-                ],
-                "Flower Color": [
-                    "Yellow"
-                ]
-            },
-            "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Early fall"
-                ],
-                "Fruit Color": [
-                    "Yellow",
-                    "White"
-                ]
-            }
-        },
-        "Description": "Corn is a tall, annual grass that is grown for its edible seeds, which are commonly known as corn or maize. It is used in a wide variety of food products and is also used as animal feed and for biofuel production. Corn is a good source of carbohydrates, fiber, and essential vitamins and minerals."
-    },
-    {
+    "Cucumber": {
         "general": {
             "id": 36,
             "name": "Cucumber",
@@ -609,7 +559,7 @@ export const plantsData = [
         },
         "Description": "Cucumber is a widely cultivated plant in the gourd family, Cucurbitaceae. It is a creeping vine that bears cucumiform fruits that are used as vegetables. Cucumbers are low in calories and high in water content, making them a great addition to salads and other dishes. They also contain various vitamins and minerals that are beneficial for overall health."
     },
-    {
+    "Eggplant": {
         "general": {
             "id": 22,
             "name": "Eggplant",
@@ -664,7 +614,7 @@ export const plantsData = [
         },
         "Description": "Eggplant is a plant species in the nightshade family. It is grown for its edible fruit, which is commonly used in cooking in many different cuisines. The fruit comes in a variety of shapes, sizes, and colors, depending on the cultivar. Eggplants are low in calories and high in fiber, vitamins, and minerals, making them a nutritious addition to a healthy diet."
     },
-    {
+    "Grape": {
         "general": {
             "id": 45,
             "name": "Grape",
@@ -716,7 +666,7 @@ export const plantsData = [
         },
         "Description": "Grapes are a type of fruit that grow on vines. They are commonly used for making wine, juice, and raisins. Grapes are high in antioxidants and other nutrients, and are a good source of fiber. There are many different types of grapes, each with their own unique flavor and texture."
     },
-    {
+    "Green_Bean": {
         "general": {
             "id": 68,
             "name": "Green Bean",
@@ -764,7 +714,7 @@ export const plantsData = [
         },
         "description": "Green bean, also known as snap bean or string bean, is a popular vegetable that is grown for its tender, immature pods. They are usually harvested before the seeds inside fully develop. Green beans are a good source of dietary fiber, vitamins, and minerals. They can be eaten raw or cooked and are commonly used in salads, stir-fries, and casseroles."
     },
-    {
+    "Mango": {
         "general": {
             "id": 1,
             "name": "Mango",
@@ -818,7 +768,7 @@ export const plantsData = [
         },
         "Description": "Mango is a tropical fruit tree that is native to South Asia. It is widely cultivated for its sweet, juicy fruit, which is a good source of vitamins and minerals. Mango trees are large and can grow up to 40 meters tall. The fruit is typically harvested in the summer and fall, and comes in a variety of colors and shapes depending on the variety."
     },
-    {
+    "Melon": {
         "general": {
             "id": 57,
             "name": "Melon",
@@ -869,7 +819,7 @@ export const plantsData = [
         },
         "Description": "Melon is a juicy, sweet fruit that is a popular summer treat. It belongs to the Cucurbitaceae family and is closely related to cucumbers, squash, and pumpkins. Melons come in many varieties, including honeydew, cantaloupe, and watermelon. They are a good source of vitamins A and C, as well as potassium and dietary fiber."
     },
-    {
+    "Onion": {
         "general": {
             "id": 40,
             "name": "Onion",
@@ -923,7 +873,7 @@ export const plantsData = [
         },
         "Description": "Onion is a biennial plant grown for its edible bulb. It is widely used in cooking and is a staple ingredient in many dishes. Onions are rich in vitamins, minerals, and antioxidants, and have many health benefits. They are easy to grow and can be planted in the fall or spring."
     },
-    {
+    "Orange": {
         "general": {
             "id": 41,
             "name": "Orange",
@@ -973,7 +923,7 @@ export const plantsData = [
         },
         "Description": "The orange is a fruit that grows on citrus trees. It is a popular fruit around the world, and is known for its sweet and tangy taste. Oranges are high in vitamin C and other nutrients, and are often used in juices, jams, and other food products. There are many different varieties of oranges, including navel oranges and Valencia oranges."
     },
-    {
+    "Peach": {
         "general": {
             "id": 78,
             "name": "Peach",
@@ -1025,7 +975,7 @@ export const plantsData = [
         },
         "Description": "The peach is a deciduous fruit tree native to China that is widely grown for its sweet, juicy fruit. Peaches are rich in vitamins, minerals, and antioxidants, and are a good source of dietary fiber. They are eaten fresh, canned, or dried, and are used in a variety of dishes, including desserts, salads, and main courses."
     },
-    {
+    "Pomegranate": {
         "general": {
             "id": 51,
             "name": "Pomegranate",
@@ -1077,7 +1027,7 @@ export const plantsData = [
         },
         "Description": "Pomegranate is a deciduous fruit tree that is native to the Middle East, but is now widely cultivated in many parts of the world. The tree produces a fruit that is round and about the size of an apple, with a thick, leathery skin and a crown of calyx lobes at the top. The fruit is filled with small, juicy, red seeds that are surrounded by a tart, fleshy pulp. Pomegranates are a good source of fiber, vitamins, and minerals, and have been used for their medicinal properties for centuries."
     },
-    {
+    "Potato": {
         "general": {
             "id": 48,
             "name": "Potato",
@@ -1131,7 +1081,7 @@ export const plantsData = [
         },
         "Description": "Potatoes are starchy root vegetables that are a staple food in many parts of the world. They are rich in carbohydrates, vitamins, and minerals, and are a good source of dietary fiber. Potatoes are used in a wide variety of dishes, including mashed potatoes, french fries, and potato chips."
     },
-    {
+    "Strawberry": {
         "general": {
             "id": 43,
             "name": "Strawberry",
@@ -1181,7 +1131,7 @@ export const plantsData = [
         },
         "Description": "Strawberries are a popular fruit that are enjoyed all over the world. They are a good source of vitamin C, fiber, and antioxidants. Strawberries are typically eaten fresh, but they can also be used in a variety of desserts and drinks, such as smoothies and ice cream."
     },
-    {
+    "Tomato": {
         "general": {
             "id": 50,
             "name": "Tomato",
@@ -1190,7 +1140,7 @@ export const plantsData = [
             "image_url": "Tomato.jpg"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
+            "plant_type": "Fruit",
             "life_span": "Annual",
             "preferred_conditions": [
                 "Full sun",
@@ -1232,7 +1182,7 @@ export const plantsData = [
         },
         "description": "Tomatoes are a popular fruit that are commonly used in cooking and eaten raw in salads. They are a rich source of vitamins and minerals, including vitamin C and potassium. Tomatoes come in a variety of colors, shapes, and sizes, and can be grown in many different climates."
     },
-    {
+    "Watermelon": {
         "general": {
             "id": 43,
             "name": "Watermelon",
@@ -1284,7 +1234,7 @@ export const plantsData = [
         },
         "Description": "Watermelon is a large, juicy fruit that is high in water content and low in calories. It is a good source of vitamins A and C, as well as potassium and lycopene. Watermelon is commonly eaten raw as a refreshing snack or used in salads, smoothies, and other dishes."
     },
-    {
+    "Zucchini": {
         "general": {
             "id": 41,
             "name": "Zucchini",
@@ -1334,13 +1284,4 @@ export const plantsData = [
         },
         "Description": "Zucchini is a summer squash that is harvested while still immature and small. It is a popular vegetable that is commonly used in cooking and is known for its mild flavor and soft texture. Zucchini is low in calories and a good source of vitamin C, fiber, and potassium."
     }
-
-]
-
-export const userPlants = [
-    {
-        user: 1,
-        img: 'image-1-12023791',
-        name: 'tomato'
-    }
-]
+}

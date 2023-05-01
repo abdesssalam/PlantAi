@@ -14,8 +14,8 @@ const DrawHeader = ({ src, text }) => {
 const DrawFact = ({ title, text }) => {
     return (
         <View style={{ flexDirection: 'row', justifyContent: "space-between", marginVertical: 10, flexWrap: 'wrap' }}>
-            <Text style={{ fontSize: 16, color: '#000' }}>{title}</Text>
-            <Text style={{ fontSize: 16, fontWeight: '700', color: '#000' }}>{text}</Text>
+            <Text style={{ fontSize: 16, color: '#000', textTransform: 'capitalize' }}>{title}</Text>
+            <Text style={{ fontSize: 16, fontWeight: '700', color: '#000', alignSelf: 'flex-end' }}>{text}</Text>
         </View>
     )
 }
@@ -24,19 +24,19 @@ const DrawFact = ({ title, text }) => {
 const PreviewScreen = ({ route, navigation }) => {
 
     const item = route.params.item
-    if (item === 'undefined') {
-        return <View><Text>no data</Text></View>
-    }
+    // if (item === 'undefined') {
+    //     return <View><Text>no data</Text></View>
+    // }
     let idItem = item.general.id;
-
+    console.log(`https://planntai.000webhostapp.com/imgs/${item['img']}`)
     return (
         <ScrollView>
             <View style={styles.container}>
 
-                <Image source={{ uri: `https://planntai.000webhostapp.com/imgs/${idItem}.JPG` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
+                <Image source={{ uri: `https://planntai.000webhostapp.com/imgs/${item['img']}` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
                 <View style={styles.card}>
-                    <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>{item.general.name}</Text>
-                    <Text style={{ textAlign: 'justify', fontSize: 14, lineHeight: 21, color: '#000' }}>{item.Description}</Text>
+                    <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>{item?.general.name}</Text>
+                    <Text style={{ textAlign: 'justify', fontSize: 14, lineHeight: 21, color: '#000' }}>{item?.Description}</Text>
                 </View>
                 {/* plant health */}
                 {/* <View style={styles.box}>

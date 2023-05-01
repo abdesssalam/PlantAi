@@ -3,14 +3,19 @@ import React from 'react'
 
 import MyPlantEmpty from '../components/myplants/MyPlantEmpty'
 
-import { getDiseaseData } from '../services/PlantsService'
+import { getDiseaseData, getUserGarden } from '../services/PlantsService'
 import ShowListPlants from '../components/myplants/ShowListPlants'
-
+import { useIsFocused } from "@react-navigation/native";
 
 export default function HistoryScreen() {
 
-    const data = getDiseaseData();
-
+    const [data, setData] = React.useState([])
+    const isFocused = useIsFocused();
+    React.useEffect(() => {
+        if (isFocused) {
+            setData(getUserGarden())
+        }
+    }, [isFocused]);
 
     return data.length > 0 ? <ShowListPlants data={data} /> : <MyPlantEmpty />
 }

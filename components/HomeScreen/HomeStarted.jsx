@@ -120,7 +120,7 @@ export default function HomeStarted({ handleClickedItem }) {
                     <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Popular Plants</Text>
 
                     <SafeAreaView style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        {popularPlantsData.map(item => <DrawCard key={item.id} text={item.title} imgSrc={item.img} height={80} width={180} handlePress={handleClickedItem} />)}
+                        {popularPlantsData.map(item => <DrawCard key={item.id} text={item.title} imgSrc={item.img} height={80} width={150} handlePress={handleClickedItem} />)}
 
                     </SafeAreaView>
                 </View>

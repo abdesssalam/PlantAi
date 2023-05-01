@@ -77,12 +77,12 @@ const DrawBodyItem = ({ Itemkey, val, icon }) => {
 
 
             }}>{Itemkey} : </Text>
-            <Text style={{ fontSize: 20 }}>{val} </Text>
+            <Text style={{ fontSize: 20, color: '#000' }}>{val} </Text>
         </View>
     )
 }
 const DrawAccountBody = ({ user }) => {
-
+    console.log(user)
     return (
         <View
             style={{

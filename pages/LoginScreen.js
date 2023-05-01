@@ -45,11 +45,11 @@ export default function LoginScreen({ navigation }) {
                 </Text>
                 <View style={styles.inputWrapper}>
                     <FontAwesomeIcon style={styles.inpuIcon} icon={faEnvelope} />
-                    <TextInput style={styles.input} defaultValue={email} placeholder='E-Mail' onChangeText={val => setEmail(val)} />
+                    <TextInput style={styles.input} defaultValue={email} placeholder='E-Mail' placeholderTextColor="#6666" onChangeText={val => setEmail(val)} />
                 </View>
                 <View style={styles.inputWrapper}>
                     <FontAwesomeIcon style={styles.inpuIcon} icon={faLock} />
-                    <TextInput secureTextEntry={true} style={styles.input} defaultValue={password} placeholder='Password' onChangeText={val => setPassword(val)} />
+                    <TextInput secureTextEntry={true} style={styles.input} defaultValue={password} placeholder='Password' placeholderTextColor="#6666" onChangeText={val => setPassword(val)} />
                 </View>
                 <TouchableOpacity style={styles.forgetWrapper} onPress={() => navigation.navigate('Home')}>
                     <Text style={styles.forget}>forget password ?</Text>
@@ -74,7 +74,8 @@ export default function LoginScreen({ navigation }) {
 
                 }}>
                     <Text style={{
-                        fontSize: 18
+                        fontSize: 18,
+                        color: '#000'
                     }}
                     >Don't have account? </Text>
                     <TouchableOpacity onPress={() => { navigation.navigate('Register') }}>

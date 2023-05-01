@@ -1,39 +1,61 @@
 'use strict';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import React, { Component } from 'react'
-import { AppRegistry, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import { plantsData } from '../data/Plants';
-
+import { store } from '../redux/store';
+import { connect } from 'react-redux';
 import ImagePicker from 'react-native-image-crop-picker';
 import axios from 'axios';
-import { getSingleItem } from '../services/PlantsService';
+import { SaveUserPlant, getSingleItem } from '../services/PlantsService';
+
+
+
 export default class CameraScreen extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            showIndicator: false,
+            user: store.getState().user
+        }
+
+    }
+    componentDidMount() {
+
+        console.log(this.state.user);
+    }
+
 
     render() {
         return (
             <View style={{ flex: 1 }}>
-                <RNCamera
-                    ref={ref => {
-                        this.camera = ref;
-                    }}
-                    style={styles.preview}
-                    type={RNCamera.Constants.Type.back} androidCameraPermissionOptions={{
-                        title: 'Permission to use camera',
-                        message: 'We need your permission to use your camera',
-                        buttonPositive: 'Ok',
-                        buttonNegative: 'Cancel',
-                    }}
-                    androidRecordAudioPermissionOptions={{
-                        title: 'Permission to use audio recording',
-                        message: 'We need your permission to use your audio',
-                        buttonPositive: 'Ok',
-                        buttonNegative: 'Cancel',
-                    }}
+                {this.state.showIndicator == false &&
+                    <RNCamera
+                        ref={ref => {
+                            this.camera = ref;
+                        }}
+                        style={styles.preview}
+                        type={RNCamera.Constants.Type.back} androidCameraPermissionOptions={{
+                            title: 'Permission to use camera',
+                            message: 'We need your permission to use your camera',
+                            buttonPositive: 'Ok',
+                            buttonNegative: 'Cancel',
+                        }}
+                        androidRecordAudioPermissionOptions={{
+                            title: 'Permission to use audio recording',
+                            message: 'We need your permission to use your audio',
+                            buttonPositive: 'Ok',
+                            buttonNegative: 'Cancel',
+                        }}
 
-                />
+                    />
+                }
+                {this.state.showIndicator && <ActivityIndicator size="large" style={{ position: 'absolute', top: 150, left: 150 }} />}
+
                 <Image source={require('../assets/cameraRectangle.png')} style={{ width: 350, height: 350, alignSelf: 'center', position: 'absolute', top: 50 }} />
                 <View style={styles.footer}>
+
                     <TouchableOpacity style={styles.btn} onPress={this.handleOpenGallery}>
                         <Image source={require('../assets/cameraPhotos.png')} />
                         <Text style={{ fontSize: 16, marginTop: 5 }}>Photos</Text>
@@ -74,29 +96,44 @@ export default class CameraScreen extends Component {
 
             console.log('send data....')
             this.uploadImage(img.path, img.mime)
-        })
+        }).catch(err => console.log(err))
     }
 
     uploadImage = async (url, mime) => {
-
+        this.setState({ showIndicator: true })
         const formData = new FormData();
+        let y = new Date()
+        let name = `image-${this.state.user.id}-${"" + y.getDay() + y.getFullYear() + y.getUTCMilliseconds()}`
         formData.append('remark', 'remark')
         formData.append('file', {
             uri: url,
-            name: `image-${new Date().getUTCMilliseconds().toString()}`,
+            name: name,
             type: mime,
         })
         try {
 
 
+            const res1 = await axios({
+                method: 'POST',
+                url: 'https://planntai.000webhostapp.com/save.php',
+                data: formData,
+                headers: { "Content-Type": "multipart/form-data" },
+            })
+            console.log('res 1...')
+            console.log(res1)
             const res = await axios({
                 method: 'POST',
                 url: 'https://061f-160-176-197-152.ngrok-free.app/file/upload/',
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
             })
+            console.log(res.data)
+            this.setState({ showIndicator: false })
             let item = getSingleItem(res.data.Name);
+            item = { ...item, ...{ img: name } }
+            console.log(item)
             if (item !== 'undefined') {
+                SaveUserPlant(this.state.user.id, name, item.general.name)
                 this.props.navigation.navigate('preview', { item: item })
             }
 
@@ -108,6 +145,12 @@ export default class CameraScreen extends Component {
 
     }
 }
+
+
+
+
+
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -147,3 +190,5 @@ const styles = StyleSheet.create({
     }
 
 });
+
+

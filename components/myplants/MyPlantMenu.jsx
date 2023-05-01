@@ -39,7 +39,7 @@ export default function MyPlantMenu({ hide, windowHeight }) {
     const showItems = items.map((item) => {
         return (
             <TouchableOpacity onPress={hide} style={{ borderBottomWidth: 1, borderBottomColor: '#6666', width: '100%', paddingVertical: 8, alignItems: 'center' }}>
-                <Text key={item.id} style={{ fontWeight: '700', color: item.color, fontSize: 22 }}>
+                <Text key={item.title} style={{ fontWeight: '700', color: item.color, fontSize: 22 }}>
                     {item.title}</Text>
             </TouchableOpacity>
         )

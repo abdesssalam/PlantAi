@@ -24,6 +24,8 @@ const DrawFact = ({ title, text }) => {
 }
 
 export default function DetailsScreen({ item, handleBack }) {
+    console.log('details :')
+    console.log(item.img)
     return (
         <ScrollView>
             <View style={styles.container}>
@@ -41,7 +43,7 @@ export default function DetailsScreen({ item, handleBack }) {
                     <FontAwesomeIcon icon={faArrowLeft} size={50} />
                 </TouchableOpacity>
 
-                <Image source={{ uri: `https://planntai.000webhostapp.com/imgs/${item.general.id}.JPG` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
+                <Image source={{ uri: `https://planntai.000webhostapp.com/imgs/${item['img']}` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
                 <View style={styles.card}>
                     <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>{item.general.name}</Text>
                     <Text style={{ textAlign: 'justify', fontSize: 14, lineHeight: 21, color: '#000' }}>{item.Description}</Text>

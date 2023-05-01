@@ -9,7 +9,7 @@ function FormInput({ icon, value, placeholder, secure, action, Objkey }) {
     return (
         <View style={styles.inputWrapper}>
             <FontAwesomeIcon style={styles.inpuIcon} icon={icon} />
-            <TextInput secureTextEntry={secure} style={styles.input} value={value} placeholder={placeholder} onChangeText={handleChange} />
+            <TextInput secureTextEntry={secure} style={styles.input} value={value} placeholder={placeholder} placeholderTextColor="#6666" onChangeText={handleChange} />
         </View>
     )
 }
