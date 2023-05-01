@@ -10,7 +10,7 @@ export default function MyPlantsScreen({ route, navigation }) {
     const [data, setData] = React.useState([])
     const isFocused = useIsFocused();
     React.useEffect(() => {
-        console.log("called");
+
 
         // Call only when screen open or when back on screen 
         if (isFocused) {

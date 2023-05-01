@@ -6,7 +6,7 @@ export const plantsData = [
             "name": "Apple",
             "species": "Malus domestica",
             "scientific_name": "Malus domestica",
-            "image_url": "Apple.jpg"
+            "image": "Apple.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -57,7 +57,7 @@ export const plantsData = [
             "name": "Avocado",
             "species": "Persea americana",
             "scientific_name": "Persea americana",
-            "image_url": "Avocado.jpg"
+            "image": "Avocado.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -108,7 +108,7 @@ export const plantsData = [
             "name": "Banana",
             "species": "Musa acuminata",
             "scientific_name": "Musa acuminata",
-            "image_url": "Banana.jpg"
+            "image": "Banana.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -156,7 +156,7 @@ export const plantsData = [
             "name": "Bell Pepper",
             "species": "Capsicum annuum",
             "scientific_name": "Capsicum annuum",
-            "image_url": "Bell_Pepper.jpg"
+            "image": "Bell_Pepper.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -209,7 +209,7 @@ export const plantsData = [
             "name": "Broad Bean",
             "species": "Vicia faba",
             "scientific_name": "Vicia faba",
-            "image_url": "Broad_Bean.jpg"
+            "image": "Broad_Bean.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -260,7 +260,7 @@ export const plantsData = [
             "name": "Cabbage",
             "species": "Brassica oleracea",
             "scientific_name": "Brassica oleracea var. capitata",
-            "image_url": "Cabbage.jpg"
+            "image": "Cabbage.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -310,7 +310,7 @@ export const plantsData = [
             "name": "Cantaloupe",
             "species": "Cucumis melo",
             "scientific_name": "Cucumis melo var. cantalupensis",
-            "image_url": "Cantaloupe.jpg"
+            "image": "Cantaloupe.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -359,7 +359,7 @@ export const plantsData = [
             "name": "Carrot",
             "species": "Daucus carota",
             "scientific_name": "Daucus carota subsp. sativus",
-            "image_url": "Carrot.jpg"
+            "image": "Carrot.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -409,7 +409,7 @@ export const plantsData = [
             "name": "Cauliflower",
             "species": "Brassica oleracea",
             "scientific_name": "Brassica oleracea var. botrytis",
-            "image_url": "Cauliflower.jpg"
+            "image": "Cauliflower.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -455,62 +455,14 @@ export const plantsData = [
         },
         "Description": "Cauliflower is a cruciferous vegetable that is rich in vitamins and minerals, particularly vitamin C and folate. It is commonly eaten raw or cooked, and can be used in a variety of dishes such as stir-fries, soups, and salads. Cauliflower plants can grow up to 60 cm tall and 45 cm wide, and are native to the Mediterranean region."
     },
-    {
-        "general": {
-            "id": 35,
-            "name": "Corn",
-            "species": "Zea mays",
-            "scientific_name": "Zea mays",
-            "image_url": "Corn_Maize.jpg"
-        },
-        "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
-            ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
-            ]
-        },
-        "characteristics": {
-            "Mature Plant": {
-                "Plant height": "1.5-2.5 m",
-                "Spread": "0.6-0.9 m",
-                "Leaf Color": [
-                    "Green"
-                ]
-            },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
-                ],
-                "Flower Color": [
-                    "Yellow"
-                ]
-            },
-            "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Early fall"
-                ],
-                "Fruit Color": [
-                    "Yellow",
-                    "White"
-                ]
-            }
-        },
-        "Description": "Corn is a tall, annual grass that is grown for its edible seeds, which are commonly known as corn or maize. It is used in a wide variety of food products and is also used as animal feed and for biofuel production. Corn is a good source of carbohydrates, fiber, and essential vitamins and minerals."
-    },
+
     {
         "general": {
             "id": 35,
             "name": "Corn Maize",
             "species": "Zea mays",
             "scientific_name": "Zea mays",
-            "image_url": "Corn_Maize.jpg"
+            "image": "Corn_Maize.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -559,7 +511,7 @@ export const plantsData = [
             "name": "Cucumber",
             "species": "Cucumis sativus",
             "scientific_name": "Cucumis sativus",
-            "image_url": "Cucumber.jpg"
+            "image": "Cucumber.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -615,7 +567,7 @@ export const plantsData = [
             "name": "Eggplant",
             "species": "Solanum melongena",
             "scientific_name": "Solanum melongena",
-            "image_url": "Eggplant.jpg"
+            "image": "Eggplant.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -670,7 +622,7 @@ export const plantsData = [
             "name": "Grape",
             "species": "Vitis vinifera",
             "scientific_name": "Vitis vinifera",
-            "image_url": "Grape.jpg"
+            "image": "Grape.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -722,7 +674,7 @@ export const plantsData = [
             "name": "Green Bean",
             "species": "Phaseolus vulgaris",
             "scientific_name": "Phaseolus vulgaris",
-            "image_url": "Green_Bean.jpg"
+            "image": "Green_Bean.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -770,7 +722,7 @@ export const plantsData = [
             "name": "Mango",
             "species": "Mangifera indica",
             "scientific_name": "Mangifera indica",
-            "image_url": "Mango.jpg"
+            "image": "Mango.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit tree",
@@ -824,7 +776,7 @@ export const plantsData = [
             "name": "Melon",
             "species": "Cucumis melo",
             "scientific_name": "Cucumis melo",
-            "image_url": "Melon.jpg"
+            "image": "Melon.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -875,7 +827,7 @@ export const plantsData = [
             "name": "Onion",
             "species": "Allium cepa",
             "scientific_name": "Allium cepa",
-            "image_url": "Onion.jpg"
+            "image": "Onion.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -929,7 +881,7 @@ export const plantsData = [
             "name": "Orange",
             "species": "Citrus × sinensis",
             "scientific_name": "Citrus × sinensis",
-            "image_url": "Orange.jpg"
+            "image": "Orange.jpg"
         },
         "key_facts": {
             "Plant Type": "Tree",
@@ -979,7 +931,7 @@ export const plantsData = [
             "name": "Peach",
             "species": "Prunus persica",
             "scientific_name": "Prunus persica",
-            "image_url": "Peach.jpg"
+            "image": "Peach.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit tree",
@@ -1031,7 +983,7 @@ export const plantsData = [
             "name": "Pomegranate",
             "species": "Punica granatum",
             "scientific_name": "Punica granatum",
-            "image_url": "Pomegranate.jpg"
+            "image": "Pomegranate.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -1083,7 +1035,7 @@ export const plantsData = [
             "name": "Potato",
             "species": "Solanum tuberosum",
             "scientific_name": "Solanum tuberosum",
-            "image_url": "Potato.jpg"
+            "image": "Potato.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -1137,7 +1089,7 @@ export const plantsData = [
             "name": "Strawberry",
             "species": "Fragaria × ananassa",
             "scientific_name": "Fragaria × ananassa",
-            "image_url": "Strawberry.jpg"
+            "image": "Strawberry.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -1187,11 +1139,11 @@ export const plantsData = [
             "name": "Tomato",
             "species": "Solanum lycopersicum",
             "scientific_name": "Solanum lycopersicum",
-            "image_url": "Tomato.jpg"
+            "image": "Tomato.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit",
-            "life_span": "Annual",
+            "life span": "Annual",
             "preferred_conditions": [
                 "Full sun",
                 "Well-drained soil"
@@ -1202,27 +1154,27 @@ export const plantsData = [
             ]
         },
         "characteristics": {
-            "mature_plant": {
-                "plant_height": "1-3 meters",
+            "mature plant": {
+                "plant height": "1-3 meters",
                 "spread": "0.5-1 meter",
-                "leaf_color": [
+                "leaf color": [
                     "Green"
                 ]
             },
             "flower": {
-                "bloom_time": [
+                "bloom time": [
                     "Summer"
                 ],
-                "flower_color": [
+                "flower color": [
                     "Yellow"
                 ]
             },
             "fruit": {
-                "harvest_time": [
+                "harvest time": [
                     "Summer",
                     "Fall"
                 ],
-                "fruit_color": [
+                "fruit color": [
                     "Red",
                     "Yellow",
                     "Green",
@@ -1238,7 +1190,7 @@ export const plantsData = [
             "name": "Watermelon",
             "species": "Citrullus lanatus",
             "scientific_name": "Citrullus lanatus",
-            "image_url": "Watermelon.jpg"
+            "image": "Watermelon.jpg"
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -1290,7 +1242,7 @@ export const plantsData = [
             "name": "Zucchini",
             "species": "Cucurbita pepo",
             "scientific_name": "Cucurbita pepo subsp. pepo",
-            "image_url": "Zucchini.jpg"
+            "image": "Zucchini.jpg"
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -1340,7 +1292,7 @@ export const plantsData = [
 export const userPlants = [
     {
         user: 1,
-        img: 'image-1-12023791',
+        img: '/media/image-1-12023528',
         name: 'tomato'
     }
 ]

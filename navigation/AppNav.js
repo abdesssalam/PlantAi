@@ -9,6 +9,7 @@ import { faCircleInfo, faGear, faHouse, faPlantWilt, faUser } from "@fortawesome
 import { StyleSheet } from "react-native";
 import HomeNav from "./HomeNav";
 import MyPlantsScreen from "../pages/MyPlantsScreen";
+import PlantHealth from "../components/myplants/PlantHealth";
 
 const Drawer = createDrawerNavigator();
 

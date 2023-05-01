@@ -1,9 +1,11 @@
-import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faClock, faEnvelope, faPhone, faTimes, faUser } from '@fortawesome/free-solid-svg-icons'
-
+import ImagePicker from 'react-native-image-crop-picker';
+import axios from 'axios'
+import { SaveUserPlant, getSingleItem } from '../services/PlantsService'
 
 const DrawHeader = ({ user }) => {
 
@@ -67,6 +69,7 @@ const DrawBodyItem = ({ Itemkey, val, icon }) => {
 
             }}
         >
+
             <FontAwesomeIcon icon={icon} size={30} style={{ marginRight: 15 }} color='#666' />
             <Text style={{
                 fontSize: 18,
@@ -104,16 +107,80 @@ const DrawAccountBody = ({ user }) => {
         </View>
     )
 }
-export default function ProfileScreen() {
+export default function ProfileScreen({ navigation }) {
     const user = useSelector(state => state.user)
+
+    const uploadImage = async (url, mime) => {
+
+        // this.setState({ showIndicator: true })
+        const formData = new FormData();
+        let y = new Date()
+        let name = `image-${user.id}-${"" + y.getDay() + y.getFullYear() + y.getUTCMilliseconds()}`
+        formData.append('remark', 'remark')
+        formData.append('file', {
+            uri: url,
+            name: name,
+            type: mime,
+        })
+        try {
+
+
+            const res1 = await axios({
+                method: 'POST',
+                url: 'https://planntai.000webhostapp.com/save.php',
+                data: formData,
+                headers: { "Content-Type": "multipart/form-data" },
+            })
+            console.log('res 1...')
+            console.log(res1)
+            const res = await axios({
+                method: 'POST',
+                url: 'https://061f-160-176-197-152.ngrok-free.app/file/upload/',
+                data: formData,
+                headers: { "Content-Type": "multipart/form-data" },
+            })
+            console.log(res.data)
+            // this.setState({ showIndicator: false })
+            let item = getSingleItem(res.data.Name);
+            item = { ...item, ...{ img: name } }
+            console.log(item)
+            if (item !== 'undefined') {
+                // SaveUserPlant(this.state.user.id, name, item.general.name)
+                navigation.navigate('preview', { item: item })
+            }
+
+            console.log(res.data.Name)
+        } catch (err) {
+            console.log(err)
+        }
+
+
+    }
+
     return (
         <View style={styles.container} >
+
             <DrawHeader user={user} />
 
             <DrawAccountBody user={user} />
+            {/* <TouchableOpacity style={{ backgroundColor: 'red' }} onPress={() => {
+                ImagePicker.openCamera({
+                    width: 300,
+                    height: 400,
+                    cropping: true,
+                }).then(image => {
+                    uploadImage(image.path, image.mime)
+                    // console.log(image);
+                }).catch(err => {
+                    console.log(err)
+                });
+            }}>
+                <Text>open test</Text>
+            </TouchableOpacity> */}
         </View>
     )
 }
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,

@@ -1,5 +1,7 @@
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { useIsFocused } from "@react-navigation/native";
+import PlantHealth from '../components/myplants/PlantHealth'
 
 const DrawHeader = ({ src, text }) => {
     return (
@@ -22,39 +24,54 @@ const DrawFact = ({ title, text }) => {
 
 
 const PreviewScreen = ({ route, navigation }) => {
+    const [showHealth, setShowHealth] = React.useState(false)
+    const isFocused = useIsFocused();
+    React.useEffect(() => {
+        if (isFocused) {
+            setShowHealth(false)
 
+        }
+    }, [isFocused]);
     const item = route.params.item
-    // if (item === 'undefined') {
-    //     return <View><Text>no data</Text></View>
-    // }
+
+    const handleClick = () => {
+        console.log('clicked')
+        setShowHealth(true)
+    }
     let idItem = item.general.id;
-    console.log(`https://planntai.000webhostapp.com/imgs/${item['img']}`)
+    console.log("url: ---" + showHealth)
+    return (showHealth === true ? <PlantHealth condition={item.Condition} plantName={item?.general.name} imgUrl={item['image_url']} /> : <RenderPreview item={item} handleClick={handleClick} />)
+}
+
+export default PreviewScreen
+
+const RenderPreview = ({ item, handleClick }) => {
     return (
         <ScrollView>
             <View style={styles.container}>
 
-                <Image source={{ uri: `https://planntai.000webhostapp.com/imgs/${item['img']}` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
+                <Image source={{ uri: `https://061f-160-176-197-152.ngrok-free.app${item['image_url']}` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
                 <View style={styles.card}>
                     <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>{item?.general.name}</Text>
                     <Text style={{ textAlign: 'justify', fontSize: 14, lineHeight: 21, color: '#000' }}>{item?.Description}</Text>
                 </View>
                 {/* plant health */}
-                {/* <View style={styles.box}>
+                <View style={styles.box}>
                     <DrawHeader src={require('../assets/ic_outline-monitor-heart.png')} text={'Plant Health'} />
                     <View style={{
                         flexDirection: 'row',
                         marginVertical: 10
                     }}>
-                        <Image source={{ uri: `https://planntai.000webhostapp.com/imgs/${idItem}.JPG` }} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
+                        <Image source={{ uri: `https://061f-160-176-197-152.ngrok-free.app${item['image_url']}` }} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
                         <View>
-                            <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 18, marginBottom: 8 }}>This plant looks ! <Text style={{ color: item.plant_health.Health === 'Healthy' ? '#30C67F' : '#FF0000' }}>{item.plant_health.Health}</Text></Text>
-                            {item.plant_health.Health !== 'Healthy' &&
-                                <TouchableOpacity style={styles.btn}>
-                                    <Text style={{ color: '#30C67F' }}>Check for Solutions</Text>
-                                </TouchableOpacity>}
+                            <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 18, marginBottom: 8 }}>This plant looks {item.Condition === 'Healthy' ? '' : 'has'}  <Text style={{ color: item.Condition === 'Healthy' ? '#30C67F' : '#FF0000' }}>{item.Condition}</Text></Text>
+
+                            <TouchableOpacity style={styles.btn} onPress={handleClick}>
+                                <Text style={{ color: '#30C67F' }}>Check for Solutions</Text>
+                            </TouchableOpacity>
                         </View>
                     </View>
-                </View> */}
+                </View>
                 {/* end plant health*/}
                 <View style={styles.box}>
                     <DrawHeader src={require('../assets/ic_key_features.png')} text={'Key Facts'} />
@@ -80,9 +97,6 @@ const PreviewScreen = ({ route, navigation }) => {
         </ScrollView>
     )
 }
-
-export default PreviewScreen
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,

@@ -84,7 +84,7 @@ export default function HomeStarted({ handleClickedItem }) {
 
     let guidData = [
         {
-            text: 'How to identify plants easily with PlantAi',
+            text: 'How to identify plants easily with AGRI AI',
             img: require('../../assets/cardBG1.png')
         },
         {

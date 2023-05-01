@@ -29,7 +29,7 @@ export default function AboutScreen() {
             }}>
                 <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#000', marginVertical: 20 }}>Contact US</Text>
                 <Text style={{ color: '#000', fontSize: 18 }}>+212696-145481</Text>
-                <Text style={{ color: '#000', fontSize: 18 }}>contact@plantia.ma</Text>
+                <Text style={{ color: '#000', fontSize: 18 }}>contact@agri-ai.ma</Text>
             </View>
             <View style={{ flexDirection: 'row', gap: 10, marginTop: 25 }}>
                 <View style={{

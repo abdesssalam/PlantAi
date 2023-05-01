@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import ImagePicker from 'react-native-image-crop-picker';
 import axios from 'axios';
 import { SaveUserPlant, getSingleItem } from '../services/PlantsService';
+import ImageCropPicker from 'react-native-image-crop-picker';
 
 
 
@@ -53,7 +54,7 @@ export default class CameraScreen extends Component {
                 }
                 {this.state.showIndicator && <ActivityIndicator size="large" style={{ position: 'absolute', top: 150, left: 150 }} />}
 
-                <Image source={require('../assets/cameraRectangle.png')} style={{ width: 350, height: 350, alignSelf: 'center', position: 'absolute', top: 50 }} />
+                <Image source={require('../assets/cameraRectangle.png')} style={{ width: 350, height: 350, left: 25, position: 'absolute', top: 50 }} />
                 <View style={styles.footer}>
 
                     <TouchableOpacity style={styles.btn} onPress={this.handleOpenGallery}>
@@ -76,9 +77,23 @@ export default class CameraScreen extends Component {
     takePicture = async () => {
         if (this.camera) {
             const options = { quality: 0.5, base64: true };
-            const data = await this.camera.takePictureAsync(options);
-
-            this.uploadImage(data.uri, 'image/jpeg')
+            const data = await this.camera.takePictureAsync({ quality: 0.5, base64: true, width: 300 });
+            const croppedImage = await ImageCropPicker.openCropper({
+                path: data.uri,
+                width: 350,
+                height: 350,
+                cropping: true,
+                cropperCircleOverlay: false,
+                showCropGuidelines: true,
+                showCropFrame: true,
+                initialCropRect: { // The initial crop rectangle in pixels
+                    originX: 50, // The x-coordinate of the top-left corner of the rectangle
+                    originY: 50, // The y-coordinate of the top-left corner of the rectangle
+                    width: 350, // The width of the rectangle
+                    height: 350 // The height of the rectangle
+                }
+            })
+            this.uploadImage(croppedImage.path, 'image/jpeg')
 
         }
         // setTimeout(() => {
@@ -113,14 +128,7 @@ export default class CameraScreen extends Component {
         try {
 
 
-            const res1 = await axios({
-                method: 'POST',
-                url: 'https://planntai.000webhostapp.com/save.php',
-                data: formData,
-                headers: { "Content-Type": "multipart/form-data" },
-            })
-            console.log('res 1...')
-            console.log(res1)
+
             const res = await axios({
                 method: 'POST',
                 url: 'https://061f-160-176-197-152.ngrok-free.app/file/upload/',
@@ -130,10 +138,10 @@ export default class CameraScreen extends Component {
             console.log(res.data)
             this.setState({ showIndicator: false })
             let item = getSingleItem(res.data.Name);
-            item = { ...item, ...{ img: name } }
-            console.log(item)
+            item = { ...item, ...res.data }
+
             if (item !== 'undefined') {
-                SaveUserPlant(this.state.user.id, name, item.general.name)
+                SaveUserPlant(this.state.user.id, res.data['image_url'], item.general.name,)
                 this.props.navigation.navigate('preview', { item: item })
             }
 

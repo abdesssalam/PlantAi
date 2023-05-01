@@ -7,7 +7,7 @@ export default function FormHeader() {
             <Image source={require('../assets/logo.png')}
                 style={styles.image}
             />
-            <Text style={styles.text}>PlantAI</Text>
+            <Text style={styles.text}>AGRI-AI.MA</Text>
 
         </View>
     )
