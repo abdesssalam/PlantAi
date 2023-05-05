@@ -11,6 +11,7 @@ import FormFooter from '../components/FormFooter';
 import FormBtn from '../components/FormBtn';
 import { useDispatch } from 'react-redux';
 import { registerService } from '../services/AuthService';
+import { LoginFailure, loginSuccess } from '../redux/actions';
 // import FormHeader from '../components/FormHeader';
 // import FormBtn from '../components/FormBtn';
 // import FormFooter from '../components/FormFooter';
@@ -33,8 +34,16 @@ function Register({ navigation }) {
         let u = { ...user, ...perm }
         setUser(u)
     }
-    const handleRegister = () => {
-        registerService(user, dispatch)
+    const handleRegister = async () => {
+        try {
+            const newUser = await registerService(user)
+            dispatch(loginSuccess(newUser))
+        } catch (error) {
+            dispatch(LoginFailure)
+
+        }
+
+
     }
     return (
         <ScrollView>

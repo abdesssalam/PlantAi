@@ -1,11 +1,13 @@
 import React from 'react'
 import DetailsScreen from './DetailsScreen'
 import ListPlants from './ListPlants'
+import PlantHealth from './PlantHealth'
 
 export default function ShowListPlants({ data }) {
 
 
     const [renderPreview, setRenderPreview] = React.useState(false)
+
     const [detailItem, setDetailItem] = React.useState(null)
     function handleback() {
         return true;
@@ -16,7 +18,7 @@ export default function ShowListPlants({ data }) {
     const handleItemClicked = (item) => {
         setDetailItem(item)
         setRenderPreview(true)
-
     }
+
     return renderPreview ? <DetailsScreen item={detailItem} handleBack={handleBack} /> : <ListPlants datalist={data} handleItemClicked={handleItemClicked} handleBackBtn={handleback} />
 }

@@ -1,7 +1,10 @@
 import { plantsData, userPlants } from '../data/Plants'
+import axios from 'axios';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+const BASE_URL = 'http://127.0.0.1:8000/api/'
 
 export const getHomePlants = (item) => {
-    return plantsData.filter(plant => plant.key_facts['plant type'] === item)
+    return plantsData.filter(plant => plant.key_facts['Plant Type'].toLowerCase() === item.toLowerCase())
 }
 
 export const getDiseaseData = () => {
@@ -15,7 +18,7 @@ export const getUserGarden = () => {
 
     data.forEach(d => {
         let item = plantsData.find(pl => pl.general.name.toUpperCase() == d.name.toUpperCase())
-        item = { ...item, ...{ img: d.img } }
+        item = { ...item, ...{ Condition: d.Condition, img: d.img } }
         console.log(item.img)
         toShow.push(item)
     })
@@ -29,11 +32,69 @@ export const getSingleItem = (name) => {
     return plantsData.find(plant => plant.general.name.toLocaleLowerCase() === name.toLocaleLowerCase())
 }
 
-export const SaveUserPlant = (id, img, name) => {
+export const SaveUserPlant = (id, img, name, condition) => {
     name = name.includes("_") ? name.replace("_", " ") : name
     userPlants.push({
         user: id,
         img: img,
-        name: name
+        name: name,
+        Condition: condition
     })
+
 }
+
+//API
+
+export const getPlants = async () => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+        const response = await axios.get(`${BASE_URL}/plants`, { headers: { Authorization: `Bearer ${token}` } });
+        const plants = response.data.plants;
+        return plants;
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+};
+
+export const createPlant = async (name, condition, img) => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+        const response = await axios.post(`${BASE_URL}/plants`, { name, condition, img }, { headers: { Authorization: `Bearer ${token}` } });
+        const plant = response.data.plant;
+        return plant;
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+};
+
+export const updatePlant = async (id, name, condition, img) => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+        const response = await axios.put(`${BASE_URL}/plants/${id}`, { name, condition, img }, { headers: { Authorization: `Bearer ${token}` } });
+        const plant = response.data.plant;
+        return plant;
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+};
+
+export const deletePlant = async (id) => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+        await axios.delete(`${BASE_URL}/plants/${id}`, { headers: { Authorization: `Bearer ${token}` } });
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+};

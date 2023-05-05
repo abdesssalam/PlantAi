@@ -1,10 +1,27 @@
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react'
 
 
 import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity } from 'react-native';
 
+const SHOW_ON_BOARDING_SCREEN = "SHOW_ON_BOARDING_SCREEN";
 export default function OnBoardingScreen({ navigation }) {
+
+    React.useEffect(() => {
+        async function isShowed() {
+            const show = await AsyncStorage.getItem(SHOW_ON_BOARDING_SCREEN)
+            console.log(show)
+            if (show) {
+
+                navigation.navigate('Login')
+            } else {
+
+                await AsyncStorage.setItem(SHOW_ON_BOARDING_SCREEN, "true")
+            }
+        }
+        isShowed()
+    }, [])
+
     return (
         <View style={styles.container}>
             <ImageBackground
@@ -23,7 +40,7 @@ export default function OnBoardingScreen({ navigation }) {
 
 
                 <Text style={styles.paragraph}>
-                    PlantAI is a mobile application that helps
+                    AGRI-AI is a mobile application that helps
                     identify and diagnose plant diseases. The app
                     works by using artificial intelligence and
                     machine learning algorithms to analyze
@@ -31,7 +48,6 @@ export default function OnBoardingScreen({ navigation }) {
                     disease or damage
                 </Text>
                 <TouchableOpacity style={styles.btn} onPress={() => {
-                    console.log('logiin')
                     navigation.navigate('Login')
                 }}>
                     <Text style={styles.text}>Start</Text>

@@ -139,9 +139,10 @@ export default class CameraScreen extends Component {
             this.setState({ showIndicator: false })
             let item = getSingleItem(res.data.Name);
             item = { ...item, ...res.data }
-
+            console.log("medel data===")
+            console.log(res.data)
             if (item !== 'undefined') {
-                SaveUserPlant(this.state.user.id, res.data['image_url'], item.general.name,)
+                SaveUserPlant(this.state.user.id, res.data['image_url'], item.general.name, res.data['Condition'])
                 this.props.navigation.navigate('preview', { item: item })
             }
 

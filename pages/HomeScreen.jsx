@@ -5,7 +5,7 @@ import { plantsData } from '../data/Plants'
 import { HomePlants, getHomePlants } from '../services/PlantsService'
 import ListPlants from '../components/myplants/ListPlants'
 import DetailsScreen from '../components/myplants/DetailsScreen'
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 export default function HomeScreen() {
   const [show, setShow] = React.useState(false)
   const [item, setItem] = React.useState('')

@@ -1,11 +1,13 @@
-import { View, Text, ScrollView, StyleSheet, Image } from 'react-native'
+import { View, Text, ScrollView, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faNotesMedical } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faNotesMedical } from '@fortawesome/free-solid-svg-icons'
 import { disessData } from '../../data/disessData'
 
-export default function PlantHealth({ plantName, condition, imgUrl }) {
+export default function PlantHealth({ plantName, condition, imgUrl, handleBack }) {
+
     let plant = disessData[plantName];
+
     return (
         <ScrollView
             style={{ flex: 1 }}
@@ -20,8 +22,21 @@ export default function PlantHealth({ plantName, condition, imgUrl }) {
 
                 }}
             >
+                <TouchableOpacity onPress={handleBack} style={{
 
-                <Image source={{ uri: 'https://061f-160-176-197-152.ngrok-free.app' + imgUrl }} style={{ width: 150, height: 150 }} />
+                    // position:'absolute',
+                    alignSelf: 'flex-start',
+                    backgroundColor: 'rgba(102,102,102,0.4)',
+                    borderRadius: 10,
+                    paddingHorizontal: 15,
+                    paddingVertical: 5,
+                    marginLeft: 15
+
+                }}>
+                    <FontAwesomeIcon icon={faArrowLeft} size={50} />
+                </TouchableOpacity>
+
+
 
                 <View
                     style={{
@@ -33,6 +48,7 @@ export default function PlantHealth({ plantName, condition, imgUrl }) {
                         paddingHorizontal: 15
                     }}
                 >
+
                     <FontAwesomeIcon icon={faNotesMedical} size={30} color='#666' />
                     <Text
                         style={{
@@ -43,6 +59,10 @@ export default function PlantHealth({ plantName, condition, imgUrl }) {
                         }}
                     >Plant Health State</Text>
                 </View>
+
+                <Image
+                    source={{ uri: 'https://061f-160-176-197-152.ngrok-free.app' + imgUrl }}
+                    style={{ width: '80%', height: 150, borderRadius: 10 }} />
                 <View style={{
                     width: '100%',
                     flexDirection: 'row',
@@ -89,14 +109,13 @@ export default function PlantHealth({ plantName, condition, imgUrl }) {
                         }}>Disess Name : </Text>
                         <Text
                             style={{
-                                // color: '#269460',
                                 color: '#EC4F4F',
                                 fontSize: 22,
                                 fontWeight: '700'
 
                             }}
-                        // >Healthy</Text>
-                        >Canker</Text>
+
+                        >{condition.replace("_", " ")}</Text>
                     </View>
                 }
                 {/* if not health */}
@@ -137,27 +156,40 @@ const DrawSection = ({ itemKey, itemVal }) => {
     return (
         <View
             style={{
-                padding: 10
+                padding: 10,
+                width: '90%'
             }}
         >
             <Text
                 style={{
-                    color: '#000',
+                    color: '#666',
                     fontSize: 22,
                     fontWeight: '600',
                     marginBottom: 8,
                 }}
-            >{itemKey}</Text>
-            <Text
+            >{itemKey.replace("_", " ")}</Text>
+            <View
                 style={{
-                    color: '#666',
-                    fontSize: 18,
-                    lineHeight: 25,
-                    textAlign: 'justify'
+                    // borderWidth: 0.5,
+                    // borderColor: '#666',
+                    borderRadius: 10,
+                    padding: 10,
+                    backgroundColor: '#cde9cd',
+                    elevation: 10
                 }}
             >
-                {itemVal}
-            </Text>
+                <Text
+                    style={{
+                        color: '#000',
+                        fontSize: 18,
+                        lineHeight: 25,
+                        textAlign: 'justify'
+                    }}
+                >
+                    {itemVal}
+                </Text>
+            </View>
+
         </View>
     )
 }

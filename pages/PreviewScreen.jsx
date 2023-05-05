@@ -35,12 +35,13 @@ const PreviewScreen = ({ route, navigation }) => {
     const item = route.params.item
 
     const handleClick = () => {
-        console.log('clicked')
+
         setShowHealth(true)
     }
-    let idItem = item.general.id;
-    console.log("url: ---" + showHealth)
-    return (showHealth === true ? <PlantHealth condition={item.Condition} plantName={item?.general.name} imgUrl={item['image_url']} /> : <RenderPreview item={item} handleClick={handleClick} />)
+    const handleBackHealth = () => {
+        setShowHealth(false)
+    }
+    return (showHealth === true ? <PlantHealth handleBack={handleBackHealth} condition={item.Condition} plantName={item?.general.name} imgUrl={item['image_url']} /> : <RenderPreview item={item} handleClick={handleClick} />)
 }
 
 export default PreviewScreen
@@ -60,11 +61,12 @@ const RenderPreview = ({ item, handleClick }) => {
                     <DrawHeader src={require('../assets/ic_outline-monitor-heart.png')} text={'Plant Health'} />
                     <View style={{
                         flexDirection: 'row',
-                        marginVertical: 10
+                        marginVertical: 10,
+                        marginRight: 10,
                     }}>
                         <Image source={{ uri: `https://061f-160-176-197-152.ngrok-free.app${item['image_url']}` }} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
                         <View>
-                            <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 18, marginBottom: 8 }}>This plant looks {item.Condition === 'Healthy' ? '' : 'has'}  <Text style={{ color: item.Condition === 'Healthy' ? '#30C67F' : '#FF0000' }}>{item.Condition}</Text></Text>
+                            <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 14, marginBottom: 8 }}>This plant looks {item.Condition === 'Healthy' ? '' : 'has'}  <Text style={{ color: item.Condition === 'Healthy' ? '#30C67F' : '#FF0000' }}>{item.Condition.replace("_", " ")}</Text></Text>
 
                             <TouchableOpacity style={styles.btn} onPress={handleClick}>
                                 <Text style={{ color: '#30C67F' }}>Check for Solutions</Text>

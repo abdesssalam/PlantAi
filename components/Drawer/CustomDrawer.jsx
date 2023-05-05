@@ -5,13 +5,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import { useSelector, useDispatch } from 'react-redux'
 import { LOGIN_FAILURE, LoginFailure } from '../../redux/actions'
+import { userLogout } from '../../services/AuthService'
+
 // import { TouchableOpacity } from 'react-native-gesture-handler'
 // import { BlurView } from '@react-native-community/blur'
 export default function CustomDrawer(props) {
     const user = useSelector(state => state.user)
     const dispatch = useDispatch();
-    const Logout = () => {
-        dispatch({ type: LOGIN_FAILURE })
+    const Logout = async () => {
+        try {
+            const res = await userLogout()
+            dispatch({ type: LOGIN_FAILURE })
+        } catch (e) {
+
+        }
+
 
     }
     return (

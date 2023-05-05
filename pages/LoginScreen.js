@@ -8,25 +8,33 @@ import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { loginService } from '../services/AuthService';
 import { useDispatch, useSelector } from 'react-redux';
 import { Snackbar, Button } from '@react-native-material/core';
+import { LoginFailure, loginSuccess, setToken } from '../redux/actions';
 
 export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const dispatch = useDispatch()
-    const auth = useSelector(state => state.isAuth)
     const [showSnack, setShowSnack] = useState(false)
 
-    const handlLogin = () => {
+    const handlLogin = async () => {
+        try {
+            const data = await loginService(email, password);
 
-        loginService(email, password, dispatch)
+            dispatch(loginSuccess(data.user))
+            dispatch(setToken(data.token))
 
-        if (!auth) {
+        } catch (err) {
+
+            dispatch(LoginFailure())
             setShowSnack(true)
             setTimeout(() => {
                 setShowSnack(false)
             }, 3000)
         }
     }
+
+
+
 
 
 

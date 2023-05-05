@@ -6,7 +6,7 @@ export const plantsData = [
             "name": "Apple",
             "species": "Malus domestica",
             "scientific_name": "Malus domestica",
-            "image": "Apple.jpg"
+            "image": require("../assets/plants/Apple.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -57,7 +57,7 @@ export const plantsData = [
             "name": "Avocado",
             "species": "Persea americana",
             "scientific_name": "Persea americana",
-            "image": "Avocado.jpg"
+            "image": require("../assets/plants/Avocado.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -108,7 +108,7 @@ export const plantsData = [
             "name": "Banana",
             "species": "Musa acuminata",
             "scientific_name": "Musa acuminata",
-            "image": "Banana.jpg"
+            "image": require("../assets/plants/Banana.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -156,7 +156,7 @@ export const plantsData = [
             "name": "Bell Pepper",
             "species": "Capsicum annuum",
             "scientific_name": "Capsicum annuum",
-            "image": "Bell_Pepper.jpg"
+            "image": require("../assets/plants/Bell_Pepper.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -209,7 +209,7 @@ export const plantsData = [
             "name": "Broad Bean",
             "species": "Vicia faba",
             "scientific_name": "Vicia faba",
-            "image": "Broad_Bean.jpg"
+            "image": require("../assets/plants/Broad_Bean.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -260,7 +260,7 @@ export const plantsData = [
             "name": "Cabbage",
             "species": "Brassica oleracea",
             "scientific_name": "Brassica oleracea var. capitata",
-            "image": "Cabbage.jpg"
+            "image": require("../assets/plants/Cabbage.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -310,7 +310,7 @@ export const plantsData = [
             "name": "Cantaloupe",
             "species": "Cucumis melo",
             "scientific_name": "Cucumis melo var. cantalupensis",
-            "image": "Cantaloupe.jpg"
+            "image": require("../assets/plants/Cantaloupe.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -359,7 +359,7 @@ export const plantsData = [
             "name": "Carrot",
             "species": "Daucus carota",
             "scientific_name": "Daucus carota subsp. sativus",
-            "image": "Carrot.jpg"
+            "image": require("../assets/plants/Carrot.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -409,7 +409,7 @@ export const plantsData = [
             "name": "Cauliflower",
             "species": "Brassica oleracea",
             "scientific_name": "Brassica oleracea var. botrytis",
-            "image": "Cauliflower.jpg"
+            "image": require("../assets/plants/Cauliflower.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -462,7 +462,7 @@ export const plantsData = [
             "name": "Corn Maize",
             "species": "Zea mays",
             "scientific_name": "Zea mays",
-            "image": "Corn_Maize.jpg"
+            "image": require("../assets/plants/Corn_Maize.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -511,7 +511,7 @@ export const plantsData = [
             "name": "Cucumber",
             "species": "Cucumis sativus",
             "scientific_name": "Cucumis sativus",
-            "image": "Cucumber.jpg"
+            "image": require("../assets/plants/Cucumber.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -567,7 +567,7 @@ export const plantsData = [
             "name": "Eggplant",
             "species": "Solanum melongena",
             "scientific_name": "Solanum melongena",
-            "image": "Eggplant.jpg"
+            "image": require("../assets/plants/Eggplant.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -622,7 +622,7 @@ export const plantsData = [
             "name": "Grape",
             "species": "Vitis vinifera",
             "scientific_name": "Vitis vinifera",
-            "image": "Grape.jpg"
+            "image": require("../assets/plants/Grape.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -674,7 +674,7 @@ export const plantsData = [
             "name": "Green Bean",
             "species": "Phaseolus vulgaris",
             "scientific_name": "Phaseolus vulgaris",
-            "image": "Green_Bean.jpg"
+            "image": require("../assets/plants/Green_Bean.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -722,7 +722,7 @@ export const plantsData = [
             "name": "Mango",
             "species": "Mangifera indica",
             "scientific_name": "Mangifera indica",
-            "image": "Mango.jpg"
+            "image": require("../assets/plants/Mango.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit tree",
@@ -776,7 +776,7 @@ export const plantsData = [
             "name": "Melon",
             "species": "Cucumis melo",
             "scientific_name": "Cucumis melo",
-            "image": "Melon.jpg"
+            "image": require("../assets/plants/Melon.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -827,7 +827,7 @@ export const plantsData = [
             "name": "Onion",
             "species": "Allium cepa",
             "scientific_name": "Allium cepa",
-            "image": "Onion.jpg"
+            "image": require("../assets/plants/Onion.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -881,7 +881,7 @@ export const plantsData = [
             "name": "Orange",
             "species": "Citrus × sinensis",
             "scientific_name": "Citrus × sinensis",
-            "image": "Orange.jpg"
+            "image": require("../assets/plants/Orange.jpg")
         },
         "key_facts": {
             "Plant Type": "Tree",
@@ -931,7 +931,7 @@ export const plantsData = [
             "name": "Peach",
             "species": "Prunus persica",
             "scientific_name": "Prunus persica",
-            "image": "Peach.jpg"
+            "image": require("../assets/plants/Peach.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit tree",
@@ -983,7 +983,7 @@ export const plantsData = [
             "name": "Pomegranate",
             "species": "Punica granatum",
             "scientific_name": "Punica granatum",
-            "image": "Pomegranate.jpg"
+            "image": require("../assets/plants/Pomegranate.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -1035,7 +1035,7 @@ export const plantsData = [
             "name": "Potato",
             "species": "Solanum tuberosum",
             "scientific_name": "Solanum tuberosum",
-            "image": "Potato.jpg"
+            "image": require("../assets/plants/Potato.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -1089,7 +1089,7 @@ export const plantsData = [
             "name": "Strawberry",
             "species": "Fragaria × ananassa",
             "scientific_name": "Fragaria × ananassa",
-            "image": "Strawberry.jpg"
+            "image": require("../assets/plants/Strawberry.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -1139,7 +1139,7 @@ export const plantsData = [
             "name": "Tomato",
             "species": "Solanum lycopersicum",
             "scientific_name": "Solanum lycopersicum",
-            "image": "Tomato.jpg"
+            "image": require("../assets/plants/Tomato.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -1190,7 +1190,7 @@ export const plantsData = [
             "name": "Watermelon",
             "species": "Citrullus lanatus",
             "scientific_name": "Citrullus lanatus",
-            "image": "Watermelon.jpg"
+            "image": require("../assets/plants/Watermelon.jpg")
         },
         "key_facts": {
             "Plant Type": "Fruit",
@@ -1242,7 +1242,7 @@ export const plantsData = [
             "name": "Zucchini",
             "species": "Cucurbita pepo",
             "scientific_name": "Cucurbita pepo subsp. pepo",
-            "image": "Zucchini.jpg"
+            "image": require("../assets/plants/Zucchini.jpg")
         },
         "key_facts": {
             "Plant Type": "Vegetable",
@@ -1290,9 +1290,10 @@ export const plantsData = [
 ]
 
 export const userPlants = [
-    {
-        user: 1,
-        img: '/media/image-1-12023528',
-        name: 'tomato'
-    }
+    // {
+    //     user: 1,
+    //     img: '/media/image-1-12023528',
+    //     name: 'tomato',
+    //     condition:'Healthy'
+    // }
 ]

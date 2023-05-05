@@ -2,15 +2,25 @@
 import React from 'react'
 import AuthNav from './navigation/AuthNav';
 import AppNav from './navigation/AppNav';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserData } from './services/AuthService';
+import { loginSuccess } from './redux/actions';
+
 
 export default function MainRoute() {
     const isAuth = useSelector(state => state.isAuth);
     const [route, setRoute] = React.useState(<AuthNav />)
+    const dispatch = useDispatch()
     React.useEffect(() => {
-        console.log(isAuth)
+        async function getUser() {
+            try {
+                const user = await getUserData();
+                dispatch(loginSuccess(user))
+            } catch (er) {
+            }
+        }
+        getUser()
         setRoute(isAuth ? <AppNav /> : <AuthNav />)
-        console.log('route')
     }, [isAuth])
     return route
 
