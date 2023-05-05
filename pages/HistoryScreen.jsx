@@ -12,8 +12,15 @@ export default function HistoryScreen() {
     const [data, setData] = React.useState([])
     const isFocused = useIsFocused();
     React.useEffect(() => {
+        async function getData() {
+            const plants = await getUserGarden();
+            setData(plants)
+        }
         if (isFocused) {
-            setData(getUserGarden())
+
+            getData()
+            console.log("history")
+            console.log(data)
         }
     }, [isFocused]);
 

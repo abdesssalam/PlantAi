@@ -10,11 +10,14 @@ export default function MyPlantsScreen({ route, navigation }) {
     const [data, setData] = React.useState([])
     const isFocused = useIsFocused();
     React.useEffect(() => {
-
-
-        // Call only when screen open or when back on screen 
+        async function getData() {
+            const plants = await getUserGarden();
+            setData(plants)
+        }
         if (isFocused) {
-            setData(getUserGarden())
+
+            getData()
+            console.log("history")
             console.log(data)
         }
     }, [isFocused]);

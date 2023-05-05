@@ -8,7 +8,7 @@ import { store } from '../redux/store';
 import { connect } from 'react-redux';
 import ImagePicker from 'react-native-image-crop-picker';
 import axios from 'axios';
-import { SaveUserPlant, getSingleItem } from '../services/PlantsService';
+import { SaveUserPlant, createPlant, getSingleItem } from '../services/PlantsService';
 import ImageCropPicker from 'react-native-image-crop-picker';
 
 
@@ -142,6 +142,11 @@ export default class CameraScreen extends Component {
             console.log("medel data===")
             console.log(res.data)
             if (item !== 'undefined') {
+                const plant = await createPlant(res.data.Name, res.data.Condition, res.data['image_url'])
+                console.log("plaaant API")
+                console.log(plant)
+                console.log("plaaant API")
+
                 SaveUserPlant(this.state.user.id, res.data['image_url'], item.general.name, res.data['Condition'])
                 this.props.navigation.navigate('preview', { item: item })
             }
