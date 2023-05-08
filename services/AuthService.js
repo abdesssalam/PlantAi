@@ -11,8 +11,17 @@ const BASE_URL = 'http://10.0.2.2:8000/api'
 
 export const registerService = async (user) => {
     try {
-        const response = await axios.post(`${BASE_URL}/register`, user);
+        console.log("registerService")
+        console.log(user)
+        console.log("registerService")
+        const response = await axios.post(`${BASE_URL}/register`, user)
+            .catch(er => console.log(er));
 
+        // console.log(response.data)
+
+        const token = response.data.access_token;
+        await AsyncStorage.setItem('token', token);
+        console.log(response.data.user)
         return response.data.user;
     } catch (error) {
         throw new Error(error.response.data.message);
@@ -42,7 +51,6 @@ export const getUserData = async () => {
     try {
         const token = await AsyncStorage.getItem('token');
         if (!token) {
-            console.log("tryyyy")
             throw new Error('No token found');
         }
 
@@ -56,16 +64,13 @@ export const getUserData = async () => {
 
 export const userLogout = async () => {
     try {
-        console.log("logout")
+
         const token = await AsyncStorage.getItem('token');
         if (!token) {
             throw new Error('No token found');
         }
-
         const response = await axios.post(`${BASE_URL}/logout`, {}, { headers: { Authorization: `Bearer ${token}` } }).catch(er => console.log(er));
         await AsyncStorage.removeItem('token')
-        console.log("logout response")
-        console.log(response)
         return response.data
     } catch (error) {
         throw new Error(error.response.data.message);

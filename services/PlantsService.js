@@ -17,9 +17,11 @@ export const getUserGarden = async () => {
     let toShow = []
 
     data.forEach(d => {
-
+        console.log("dddddddddddddddddd")
+        console.log(d)
+        console.log("dddddddddddddddddd")
         let item = plantsData.find(pl => pl.general.name.toUpperCase() == d.name.toUpperCase())
-        item = { ...item, ...{ Condition: d.Condition, img: d.img } }
+        item = { ...item, ...{ Condition: d.condition, img: d.img } }
         console.log(item)
         toShow.push(item)
     })

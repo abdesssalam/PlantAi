@@ -3,10 +3,11 @@ import React from 'react'
 
 
 import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import { DrawSplashScreen } from './SplashScreen';
 
 const SHOW_ON_BOARDING_SCREEN = "SHOW_ON_BOARDING_SCREEN";
 export default function OnBoardingScreen({ navigation }) {
-
+    const [showScreen, setshowScreen] = React.useState(false)
     React.useEffect(() => {
         async function isShowed() {
             const show = await AsyncStorage.getItem(SHOW_ON_BOARDING_SCREEN)
@@ -15,7 +16,8 @@ export default function OnBoardingScreen({ navigation }) {
 
                 navigation.navigate('Login')
             } else {
-
+                console.log("alredy")
+                setshowScreen(true)
                 await AsyncStorage.setItem(SHOW_ON_BOARDING_SCREEN, "true")
             }
         }
@@ -24,37 +26,40 @@ export default function OnBoardingScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <ImageBackground
-                source={require('../assets/onBoarding.png')}
-                resizeMode='cover'
-                style={styles.background} >
+            {showScreen ?
+                <ImageBackground
+                    source={require('../assets/onBoarding.png')}
+                    resizeMode='cover'
+                    style={styles.background} >
 
 
 
 
-                <Image
-                    source={require('../assets/LogoWhite.png')}
-                    resizeMode='contain'
-                    style={styles.image}
-                />
+                    <Image
+                        source={require('../assets/LogoWhite.png')}
+                        resizeMode='contain'
+                        style={styles.image}
+                    />
 
 
-                <Text style={styles.paragraph}>
-                    AGRI-AI is a mobile application that helps
-                    identify and diagnose plant diseases. The app
-                    works by using artificial intelligence and
-                    machine learning algorithms to analyze
-                    images of plants and detect any signs of
-                    disease or damage
-                </Text>
-                <TouchableOpacity style={styles.btn} onPress={() => {
-                    navigation.navigate('Login')
-                }}>
-                    <Text style={styles.text}>Start</Text>
-                </TouchableOpacity>
+                    <Text style={styles.paragraph}>
+                        AGRI-AI is a mobile application that helps
+                        identify and diagnose plant diseases. The app
+                        works by using artificial intelligence and
+                        machine learning algorithms to analyze
+                        images of plants and detect any signs of
+                        disease or damage
+                    </Text>
+                    <TouchableOpacity style={styles.btn} onPress={() => {
+                        navigation.navigate('Login')
+                    }}>
+                        <Text style={styles.text}>Start</Text>
+                    </TouchableOpacity>
 
 
-            </ImageBackground>
+                </ImageBackground>
+                : <DrawSplashScreen />
+            }
 
         </View>
     )

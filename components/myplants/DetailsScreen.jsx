@@ -36,6 +36,8 @@ export default function DetailsScreen({ item, handleBack }) {
     return renderHealth ? <PlantHealth handleBack={handleBackHealth} condition={item.Condition} imgUrl={item.img} plantName={item.general.name} /> : <DrawDetailsScreen item={item} handleBack={handleBack} handleRenderHealth={handleRenderHealth} />
 }
 const DrawDetailsScreen = ({ item, handleBack, handleRenderHealth }) => {
+    console.log("DrawDetailsScreen")
+    console.log(item)
     return (
         <ScrollView>
             <View style={styles.container}>

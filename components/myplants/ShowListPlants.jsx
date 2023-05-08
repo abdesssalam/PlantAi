@@ -4,7 +4,9 @@ import ListPlants from './ListPlants'
 import PlantHealth from './PlantHealth'
 
 export default function ShowListPlants({ data }) {
-
+    console.log("ShowListPlants 0")
+    console.log(data[0])
+    console.log("ShowListPlants 0")
 
     const [renderPreview, setRenderPreview] = React.useState(false)
 

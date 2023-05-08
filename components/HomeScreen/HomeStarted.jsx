@@ -1,10 +1,20 @@
-import { View, Text, StyleSheet, TextInput, FlatList, ScrollView, SafeAreaView, TouchableOpacity, ImageBackground } from 'react-native'
+import { View, Dimensions, Text, StyleSheet, TextInput, FlatList, ScrollView, SafeAreaView, TouchableOpacity, ImageBackground, PixelRatio } from 'react-native'
 import React, { useState } from 'react'
 
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import Card from '../Card'
 import { useSelector } from 'react-redux'
+
+
+const WINDOW_WIDTH = Dimensions.get("window").width;
+const WINDOW_HEIGHT = Dimensions.get("window").height;
+const scale = WINDOW_WIDTH / 320;
+const normalizeFont = (size) => {
+    const newSize = size * scale;
+    return Math.round(PixelRatio.roundToNearestPixel(newSize));
+}
+
 
 const DrawCard = ({ text, width, height, imgSrc, handlePress }) => {
     return (
@@ -111,16 +121,16 @@ export default function HomeStarted({ handleClickedItem }) {
                     , <Text style={{ color: '#000' }}>{user?.firstName}</Text>
                 </Text>
                 <View style={{ width: '95%', marginVertical: 15 }}>
-                    <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Get Started</Text>
+                    <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: normalizeFont(18) }}>Get Started</Text>
 
-                    <FlatList horizontal={true} data={guidData} renderItem={({ item }) => <Card text={item.text} imgSrc={item.img} width={260} height={130} />} />
+                    <FlatList horizontal={true} data={guidData} renderItem={({ item }) => <Card text={item.text} imgSrc={item.img} width={WINDOW_WIDTH * 0.60} height={WINDOW_WIDTH * 0.30} />} />
 
                 </View>
                 <View style={{ width: '95%' }}>
-                    <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: 18 }}>Popular Plants</Text>
+                    <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: normalizeFont(18) }}>Popular Plants</Text>
 
                     <SafeAreaView style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        {popularPlantsData.map(item => <DrawCard key={item.id} text={item.title} imgSrc={item.img} height={80} width={150} handlePress={handleClickedItem} />)}
+                        {popularPlantsData.map(item => <DrawCard key={item.id} text={item.title} imgSrc={item.img} height={WINDOW_WIDTH * 0.20} width={WINDOW_WIDTH * 0.45} handlePress={handleClickedItem} />)}
 
                     </SafeAreaView>
                 </View>

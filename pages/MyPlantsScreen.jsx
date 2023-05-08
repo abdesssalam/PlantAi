@@ -17,8 +17,6 @@ export default function MyPlantsScreen({ route, navigation }) {
         if (isFocused) {
 
             getData()
-            console.log("history")
-            console.log(data)
         }
     }, [isFocused]);
 

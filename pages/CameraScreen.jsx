@@ -1,11 +1,9 @@
 'use strict';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import React, { Component } from 'react'
 import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { RNCamera } from 'react-native-camera';
-import { plantsData } from '../data/Plants';
+
 import { store } from '../redux/store';
-import { connect } from 'react-redux';
 import ImagePicker from 'react-native-image-crop-picker';
 import axios from 'axios';
 import { SaveUserPlant, createPlant, getSingleItem } from '../services/PlantsService';
@@ -22,10 +20,7 @@ export default class CameraScreen extends Component {
         }
 
     }
-    componentDidMount() {
 
-        console.log(this.state.user);
-    }
 
 
     render() {
@@ -135,7 +130,7 @@ export default class CameraScreen extends Component {
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
             })
-            console.log(res.data)
+
             this.setState({ showIndicator: false })
             let item = getSingleItem(res.data.Name);
             item = { ...item, ...res.data }
