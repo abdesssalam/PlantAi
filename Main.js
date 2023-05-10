@@ -5,9 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 
 
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
-import MainRoute from './MainRoute';
-import SplashScreen from './pages/SplashScreen';
+import { store } from './src/redux/store';
+import AuthNavigator from './src/navigation/AuthNavigator';
 
 export default function App() {
 
@@ -15,7 +14,7 @@ export default function App() {
         <Provider store={store}>
             <NavigationContainer>
 
-                <SplashScreen />
+                <AuthNavigator />
             </NavigationContainer>
         </Provider>
     )
