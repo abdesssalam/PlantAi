@@ -66,7 +66,7 @@ export const disessData = {
                     "Pruning": "Pinch off growing tips to encourage branching",
                     "Harvesting": "Harvest when pods are plump but not yet fully mature",
                     "Storage": "Store in a cool, dry place for up to a week",
-                    "Pests_and_Diseases": "Aphids, bean weevils, chocolate spot, black fly, spider mites, and rust"
+                    "pests and diseases": "Aphids, bean weevils, chocolate spot, black fly, spider mites, and rust"
                 }
             },
             "Chocolate_Spot": {
@@ -83,7 +83,7 @@ export const disessData = {
                     "Pruning": "Pinch off growing tips to encourage branching",
                     "Harvesting": "Harvest when pods are plump but not yet fully mature",
                     "Storage": "Store in a cool, dry place for up to a week",
-                    "Pests_and_Diseases": "Aphids, bean weevils, chocolate spot, black fly, spider mites, and rust"
+                    "pests and diseases": "Aphids, bean weevils, chocolate spot, black fly, spider mites, and rust"
                 }
             }
         }
@@ -206,7 +206,7 @@ export const disessData = {
                     "pruning": "removing suckers and lower leaves",
                     "harvesting": "when ears feel plump and kernels release a milky liquid when punctured",
                     "storage": "refrigerate or freeze for best storage",
-                    "pests_and_diseases": "common pests include cutworms, corn earworms, and armyworms. Diseases include common rust, blight, and gray leaf spot"
+                    "pests and diseases": "common pests include cutworms, corn earworms, and armyworms. Diseases include common rust, blight, and gray leaf spot"
                 }
             },
             "Common_Rust": {
@@ -223,7 +223,7 @@ export const disessData = {
                     "pruning": "removing suckers and lower leaves",
                     "harvesting": "when ears feel plump and kernels release a milky liquid when punctured",
                     "storage": "refrigerate or freeze for best storage",
-                    "pests_and_diseases": "common pests include cutworms, corn earworms, and armyworms. Diseases include common rust, blight, and gray leaf spot"
+                    "pests and diseases": "common pests include cutworms, corn earworms, and armyworms. Diseases include common rust, blight, and gray leaf spot"
                 }
             },
             "Blight": {
@@ -240,7 +240,7 @@ export const disessData = {
                     "pruning": "removing suckers and lower leaves",
                     "harvesting": "when ears feel plump and kernels release a milky liquid when punctured",
                     "storage": "refrigerate or freeze for best storage",
-                    "pests_and_diseases": "common pests include cutworms, corn earworms, and armyworms. Diseases include common rust, blight, and gray leaf spot"
+                    "pests and diseases": "common pests include cutworms, corn earworms, and armyworms. Diseases include common rust, blight, and gray leaf spot"
                 }
             },
             "Gray_Leaf_Spot": {
@@ -257,7 +257,7 @@ export const disessData = {
                     "pruning": "removing suckers and lower leaves",
                     "harvesting": "when ears feel plump and kernels release a milky liquid when punctured",
                     "storage": "refrigerate or freeze for best storage",
-                    "pests_and_diseases": "common pests include cutworms, corn earworms, and armyworms. Diseases include common rust, blight, and gray leaf spot"
+                    "pests and diseases": "common pests include cutworms, corn earworms, and armyworms. Diseases include common rust, blight, and gray leaf spot"
                 }
             }
         }
@@ -495,7 +495,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Early_Blight": {
@@ -512,7 +512,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Late_Blight": {
@@ -529,7 +529,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Septoria_Leaf_Spot": {
@@ -546,7 +546,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Blossom_End_Rot": {
@@ -563,7 +563,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Rot": {
@@ -580,7 +580,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Tomato_Yellow_Leaf_Curl_Virus": {
@@ -597,7 +597,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Tomato_Mosaic_Virus": {
@@ -614,7 +614,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Target_spot": {
@@ -631,7 +631,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Spider_Mites": {
@@ -648,7 +648,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Cat_Facing": {
@@ -665,7 +665,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Cracking": {
@@ -682,7 +682,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Bacterial_Spot": {
@@ -699,7 +699,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Leaf_Mold": {
@@ -716,7 +716,7 @@ export const disessData = {
                     "pruning": "Prune tomato plants to remove suckers and promote air circulation. Pinch off suckers that grow between the main stem and branches, and remove any damaged or diseased leaves.",
                     "harvesting": "Harvest tomatoes when they are fully ripe and have reached their desired color. Pick them by gently twisting and pulling them from the stem.",
                     "storage": "Tomatoes are best stored at room temperature, away from direct sunlight. Avoid storing them in the refrigerator, as this can affect their texture and flavor.",
-                    "pests_and_diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor tomato plants regularly for signs of pests and diseases, such as aphids, hornworms, and blight. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             }
         }
@@ -752,7 +752,7 @@ export const disessData = {
                     "Fertilizing": "Fertilize potato plants regularly with a balanced fertilizer. Avoid overfertilizing, as this can cause the tubers to rot.",
                     "Pruning": "Prune potato plants to remove suckers and promote air circulation. This will help prevent disease.",
                     "Weed Control": "Keep the area around potato plants free of weeds, as weeds can compete with the plants for nutrients and water. Hand-pull weeds or use a hoe to carefully remove them from the soil surface. Avoid using herbicides as they can damage the potato plants.",
-                    "Pests_and_diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
+                    "pests and diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
                     "Disease Prevention": "Potatoes are vulnerable to a number of diseases, including early blight, late blight, and blackleg. Prevent the spread of disease by practicing crop rotation, avoiding planting potatoes in the same location for at least three years. Avoid watering plants overhead, as this can spread disease. Remove and destroy any infected plants immediately.",
                     "Harvesting": "Potatoes are ready to harvest when the plants begin to die back. Carefully dig up the tubers with a garden fork. Do not leave the tubers exposed to sunlight for long, as this can cause them to turn green and become toxic. Store potatoes in a cool, dark place."
                 }
@@ -770,7 +770,7 @@ export const disessData = {
                     "Fertilizing": "Fertilize potato plants regularly with a balanced fertilizer. Avoid overfertilizing, as this can cause the tubers to rot.",
                     "Pruning": "Prune potato plants to remove suckers and promote air circulation. This will help prevent disease.",
                     "Weed Control": "Keep the area around potato plants free of weeds, as weeds can compete with the plants for nutrients and water. Hand-pull weeds or use a hoe to carefully remove them from the soil surface. Avoid using herbicides as they can damage the potato plants.",
-                    "Pests_and_diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
+                    "pests and diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
                     "Disease Prevention": "Potatoes are vulnerable to a number of diseases, including early blight, late blight, and blackleg. Prevent the spread of disease by practicing crop rotation, avoiding planting potatoes in the same location for at least three years. Avoid watering plants overhead, as this can spread disease. Remove and destroy any infected plants immediately.",
                     "Harvesting": "Potatoes are ready to harvest when the plants begin to die back. Carefully dig up the tubers with a garden fork. Do not leave the tubers exposed to sunlight for long, as this can cause them to turn green and become toxic. Store potatoes in a cool, dark place."
                 }
@@ -788,7 +788,7 @@ export const disessData = {
                     "Fertilizing": "Fertilize potato plants regularly with a balanced fertilizer. Avoid overfertilizing, as this can cause the tubers to rot.",
                     "Pruning": "Prune potato plants to remove suckers and promote air circulation. This will help prevent disease.",
                     "Weed Control": "Keep the area around potato plants free of weeds, as weeds can compete with the plants for nutrients and water. Hand-pull weeds or use a hoe to carefully remove them from the soil surface. Avoid using herbicides as they can damage the potato plants.",
-                    "Pests_and_diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
+                    "pests and diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
                     "Disease Prevention": "Potatoes are vulnerable to a number of diseases, including early blight, late blight, and blackleg. Prevent the spread of disease by practicing crop rotation, avoiding planting potatoes in the same location for at least three years. Avoid watering plants overhead, as this can spread disease. Remove and destroy any infected plants immediately.",
                     "Harvesting": "Potatoes are ready to harvest when the plants begin to die back. Carefully dig up the tubers with a garden fork. Do not leave the tubers exposed to sunlight for long, as this can cause them to turn green and become toxic. Store potatoes in a cool, dark place."
                 }
@@ -806,7 +806,7 @@ export const disessData = {
                     "Fertilizing": "Fertilize potato plants regularly with a balanced fertilizer. Avoid overfertilizing, as this can cause the tubers to rot.",
                     "Pruning": "Prune potato plants to remove suckers and promote air circulation. This will help prevent disease.",
                     "Weed Control": "Keep the area around potato plants free of weeds, as weeds can compete with the plants for nutrients and water. Hand-pull weeds or use a hoe to carefully remove them from the soil surface. Avoid using herbicides as they can damage the potato plants.",
-                    "Pests_and_diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
+                    "pests and diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
                     "Disease Prevention": "Potatoes are vulnerable to a number of diseases, including early blight, late blight, and blackleg. Prevent the spread of disease by practicing crop rotation, avoiding planting potatoes in the same location for at least three years. Avoid watering plants overhead, as this can spread disease. Remove and destroy any infected plants immediately.",
                     "Harvesting": "Potatoes are ready to harvest when the plants begin to die back. Carefully dig up the tubers with a garden fork. Do not leave the tubers exposed to sunlight for long, as this can cause them to turn green and become toxic. Store potatoes in a cool, dark place."
                 }
@@ -824,7 +824,7 @@ export const disessData = {
                     "Fertilizing": "Fertilize potato plants regularly with a balanced fertilizer. Avoid overfertilizing, as this can cause the tubers to rot.",
                     "Pruning": "Prune potato plants to remove suckers and promote air circulation. This will help prevent disease.",
                     "Weed Control": "Keep the area around potato plants free of weeds, as weeds can compete with the plants for nutrients and water. Hand-pull weeds or use a hoe to carefully remove them from the soil surface. Avoid using herbicides as they can damage the potato plants.",
-                    "Pests_and_diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
+                    "pests and diseases": "Monitor potato plants for signs of pest infestations, such as holes in the leaves or chewed tubers. Common potato pests include Colorado potato beetles, potato aphids, and potato tuberworms. Use natural predators like ladybugs or parasitic wasps, or use organic pesticides if necessary.",
                     "Disease Prevention": "Potatoes are vulnerable to a number of diseases, including early blight, late blight, and blackleg. Prevent the spread of disease by practicing crop rotation, avoiding planting potatoes in the same location for at least three years. Avoid watering plants overhead, as this can spread disease. Remove and destroy any infected plants immediately.",
                     "Harvesting": "Potatoes are ready to harvest when the plants begin to die back. Carefully dig up the tubers with a garden fork. Do not leave the tubers exposed to sunlight for long, as this can cause them to turn green and become toxic. Store potatoes in a cool, dark place."
                 }
@@ -879,7 +879,7 @@ export const disessData = {
                     "Watering": "Water avocado trees deeply and infrequently, allowing the top 2 to 3 inches of soil to dry out between waterings. Avoid overwatering, which can lead to root rot, and make sure the soil has good drainage.",
                     "Fertilizing": "Fertilize avocado trees three times per year with a balanced fertilizer, following the manufacturer's instructions. Apply the first dose in early spring before new growth appears, the second dose in late spring or early summer, and the third dose in late summer or early fall.",
                     "Pruning": "Prune avocado trees in late winter or early spring to remove dead or damaged wood and to maintain a compact, balanced shape. Avoid heavy pruning, which can reduce fruit production. Pinch back new growth to encourage branching and a fuller canopy.",
-                    "Pests_and_diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Scab": {
@@ -894,7 +894,7 @@ export const disessData = {
                     "Watering": "Water avocado trees deeply and infrequently, allowing the top 2 to 3 inches of soil to dry out between waterings. Avoid overwatering, which can lead to root rot, and make sure the soil has good drainage.",
                     "Fertilizing": "Fertilize avocado trees three times per year with a balanced fertilizer, following the manufacturer's instructions. Apply the first dose in early spring before new growth appears, the second dose in late spring or early summer, and the third dose in late summer or early fall.",
                     "Pruning": "Prune avocado trees in late winter or early spring to remove dead or damaged wood and to maintain a compact, balanced shape. Avoid heavy pruning, which can reduce fruit production. Pinch back new growth to encourage branching and a fuller canopy.",
-                    "Pests_and_diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Blotch": {
@@ -909,7 +909,7 @@ export const disessData = {
                     "Watering": "Water avocado trees deeply and infrequently, allowing the top 2 to 3 inches of soil to dry out between waterings. Avoid overwatering, which can lead to root rot, and make sure the soil has good drainage.",
                     "Fertilizing": "Fertilize avocado trees three times per year with a balanced fertilizer, following the manufacturer's instructions. Apply the first dose in early spring before new growth appears, the second dose in late spring or early summer, and the third dose in late summer or early fall.",
                     "Pruning": "Prune avocado trees in late winter or early spring to remove dead or damaged wood and to maintain a compact, balanced shape. Avoid heavy pruning, which can reduce fruit production. Pinch back new growth to encourage branching and a fuller canopy.",
-                    "Pests_and_diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Rot": {
@@ -924,7 +924,7 @@ export const disessData = {
                     "Watering": "Water avocado trees deeply and infrequently, allowing the top 2 to 3 inches of soil to dry out between waterings. Avoid overwatering, which can lead to root rot, and make sure the soil has good drainage.",
                     "Fertilizing": "Fertilize avocado trees three times per year with a balanced fertilizer, following the manufacturer's instructions. Apply the first dose in early spring before new growth appears, the second dose in late spring or early summer, and the third dose in late summer or early fall.",
                     "Pruning": "Prune avocado trees in late winter or early spring to remove dead or damaged wood and to maintain a compact, balanced shape. Avoid heavy pruning, which can reduce fruit production. Pinch back new growth to encourage branching and a fuller canopy.",
-                    "Pests_and_diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             }
         }
@@ -941,7 +941,7 @@ export const disessData = {
                     "Watering": "Water avocado trees deeply and infrequently, allowing the top 2 to 3 inches of soil to dry out between waterings. Avoid overwatering, which can lead to root rot, and make sure the soil has good drainage.",
                     "Fertilizing": "Fertilize avocado trees three times per year with a balanced fertilizer, following the manufacturer's instructions. Apply the first dose in early spring before new growth appears, the second dose in late spring or early summer, and the third dose in late summer or early fall.",
                     "Pruning": "Prune avocado trees in late winter or early spring to remove dead or damaged wood and to maintain a compact, balanced shape. Avoid heavy pruning, which can reduce fruit production. Pinch back new growth to encourage branching and a fuller canopy.",
-                    "Pests_and_diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Scab": {
@@ -956,7 +956,7 @@ export const disessData = {
                     "Watering": "Water avocado trees deeply and infrequently, allowing the top 2 to 3 inches of soil to dry out between waterings. Avoid overwatering, which can lead to root rot, and make sure the soil has good drainage.",
                     "Fertilizing": "Fertilize avocado trees three times per year with a balanced fertilizer, following the manufacturer's instructions. Apply the first dose in early spring before new growth appears, the second dose in late spring or early summer, and the third dose in late summer or early fall.",
                     "Pruning": "Prune avocado trees in late winter or early spring to remove dead or damaged wood and to maintain a compact, balanced shape. Avoid heavy pruning, which can reduce fruit production. Pinch back new growth to encourage branching and a fuller canopy.",
-                    "Pests_and_diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor avocado trees regularly for signs of pests and diseases, such as mites, thrips, root rot, and fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             }
         }
@@ -973,7 +973,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Aphids": {
@@ -988,7 +988,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Black_Sigatoka": {
@@ -1003,7 +1003,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Panama_Disease": {
@@ -1018,7 +1018,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Pseudostem_Weevil": {
@@ -1033,7 +1033,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Potassium_Deficiency": {
@@ -1048,7 +1048,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Rot": {
@@ -1063,7 +1063,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Scarring_Beetle": {
@@ -1078,7 +1078,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Soft_Rot": {
@@ -1093,7 +1093,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             },
             "Yellow_Sigatoka": {
@@ -1108,7 +1108,7 @@ export const disessData = {
                     "watering": "Water banana plants deeply and regularly, especially during periods of drought. Keep the soil consistently moist, but not waterlogged, as waterlogging can lead to root rot. Avoid overhead watering to prevent fungal diseases.",
                     "fertilizing": "Fertilize banana plants regularly with a balanced fertilizer, following the manufacturer's instructions. Apply the fertilizer every two to three months, starting six months after planting. Use organic fertilizers, such as compost or well-rotted manure, to provide additional nutrients.",
                     "pruning": "Prune banana plants regularly to remove dead or damaged leaves and to promote new growth. Remove the flower stalk after the fruit has been harvested, and remove any suckers that grow around the base of the plant to promote the growth of the main stem.",
-                    "pests_and_diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
+                    "pests and diseases": "Monitor banana plants regularly for signs of pests and diseases, such as banana weevils, nematodes, and bacterial or fungal infections. Treat infestations or infections promptly with the appropriate insecticides or fungicides, following the manufacturer's instructions."
                 }
             }
         }
@@ -1125,7 +1125,7 @@ export const disessData = {
                     "watering": "Cantaloupes require regular watering, especially during periods of drought. Avoid overhead watering, as this can lead to the development of fungal diseases. Mulching around the plants can help to conserve moisture and suppress weeds.",
                     "fertilizing": "Fertilize cantaloupes regularly with a balanced fertilizer, following the manufacturer's instructions.",
                     "pruning": "Prune the plants to remove any dead or diseased foliage, and to encourage good air circulation.",
-                    "pests_and_diseases": "Common pests and diseases that can affect cantaloupes include aphids, spider mites, cucumber beetles, powdery mildew, and fusarium wilt. Monitor plants regularly for signs of damage or disease and take appropriate measures, such as using insecticidal soap or neem oil for pests and treating with a fungicide for fungal diseases."
+                    "pests and diseases": "Common pests and diseases that can affect cantaloupes include aphids, spider mites, cucumber beetles, powdery mildew, and fusarium wilt. Monitor plants regularly for signs of damage or disease and take appropriate measures, such as using insecticidal soap or neem oil for pests and treating with a fungicide for fungal diseases."
                 }
             },
             "Rot": {
@@ -1140,7 +1140,7 @@ export const disessData = {
                     "watering": "Cantaloupes require regular watering, especially during periods of drought. Avoid overhead watering, as this can lead to the development of fungal diseases. Mulching around the plants can help to conserve moisture and suppress weeds.",
                     "fertilizing": "Fertilize cantaloupes regularly with a balanced fertilizer, following the manufacturer's instructions.",
                     "pruning": "Prune the plants to remove any dead or diseased foliage, and to encourage good air circulation.",
-                    "pests_and_diseases": "Common pests and diseases that can affect cantaloupes include aphids, spider mites, cucumber beetles, powdery mildew, and fusarium wilt. Monitor plants regularly for signs of damage or disease and take appropriate measures, such as using insecticidal soap or neem oil for pests and treating with a fungicide for fungal diseases."
+                    "pests and diseases": "Common pests and diseases that can affect cantaloupes include aphids, spider mites, cucumber beetles, powdery mildew, and fusarium wilt. Monitor plants regularly for signs of damage or disease and take appropriate measures, such as using insecticidal soap or neem oil for pests and treating with a fungicide for fungal diseases."
                 }
             }
         }
@@ -1157,7 +1157,7 @@ export const disessData = {
                     "watering": "Water grapes deeply once a week during the growing season, and more frequently during hot, dry weather. Avoid overhead watering, as this can promote fungal diseases.",
                     "fertilizing": "Fertilize grapes in early spring with a balanced fertilizer, and again in late spring or early summer with a fertilizer high in nitrogen. Avoid over-fertilizing, as this can reduce fruit quality.",
                     "pruning": "Prune grape vines in late winter or early spring to remove dead or damaged wood and shape the vine. Remove 90% of the previous year's growth, leaving 2-3 buds per cane.",
-                    "pests_and_diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
+                    "pests and diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
                 }
             },
             "Black_Measles": {
@@ -1172,7 +1172,7 @@ export const disessData = {
                     "watering": "Water grapes deeply once a week during the growing season, and more frequently during hot, dry weather. Avoid overhead watering, as this can promote fungal diseases.",
                     "fertilizing": "Fertilize grapes in early spring with a balanced fertilizer, and again in late spring or early summer with a fertilizer high in nitrogen. Avoid over-fertilizing, as this can reduce fruit quality.",
                     "pruning": "Prune grape vines in late winter or early spring to remove dead or damaged wood and shape the vine. Remove 90% of the previous year's growth, leaving 2-3 buds per cane.",
-                    "pests_and_diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
+                    "pests and diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
                 }
             },
             "Blight": {
@@ -1187,7 +1187,7 @@ export const disessData = {
                     "watering": "Water grapes deeply once a week during the growing season, and more frequently during hot, dry weather. Avoid overhead watering, as this can promote fungal diseases.",
                     "fertilizing": "Fertilize grapes in early spring with a balanced fertilizer, and again in late spring or early summer with a fertilizer high in nitrogen. Avoid over-fertilizing, as this can reduce fruit quality.",
                     "pruning": "Prune grape vines in late winter or early spring to remove dead or damaged wood and shape the vine. Remove 90% of the previous year's growth, leaving 2-3 buds per cane.",
-                    "pests_and_diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
+                    "pests and diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
                 }
             },
             "Grey_Mould": {
@@ -1202,7 +1202,7 @@ export const disessData = {
                     "watering": "Water grapes deeply once a week during the growing season, and more frequently during hot, dry weather. Avoid overhead watering, as this can promote fungal diseases.",
                     "fertilizing": "Fertilize grapes in early spring with a balanced fertilizer, and again in late spring or early summer with a fertilizer high in nitrogen. Avoid over-fertilizing, as this can reduce fruit quality.",
                     "pruning": "Prune grape vines in late winter or early spring to remove dead or damaged wood and shape the vine. Remove 90% of the previous year's growth, leaving 2-3 buds per cane.",
-                    "pests_and_diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
+                    "pests and diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
                 }
             },
             "Powdery_Mildew": {
@@ -1217,7 +1217,7 @@ export const disessData = {
                     "watering": "Water grapes deeply once a week during the growing season, and more frequently during hot, dry weather. Avoid overhead watering, as this can promote fungal diseases.",
                     "fertilizing": "Fertilize grapes in early spring with a balanced fertilizer, and again in late spring or early summer with a fertilizer high in nitrogen. Avoid over-fertilizing, as this can reduce fruit quality.",
                     "pruning": "Prune grape vines in late winter or early spring to remove dead or damaged wood and shape the vine. Remove 90% of the previous year's growth, leaving 2-3 buds per cane.",
-                    "pests_and_diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
+                    "pests and diseases": "Common pests and diseases of grapes include powdery mildew, black rot, phylloxera, and Japanese beetles. Monitor plants regularly and take action if signs of infestation or disease are present. Practice good sanitation and remove infected plant material to prevent the spread of disease."
                 }
             }
         }
@@ -1234,7 +1234,7 @@ export const disessData = {
                     "watering": "Mango trees require regular watering, especially during the first few years after planting. They should be watered deeply and regularly, but care should be taken not to overwater as this can lead to root rot.",
                     "fertilizing": "Mango trees should be fertilized regularly with a balanced fertilizer containing nitrogen, phosphorus, and potassium. Fertilizer should be applied in the spring and summer, and care should be taken not to over-fertilize as this can lead to excessive vegetative growth at the expense of fruit production.",
                     "pruning": "Mango trees should be pruned regularly to remove dead or diseased wood and to maintain a manageable size. Pruning should be done during the dormant season, and care should be taken not to remove too much wood as this can reduce fruit production.",
-                    "pests_and_diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
+                    "pests and diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
                 }
             },
             "Anthracnose": {
@@ -1249,7 +1249,7 @@ export const disessData = {
                     "watering": "Mango trees require regular watering, especially during the first few years after planting. They should be watered deeply and regularly, but care should be taken not to overwater as this can lead to root rot.",
                     "fertilizing": "Mango trees should be fertilized regularly with a balanced fertilizer containing nitrogen, phosphorus, and potassium. Fertilizer should be applied in the spring and summer, and care should be taken not to over-fertilize as this can lead to excessive vegetative growth at the expense of fruit production.",
                     "pruning": "Mango trees should be pruned regularly to remove dead or diseased wood and to maintain a manageable size. Pruning should be done during the dormant season, and care should be taken not to remove too much wood as this can reduce fruit production.",
-                    "pests_and_diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
+                    "pests and diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
                 }
             },
             "Bacterial_Canker": {
@@ -1264,7 +1264,7 @@ export const disessData = {
                     "watering": "Mango trees require regular watering, especially during the first few years after planting. They should be watered deeply and regularly, but care should be taken not to overwater as this can lead to root rot.",
                     "fertilizing": "Mango trees should be fertilized regularly with a balanced fertilizer containing nitrogen, phosphorus, and potassium. Fertilizer should be applied in the spring and summer, and care should be taken not to over-fertilize as this can lead to excessive vegetative growth at the expense of fruit production.",
                     "pruning": "Mango trees should be pruned regularly to remove dead or diseased wood and to maintain a manageable size. Pruning should be done during the dormant season, and care should be taken not to remove too much wood as this can reduce fruit production.",
-                    "pests_and_diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
+                    "pests and diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
                 }
             },
             "Cutting_Weevil": {
@@ -1279,7 +1279,7 @@ export const disessData = {
                     "watering": "Mango trees require regular watering, especially during the first few years after planting. They should be watered deeply and regularly, but care should be taken not to overwater as this can lead to root rot.",
                     "fertilizing": "Mango trees should be fertilized regularly with a balanced fertilizer containing nitrogen, phosphorus, and potassium. Fertilizer should be applied in the spring and summer, and care should be taken not to over-fertilize as this can lead to excessive vegetative growth at the expense of fruit production.",
                     "pruning": "Mango trees should be pruned regularly to remove dead or diseased wood and to maintain a manageable size. Pruning should be done during the dormant season, and care should be taken not to remove too much wood as this can reduce fruit production.",
-                    "pests_and_diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
+                    "pests and diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
                 }
             },
             "Die_Back": {
@@ -1294,7 +1294,7 @@ export const disessData = {
                     "watering": "Mango trees require regular watering, especially during the first few years after planting. They should be watered deeply and regularly, but care should be taken not to overwater as this can lead to root rot.",
                     "fertilizing": "Mango trees should be fertilized regularly with a balanced fertilizer containing nitrogen, phosphorus, and potassium. Fertilizer should be applied in the spring and summer, and care should be taken not to over-fertilize as this can lead to excessive vegetative growth at the expense of fruit production.",
                     "pruning": "Mango trees should be pruned regularly to remove dead or diseased wood and to maintain a manageable size. Pruning should be done during the dormant season, and care should be taken not to remove too much wood as this can reduce fruit production.",
-                    "pests_and_diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
+                    "pests and diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
                 }
             },
             "Gall_Midge": {
@@ -1309,7 +1309,7 @@ export const disessData = {
                     "watering": "Mango trees require regular watering, especially during the first few years after planting. They should be watered deeply and regularly, but care should be taken not to overwater as this can lead to root rot.",
                     "fertilizing": "Mango trees should be fertilized regularly with a balanced fertilizer containing nitrogen, phosphorus, and potassium. Fertilizer should be applied in the spring and summer, and care should be taken not to over-fertilize as this can lead to excessive vegetative growth at the expense of fruit production.",
                     "pruning": "Mango trees should be pruned regularly to remove dead or diseased wood and to maintain a manageable size. Pruning should be done during the dormant season, and care should be taken not to remove too much wood as this can reduce fruit production.",
-                    "pests_and_diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
+                    "pests and diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
                 }
             },
             "Powdery_Mildew": {
@@ -1324,7 +1324,7 @@ export const disessData = {
                     "watering": "Mango trees require regular watering, especially during the first few years after planting. They should be watered deeply and regularly, but care should be taken not to overwater as this can lead to root rot.",
                     "fertilizing": "Mango trees should be fertilized regularly with a balanced fertilizer containing nitrogen, phosphorus, and potassium. Fertilizer should be applied in the spring and summer, and care should be taken not to over-fertilize as this can lead to excessive vegetative growth at the expense of fruit production.",
                     "pruning": "Mango trees should be pruned regularly to remove dead or diseased wood and to maintain a manageable size. Pruning should be done during the dormant season, and care should be taken not to remove too much wood as this can reduce fruit production.",
-                    "pests_and_diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
+                    "pests and diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
                 }
             },
             "Sooty_Mould": {
@@ -1339,7 +1339,7 @@ export const disessData = {
                     "watering": "Mango trees require regular watering, especially during the first few years after planting. They should be watered deeply and regularly, but care should be taken not to overwater as this can lead to root rot.",
                     "fertilizing": "Mango trees should be fertilized regularly with a balanced fertilizer containing nitrogen, phosphorus, and potassium. Fertilizer should be applied in the spring and summer, and care should be taken not to over-fertilize as this can lead to excessive vegetative growth at the expense of fruit production.",
                     "pruning": "Mango trees should be pruned regularly to remove dead or diseased wood and to maintain a manageable size. Pruning should be done during the dormant season, and care should be taken not to remove too much wood as this can reduce fruit production.",
-                    "pests_and_diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
+                    "pests and diseases": "Common pests and diseases that affect mango trees include anthracnose, powdery mildew, mango fruit fly, and mealybugs. Proper sanitation, including removing fallen fruit and leaves, can help prevent these issues. Fungicides and insecticides can also be used as needed."
                 }
             }
         }
@@ -1356,7 +1356,7 @@ export const disessData = {
                     "watering": "Melons require consistent watering to develop properly. Water deeply once a week, and more frequently during periods of drought or high heat.",
                     "fertilizing": "Fertilize melons with a balanced fertilizer when planting, and again when the plants begin to flower. Avoid over-fertilizing, as this can lead to excessive vegetative growth and reduced fruit production.",
                     "pruning": "Melon vines can become quite large and unruly, so pruning can help manage growth and improve air circulation. Pinch off the growing tips of the vines once they reach the desired length, and remove any lateral branches that are growing off the main stem.",
-                    "pests_and_diseases": "Melons can be affected by a range of pests and diseases, including aphids, cucumber beetles, and powdery mildew. Practice good sanitation and crop rotation to reduce the risk of disease, and consider using insecticidal soap or other natural pest control methods to manage insect infestations."
+                    "pests and diseases": "Melons can be affected by a range of pests and diseases, including aphids, cucumber beetles, and powdery mildew. Practice good sanitation and crop rotation to reduce the risk of disease, and consider using insecticidal soap or other natural pest control methods to manage insect infestations."
                 }
             },
             "Powdery_Mildew": {
@@ -1371,7 +1371,7 @@ export const disessData = {
                     "watering": "Melons require consistent watering to develop properly. Water deeply once a week, and more frequently during periods of drought or high heat.",
                     "fertilizing": "Fertilize melons with a balanced fertilizer when planting, and again when the plants begin to flower. Avoid over-fertilizing, as this can lead to excessive vegetative growth and reduced fruit production.",
                     "pruning": "Melon vines can become quite large and unruly, so pruning can help manage growth and improve air circulation. Pinch off the growing tips of the vines once they reach the desired length, and remove any lateral branches that are growing off the main stem.",
-                    "pests_and_diseases": "Melons can be affected by a range of pests and diseases, including aphids, cucumber beetles, and powdery mildew. Practice good sanitation and crop rotation to reduce the risk of disease, and consider using insecticidal soap or other natural pest control methods to manage insect infestations."
+                    "pests and diseases": "Melons can be affected by a range of pests and diseases, including aphids, cucumber beetles, and powdery mildew. Practice good sanitation and crop rotation to reduce the risk of disease, and consider using insecticidal soap or other natural pest control methods to manage insect infestations."
                 }
             }
         }
@@ -1388,7 +1388,7 @@ export const disessData = {
                     "watering": "Water newly planted trees thoroughly and regularly until they become established. Afterward, water deeply once or twice a week, depending on rainfall and soil conditions.",
                     "fertilizing": "Fertilize orange trees in early spring with a balanced fertilizer, and again in late spring or early summer with a nitrogen-rich fertilizer. Avoid fertilizing in fall or winter.",
                     "pruning": "Prune orange trees annually in late winter or early spring to remove any dead, diseased, or damaged wood. Thin out overcrowded branches to improve airflow and sunlight penetration.",
-                    "pests_and_diseases": "Common pests that affect orange trees include citrus leafminer, spider mites, and scale insects. Diseases that affect oranges include citrus canker, citrus greening, and root rot. Proper care, including regular monitoring and treatment with horticultural oil or insecticidal soap, can help prevent and manage these issues."
+                    "pests and diseases": "Common pests that affect orange trees include citrus leafminer, spider mites, and scale insects. Diseases that affect oranges include citrus canker, citrus greening, and root rot. Proper care, including regular monitoring and treatment with horticultural oil or insecticidal soap, can help prevent and manage these issues."
                 }
             },
             "Black_Spot": {
@@ -1403,7 +1403,7 @@ export const disessData = {
                     "watering": "Water newly planted trees thoroughly and regularly until they become established. Afterward, water deeply once or twice a week, depending on rainfall and soil conditions.",
                     "fertilizing": "Fertilize orange trees in early spring with a balanced fertilizer, and again in late spring or early summer with a nitrogen-rich fertilizer. Avoid fertilizing in fall or winter.",
                     "pruning": "Prune orange trees annually in late winter or early spring to remove any dead, diseased, or damaged wood. Thin out overcrowded branches to improve airflow and sunlight penetration.",
-                    "pests_and_diseases": "Common pests that affect orange trees include citrus leafminer, spider mites, and scale insects. Diseases that affect oranges include citrus canker, citrus greening, and root rot. Proper care, including regular monitoring and treatment with horticultural oil or insecticidal soap, can help prevent and manage these issues."
+                    "pests and diseases": "Common pests that affect orange trees include citrus leafminer, spider mites, and scale insects. Diseases that affect oranges include citrus canker, citrus greening, and root rot. Proper care, including regular monitoring and treatment with horticultural oil or insecticidal soap, can help prevent and manage these issues."
                 }
             },
             "Canker": {
@@ -1418,7 +1418,7 @@ export const disessData = {
                     "watering": "Water newly planted trees thoroughly and regularly until they become established. Afterward, water deeply once or twice a week, depending on rainfall and soil conditions.",
                     "fertilizing": "Fertilize orange trees in early spring with a balanced fertilizer, and again in late spring or early summer with a nitrogen-rich fertilizer. Avoid fertilizing in fall or winter.",
                     "pruning": "Prune orange trees annually in late winter or early spring to remove any dead, diseased, or damaged wood. Thin out overcrowded branches to improve airflow and sunlight penetration.",
-                    "pests_and_diseases": "Common pests that affect orange trees include citrus leafminer, spider mites, and scale insects. Diseases that affect oranges include citrus canker, citrus greening, and root rot. Proper care, including regular monitoring and treatment with horticultural oil or insecticidal soap, can help prevent and manage these issues."
+                    "pests and diseases": "Common pests that affect orange trees include citrus leafminer, spider mites, and scale insects. Diseases that affect oranges include citrus canker, citrus greening, and root rot. Proper care, including regular monitoring and treatment with horticultural oil or insecticidal soap, can help prevent and manage these issues."
                 }
             },
             "Greening": {
@@ -1477,7 +1477,7 @@ export const disessData = {
                     "watering": "Water newly planted peach trees deeply once a week. Established trees need about 1 inch of water per week during the growing season.",
                     "fertilizing": "Fertilize peach trees with a balanced fertilizer in early spring, just before new growth begins. Repeat every 4-6 weeks during the growing season.",
                     "pruning": "Prune peach trees annually to maintain an open center or vase shape, and remove any dead or diseased wood.",
-                    "pests_and_diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
+                    "pests and diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
                 }
             },
             "Brown_Rot": {
@@ -1492,7 +1492,7 @@ export const disessData = {
                     "watering": "Water newly planted peach trees deeply once a week. Established trees need about 1 inch of water per week during the growing season.",
                     "fertilizing": "Fertilize peach trees with a balanced fertilizer in early spring, just before new growth begins. Repeat every 4-6 weeks during the growing season.",
                     "pruning": "Prune peach trees annually to maintain an open center or vase shape, and remove any dead or diseased wood.",
-                    "pests_and_diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
+                    "pests and diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
                 }
             },
             "Bacterial_Spot": {
@@ -1507,7 +1507,7 @@ export const disessData = {
                     "watering": "Water newly planted peach trees deeply once a week. Established trees need about 1 inch of water per week during the growing season.",
                     "fertilizing": "Fertilize peach trees with a balanced fertilizer in early spring, just before new growth begins. Repeat every 4-6 weeks during the growing season.",
                     "pruning": "Prune peach trees annually to maintain an open center or vase shape, and remove any dead or diseased wood.",
-                    "pests_and_diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
+                    "pests and diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
                 }
             },
             "Leaf_Curl": {
@@ -1522,7 +1522,7 @@ export const disessData = {
                     "watering": "Water newly planted peach trees deeply once a week. Established trees need about 1 inch of water per week during the growing season.",
                     "fertilizing": "Fertilize peach trees with a balanced fertilizer in early spring, just before new growth begins. Repeat every 4-6 weeks during the growing season.",
                     "pruning": "Prune peach trees annually to maintain an open center or vase shape, and remove any dead or diseased wood.",
-                    "pests_and_diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
+                    "pests and diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
                 }
             },
             "Scab": {
@@ -1537,7 +1537,7 @@ export const disessData = {
                     "watering": "Water newly planted peach trees deeply once a week. Established trees need about 1 inch of water per week during the growing season.",
                     "fertilizing": "Fertilize peach trees with a balanced fertilizer in early spring, just before new growth begins. Repeat every 4-6 weeks during the growing season.",
                     "pruning": "Prune peach trees annually to maintain an open center or vase shape, and remove any dead or diseased wood.",
-                    "pests_and_diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
+                    "pests and diseases": "Peaches are susceptible to several pests and diseases, including peach leaf curl, brown rot, and peach tree borer. Regular monitoring and treatment as needed can help prevent or manage these issues."
                 }
             }
         }
@@ -1554,7 +1554,7 @@ export const disessData = {
                     "watering": "Water deeply and infrequently, allowing soil to dry out between waterings",
                     "fertilizing": "Fertilize in spring and summer with a balanced fertilizer",
                     "pruning": "Prune in late winter or early spring to remove dead or damaged branches and shape the tree",
-                    "pests_and_diseases": "Common pests include aphids, whiteflies, and scale insects, and diseases include bacterial blight, fruit rot, and leaf spot"
+                    "pests and diseases": "Common pests include aphids, whiteflies, and scale insects, and diseases include bacterial blight, fruit rot, and leaf spot"
                 }
             },
             "Rot": {
@@ -1569,7 +1569,7 @@ export const disessData = {
                     "watering": "Water deeply and infrequently, allowing soil to dry out between waterings",
                     "fertilizing": "Fertilize in spring and summer with a balanced fertilizer",
                     "pruning": "Prune in late winter or early spring to remove dead or damaged branches and shape the tree",
-                    "pests_and_diseases": "Common pests include aphids, whiteflies, and scale insects, and diseases include bacterial blight, fruit rot, and leaf spot"
+                    "pests and diseases": "Common pests include aphids, whiteflies, and scale insects, and diseases include bacterial blight, fruit rot, and leaf spot"
                 }
             }
         }
@@ -1586,7 +1586,7 @@ export const disessData = {
                     "watering": "Strawberries need regular watering, about 1-2 inches per week.",
                     "fertilizing": "Fertilize strawberries in early spring and again in late summer or early fall.",
                     "pruning": "Remove runners to focus plant energy on fruit production, and cut back old leaves after the harvest season.",
-                    "pests_and_diseases": "Common pests and diseases that affect strawberries include aphids, spider mites, gray mold, and verticillium wilt."
+                    "pests and diseases": "Common pests and diseases that affect strawberries include aphids, spider mites, gray mold, and verticillium wilt."
                 }
             },
             "Leaf_Scorch": {
@@ -1601,7 +1601,7 @@ export const disessData = {
                     "watering": "Strawberries need regular watering, about 1-2 inches per week.",
                     "fertilizing": "Fertilize strawberries in early spring and again in late summer or early fall.",
                     "pruning": "Remove runners to focus plant energy on fruit production, and cut back old leaves after the harvest season.",
-                    "pests_and_diseases": "Common pests and diseases that affect strawberries include aphids, spider mites, gray mold, and verticillium wilt."
+                    "pests and diseases": "Common pests and diseases that affect strawberries include aphids, spider mites, gray mold, and verticillium wilt."
                 }
             }
         }
@@ -1618,7 +1618,7 @@ export const disessData = {
                     "watering": "Watermelons need regular watering, about 1-2 inches per week.",
                     "fertilizing": "Fertilize watermelons in early spring and again in late summer or early fall.",
                     "pruning": "Remove runners to focus plant energy on fruit production, and cut back old leaves after the harvest season.",
-                    "pests_and_diseases": "Common pests and diseases that affect watermelons include aphids, spider mites, gray mold, and verticillium wilt."
+                    "pests and diseases": "Common pests and diseases that affect watermelons include aphids, spider mites, gray mold, and verticillium wilt."
                 }
             },
             "Rot": {
@@ -1633,7 +1633,7 @@ export const disessData = {
                     "watering": "Watermelons need regular watering, about 1-2 inches per week.",
                     "fertilizing": "Fertilize watermelons in early spring and again in late summer or early fall.",
                     "pruning": "Remove runners to focus plant energy on fruit production, and cut back old leaves after the harvest season.",
-                    "pests_and_diseases": "Common pests and diseases that affect watermelons include aphids, spider mites, gray mold, and verticillium wilt."
+                    "pests and diseases": "Common pests and diseases that affect watermelons include aphids, spider mites, gray mold, and verticillium wilt."
                 }
             }
         }

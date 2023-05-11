@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 import routes from '../../constants/routes'
+import responsive from '../../constants/responsive'
+import { useNavigation } from '@react-navigation/native';
 
 export default function DetailScreen({ route, navigation }) {
     const item = route.params.item
-
-
     const handleRenderHealth = () => {
         let itemT = {
             condition: item.Condition,
@@ -13,10 +13,23 @@ export default function DetailScreen({ route, navigation }) {
             imgUrl: item.img
         }
         navigation.navigate(routes.HEALTH, { item: itemT })
-        console.log('render health')
+
     }
+    useEffect(() => {
+        navigation.getParent()?.setOptions({
+            tabBarStyle: {
+                // backgroundColor: 'red',
+                display: "none",
+
+            }
+        });
+        return () => navigation.getParent()?.setOptions({
+            tabBarStyle: undefined
+        });
+    }, [navigation]);
     return (
-        <ScrollView>
+
+        <ScrollView >
             <View style={styles.container}>
                 {(item.general['image'] && item['img']) ?
                     <Image source={{ uri: `https://061f-160-176-197-152.ngrok-free.app${item['img']}` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
@@ -74,8 +87,12 @@ export default function DetailScreen({ route, navigation }) {
                         })
                     }
                 </View>
+                <TouchableOpacity style={{ width: responsive.WINDOW_WIDTH * 0.95, backgroundColor: '#30C67F' }}>
+                    <Text>save in my garden</Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
+
     )
 }
 
@@ -105,7 +122,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingTop: 5,
         backgroundColor: '#EDFBFF',
-        paddingBottom: 25
+        paddingBottom: 60
     },
     card: {
         backgroundColor: '#fff',

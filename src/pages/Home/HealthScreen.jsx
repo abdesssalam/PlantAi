@@ -1,55 +1,53 @@
 import { View, Text, ScrollView, StyleSheet, Image, TouchableOpacity } from 'react-native'
+
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faArrowLeft, faNotesMedical } from '@fortawesome/free-solid-svg-icons'
 import { disessData } from '../../data/disessData'
 import responsive, { normalizeFont } from '../../constants/responsive'
+import HelthTabs from '../../components/Plants/HelthTabs'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faHeartCircleBolt, faShieldHalved, faVial } from '@fortawesome/free-solid-svg-icons'
+
+
+
+
+
+
 export default function HealthScreen({ route }) {
     const item = route.params.item
     let plant = disessData[item.plantName];
-
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, width: responsive.WINDOW_WIDTH, height: responsive.WINDOW_HEIGHT }}>
             <ScrollView
-                style={{ flex: 1, paddingTop: responsive.WINDOW_HEIGHT * 0.10 }}
+                style={{ flex: 1 }}
             >
-
                 <View
                     style={{
                         // flex: 1,
                         alignItems: 'center',
                         paddingTop: 5,
-                        backgroundColor: '#EDFBFF',
+                        backgroundColor: '#FFF',
                         paddingBottom: 25,
-
-
                     }}
                 >
                     <Image
                         source={{ uri: 'https://061f-160-176-197-152.ngrok-free.app' + item.imgUrl }}
-                        style={{ width: '80%', height: 150, borderRadius: 10 }} />
-                    <Text
-                        style={{
-                            color: '#000',
-                            fontSize: normalizeFont(16),
-                            fontWeight: '500'
-                        }}
-                    >nom du plante : <Text style={{ fontStyle: 'italic' }}>{item.plantName}</Text></Text>
-                    <View style={{
-                        width: '100%',
-                        flexDirection: 'row',
-                        justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        paddingVertical: 10,
-                        paddingHorizontal: 15
+                        style={{ width: responsive.WINDOW_WIDTH, height: responsive.WINDOW_WIDTH * 0.50, borderTopLeftRadius: 8, borderTopRightRadius: 8, }} />
+                    <Text style={{
+                        fontSize: normalizeFont(16),
+                        fontWeight: '600', color: '#000',
+                        alignSelf: 'flex-start',
+                        marginLeft: normalizeFont(10),
+                        marginTop: normalizeFont(8)
+                    }}>{item.plantName}</Text>
 
-                    }}>
-                        <Text style={{
-                            color: '#000111',
-                            fontStyle: 'italic',
-                            fontSize: 22
+                    <Text style={{
+                        color: '#000111',
+                        fontWeight: '400',
+                        fontSize: normalizeFont(18),
+                        alignSelf: 'flex-start',
+                        marginLeft: normalizeFont(10),
 
-                        }}>this plant looks : </Text>
+                    }}>this plant looks {item.condition === 'Healthy' ? ' ' : 'has '}
                         <Text
                             style={{
                                 // color: '#269460',
@@ -59,47 +57,21 @@ export default function HealthScreen({ route }) {
 
                             }}
                         // >Healthy</Text>
-                        >{item.condition === 'Healthy' ? 'Healthy' : 'Sick'}</Text>
-                    </View>
-                    {item.condition !== 'Healthy' &&
-                        <View style={{
-                            width: '100%',
-                            flexDirection: 'row',
-                            justifyContent: 'flex-start',
-                            alignItems: 'center',
-                            paddingVertical: 10,
-                            paddingHorizontal: 15
-
-                        }}>
-                            <Text style={{
-                                color: '#000111',
-                                // fontStyle: 'italic',
-                                fontSize: 22,
-                                fontWeight: '600'
-
-
-                            }}>Disess Name : </Text>
-                            <Text
-                                style={{
-                                    color: '#EC4F4F',
-                                    fontSize: 22,
-                                    fontWeight: '700'
-
-                                }}
-
-                            >{item.condition.replace("_", " ")}</Text>
-                        </View>
-                    }
-                    {/* if not health */}
+                        >{item.condition === ' Healthy' ? 'Healthy' : item.condition.replace("_", " ")}</Text>
+                    </Text>
                     {
                         item.condition !== 'Healthy' &&
                         Object.keys(plant.Condition[item.condition]).map((k, idx) => {
                             if (k !== 'Care') {
-                                return <DrawSection key={k} itemKey={k} itemVal={plant.Condition[item.condition][k]} />
+                                return <DrawHealthSection key={k} itemKey={k} itemVal={plant.Condition[item.condition][k]} />
                             }
 
                         })
                     }
+                    {/* if not health */}
+                    {/* <View style={{ width: responsive.WINDOW_WIDTH, height: responsive.WINDOW_HEIGHT * 0.35 }}>
+                        {item.condition !== 'Healthy' && <HelthTabs disess={plant.Condition[item.condition]} />}
+                    </View> */}
                     <Text
                         style={{
                             color: '#269460',
@@ -108,7 +80,8 @@ export default function HealthScreen({ route }) {
                             fontWeight: '700',
                             alignSelf: 'flex-start',
                             marginLeft: 15,
-                            marginTop: 10
+                            marginTop: 10,
+                            marginBottom: normalizeFont(15)
 
                         }}
                     // >Healthy</Text>
@@ -131,40 +104,91 @@ const DrawSection = ({ itemKey, itemVal }) => {
     return (
         <View
             style={{
-                padding: 10,
-                width: '90%'
+                width: '90%',
+                backgroundColor: '#53B9F2',
+                marginBottom: normalizeFont(16),
+                borderRadius: normalizeFont(8),
+                elevation: 10
             }}
         >
             <Text
                 style={{
-                    color: '#666',
+                    color: '#FFF',
                     fontSize: 22,
                     fontWeight: '600',
-                    marginBottom: 8,
+                    textTransform: 'capitalize',
+                    marginLeft: normalizeFont(10),
+                    paddingVertical: normalizeFont(5)
+
                 }}
             >{itemKey.replace("_", " ")}</Text>
             <View
+
                 style={{
-                    // borderWidth: 0.5,
-                    // borderColor: '#666',
-                    borderRadius: 10,
-                    padding: 10,
-                    backgroundColor: '#cde9cd',
-                    elevation: 10
+                    padding: normalizeFont(10),
+                    backgroundColor: '#FFF',
+                    marginTop: normalizeFont(5),
+                    width: '100%',
+                    borderBottomLeftRadius: normalizeFont(8),
+                    borderBottomRightRadius: normalizeFont(8),
+
                 }}
             >
                 <Text
                     style={{
                         color: '#000',
-                        fontSize: 18,
-                        lineHeight: 25,
-                        textAlign: 'justify'
+                        fontSize: normalizeFont(16),
+                        lineHeight: normalizeFont(25),
+                        textAlign: 'left'
                     }}
                 >
                     {itemVal}
                 </Text>
             </View>
 
+        </View>
+    )
+}
+
+const DrawHealthSection = ({ itemKey, itemVal }) => {
+    let icon;
+    let color;
+    if (itemKey === 'Symptoms') {
+        icon = <FontAwesomeIcon icon={faHeartCircleBolt} size={40} color='#FFF' />
+        color = '#EC4F4F'
+    } else if (itemKey === 'Treatment') {
+        color = '#269460'
+        icon = <FontAwesomeIcon icon={faVial} size={40} color='#FFF' />
+    } else {
+        color = '#F5D256'
+        icon = <FontAwesomeIcon icon={faShieldHalved} size={40} color='#FFF' />
+    }
+    return (
+        <View style={{
+            width: '100%',
+            marginTop: normalizeFont(15)
+        }}>
+            <View
+                style={{
+                    flexDirection: 'row',
+                    backgroundColor: color,
+                    width: responsive.WINDOW_WIDTH * 0.45,
+                    paddingHorizontal: normalizeFont(10),
+                    paddingVertical: normalizeFont(5),
+                    alignItems: 'center',
+                    alignSelf: 'flex-start',
+                    borderTopRightRadius: 15,
+                    borderBottomRightRadius: 15
+                }}
+            >
+                <Text
+                    style={{ color: '#fff', fontSize: normalizeFont(16), marginRight: normalizeFont(8), fontWeight: '600' }}
+                >{itemKey}</Text>
+                {icon}
+            </View>
+            <Text style={{ color: '#000', marginHorizontal: normalizeFont(12), marginVertical: normalizeFont(5), fontSize: normalizeFont(14), fontWeight: '400', textAlign: 'justify' }}>
+                {itemVal}
+            </Text>
         </View>
     )
 }

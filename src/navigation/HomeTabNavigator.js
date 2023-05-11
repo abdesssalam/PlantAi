@@ -69,8 +69,7 @@ export default function HomeTabNavigator() {
                             </View>
                         </View>
                     )
-
-                )
+                ),
             }} />
             <Tab.Screen name={routes.GARDEN_NAV} component={PlantsNavigator} options={{
                 tabBarShowLabel: false,
@@ -100,5 +99,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         elevation: 5,
         height: 60,
+        marginTop: 10,
     }
 })
