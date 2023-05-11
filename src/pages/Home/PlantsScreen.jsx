@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import { useIsFocused } from "@react-navigation/native";
 import { useState, useEffect } from 'react'
-import { getUserGarden } from '../../services/PlantsService';
+import { getUserPlants } from '../../services/PlantsService';
 import routes from '../../constants/routes';
 
 export default function PlantsScreen({ navigation }) {
@@ -10,7 +10,7 @@ export default function PlantsScreen({ navigation }) {
 
 
     async function getData() {
-        const plants = await getUserGarden();
+        const plants = await getUserPlants();
         setData(plants)
         if (plants.length > 0) navigation.navigate(routes.LIST, { data: data })
     }

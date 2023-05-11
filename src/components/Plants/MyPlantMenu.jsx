@@ -1,14 +1,24 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { MovePlantToGarden, getPlants } from '../../services/PlantsService'
 
 
-export default function MyPlantMenu({ hide, windowHeight }) {
+export default function MyPlantMenu({ hide, windowHeight, plant }) {
+
+    const handleMoveToGatden = async () => {
+
+
+        await MovePlantToGarden(plant.plant_id)
+
+        await hide()
+    }
+
     const items = [
         {
             id: 1,
-            title: 'Correct the result',
+            title: 'Save to my garden',
             color: '#30C67F',
-            action: hide
+            action: async () => { await handleMoveToGatden() }
         },
         {
             id: 2,
@@ -38,7 +48,7 @@ export default function MyPlantMenu({ hide, windowHeight }) {
 
     const showItems = items.map((item) => {
         return (
-            <TouchableOpacity key={item.title} onPress={hide} style={{ borderBottomWidth: 1, borderBottomColor: '#6666', width: '100%', paddingVertical: 8, alignItems: 'center' }}>
+            <TouchableOpacity key={item.title} onPress={item.action} style={{ borderBottomWidth: 1, borderBottomColor: '#6666', width: '100%', paddingVertical: 8, alignItems: 'center' }}>
                 <Text key={item.title} style={{ fontWeight: '700', color: item.color, fontSize: 22 }}>
                     {item.title}</Text>
             </TouchableOpacity>

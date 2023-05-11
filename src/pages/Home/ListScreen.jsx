@@ -25,7 +25,7 @@ const DrawCard = ({ item, handlePress }) => {
     return (
 
         <TouchableOpacity onPress={() => handlePress(item)} style={{ flexDirection: 'row', backgroundColor: '#fff', borderRadius: 10, width: '100%', padding: 10, marginTop: 15 }} >
-            <Image source={{ uri: `https://061f-160-176-197-152.ngrok-free.app${item['img']}` }} style={{ width: 150, height: 150 }} />
+            <Image source={{ uri: `https://fa7f-41-142-62-254.ngrok-free.app${item['img']}` }} style={{ width: 150, height: 150 }} />
             <View style={{ marginLeft: 15 }}>
                 <Text style={{ flexWrap: 'wrap', fontSize: 22, color: '#30C67F', fontWeight: '800', textAlign: 'justify' }}>{item.general.name}</Text>
                 <Text style={{ fontSize: 16, color: '#A3A3A3' }}>{item.general['scientific_name']}</Text>
@@ -36,7 +36,7 @@ const DrawCard = ({ item, handlePress }) => {
             </TouchableOpacity>
             <Modal visible={visible} animationType='slide' transparent={true} style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <Pressable style={{ height: responsive.WINDOW_HEIGHT * 0.55, backgroundColor: '#ddd', opacity: 0.5 }} onPress={hide} />
-                <MyPlantMenu hide={hide} windowHeight={responsive.WINDOW_HEIGHT} />
+                <MyPlantMenu hide={hide} windowHeight={responsive.WINDOW_HEIGHT} plant={item} />
             </Modal>
 
         </TouchableOpacity >

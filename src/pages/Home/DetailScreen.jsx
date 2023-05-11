@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native'
-import { useEffect, useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 import routes from '../../constants/routes'
 import responsive from '../../constants/responsive'
-import { useNavigation } from '@react-navigation/native';
 
 export default function DetailScreen({ route, navigation }) {
     const item = route.params.item
+    let path = item['img'] ? item['img'] : item['image_url'];
     const handleRenderHealth = () => {
         let itemT = {
             condition: item.Condition,
@@ -27,12 +27,14 @@ export default function DetailScreen({ route, navigation }) {
             tabBarStyle: undefined
         });
     }, [navigation]);
+
     return (
 
         <ScrollView >
             <View style={styles.container}>
-                {(item.general['image'] && item['img']) ?
-                    <Image source={{ uri: `https://061f-160-176-197-152.ngrok-free.app${item['img']}` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
+                {(item.general['image'] && (item['img'] || item['image_url'])) ?
+
+                    <Image source={{ uri: `https://fa7f-41-142-62-254.ngrok-free.app${path}` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
 
                     :
                     <Image source={item.general['image']} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
@@ -55,7 +57,7 @@ export default function DetailScreen({ route, navigation }) {
                             marginVertical: 10,
                             marginRight: 10,
                         }}>
-                            <Image source={{ uri: `https://061f-160-176-197-152.ngrok-free.app${item['img']}` }} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
+                            <Image source={{ uri: `https://fa7f-41-142-62-254.ngrok-free.app${path}` }} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
                             <View>
                                 <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 14, marginBottom: 8 }}>This plant looks {item.Condition === 'Healthy' ? '' : 'has'}  <Text style={{ color: item.Condition === 'Healthy' ? '#30C67F' : '#FF0000' }}>{item.Condition.replace("_", " ")}</Text></Text>
 

@@ -23,5 +23,6 @@ export default {
 
     PLANTS_NAV: 'Plants Nav',
     GARDEN_NAV: 'Garden Nav',
+    CAMERA_NAV: 'Camera Nav'
 
 }

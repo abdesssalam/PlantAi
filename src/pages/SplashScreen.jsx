@@ -21,8 +21,6 @@ export default function SplashScreen({ navigation }) {
         await axios.head("https://github.com/").then(res => {
             if (res.status === 200) {
                 setConnected(true)
-
-                console.log('connected')
             } else {
                 console.log("not connected")
                 setConnected(false)
@@ -31,8 +29,6 @@ export default function SplashScreen({ navigation }) {
     }
 
     async function GET_CURRENT_USER() {
-        console.log("getting user")
-        console.log("connected :" + isConnected)
         if (isConnected) {
             const user = await getUserData()
             if (user.username) {

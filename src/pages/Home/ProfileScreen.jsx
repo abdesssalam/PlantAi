@@ -44,7 +44,7 @@ const DrawHeader = ({ user }) => {
                     style={{ color: '#fff', fontSize: 26, fontWeight: '600', textTransform: 'capitalize', marginTop: 5, textAlign: 'center' }}
                 >{`${user?.firstName} ${user?.lastName}`}</Text>
                 <Text
-                    style={{ color: '#efefef', fontSize: 22, fontWeight: '600', textTransform: 'capitalize', textAlign: 'center' }}
+                    style={{ color: '#efefef', fontSize: 22, fontWeight: '600', textAlign: 'center' }}
                 >@{user?.username}</Text>
 
             </View>
@@ -98,7 +98,7 @@ const DrawAccountBody = ({ user }) => {
             <DrawBodyItem Itemkey={'Name'} val={`${user?.firstName} ${user?.lastName}`} icon={faUser} />
             <DrawBodyItem Itemkey={'email'} val={user?.email} icon={faEnvelope} />
             <DrawBodyItem Itemkey={'Phone'} val={user?.phone} icon={faPhone} />
-            <DrawBodyItem Itemkey={'Joined In'} val={user?.joined} icon={faClock} />
+            <DrawBodyItem Itemkey={'Joined In'} val={user?.created_at.slice(0, 10)} icon={faClock} />
 
 
         </View>

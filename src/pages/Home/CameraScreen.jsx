@@ -127,7 +127,7 @@ export default class CameraScreen extends Component {
 
             const res = await axios({
                 method: 'POST',
-                url: 'https://061f-160-176-197-152.ngrok-free.app/file/upload/',
+                url: 'https://fa7f-41-142-62-254.ngrok-free.app/file/upload/',
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
             })

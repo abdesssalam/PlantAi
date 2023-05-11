@@ -4,16 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faCamera, faHome, faPlantWilt, faSearch, faSunPlantWilt } from "@fortawesome/free-solid-svg-icons";
 import { StyleSheet, View, Image, Text } from "react-native";
 import routes from "../constants/routes";
-import HomeScreen from "../pages/Home/HomeScreen";
-import CameraScreen from "../pages/Home/CameraScreen";
-import GardenScreen from "../pages/Home/GardenScreen";
+
 import ProfileScreen from "../pages/Home/ProfileScreen";
 
-import PlantsScreen from "../pages/Home/PlantsScreen";
 import HomeStackNavigator from "./HomeStackNavigator";
 import PlantsNavigator from "./PlantsNavigator";
 import GardenNavigator from "./GardenNavigator";
 import DetailScreen from "../pages/Home/DetailScreen";
+import CameraNavigator from "./CameraNavigator";
 
 export default function HomeTabNavigator() {
     return (
@@ -37,7 +35,7 @@ export default function HomeTabNavigator() {
                     </View>
                 )
             }} />
-            <Tab.Screen name={routes.CAMERA} component={CameraScreen} options={{
+            <Tab.Screen name={routes.CAMERA_NAV} component={CameraNavigator} options={{
                 tabBarIcon: ({ focused }) => (
                     !focused && (
                         <View style={{
@@ -71,7 +69,7 @@ export default function HomeTabNavigator() {
                     )
                 ),
             }} />
-            <Tab.Screen name={routes.GARDEN_NAV} component={PlantsNavigator} options={{
+            <Tab.Screen name={routes.GARDEN_NAV} component={GardenNavigator} options={{
                 tabBarShowLabel: false,
                 tabBarIcon: ({ focused }) => (
                     <View style={{ alignItems: 'center' }}>

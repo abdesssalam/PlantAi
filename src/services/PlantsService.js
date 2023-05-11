@@ -11,14 +11,28 @@ export const getDiseaseData = () => {
     return plantsData.filter((p, i) => (i > 15 || i <= 27));
 }
 
-export const getUserGarden = async () => {
+export const getUserPlants = async () => {
     let data = await getPlants();
 
     let toShow = []
 
     data.forEach(d => {
         let item = plantsData.find(pl => pl.general.name.toUpperCase() == d.name.toUpperCase())
-        item = { ...item, ...{ Condition: d.condition, img: d.img } }
+        item = { ...item, ...{ Condition: d.condition, img: d.img, plant_id: d.id } }
+
+        toShow.push(item)
+    })
+
+    return toShow
+}
+export const getUsergarden = async () => {
+    let data = await getPlants();
+    data = data.filter(d => d.is_garden)
+    let toShow = []
+
+    data.forEach(d => {
+        let item = plantsData.find(pl => pl.general.name.toUpperCase() == d.name.toUpperCase())
+        item = { ...item, ...{ Condition: d.condition, img: d.img, plant_id: d.id } }
 
         toShow.push(item)
     })
@@ -99,6 +113,24 @@ export const deletePlant = async (id) => {
             throw new Error('No token found');
         }
         await axios.delete(`${BASE_URL}/plants/${id}`, { headers: { Authorization: `Bearer ${token}` } });
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+};
+export const MovePlantToGarden = async (id) => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+
+        await axios.patch(`${BASE_URL}/plants/${id}/to-garden`, {}, { headers: { Authorization: `Bearer ${token}` } })
+            .then(data => {
+                console.log(data.data)
+            }).catch(er => {
+                console.log("move plant err :" + er)
+                // console.log(er.request)
+            });
     } catch (error) {
         throw new Error(error.response.data.message);
     }
