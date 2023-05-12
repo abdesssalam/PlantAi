@@ -42,20 +42,20 @@ export default function SplashScreen({ navigation }) {
     async function GET_CURRENT_USER() {
         if (isConnected) {
 
-            // const user = await getUserData()
-            const user = {}
+            const user = await getUserData()
+
             if (user.username) {
                 dispatch(loginSuccess(user))
                 console.log("redirect to app")
                 navigation.navigate(routes.APP_NAV)
             } else {
                 if (to_show_onBoardnig) {
+                    console.log("redirect to login")
+                    navigation.navigate(routes.LOGIN)
+                } else {
+                    await AsyncStorage.setItem(SHOW_ON_BOARDING_SCREEN, "true")
                     console.log("redirect to onBoardng")
                     navigation.navigate(routes.ON_BOARDING_SCEEN)
-                } else {
-                    console.log("redirect to login")
-                    await AsyncStorage.setItem(SHOW_ON_BOARDING_SCREEN, "true")
-                    navigation.navigate(routes.LOGIN)
                 }
 
 

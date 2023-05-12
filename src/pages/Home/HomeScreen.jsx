@@ -17,12 +17,10 @@ export default function HomeScreen({ navigation }) {
     var hours = new Date().getHours()
 
     let message;
-    if (hours >= 4 && hours < 12) {
-        message = 'good morning'
-    } else if (hours < 16) {
-        message = 'good afternoon'
+    if (hours >= 4 && hours < 14) {
+        message = 'bonjour'
     } else {
-        message = 'good evening'
+        message = 'bonsoir'
     }
     const handleSearchChange = (newVal) => {
         setSearch(newVal)
@@ -56,10 +54,16 @@ export default function HomeScreen({ navigation }) {
                 </Text>
                 <View style={{ width: '95%' }}>
 
-                    <Text style={{ fontFamily: 'Poppins', fontWeight: '800', color: '#000', fontSize: normalizeFont(18) }}>Popular Plants</Text>
+                    <Text
+                        style={{
+                            fontFamily: 'Poppins',
+                            fontWeight: '800',
+                            color: '#000',
+                            fontSize: normalizeFont(18)
+                        }}>Plantes populaires</Text>
 
                     <SafeAreaView style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        {HomeItems.popularPlantsData.map(item => <DrawCard key={item.id} text={item.title} imgSrc={item.img} height={responsive.WINDOW_WIDTH * 0.20} width={responsive.WINDOW_WIDTH * 0.45} handlePress={handlePress} />)}
+                        {HomeItems.popularPlantsData.map(item => <DrawCard key={item.id} text={item.title} imgSrc={item.img} height={responsive.WINDOW_WIDTH * 0.30} width={responsive.WINDOW_WIDTH * 0.90} handlePress={handlePress} />)}
 
                     </SafeAreaView>
                 </View>
@@ -73,13 +77,22 @@ const DrawCard = ({ text, width, height, imgSrc, handlePress }) => {
     return (
         <TouchableOpacity onPress={() => handlePress(text)}>
             <ImageBackground
-                imageStyle={{ borderRadius: 6 }}
+                imageStyle={{ borderRadius: 10, }}
                 source={imgSrc} style={{ width: width, height: height, marginVertical: 10, marginRight: 8 }}>
                 <View style={[styles.overley, {
                     justifyContent: 'flex-end',
                     alignItems: 'center'
                 }]}>
-                    <Text style={{ color: '#fff', width: '80%', fontSize: 20, margin: 8, textTransform: 'capitalize' }}>{text}</Text>
+                    <Text
+                        style={{
+                            color: '#fff',
+                            width: '80%',
+                            fontSize: normalizeFont(18),
+                            margin: 8,
+                            textTransform: 'capitalize',
+                            fontWeight: '600',
+                            fontFamily: 'Poppins'
+                        }}>{text}</Text>
                 </View>
             </ImageBackground>
         </TouchableOpacity>
@@ -120,4 +133,13 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         fontSize: 18,
     },
+    overley: {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        borderRadius: 10
+    }
 })

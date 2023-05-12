@@ -1,14 +1,18 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { MovePlantToGarden, getPlants } from '../../services/PlantsService'
+import { MovePlantToGarden, getPlants, removePlantFromGarden } from '../../services/PlantsService'
 
 
 export default function MyPlantMenu({ hide, windowHeight, plant }) {
-
+    console.log(plant)
     const handleMoveToGatden = async () => {
+        if (plant.is_garden) {
+            console.log("ggg")
+            await removePlantFromGarden(plant.plant_id)
+        } else {
+            await MovePlantToGarden(plant.plant_id)
+        }
 
-
-        await MovePlantToGarden(plant.plant_id)
 
         await hide()
     }
@@ -16,7 +20,7 @@ export default function MyPlantMenu({ hide, windowHeight, plant }) {
     const items = [
         {
             id: 1,
-            title: 'Save to my garden',
+            title: plant.is_garden ? 'remove from garden' : 'Save to my garden',
             color: '#30C67F',
             action: async () => { await handleMoveToGatden() }
         },

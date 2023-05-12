@@ -1,6 +1,7 @@
 import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import routes from '../../constants/routes'
+import MyPlantEmpty from '../../components/Plants/EmptyListPlant'
 
 export default function HomeListScreen({ route, navigation }) {
     const items = route.params.items
@@ -8,11 +9,17 @@ export default function HomeListScreen({ route, navigation }) {
 
         navigation.navigate(routes.DETAILS, { item: item })
     }
-    return (
-        <View>
-            <FlatList style={{ width: '100%' }} data={items} renderItem={({ item }) => <DrawCard item={item} handleItemClicked={handleItemClicked} />} />
-        </View>
-    )
+    if (items.lenght > 0) {
+
+        return (
+            <View>
+                <FlatList style={{ width: '100%' }} data={items} renderItem={({ item }) => <DrawCard item={item} handleItemClicked={handleItemClicked} />} />
+            </View>
+        )
+    } else {
+        return <MyPlantEmpty />
+
+    }
 }
 
 const DrawCard = ({ item, handleItemClicked }) => {

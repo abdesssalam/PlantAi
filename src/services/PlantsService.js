@@ -18,7 +18,7 @@ export const getUserPlants = async () => {
 
     data.forEach(d => {
         let item = plantsData.find(pl => pl.general.name.toUpperCase() == d.name.toUpperCase())
-        item = { ...item, ...{ Condition: d.condition, img: d.img, plant_id: d.id } }
+        item = { ...item, ...{ Condition: d.condition, img: d.img, plant_id: d.id, is_garden: d.is_garden } }
 
         toShow.push(item)
     })
@@ -32,7 +32,7 @@ export const getUsergarden = async () => {
 
     data.forEach(d => {
         let item = plantsData.find(pl => pl.general.name.toUpperCase() == d.name.toUpperCase())
-        item = { ...item, ...{ Condition: d.condition, img: d.img, plant_id: d.id } }
+        item = { ...item, ...{ Condition: d.condition, img: d.img, plant_id: d.id, is_garden: d.is_garden } }
 
         toShow.push(item)
     })
@@ -125,6 +125,24 @@ export const MovePlantToGarden = async (id) => {
         }
 
         await axios.patch(`${BASE_URL}/plants/${id}/to-garden`, {}, { headers: { Authorization: `Bearer ${token}` } })
+            .then(data => {
+                console.log(data.data)
+            }).catch(er => {
+                console.log("move plant err :" + er)
+                // console.log(er.request)
+            });
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+};
+export const removePlantFromGarden = async (id) => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+
+        await axios.patch(`${BASE_URL}/plants/${id}/from-garden`, {}, { headers: { Authorization: `Bearer ${token}` } })
             .then(data => {
                 console.log(data.data)
             }).catch(er => {
