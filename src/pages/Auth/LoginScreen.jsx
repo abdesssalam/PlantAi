@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Snackbar, Button } from '@react-native-material/core';
 import { LoginFailure, loginSuccess, setToken } from '../../redux/actions'
 import routes from '../../constants/routes';
+import responsive, { normalizeFont } from '../../constants/responsive';
 export default function LoginScreen({ navigation }) {
 
     const [email, setEmail] = useState('')
@@ -45,49 +46,52 @@ export default function LoginScreen({ navigation }) {
                 />
                 {/* <Text style={styles.text}>PlantAI</Text> */}
                 <Text style={styles.paragraph}>
-                    Please enter your account information to login
-                    or connect with Google or Facebook
+                    Veuillez saisir vos informations de compte pour vous connecter
                 </Text>
                 <View style={styles.inputWrapper}>
                     <FontAwesomeIcon style={styles.inpuIcon} icon={faEnvelope} />
-                    <TextInput style={styles.input} defaultValue={email} placeholder='E-Mail' placeholderTextColor="#6666" onChangeText={val => setEmail(val)} />
+                    <TextInput style={styles.input} defaultValue={email} placeholder='Adresse E-mail' placeholderTextColor="#6666" onChangeText={val => setEmail(val)} />
                 </View>
                 <View style={styles.inputWrapper}>
                     <FontAwesomeIcon style={styles.inpuIcon} icon={faLock} />
-                    <TextInput secureTextEntry={true} style={styles.input} defaultValue={password} placeholder='Password' placeholderTextColor="#6666" onChangeText={val => setPassword(val)} />
+                    <TextInput secureTextEntry={true} style={styles.input} defaultValue={password} placeholder='mot de passe' placeholderTextColor="#6666" onChangeText={val => setPassword(val)} />
                 </View>
-                <TouchableOpacity style={styles.forgetWrapper} onPress={() => navigation.navigate(routes.FORGET)}>
-                    <Text style={styles.forget}>forget password ?</Text>
+                <TouchableOpacity
+                    style={{
+                        width: responsive.WINDOW_WIDTH * 0.80,
+                    }}
+                    onPress={() => navigation.navigate(routes.FORGET)}>
+                    <Text
+                        style={{
+                            color: '#269460',
+                            alignSelf: 'flex-end',
+                            fontSize: normalizeFont(12)
+                        }}
+                    > mot de passe oublié ?</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btn} onPress={handlLogin}>
-                    <Text style={styles.btnText}>Login</Text>
+                    <Text style={styles.btnText}>connexion</Text>
                 </TouchableOpacity>
-                <View style={styles.loginWithWrapper}>
-                    <Text style={styles.loginWith}> or login with</Text>
-                </View>
-                <View style={styles.socialWrapper}>
-                    <View style={styles.faGoogleWrapper} >
-                        <FontAwesomeIcon style={styles.faGoogle} icon={faGoogle} size={30} />
-                    </View>
-                    <View style={styles.faFacebookWrapper} >
-                        <FontAwesomeIcon style={styles.faFacebook} icon={faFacebook} size={30} />
-                    </View>
-                </View>
+
                 <View style={{
                     flexDirection: 'row',
-                    marginTop: 10
+                    marginTop: 10,
+                    width: responsive.WINDOW_WIDTH * 0.80,
+
 
                 }}>
                     <Text style={{
-                        fontSize: 18,
-                        color: '#000'
+                        fontSize: normalizeFont(12),
+                        color: '#000',
+                        fontFamily: 'Poppins'
                     }}
-                    >Don't have account? </Text>
+                    >vous n'avez pas de compte ? </Text>
                     <TouchableOpacity onPress={() => { navigation.navigate(routes.REGISTER) }}>
                         <Text style={{
                             color: '#269460',
-                            fontSize: 18
-                        }}>register now</Text>
+                            fontSize: normalizeFont(12),
+                            fontFamily: 'Poppins',
+                        }}> s'inscrire maintenant</Text>
                     </TouchableOpacity>
                 </View>
                 {showSnack && <Snackbar
@@ -115,35 +119,27 @@ const styles = StyleSheet.create({
     },
 
     image: {
-        width: 150,
-        height: 150,
-        marginVertical: 22,
-    },
-    text: {
-        fontSize: 32,
-        fontWeight: '900',
-        color: '#000',
-        textAlign: 'center'
+        width: responsive.WINDOW_WIDTH * 0.45,
+        height: responsive.WINDOW_WIDTH * 0.45,
+        marginVertical: normalizeFont(12),
     },
     paragraph: {
         fontWeight: '600',
         color: '#000',
-        fontSize: 18,
-        paddingHorizontal: 16,
+        fontSize: normalizeFont(14),
+        paddingHorizontal: normalizeFont(10),
         textAlign: 'center',
-        lineHeight: 28,
-        marginVertical: 16
+        lineHeight: normalizeFont(22),
+        marginVertical: normalizeFont(14)
 
     },
 
     btn: {
         backgroundColor: '#2ec980',
-
-        paddingHorizontal: 25,
-        paddingVertical: 10,
+        paddingVertical: normalizeFont(10),
         borderRadius: 10,
-        width: '75%',
-        marginTop: 10
+        width: responsive.WINDOW_WIDTH * 0.75,
+        marginTop: normalizeFont(8)
     },
     inputWrapper: {
         flexDirection: 'row',
@@ -152,90 +148,31 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderColor: '#9b8f8f',
         borderWidth: 2,
-        width: '80%',
-        paddingHorizontal: 10,
+        width: responsive.WINDOW_WIDTH * 0.80,
+        paddingHorizontal: normalizeFont(10),
         borderRadius: 15,
-        marginVertical: 8,
-
-
-
+        marginVertical: normalizeFont(6),
     },
     inpuIcon: {
-        padding: 10,
+        padding: normalizeFont(8),
         color: '#9b8f8f'
     },
     input: {
-        paddingTop: 10,
-        paddingRight: 10,
-        paddingBottom: 10,
+        paddingTop: normalizeFont(8),
         paddingLeft: 0,
-        // backgroundColor: 'red',
         color: '#424242',
-        marginLeft: 10,
-        fontSize: 18,
+        marginLeft: normalizeFont(10),
+        fontSize: normalizeFont(14),
         width: '90%',
-
-    },
-    forgetWrapper: {
-        width: '80%',
-    },
-    forget: {
-        color: '#269460',
-        alignSelf: 'flex-end'
 
     },
     btnText: {
         color: 'white',
-        fontSize: 22,
+        fontSize: normalizeFont(20),
         fontWeight: '600',
         textAlign: 'center',
     },
-    loginWithWrapper: {
-        width: wp('85%'),
-        // height: hp('2%'),
-        borderBottomWidth: wp('0.25%'),
-        borderBottomColor: '#424242',
-        justifyContent: 'center',
-        marginVertical: 10,
-    },
-    loginWith: {
-        textAlign: 'center',
-        // backgroundColor: '#edfaf7',
-        fontSize: 18,
-        padding: 5,
-    },
-    socialWrapper: {
-        width: wp('40%'),
-        justifyContent: 'space-between',
-        flexDirection: 'row',
-        marginTop: 10,
-    },
-    faGoogleWrapper: {
-        backgroundColor: '#db0000',
-        width: 50,
-        height: 50,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 5
-    },
-    faFacebookWrapper: {
-        backgroundColor: '#4267b2',
-        width: 50,
-        height: 50,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 5
-    },
-    faGoogle: {
-        color: '#fff',
-        width: 25
 
-    },
-    faFacebook: {
-        color: '#fff',
-        width: 25
-
-    }
 
 
 });

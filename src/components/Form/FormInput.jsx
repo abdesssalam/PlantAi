@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { View, StyleSheet, TextInput } from 'react-native'
+import { normalizeFont } from '../../constants/responsive'
 
 function FormInput({ icon, value, placeholder, secure, action, Objkey }) {
     const handleChange = (val) => {
@@ -25,24 +26,22 @@ const styles = StyleSheet.create({
         borderColor: '#9b8f8f',
         borderWidth: 2,
         width: '80%',
-        paddingHorizontal: 10,
+        paddingHorizontal: normalizeFont(10),
         borderRadius: 15,
-        marginVertical: 8,
+        marginVertical: normalizeFont(5),
     },
     inpuIcon: {
-        padding: 10,
+        padding: normalizeFont(8),
         color: '#9b8f8f'
     },
     input: {
-        paddingTop: 10,
-        paddingRight: 10,
-        paddingBottom: 10,
+
+        paddingBottom: normalizeFont(8),
         paddingLeft: 0,
         backgroundColor: '#fff',
         color: '#424242',
-        marginLeft: 10,
-        fontSize: 18,
+        marginLeft: normalizeFont(10),
+        fontSize: normalizeFont(14),
         width: '90%',
-        // backgroundColor: 'red'
     },
 })

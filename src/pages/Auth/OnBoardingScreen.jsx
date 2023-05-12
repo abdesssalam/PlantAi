@@ -1,6 +1,7 @@
 
 import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import routes from '../../constants/routes';
+import responsive, { normalizeFont } from '../../constants/responsive';
 
 
 export default function OnBoardingScreen({ navigation }) {
@@ -24,15 +25,11 @@ export default function OnBoardingScreen({ navigation }) {
 
 
                 <Text style={styles.paragraph}>
-                    AGRI-AI is a mobile application that helps
-                    identify and diagnose plant diseases. The app
-                    works by using artificial intelligence and
-                    machine learning algorithms to analyze
-                    images of plants and detect any signs of
-                    disease or damage
+                    AGRI-AI est une application mobile qui aide à identifier et diagnostiquer les maladies des plantes.
+                    L'application utilise l'intelligence artificielle et des algorithmes d'apprentissage automatique pour analyser les images des plantes et détecter tout signe de maladie ou de dommage.
                 </Text>
                 <TouchableOpacity style={styles.btn} onPress={() => {
-                    // navigation.navigate(routes.LOGIN)
+                    navigation.navigate(routes.LOGIN)
                 }}>
                     <Text style={styles.text}>Start</Text>
                 </TouchableOpacity>
@@ -52,12 +49,12 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     image: {
-        width: 250,
-        height: 250,
-        marginVertical: 16,
+        width: responsive.WINDOW_WIDTH * 0.5,
+        height: responsive.WINDOW_WIDTH * 0.5,
+        marginVertical: normalizeFont(16),
     },
     text: {
-        fontSize: 32,
+        fontSize: normalizeFont(22),
         fontWeight: '900',
         color: 'white',
         textAlign: 'center'
@@ -65,22 +62,21 @@ const styles = StyleSheet.create({
     paragraph: {
         fontWeight: '600',
         color: 'white',
-        fontSize: 22,
-        paddingHorizontal: 10,
-        textAlign: 'justify',
-        lineHeight: 28,
-        marginVertical: 25
+        fontSize: normalizeFont(16),
+        paddingHorizontal: normalizeFont(10),
+        textAlign: 'center',
+        lineHeight: normalizeFont(23),
+        marginVertical: normalizeFont(16),
+        fontFamily: 'Poppins'
 
     },
 
     btn: {
         backgroundColor: 'rgba(255, 255, 255, 0.2)',
-        paddingHorizontal: 25,
-        paddingVertical: 10,
+        paddingHorizontal: normalizeFont(16),
+        paddingVertical: normalizeFont(8),
         borderRadius: 10,
-        width: '75%',
-
-
+        width: responsive.WINDOW_WIDTH * 0.75,
     },
 
 

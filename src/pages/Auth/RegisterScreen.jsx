@@ -8,6 +8,7 @@ import FormBtn from '../../components/Form/FormBtn';
 import FormFooter from '../../components/Form/FormFooter';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import routes from '../../constants/routes';
+import responsive, { normalizeFont } from '../../constants/responsive';
 
 
 export default function RegisterScreen({ navigation }) {
@@ -36,36 +37,42 @@ export default function RegisterScreen({ navigation }) {
     }
 
     return (
-        <ScrollView>
+        <ScrollView style={{ flex: 1 }}>
             <FormHeader />
 
             <View style={{
-                width: '95%',
+                width: responsive.WINDOW_WIDTH,
                 justifyContent: 'center',
                 alignItems: 'center',
                 flex: 2,
-                marginVertical: 15
+                marginVertical: normalizeFont(10)
             }}>
-                <Text >
-                    Please enter your account information to
-                    register
+                <Text
+                    style={{
+                        fontFamily: 'Poppins',
+                        fontSize: normalizeFont(14),
+                        color: '#0d0d0d',
+                        textAlign: 'center'
+                    }}
+                >
+                    Veuillez saisir vos informations de compte pour vous inscrire
                 </Text>
-                <FormInput icon={faUser} placeholder={"First name"} Objkey={'firstName'} value={user.firstName} secure={false} action={handleChnge} />
-                <FormInput icon={faUser} placeholder={"Last name"} Objkey={'lastName'} value={user.lastName} secure={false} action={handleChnge} />
-                <FormInput icon={faEnvelope} placeholder={"Email"} Objkey={'email'} value={user.email} secure={false} action={handleChnge} />
-                <FormInput icon={faLock} placeholder={"Password"} Objkey={'password'} value={user.password} secure={true} action={handleChnge} />
+                <FormInput icon={faUser} placeholder={"Prénome"} Objkey={'firstName'} value={user.firstName} secure={false} action={handleChnge} />
+                <FormInput icon={faUser} placeholder={"Nom"} Objkey={'lastName'} value={user.lastName} secure={false} action={handleChnge} />
+                <FormInput icon={faEnvelope} placeholder={"Adresse E-mail"} Objkey={'email'} value={user.email} secure={false} action={handleChnge} />
+                <FormInput icon={faLock} placeholder={"Mot de passe"} Objkey={'password'} value={user.password} secure={true} action={handleChnge} />
             </View>
             <View style={{
                 flex: 1,
-                width: '95%',
+                width: responsive.WINDOW_WIDTH,
                 alignItems: 'center',
                 // justifyContent: 'center',
             }}>
-                <FormBtn text={'register'} action={handleRegister} />
+                <FormBtn text="S'inscrire" action={handleRegister} />
 
             </View>
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                <FormFooter text={'Alread  shave account? '} textAction={'login'} onPress={goToLogin} />
+                <FormFooter text="Vous avez déjà un compte ?" textAction="connecter" onPress={goToLogin} />
             </View>
 
         </ScrollView>
