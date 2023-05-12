@@ -1,4 +1,4 @@
-import { View, Text, AppState } from 'react-native'
+import { View, Text, AppState, Image } from 'react-native'
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 import urls from '../constants/urls';
@@ -7,6 +7,10 @@ import { useDispatch } from 'react-redux';
 import { loginSuccess } from '../redux/actions';
 import routes from '../constants/routes';
 import { useIsFocused } from "@react-navigation/native";
+import COLORS from '../constants/COLORS';
+import responsive, { normalizeFont } from '../constants/responsive';
+
+const SHOW_ON_BOARDING_SCREEN = "SHOW_ON_BOARDING_SCREEN";
 
 export default function SplashScreen({ navigation }) {
 
@@ -15,7 +19,14 @@ export default function SplashScreen({ navigation }) {
     const isFocused = useIsFocused();
     const [appState, setAppState] = useState(AppState.currentState);
 
+
     //functions
+
+    async function to_show_onBoardnig() {
+        return await AsyncStorage.getItem(SHOW_ON_BOARDING_SCREEN)
+
+    }
+
     async function CHECK_IF_CONNECTED() {
         console.log("start checking...")
         await axios.head("https://github.com/").then(res => {
@@ -30,14 +41,24 @@ export default function SplashScreen({ navigation }) {
 
     async function GET_CURRENT_USER() {
         if (isConnected) {
-            const user = await getUserData()
+
+            // const user = await getUserData()
+            const user = {}
             if (user.username) {
                 dispatch(loginSuccess(user))
                 console.log("redirect to app")
                 navigation.navigate(routes.APP_NAV)
             } else {
-                console.log("redirect to login")
-                navigation.navigate(routes.LOGIN)
+                if (to_show_onBoardnig) {
+                    console.log("redirect to onBoardng")
+                    navigation.navigate(routes.ON_BOARDING_SCEEN)
+                } else {
+                    console.log("redirect to login")
+                    await AsyncStorage.setItem(SHOW_ON_BOARDING_SCREEN, "true")
+                    navigation.navigate(routes.LOGIN)
+                }
+
+
             }
 
         }
@@ -53,8 +74,40 @@ export default function SplashScreen({ navigation }) {
     }, [navigation])
 
     return (
-        <View>
-            <Text>Welcome to AGRI AI</Text>
+        <View
+            style={{
+                backgroundColor: '#fff',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flex: 1
+            }}
+        >
+            <Image
+                source={require('../assets/logo.png')}
+                resizeMode='contain'
+                style={{
+                    width: responsive.WINDOW_WIDTH * 0.5,
+                    height: responsive.WINDOW_HEIGHT * 0.5
+                }}
+            />
+            <Text
+                style={{
+                    color: '#000',
+                    fontFamily: 'Poppins',
+                    fontSize: normalizeFont(25),
+                    fontWeight: 'bold'
+                }}
+            >AGRI-AI</Text>
+            <Text
+                style={{
+                    width: responsive.WINDOW_WIDTH * 0.75,
+                    textAlign: 'center',
+                    fontWeight: '700',
+                    color: '#343641',
+                    marginTop: normalizeFont(12),
+                    fontFamily: 'Poppins'
+                }}
+            >  L'avenir de la détection des maladies des plantes, désormais à portée de vos doigts.</Text>
         </View>
     )
 }
