@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { LOGIN_FAILURE } from '../../redux/actions'
 import { userLogout } from '../../services/AuthService'
 import routes from '../../constants/routes'
+import urls from '../../constants/urls'
 
 
 // import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -32,7 +33,7 @@ export default function CustomDrawer(props) {
             <DrawerContentScrollView {...props} >
                 <View style={styles.drawerheader}>
                     <View style={styles.imageWrapper}>
-                        <Image source={require('../../assets/profile.jpg')} style={styles.profileImage} />
+                        <Image source={user.img ? { uri: urls.USER_URL + user.img } : require('../../assets/no-profile.png')} style={styles.profileImage} />
                     </View>
 
                     <View style={styles.info}>

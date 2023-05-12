@@ -6,6 +6,7 @@ import responsive, { normalizeFont } from '../../constants/responsive'
 import HelthTabs from '../../components/Plants/HelthTabs'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faHeartCircleBolt, faShieldHalved, faVial } from '@fortawesome/free-solid-svg-icons'
+import urls from '../../constants/urls'
 
 
 
@@ -30,7 +31,7 @@ export default function HealthScreen({ route }) {
                     }}
                 >
                     <Image
-                        source={{ uri: 'https://061f-160-176-197-152.ngrok-free.app' + item.imgUrl }}
+                        source={{ uri: urls.AI_API + item.imgUrl }}
                         style={{ width: responsive.WINDOW_WIDTH, height: responsive.WINDOW_WIDTH * 0.50, borderTopLeftRadius: 8, borderTopRightRadius: 8, }} />
                     <Text style={{
                         fontSize: normalizeFont(16),

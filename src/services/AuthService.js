@@ -27,6 +27,22 @@ export const registerService = async (user) => {
         throw new Error(error.response.data.message);
     }
 };
+export const editUserService = async (user) => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+
+            throw new Error('No token found');
+        }
+
+        const response = await axios.put(`${BASE_URL}/users/edit`, user, { headers: { Authorization: `Bearer ${token}` } })
+            .catch(er => console.log(er));
+
+        return response.data.user;
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+};
 
 export const loginService = async (email, password) => {
     const response =
@@ -48,15 +64,13 @@ export const loginService = async (email, password) => {
 
 
 export const getUserData = async () => {
-    console.log("geeet22222")
+
     try {
         const token = await AsyncStorage.getItem('token');
-        console.log(token)
         if (!token) {
 
             throw new Error('No token found');
         }
-        console.log("not==========----")
         const response = await axios.get(`${BASE_URL}/user`, { headers: { Authorization: `Bearer ${token}` } }).catch(er => console.log(er));
         const user = response.data.user;
         return user;
@@ -75,6 +89,26 @@ export const userLogout = async () => {
         const response = await axios.post(`${BASE_URL}/logout`, {}, { headers: { Authorization: `Bearer ${token}` } }).catch(er => console.log(er));
         await AsyncStorage.removeItem('token')
         return response.data
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+}
+
+export const changeProfilePicture = async (formData) => {
+    try {
+
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+        const res = await axios({
+            method: 'POST',
+            url: BASE_URL + '/users/upload-photo',
+            data: formData,
+            headers: { "Content-Type": "multipart/form-data", Authorization: `Bearer ${token}` },
+        })
+        console.log(res)
+        return res.data
     } catch (error) {
         throw new Error(error.response.data.message);
     }

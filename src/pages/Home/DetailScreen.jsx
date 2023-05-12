@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'rea
 import { useEffect } from 'react'
 import routes from '../../constants/routes'
 import responsive from '../../constants/responsive'
+import urls from '../../constants/urls'
 
 export default function DetailScreen({ route, navigation }) {
     const item = route.params.item
@@ -34,7 +35,7 @@ export default function DetailScreen({ route, navigation }) {
             <View style={styles.container}>
                 {(item.general['image'] && (item['img'] || item['image_url'])) ?
 
-                    <Image source={{ uri: `https://fa7f-41-142-62-254.ngrok-free.app${path}` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
+                    <Image source={{ uri: `${urls.AI_API + path}` }} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
 
                     :
                     <Image source={item.general['image']} style={{ borderRadius: 15, width: '95%', height: '25%' }} />
@@ -49,7 +50,6 @@ export default function DetailScreen({ route, navigation }) {
                 {
                     item.Condition &&
 
-
                     <View style={styles.box}>
                         <DrawHeader src={require('../../assets/ic_outline-monitor-heart.png')} text={'Plant Health'} />
                         <View style={{
@@ -57,7 +57,7 @@ export default function DetailScreen({ route, navigation }) {
                             marginVertical: 10,
                             marginRight: 10,
                         }}>
-                            <Image source={{ uri: `https://fa7f-41-142-62-254.ngrok-free.app${path}` }} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
+                            <Image source={{ uri: `${urls.AI_API + path}` }} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
                             <View>
                                 <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 14, marginBottom: 8 }}>This plant looks {item.Condition === 'Healthy' ? '' : 'has'}  <Text style={{ color: item.Condition === 'Healthy' ? '#30C67F' : '#FF0000' }}>{item.Condition.replace("_", " ")}</Text></Text>
 
@@ -89,9 +89,10 @@ export default function DetailScreen({ route, navigation }) {
                         })
                     }
                 </View>
-                <TouchableOpacity style={{ width: responsive.WINDOW_WIDTH * 0.95, backgroundColor: '#30C67F' }}>
+                {/* <TouchableOpacity style={{ width: responsive.WINDOW_WIDTH * 0.95, backgroundColor: '#30C67F' }}>
                     <Text>save in my garden</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
+                <View style={{ height: responsive.WINDOW_HEIGHT * 0.40 }}></View>
             </View>
         </ScrollView>
 
@@ -123,7 +124,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         paddingTop: 5,
-        backgroundColor: '#EDFBFF',
+        backgroundColor: '#FFF',
         paddingBottom: 60
     },
     card: {
@@ -133,14 +134,18 @@ const styles = StyleSheet.create({
         width: '95%',
         marginTop: 10,
         paddingHorizontal: 15,
-        paddingVertical: 10
+        paddingVertical: 10,
+        elevation: 10,
+        borderRadius: 10,
     },
     box: {
         backgroundColor: '#fff',
         width: '95%',
         marginTop: 5,
         paddingHorizontal: 15,
-        paddingVertical: 10
+        paddingVertical: 10,
+        elevation: 10,
+        borderRadius: 10
     },
     btn: {
         borderWidth: 1,

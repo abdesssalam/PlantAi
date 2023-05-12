@@ -3,6 +3,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faClock, faEnvelope, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
+import urls from '../../constants/urls'
 
 const DrawHeader = ({ user }) => {
 
@@ -34,7 +35,7 @@ const DrawHeader = ({ user }) => {
                     shadowColor: '#202020'
                 }}
             >
-                <Image source={require('../../assets/profile.jpg')}
+                <Image source={user.img ? { uri: urls.USER_URL + user.img } : require('../../assets/no-profile.png')}
                     style={{ width: '95%', height: '95%', borderRadius: 40 }}
                 />
             </View>

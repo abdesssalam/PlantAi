@@ -9,6 +9,7 @@ import axios from 'axios';
 import { SaveUserPlant, createPlant, getSingleItem } from '../../services/PlantsService';
 import ImageCropPicker from 'react-native-image-crop-picker';
 import routes from '../../constants/routes';
+import urls from '../../constants/urls';
 
 
 
@@ -92,11 +93,6 @@ export default class CameraScreen extends Component {
             this.uploadImage(croppedImage.path, 'image/jpeg')
 
         }
-        // setTimeout(() => {
-        //     let data = plantsData;
-        //     let item = data[Math.floor(Math.random() * ((data.length - 1) + 1))]
-        //     this.props.navigation.navigate('preview', { item: item })
-        // }, 1500)
     };
     handleOpenGallery = () => {
         ImagePicker.openPicker({
@@ -127,7 +123,7 @@ export default class CameraScreen extends Component {
 
             const res = await axios({
                 method: 'POST',
-                url: 'https://fa7f-41-142-62-254.ngrok-free.app/file/upload/',
+                url: urls.AI_API + '/file/upload/',
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
             })
