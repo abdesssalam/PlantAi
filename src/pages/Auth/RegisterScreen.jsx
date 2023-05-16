@@ -9,6 +9,7 @@ import FormFooter from '../../components/Form/FormFooter';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import routes from '../../constants/routes';
 import responsive, { normalizeFont } from '../../constants/responsive';
+import { send_email_verification } from '../../services/AuthService';
 
 
 export default function RegisterScreen({ navigation }) {
@@ -31,6 +32,8 @@ export default function RegisterScreen({ navigation }) {
         try {
             const newUser = await registerService(user)
             dispatch(loginSuccess(newUser))
+            await send_email_verification(newUser.email)
+            await navigation.navigate(routes.VERIFY)
         } catch (error) {
             dispatch(LoginFailure)
         }

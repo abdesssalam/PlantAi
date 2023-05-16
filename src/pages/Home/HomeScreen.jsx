@@ -49,7 +49,7 @@ export default function HomeScreen({ navigation }) {
                     fontSize: 20,
                     marginVertical: 5
                 }}>
-                    {`${message}`}
+                    Bienvenu
                     , <Text style={{ color: '#000' }}>{user?.firstName}</Text>
                 </Text>
                 <View style={{ width: '95%' }}>

@@ -8,6 +8,7 @@ import AppNavigator from "./AppNavigator";
 import ForgetPasswordScreen from "../pages/Auth/ForgetPasswordScreen";
 import VerifyScreen from "../pages/Auth/VerifyScreen";
 import OnBoardingScreen from "../pages/Auth/OnBoardingScreen";
+import NewPasswordScreen from "../pages/Auth/NewPasswordScreen";
 
 export default function AuthNavigator() {
     return (
@@ -19,6 +20,7 @@ export default function AuthNavigator() {
             <Stack.Screen name={routes.FORGET} component={ForgetPasswordScreen} />
             <Stack.Screen name={routes.VERIFY} component={VerifyScreen} />
             <Stack.Screen name={routes.APP_NAV} component={AppNavigator} />
+            <Stack.Screen name={routes.NEW_PASSWORD} component={NewPasswordScreen} />
         </Stack.Navigator>
     )
 

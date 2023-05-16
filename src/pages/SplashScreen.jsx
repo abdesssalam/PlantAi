@@ -66,7 +66,8 @@ export default function SplashScreen({ navigation }) {
     useEffect(() => {
         async function run() {
             await CHECK_IF_CONNECTED();
-            await GET_CURRENT_USER();
+            // await GET_CURRENT_USER();
+            await navigation.navigate(routes.NEW_PASSWORD)
         }
 
         run();
@@ -98,16 +99,7 @@ export default function SplashScreen({ navigation }) {
                     fontWeight: 'bold'
                 }}
             >AGRI-AI</Text>
-            <Text
-                style={{
-                    width: responsive.WINDOW_WIDTH * 0.75,
-                    textAlign: 'center',
-                    fontWeight: '700',
-                    color: '#343641',
-                    marginTop: normalizeFont(12),
-                    fontFamily: 'Poppins'
-                }}
-            >  L'avenir de la détection des maladies des plantes, désormais à portée de vos doigts.</Text>
+
         </View>
     )
 }

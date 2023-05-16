@@ -2,7 +2,26 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import responsive, { normalizeFont } from '../../constants/responsive'
 import COLORS from '../../constants/COLORS'
 import routes from '../../constants/routes'
+import { useState } from 'react'
+import { useRoute } from '@react-navigation/native'
+import { check_verification_service } from '../../services/AuthService'
 export default function VerifyScreen({ navigation }) {
+    const [code, setCode] = useState('')
+    const route = useRoute();
+    const handleInputCode = (v) => {
+        setCode(v)
+    }
+    const handle_verify = async () => {
+        try {
+            const res = await check_verification_service(route.params.email, code)
+            if (res?.data?.message == "ok") {
+                if (route.params.type) navigation.navigate(routes.NEW_PASSWORD)
+                else navigation.navigate(routes.APP_NAV)
+            }
+        } catch (er) {
+            console.log(er + "eee")
+        }
+    }
     return (
         <View
             style={{
@@ -34,6 +53,8 @@ export default function VerifyScreen({ navigation }) {
                     }}
                 > Saisir le code de vérification</Text>
                 <TextInput
+                    value={code}
+                    onChangeText={(v) => handleInputCode(v)}
                     style={{
                         backgroundColor: '#FFF',
                         borderRadius: 10,
@@ -49,7 +70,7 @@ export default function VerifyScreen({ navigation }) {
 
                 />
                 <TouchableOpacity
-
+                    onPress={handle_verify}
                     style={{
                         backgroundColor: COLORS.GREEN_LIGHT,
                         width: responsive.WINDOW_WIDTH * 0.50,

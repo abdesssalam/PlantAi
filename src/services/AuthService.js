@@ -113,3 +113,67 @@ export const changeProfilePicture = async (formData) => {
         throw new Error(error.response.data.message);
     }
 }
+
+export const send_email_verification = async (email) => {
+    //send-verification-code
+    try {
+        const response = await axios.post(`${BASE_URL}/send-verification-code`, { email: email }).catch(er => console.log(er));
+
+        return response.data.message
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+}
+export const forget_password_service = async (email) => {
+    try {
+        const response = await axios.post(`${BASE_URL}/forget_password`, { email: email })
+            .then(res => {
+                return res
+            })
+            .catch(er => console.log(er));
+
+        return response.data.message
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+}
+
+export const check_verification_service = async (email, code) => {
+    try {
+        const response = await axios.post(`${BASE_URL}/verify-code`, { email, code })
+            .then(res => {
+                console.log("check_verification_service")
+                console.log(res.data)
+                console.log("check_verification_service")
+                return res
+            })
+            .catch(er => {
+                console.log("check_verification_service err")
+                console.log(er)
+            });
+
+        return response.data.message
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+}
+
+export const new_password_service = async (email, password) => {
+    try {
+        const response = await axios.post(`${BASE_URL}/reset_password`, { email, password })
+            .then(res => {
+                console.log("check_verification_service")
+                console.log(res.data)
+                console.log("check_verification_service")
+                return res
+            })
+            .catch(er => {
+                console.log("check_verification_service err")
+                console.log(er)
+            });
+
+        return response.data
+    } catch (error) {
+        throw new Error(error.response.data.message);
+    }
+}

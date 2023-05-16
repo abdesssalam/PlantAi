@@ -2,12 +2,21 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import responsive, { normalizeFont } from '../../constants/responsive'
 import COLORS from '../../constants/COLORS'
 import routes from '../../constants/routes'
+import { useState } from 'react'
+import { forget_password_service } from '../../services/AuthService'
 
 
 export default function ForgetPasswordScreen({ navigation }) {
 
-    const send_OTP_code = () => {
-        navigation.navigate(routes.VERIFY)
+    const [email, setEmail] = useState('')
+    const send_OTP_code = async () => {
+        try {
+            await forget_password_service(email)
+            await navigation.navigate(routes.VERIFY, { email: email, type: 'password' })
+        } catch (e) {
+            console.log(e)
+        }
+
     }
 
     return (
@@ -41,6 +50,8 @@ export default function ForgetPasswordScreen({ navigation }) {
                     }}
                 > Entrez votre adresse e-mail</Text>
                 <TextInput
+                    value={email}
+                    onChangeText={(v) => setEmail(v)}
                     style={{
                         backgroundColor: '#FFF',
                         borderRadius: 10,

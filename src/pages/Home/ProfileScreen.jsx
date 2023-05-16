@@ -83,7 +83,7 @@ const DrawBodyItem = ({ Itemkey, val, icon }) => {
     )
 }
 const DrawAccountBody = ({ user }) => {
-    console.log(user)
+
     return (
         <View
             style={{

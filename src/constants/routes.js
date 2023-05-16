@@ -25,6 +25,7 @@ export default {
     GARDEN_NAV: 'Garden Nav',
     CAMERA_NAV: 'Camera Nav',
 
-    ON_BOARDING_SCEEN: 'On Boardnig Screen'
+    ON_BOARDING_SCEEN: 'On Boardnig Screen',
+    NEW_PASSWORD: 'New Password'
 
 }
