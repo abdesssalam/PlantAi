@@ -66,8 +66,8 @@ export default function SplashScreen({ navigation }) {
     useEffect(() => {
         async function run() {
             await CHECK_IF_CONNECTED();
-            // await GET_CURRENT_USER();
-            await navigation.navigate(routes.NEW_PASSWORD)
+            await GET_CURRENT_USER();
+            // await navigation.navigate(routes.NEW_PASSWORD)
         }
 
         run();

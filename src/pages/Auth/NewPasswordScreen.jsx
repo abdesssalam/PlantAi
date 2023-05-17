@@ -24,11 +24,10 @@ export default function NewPasswordScreen({ navigation }) {
                 setShowSnack(false)
             }, 3000)
         } else {
-            const res = await new_password_service("abdessalam.ait.999@gmail.com", pass)
+            const res = await new_password_service(route.params.email, pass)
             if (res?.message === "ok") {
                 navigation.navigate(routes.LOGIN)
             }
-            // new_password_service(route.params.email,pass)
         }
     }
 

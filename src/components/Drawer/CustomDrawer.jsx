@@ -33,7 +33,7 @@ export default function CustomDrawer(props) {
             <DrawerContentScrollView {...props} >
                 <View style={styles.drawerheader}>
                     <View style={styles.imageWrapper}>
-                        <Image source={user.img ? { uri: urls.USER_URL + user.img } : require('../../assets/no-profile.png')} style={styles.profileImage} />
+                        <Image source={user?.img ? { uri: urls.USER_URL + user?.img } : require('../../assets/no-profile.png')} style={styles.profileImage} />
                     </View>
 
                     <View style={styles.info}>
