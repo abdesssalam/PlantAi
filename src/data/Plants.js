@@ -6,50 +6,51 @@ export const plantsData = [
             "name": "Apple",
             "species": "Malus domestica",
             "scientific_name": "Malus domestica",
-            "image": require("../assets/plants/Apple.jpg")
+            "image": require("../assets/plants/Apple.jpg"),
+            "fr_name": "Pomme"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Fruit",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Plein soleil",
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Fall",
-                "Winter"
+            "Moment de la plantation": [
+                "Automne",
+                "Hiver"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "3-12 m",
-                "Spread": "3-9 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "3-12 m",
+                "Étendue": "3-9 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Spring"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Printemps"
                 ],
-                "Flower Color": [
-                    "White",
-                    "Pink"
+                "Couleur de la fleur": [
+                    "Blanc",
+                    "Rose"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Fall"
+                "Moment de la récolte": [
+                    "Fin de l'été",
+                    "Automne"
                 ],
-                "Fruit Color": [
-                    "Red",
-                    "Green",
-                    "Yellow"
+                "Couleur du fruit": [
+                    "Rouge",
+                    "Vert",
+                    "Jaune"
                 ]
             }
         },
-        "Description": "Apples are a popular fruit that come in a variety of colors and flavors. They are rich in fiber and antioxidants, and are often used in desserts, salads, and other dishes. Apples grow on trees that are typically small to medium in size and are native to Central Asia."
+        "Description": "Les pommes sont des fruits populaires qui existent dans une variété de couleurs et de saveurs. Elles sont riches en fibres et en antioxydants, et sont souvent utilisées dans les desserts, les salades et d'autres plats. Les pommes poussent sur des arbres qui sont généralement de petite à moyenne taille et sont originaires d'Asie centrale."
     },
     {
         "general": {
@@ -57,50 +58,51 @@ export const plantsData = [
             "name": "Avocado",
             "species": "Persea americana",
             "scientific_name": "Persea americana",
-            "image": require("../assets/plants/Avocado.jpg")
+            "image": require("../assets/plants/Avocado.jpg"),
+            "fr_name": "Avocat"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Fruit",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Vivace",
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "4-12 m",
-                "Spread": "4-12 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "4-12 m",
+                "Étendue": "4-12 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Winter",
-                    "Spring"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Hiver",
+                    "Printemps"
                 ],
-                "Flower Color": [
-                    "Green",
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Vert",
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Fall",
-                    "Winter"
+                "Moment de la récolte": [
+                    "Automne",
+                    "Hiver"
                 ],
-                "Fruit Color": [
-                    "Green",
-                    "Black"
+                "Couleur du fruit": [
+                    "Vert",
+                    "Noir"
                 ]
             }
         },
-        "Description": "Avocado is a popular fruit that is high in healthy fats, fiber, and essential vitamins and minerals. It is commonly used in salads, sandwiches, and guacamole. Avocado trees are evergreen and can grow up to 12 meters tall. They are native to Central and South America, and are now cultivated in many parts of the world."
+        "Description": "L'avocat est un fruit populaire riche en matières grasses saines, en fibres et en vitamines et minéraux essentiels. Il est couramment utilisé dans les salades, les sandwichs et le guacamole. Les arbres à avocats sont persistants et peuvent atteindre une hauteur de 12 mètres. Ils sont originaires d'Amérique centrale et du Sud et sont maintenant cultivés dans de nombreuses régions du monde."
     },
     {
         "general": {
@@ -108,100 +110,106 @@ export const plantsData = [
             "name": "Banana",
             "species": "Musa acuminata",
             "scientific_name": "Musa acuminata",
-            "image": require("../assets/plants/Banana.jpg")
+            "image": require("../assets/plants/Banana.jpg"),
+            "fr_name": "Banane"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Fruit",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Vivace",
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "3-8 m",
-                "Spread": "3-5 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "3-8 m",
+                "Étendue": "3-5 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Year-round"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Toute l'année"
                 ],
-                "Flower Color": [
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Year-round"
+                "Moment de la récolte": [
+                    "Toute l'année"
                 ],
-                "Fruit Color": [
-                    "Yellow",
-                    "Green"
+                "Couleur du fruit": [
+                    "Jaune",
+                    "Vert"
                 ]
             }
         },
-        "Description": "Bananas are a popular fruit that are high in potassium, fiber, and essential vitamins and minerals. They are commonly eaten fresh, but can also be used in baking and cooking. Banana plants are perennial herbs that grow up to 8 meters tall. They are native to tropical regions of Southeast Asia, but are now grown in many parts of the world."
-    },
+        "Description": "Les bananes sont des fruits populaires riches en potassium, en fibres et en vitamines et minéraux essentiels. Elles sont couramment consommées fraîches, mais peuvent également être utilisées en pâtisserie et en cuisine. Les bananiers sont des herbes vivaces qui peuvent atteindre une hauteur de 8 mètres. Ils sont originaires des régions tropicales d'Asie du Sud-Est, mais sont maintenant cultivés dans de nombreuses régions du monde."
+    }
+
+
+
+
+    ,
     {
         "general": {
             "id": 17,
             "name": "Bell Pepper",
             "species": "Capsicum annuum",
             "scientific_name": "Capsicum annuum",
-            "image": require("../assets/plants/Bell_Pepper.jpg")
+            "image": require("../assets/plants/Bell_Pepper.jpg"),
+            "fr_name": "Poivron"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil",
-                "Warm temperatures"
+            "Type de plante": "Légume",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Sol bien drainé",
+                "Températures chaudes"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "45-75 cm",
-                "Spread": "30-60 cm",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "45-75 cm",
+                "Étendue": "30-60 cm",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "White",
-                    "Green"
+                "Couleur de la fleur": [
+                    "Blanc",
+                    "Vert"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer",
-                    "Fall"
+                "Moment de la récolte": [
+                    "Été",
+                    "Automne"
                 ],
-                "Fruit Color": [
-                    "Green",
-                    "Red",
-                    "Yellow",
+                "Couleur du fruit": [
+                    "Vert",
+                    "Rouge",
+                    "Jaune",
                     "Orange"
                 ]
             }
         },
-        "Description": "Bell peppers, also known as sweet peppers, are a popular vegetable that are rich in vitamins and antioxidants. They are typically eaten raw or cooked, and come in a range of colors, including green, red, yellow, and orange. Bell pepper plants are annuals that grow up to 75 cm tall, and are native to Central and South America."
+        "Description": "Les poivrons, également connus sous le nom de poivrons doux, sont des légumes populaires riches en vitamines et en antioxydants. Ils sont généralement consommés crus ou cuits, et se déclinent en différentes couleurs, notamment le vert, le rouge, le jaune et l'orange. Les plants de poivrons sont des annuelles qui peuvent atteindre une hauteur de 75 cm et sont originaires d'Amérique centrale et du Sud."
     },
     {
         "general": {
@@ -209,50 +217,50 @@ export const plantsData = [
             "name": "Broad Bean",
             "species": "Vicia faba",
             "scientific_name": "Vicia faba",
-            "image": require("../assets/plants/Broad_Bean.jpg")
+            "image": require("../assets/plants/Broad_Bean.jpg"),
+            "fr_name": "Fève"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil",
-                "Cool temperatures"
+            "Type de plante": "Légume",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Sol bien drainé",
+                "Températures fraîches"
             ],
-            "Planting Time": [
-                "Fall",
-                "Winter"
+            "Moment de la plantation": [
+                "Automne",
+                "Hiver"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "30-90 cm",
-                "Spread": "30-90 cm",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "30-90 cm",
+                "Étendue": "30-90 cm",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Spring"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Printemps"
                 ],
-                "Flower Color": [
-                    "White",
-                    "Pink"
+                "Couleur de la fleur": [
+                    "Blanc",
+                    "Rose"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Spring",
-                    "Summer"
+                "Moment de la récolte": [
+                    "Printemps",
+                    "Été"
                 ],
-                "Fruit Color": [
-                    "Green",
-                    "Yellow"
+                "Couleur du fruit": [
+                    "Vert",
+                    "Jaune"
                 ]
             }
         },
-        "Description": "Broad beans, also known as fava beans, are a type of legume that are high in protein, fiber, and other nutrients. They are typically eaten cooked, and can be used in a variety of dishes, including soups, stews, and salads. Broad bean plants are annuals that grow up to 90 cm tall, and are native to the Mediterranean region."
+        "Description": "Les fèves, également connues sous le nom de fèves des marais, sont une variété de légumineuses riches en protéines, en fibres et en autres nutriments. Elles sont généralement consommées cuites et peuvent être utilisées dans une variété de plats, notamment les soupes, les ragoûts et les salades. Les plants de fèves sont des annuelles qui peuvent atteindre une hauteur de 90 cm et sont originaires de la région méditerranéenne."
     },
     {
         "general": {
@@ -260,49 +268,49 @@ export const plantsData = [
             "name": "Cabbage",
             "species": "Brassica oleracea",
             "scientific_name": "Brassica oleracea var. capitata",
-            "image": require("../assets/plants/Cabbage.jpg")
+            "image": require("../assets/plants/Cabbage.jpg"),
+            "fr_name": "Chou"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Biennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil",
-                "Cool temperatures"
+            "Type de plante": "Légume",
+            "Durée de vie": "Bisannuelle",
+            "Conditions préférées": [
+                "Sol bien drainé",
+                "Températures fraîches"
             ],
-            "Planting Time": [
-                "Spring",
-                "Fall"
+            "Moment de la plantation": [
+                "Printemps",
+                "Automne"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "30-90 cm",
-                "Spread": "30-90 cm",
-                "Leaf Color": [
-                    "Green",
-                    "Purple"
+            "Plante mature": {
+                "Hauteur de la plante": "30-90 cm",
+                "Étendue": "30-90 cm",
+                "Couleur des feuilles": [
+                    "Vert",
+                    "Violet"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Fall"
+                "Moment de la récolte": [
+                    "Fin de l'été",
+                    "Automne"
                 ],
-                "Fruit Color": [
-                    "Green"
+                "Couleur du fruit": [
+                    "Vert"
                 ]
             }
         },
-        "Description": "Cabbage is a leafy green or purple biennial vegetable that is grown for its tightly packed clusters of leaves, which are eaten cooked or raw. Cabbage is a good source of vitamins C and K, and can be used in a variety of dishes, including salads, soups, and stews. Cabbage plants are biennials that can grow up to 90 cm tall, and are native to Europe and Asia."
+        "Description": "Le chou est un légume bisannuel à feuilles vertes ou violettes, cultivé pour ses grappes de feuilles densément serrées, qui sont consommées cuites ou crues. Le chou est une bonne source de vitamines C et K, et peut être utilisé dans une variété de plats, notamment les salades, les soupes et les ragoûts. Les plants de chou sont des bisannuels qui peuvent atteindre une hauteur de 90 cm et sont originaires d'Europe et d'Asie."
     },
     {
         "general": {
@@ -310,48 +318,48 @@ export const plantsData = [
             "name": "Cantaloupe",
             "species": "Cucumis melo",
             "scientific_name": "Cucumis melo var. cantalupensis",
-            "image": require("../assets/plants/Cantaloupe.jpg")
+            "image": require("../assets/plants/Cantaloupe.jpg"),
+            "fr_name": "Cantaloup"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil",
-                "Warm temperatures"
+            "Type de plante": "Fruit",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Sol bien drainé",
+                "Températures chaudes"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "30-45 cm",
-                "Spread": "1-1.5 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "30-45 cm",
+                "Étendue": "1-1.5 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer",
-                    "Early fall"
+                "Moment de la récolte": [
+                    "Été",
+                    "Début de l'automne"
                 ],
-                "Fruit Color": [
+                "Couleur du fruit": [
                     "Orange"
                 ]
             }
         },
-        "Description": "Cantaloupe is a type of muskmelon that is grown for its sweet and juicy fruit. It is a good source of vitamins A and C, and is commonly eaten fresh or used in fruit salads, smoothies, and desserts. Cantaloupe plants are annuals that can grow up to 45 cm tall and spread up to 1.5 m wide, and are native to Africa and South Asia."
+        "Description": "Le cantaloup est un type de melon qui est cultivé pour son fruit sucré et juteux. Il est une bonne source de vitamines A et C, et est généralement consommé frais ou utilisé dans les salades de fruits, les smoothies et les desserts. Les plants de cantaloup sont des annuelles qui peuvent atteindre une hauteur de 45 cm et une largeur de 1 à 1,5 m, et sont originaires d'Afrique et d'Asie du Sud."
     },
     {
         "general": {
@@ -359,49 +367,49 @@ export const plantsData = [
             "name": "Carrot",
             "species": "Daucus carota",
             "scientific_name": "Daucus carota subsp. sativus",
-            "image": require("../assets/plants/Carrot.jpg")
+            "image": require("../assets/plants/Carrot.jpg"),
+            "fr_name": "Carotte"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Biennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil",
-                "Cool temperatures"
+            "Type de plante": "Légume",
+            "Durée de vie": "Biennale",
+            "Conditions préférées": [
+                "Sol bien drainé",
+                "Températures fraîches"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer",
-                "Fall"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été",
+                "Automne"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "30-60 cm",
-                "Spread": "15-30 cm",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "30-60 cm",
+                "Étendue": "15-30 cm",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "White"
+                "Couleur de la fleur": [
+                    "Blanc"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Fall"
+                "Moment de la récolte": [
+                    "Fin de l'été",
+                    "Automne"
                 ],
-                "Fruit Color": [
+                "Couleur du fruit": [
                     "Orange"
                 ]
             }
         },
-        "Description": "Carrots are root vegetables that are rich in vitamins and minerals, particularly vitamin A. They are commonly eaten raw or cooked, and can be used in a variety of dishes such as soups, stews, and salads. Carrots are biennial plants that can grow up to 60 cm tall and 30 cm wide, and are native to Europe and southwestern Asia."
+        "Description": "Les carottes sont des légumes-racines riches en vitamines et minéraux, en particulier en vitamine A. Elles sont généralement consommées crues ou cuites et peuvent être utilisées dans une variété de plats tels que les soupes, les ragoûts et les salades. Les carottes sont des plantes bisannuelles pouvant atteindre une hauteur de 60 cm et une largeur de 30 cm, et sont originaires d'Europe et d'Asie du Sud-Ouest."
     },
     {
         "general": {
@@ -409,51 +417,51 @@ export const plantsData = [
             "name": "Cauliflower",
             "species": "Brassica oleracea",
             "scientific_name": "Brassica oleracea var. botrytis",
-            "image": require("../assets/plants/Cauliflower.jpg")
+            "image": require("../assets/plants/Cauliflower.jpg"),
+            "fr_name": "Chou-fleur"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil",
-                "Cool temperatures"
+            "Type de plante": "Légume",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Sol bien drainé",
+                "Températures fraîches"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "30-60 cm",
-                "Spread": "30-45 cm",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "30-60 cm",
+                "Étendue": "30-45 cm",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Spring",
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Printemps",
+                    "Été"
                 ],
-                "Flower Color": [
-                    "White"
+                "Couleur de la fleur": [
+                    "Blanc"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Fall"
+                "Moment de la récolte": [
+                    "Fin de l'été",
+                    "Automne"
                 ],
-                "Fruit Color": [
-                    "White",
-                    "Yellow",
-                    "Green"
+                "Couleur du fruit": [
+                    "Blanc",
+                    "Jaune",
+                    "Vert"
                 ]
             }
         },
-        "Description": "Cauliflower is a cruciferous vegetable that is rich in vitamins and minerals, particularly vitamin C and folate. It is commonly eaten raw or cooked, and can be used in a variety of dishes such as stir-fries, soups, and salads. Cauliflower plants can grow up to 60 cm tall and 45 cm wide, and are native to the Mediterranean region."
+        "Description": "Le chou-fleur est un légume crucifère riche en vitamines et minéraux, notamment en vitamine C et en folate. Il est généralement consommé cru ou cuit et peut être utilisé dans une variété de plats tels que les sautés, les soupes et les salades. Les plants de chou-fleur peuvent atteindre une hauteur de 60 cm et une largeur de 45 cm, et sont originaires de la région méditerranéenne."
     },
 
     {
@@ -462,48 +470,48 @@ export const plantsData = [
             "name": "Corn Maize",
             "species": "Zea mays",
             "scientific_name": "Zea mays",
-            "image": require("../assets/plants/Corn_Maize.jpg")
+            "image": require("../assets/plants/Corn_Maize.jpg"),
+            "fr_name": "Maïs"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Légume",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "1.5-2.5 m",
-                "Spread": "0.6-0.9 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "1,5-2,5 m",
+                "Étendue": "0,6-0,9 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Early fall"
+                "Moment de la récolte": [
+                    "Fin de l'été",
+                    "Début de l'automne"
                 ],
-                "Fruit Color": [
-                    "Yellow",
-                    "White"
+                "Couleur du fruit": [
+                    "Jaune",
+                    "Blanc"
                 ]
             }
         },
-        "Description": "Corn is a tall, annual grass that is grown for its edible seeds, which are commonly known as corn or maize. It is used in a wide variety of food products and is also used as animal feed and for biofuel production. Corn is a good source of carbohydrates, fiber, and essential vitamins and minerals."
+        "Description": "Le maïs est une grande herbe annuelle cultivée pour ses graines comestibles, communément appelées maïs. Il est utilisé dans une grande variété de produits alimentaires et sert également de nourriture pour les animaux et de source d'énergie renouvelable. Le maïs est une bonne source de glucides, de fibres et de vitamines et minéraux essentiels."
     },
     {
         "general": {
@@ -511,55 +519,55 @@ export const plantsData = [
             "name": "Cucumber",
             "species": "Cucumis sativus",
             "scientific_name": "Cucumis sativus",
-            "image": require("../assets/plants/Cucumber.jpg")
+            "image": require("../assets/plants/Cucumber.jpg"),
+            "fr_name": "Concombre"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Légume",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "0.5-1.5 m",
-                "Spread": "0.3-0.45 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "0,5-1,5 m",
+                "Étendue": "0,3-0,45 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer",
-                    "Early fall"
+                "Moment de la récolte": [
+                    "Été",
+                    "Début de l'automne"
                 ],
-                "Fruit Color": [
-                    "Green",
-                    "Yellow"
+                "Couleur du fruit": [
+                    "Vert",
+                    "Jaune"
                 ],
-                "Fruit Shape": [
-                    "Oval"
+                "Forme du fruit": [
+                    "Ovale"
                 ],
-                "Fruit Size": [
-                    "Small",
-                    "Medium"
+                "Taille du fruit": [
+                    "Petite",
+                    "Moyenne"
                 ]
             }
         },
-        "Description": "Cucumber is a widely cultivated plant in the gourd family, Cucurbitaceae. It is a creeping vine that bears cucumiform fruits that are used as vegetables. Cucumbers are low in calories and high in water content, making them a great addition to salads and other dishes. They also contain various vitamins and minerals that are beneficial for overall health."
+        "Description": "Le concombre est une plante largement cultivée de la famille des cucurbitacées. C'est une vigne rampante qui produit des fruits cucurbitacés utilisés comme légumes. Les concombres sont faibles en calories et riches en eau, ce qui en fait un excellent ajout aux salades et autres plats. Ils contiennent également diverses vitamines et minéraux bénéfiques pour la santé globale."
     },
     {
         "general": {
@@ -567,54 +575,54 @@ export const plantsData = [
             "name": "Eggplant",
             "species": "Solanum melongena",
             "scientific_name": "Solanum melongena",
-            "image": require("../assets/plants/Eggplant.jpg")
+            "image": require("../assets/plants/Eggplant.jpg"),
+            "fr_name": "Aubergine"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Warm temperatures"
+            "Type de plante": "Légume",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Températures chaudes"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "60-150 cm",
-                "Spread": "60-120 cm",
-                "Leaf Color": [
-                    "Green",
-                    "Purple"
+            "Plante mature": {
+                "Hauteur de la plante": "60-150 cm",
+                "Étendue": "60-120 cm",
+                "Couleur des feuilles": [
+                    "Vert",
+                    "Violet"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer",
-                    "Fall"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été",
+                    "Automne"
                 ],
-                "Flower Color": [
-                    "Purple",
-                    "White"
+                "Couleur de la fleur": [
+                    "Violet",
+                    "Blanc"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer",
-                    "Fall"
+                "Moment de la récolte": [
+                    "Été",
+                    "Automne"
                 ],
-                "Fruit Color": [
-                    "Purple",
-                    "Black",
-                    "Green",
-                    "White",
-                    "Yellow"
+                "Couleur du fruit": [
+                    "Violet",
+                    "Noir",
+                    "Vert",
+                    "Blanc",
+                    "Jaune"
                 ]
             }
         },
-        "Description": "Eggplant is a plant species in the nightshade family. It is grown for its edible fruit, which is commonly used in cooking in many different cuisines. The fruit comes in a variety of shapes, sizes, and colors, depending on the cultivar. Eggplants are low in calories and high in fiber, vitamins, and minerals, making them a nutritious addition to a healthy diet."
+        "Description": "L'aubergine est une espèce végétale de la famille des solanacées. Elle est cultivée pour son fruit comestible, qui est couramment utilisé en cuisine dans de nombreuses cuisines différentes. Le fruit se décline en différentes formes, tailles et couleurs, selon la variété cultivée. Les aubergines sont faibles en calories et riches en fibres, en vitamines et en minéraux, ce qui en fait un ajout nutritif à une alimentation saine."
     },
     {
         "general": {
@@ -622,51 +630,51 @@ export const plantsData = [
             "name": "Grape",
             "species": "Vitis vinifera",
             "scientific_name": "Vitis vinifera",
-            "image": require("../assets/plants/Grape.jpg")
+            "image": require("../assets/plants/Grape.jpg"),
+            "fr_name": "Raisin"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Fruit",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Fall"
+            "Moment de la plantation": [
+                "Printemps",
+                "Automne"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "1.5-3 m",
-                "Spread": "1.5-3 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "1,5-3 m",
+                "Étendue": "1,5-3 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Spring"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Printemps"
                 ],
-                "Flower Color": [
-                    "Green",
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Vert",
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Early fall"
+                "Moment de la récolte": [
+                    "Fin de l'été",
+                    "Début de l'automne"
                 ],
-                "Fruit Color": [
-                    "Green",
-                    "Red",
-                    "Purple",
-                    "Black"
+                "Couleur du fruit": [
+                    "Vert",
+                    "Rouge",
+                    "Violet",
+                    "Noir"
                 ]
             }
         },
-        "Description": "Grapes are a type of fruit that grow on vines. They are commonly used for making wine, juice, and raisins. Grapes are high in antioxidants and other nutrients, and are a good source of fiber. There are many different types of grapes, each with their own unique flavor and texture."
+        "Description": "Le raisin est un type de fruit qui pousse sur des vignes. Il est couramment utilisé pour faire du vin, du jus et des raisins secs. Les raisins sont riches en antioxydants et en autres nutriments, et constituent une bonne source de fibres. Il existe de nombreux types de raisins, chacun ayant sa propre saveur et sa propre texture unique."
     },
     {
         "general": {
@@ -674,47 +682,47 @@ export const plantsData = [
             "name": "Green Bean",
             "species": "Phaseolus vulgaris",
             "scientific_name": "Phaseolus vulgaris",
-            "image": require("../assets/plants/Green_Bean.jpg")
+            "image": require("../assets/plants/Green_Bean.jpg"),
+            "fr_name": "Haricot vert"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil",
-                "pH 6.0 to 6.5"
+            "Type de plante": "Légume",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Sol bien drainé",
+                "pH de 6,0 à 6,5"
             ],
-            "Planting Time": [
-                "Spring"
+            "Moment de la plantation": [
+                "Printemps"
             ],
             "Days to Maturity": "45-60"
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "30-60 cm",
-                "Spread": "15-30 cm",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "30-60 cm",
+                "Étendue": "15-30 cm",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "White"
+                "Couleur de la fleur": [
+                    "Blanc"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer"
+                "Moment de la récolte": [
+                    "Été"
                 ],
-                "Fruit Color": [
-                    "Green"
+                "Couleur du fruit": [
+                    "Vert"
                 ]
             }
         },
-        "description": "Green bean, also known as snap bean or string bean, is a popular vegetable that is grown for its tender, immature pods. They are usually harvested before the seeds inside fully develop. Green beans are a good source of dietary fiber, vitamins, and minerals. They can be eaten raw or cooked and are commonly used in salads, stir-fries, and casseroles."
+        "description": "Le haricot vert, également connu sous le nom de haricot mangetout ou haricot à écosser, est un légume populaire cultivé pour ses gousses tendres et immatures. Elles sont généralement récoltées avant que les graines à l'intérieur ne se développent pleinement. Les haricots verts sont une bonne source de fibres alimentaires, de vitamines et de minéraux. Ils peuvent être consommés crus ou cuits et sont couramment utilisés dans les salades, les sautés et les casseroles."
     },
     {
         "general": {
@@ -722,53 +730,53 @@ export const plantsData = [
             "name": "Mango",
             "species": "Mangifera indica",
             "scientific_name": "Mangifera indica",
-            "image": require("../assets/plants/Mango.jpg")
+            "image": require("../assets/plants/Mango.jpg"),
+            "fr_name": "Mangue"
         },
         "key_facts": {
-            "Plant Type": "Fruit tree",
-            "Life Span": "Long-lived perennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Arbre fruitier",
+            "Durée de vie": "Vivace à longue durée de vie",
+            "Conditions préférées": [
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Tree": {
-                "Tree Height": "10-40 m",
-                "Spread": "10-15 m",
-                "Leaf Color": [
-                    "Dark green"
+            "Arbre mature": {
+                "Hauteur de l'arbre": "10-40 m",
+                "Étendue": "10-15 m",
+                "Couleur des feuilles": [
+                    "Vert foncé"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Winter",
-                    "Spring"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Hiver",
+                    "Printemps"
                 ],
-                "Flower Color": [
-                    "Pink",
-                    "Yellow",
+                "Couleur de la fleur": [
+                    "Rose",
+                    "Jaune",
                     "Orange"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer",
-                    "Fall"
+                "Moment de la récolte": [
+                    "Été",
+                    "Automne"
                 ],
-                "Fruit Color": [
-                    "Green",
-                    "Yellow",
-                    "Red"
+                "Couleur du fruit": [
+                    "Vert",
+                    "Jaune",
+                    "Rouge"
                 ],
-                "Fruit Shape": "Oval"
+                "Forme du fruit": "Ovale"
             }
         },
-        "Description": "Mango is a tropical fruit tree that is native to South Asia. It is widely cultivated for its sweet, juicy fruit, which is a good source of vitamins and minerals. Mango trees are large and can grow up to 40 meters tall. The fruit is typically harvested in the summer and fall, and comes in a variety of colors and shapes depending on the variety."
+        "description": "La mangue est un arbre fruitier tropical originaire d'Asie du Sud. Elle est largement cultivée pour son fruit sucré et juteux, qui est une bonne source de vitamines et de minéraux. Les manguiers sont de grande taille et peuvent atteindre jusqu'à 40 mètres de hauteur. Les fruits sont généralement récoltés en été et en automne, et ils se déclinent en différentes couleurs et formes selon la variété."
     },
     {
         "general": {
@@ -776,50 +784,50 @@ export const plantsData = [
             "name": "Melon",
             "species": "Cucumis melo",
             "scientific_name": "Cucumis melo",
-            "image": require("../assets/plants/Melon.jpg")
+            "image": require("../assets/plants/Melon.jpg"),
+            "fr_name": "Melon"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Légume",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "0.5-1 m",
-                "Spread": "1-2 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "0,5-1 m",
+                "Étendue": "1-2 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Early fall"
+                "Moment de la récolte": [
+                    "Fin de l'été",
+                    "Début de l'automne"
                 ],
-                "Fruit Color": [
-                    "Green",
-                    "Yellow",
+                "Couleur du fruit": [
+                    "Vert",
+                    "Jaune",
                     "Orange"
                 ],
-                "Fruit Size": "10-30 cm"
+                "Taille du fruit": "10-30 cm"
             }
         },
-        "Description": "Melon is a juicy, sweet fruit that is a popular summer treat. It belongs to the Cucurbitaceae family and is closely related to cucumbers, squash, and pumpkins. Melons come in many varieties, including honeydew, cantaloupe, and watermelon. They are a good source of vitamins A and C, as well as potassium and dietary fiber."
+        "description": "Le melon est un fruit juteux et sucré qui est très apprécié en été. Il appartient à la famille des Cucurbitacées et est étroitement apparenté aux concombres, aux courges et aux citrouilles. Les melons se déclinent en de nombreuses variétés, dont le melon d'eau, le melon cantaloup et le melon honeydew. Ils sont une bonne source de vitamines A et C, ainsi que de potassium et de fibres alimentaires."
     },
     {
         "general": {
@@ -827,53 +835,53 @@ export const plantsData = [
             "name": "Onion",
             "species": "Allium cepa",
             "scientific_name": "Allium cepa",
-            "image": require("../assets/plants/Onion.jpg")
+            "image": require("../assets/plants/Onion.jpg"),
+            "fr_name": "Oignon"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Biennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Légume",
+            "Durée de vie": "Bisannuelle",
+            "Conditions préférées": [
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Fall",
-                "Spring"
+            "Moment de la plantation": [
+                "Automne",
+                "Printemps"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant Height": "30-50 cm",
-                "Spread": "10-15 cm",
-                "Leaf Color": [
-                    "Green",
-                    "Yellow"
+            "Plante mature": {
+                "Hauteur de la plante": "30-50 cm",
+                "Étendue": "10-15 cm",
+                "Couleur des feuilles": [
+                    "Vert",
+                    "Jaune"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "White",
-                    "Pink"
+                "Couleur de la fleur": [
+                    "Blanc",
+                    "Rose"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer",
-                    "Fall"
+                "Moment de la récolte": [
+                    "Été",
+                    "Automne"
                 ],
-                "Fruit Color": [
-                    "Brown",
-                    "White",
-                    "Yellow",
-                    "Red",
-                    "Purple"
+                "Couleur du fruit": [
+                    "Marron",
+                    "Blanc",
+                    "Jaune",
+                    "Rouge",
+                    "Violet"
                 ]
             }
         },
-        "Description": "Onion is a biennial plant grown for its edible bulb. It is widely used in cooking and is a staple ingredient in many dishes. Onions are rich in vitamins, minerals, and antioxidants, and have many health benefits. They are easy to grow and can be planted in the fall or spring."
+        "description": "L'oignon est une plante bisannuelle cultivée pour son bulbe comestible. Il est largement utilisé en cuisine et constitue un ingrédient de base dans de nombreux plats. Les oignons sont riches en vitamines, minéraux et antioxydants, et présentent de nombreux bienfaits pour la santé. Ils sont faciles à cultiver et peuvent être plantés en automne ou au printemps."
     },
     {
         "general": {
@@ -881,49 +889,49 @@ export const plantsData = [
             "name": "Orange",
             "species": "Citrus × sinensis",
             "scientific_name": "Citrus × sinensis",
-            "image": require("../assets/plants/Orange.jpg")
+            "image": require("../assets/plants/Orange.jpg"),
+            "fr_name": "Orange"
         },
         "key_facts": {
-            "Plant Type": "Tree",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil",
-                "Warm temperatures"
+            "Type de plante": "Arbre",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Sol bien drainé",
+                "Températures chaudes"
             ],
-            "Planting Time": [
-                "Fall",
-                "Winter"
+            "Moment de la plantation": [
+                "Automne",
+                "Hiver"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "4-8 m",
-                "Spread": "3-6 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "4-8 m",
+                "Étendue": "3-6 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Spring",
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Printemps",
+                    "Été"
                 ],
-                "Flower Color": [
-                    "White"
+                "Couleur de la fleur": [
+                    "Blanc"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Winter",
-                    "Spring"
+                "Moment de la récolte": [
+                    "Hiver",
+                    "Printemps"
                 ],
-                "Fruit Color": [
+                "Couleur du fruit": [
                     "Orange"
                 ]
             }
         },
-        "Description": "The orange is a fruit that grows on citrus trees. It is a popular fruit around the world, and is known for its sweet and tangy taste. Oranges are high in vitamin C and other nutrients, and are often used in juices, jams, and other food products. There are many different varieties of oranges, including navel oranges and Valencia oranges."
+        "description": "L'orange est un fruit qui pousse sur les arbres d'agrumes. C'est un fruit populaire dans le monde entier, connu pour son goût sucré et acidulé. Les oranges sont riches en vitamine C et autres nutriments, et sont souvent utilisées dans les jus, les confitures et autres produits alimentaires. Il existe de nombreuses variétés d'oranges, notamment les oranges navel et les oranges Valencia."
     },
     {
         "general": {
@@ -931,51 +939,51 @@ export const plantsData = [
             "name": "Peach",
             "species": "Prunus persica",
             "scientific_name": "Prunus persica",
-            "image": require("../assets/plants/Peach.jpg")
+            "image": require("../assets/plants/Peach.jpg"),
+            "fr_name": "Pêche"
         },
         "key_facts": {
-            "Plant Type": "Fruit tree",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Arbre fruitier",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Late winter",
-                "Early spring"
+            "Moment de la plantation": [
+                "Fin de l'hiver",
+                "Début du printemps"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "4-6 m",
-                "Spread": "4-6 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "4-6 m",
+                "Étendue": "4-6 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Late winter",
-                    "Early spring"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Fin de l'hiver",
+                    "Début du printemps"
                 ],
-                "Flower Color": [
-                    "Pink",
-                    "White"
+                "Couleur de la fleur": [
+                    "Rose",
+                    "Blanc"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Late spring",
-                    "Summer"
+                "Moment de la récolte": [
+                    "Fin du printemps",
+                    "Été"
                 ],
-                "Fruit Color": [
+                "Couleur du fruit": [
                     "Orange",
-                    "Yellow",
-                    "Red"
+                    "Jaune",
+                    "Rouge"
                 ]
             }
         },
-        "Description": "The peach is a deciduous fruit tree native to China that is widely grown for its sweet, juicy fruit. Peaches are rich in vitamins, minerals, and antioxidants, and are a good source of dietary fiber. They are eaten fresh, canned, or dried, and are used in a variety of dishes, including desserts, salads, and main courses."
+        "description": "La pêche est un arbre fruitier caduc originaire de Chine et largement cultivé pour son fruit sucré et juteux. Les pêches sont riches en vitamines, minéraux et antioxydants, et sont une bonne source de fibres alimentaires. Elles sont consommées fraîches, en conserve ou séchées, et sont utilisées dans une variété de plats, notamment les desserts, les salades et les plats principaux."
     },
     {
         "general": {
@@ -983,51 +991,51 @@ export const plantsData = [
             "name": "Pomegranate",
             "species": "Punica granatum",
             "scientific_name": "Punica granatum",
-            "image": require("../assets/plants/Pomegranate.jpg")
+            "image": require("../assets/plants/Pomegranate.jpg"),
+            "fr_name": "Grenade"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Fruit",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Fall"
+            "Moment de la plantation": [
+                "Printemps",
+                "Automne"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "5-8 m",
-                "Spread": "4-6 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "5-8 m",
+                "Étendue": "4-6 m",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer",
-                    "Fall"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été",
+                    "Automne"
                 ],
-                "Flower Color": [
-                    "Red",
+                "Couleur de la fleur": [
+                    "Rouge",
                     "Orange"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Fall",
-                    "Winter"
+                "Moment de la récolte": [
+                    "Automne",
+                    "Hiver"
                 ],
-                "Fruit Color": [
-                    "Red",
-                    "Pink"
+                "Couleur du fruit": [
+                    "Rouge",
+                    "Rose"
                 ],
-                "Fruit Shape": "Round"
+                "Forme du fruit": "Rond"
             }
         },
-        "Description": "Pomegranate is a deciduous fruit tree that is native to the Middle East, but is now widely cultivated in many parts of the world. The tree produces a fruit that is round and about the size of an apple, with a thick, leathery skin and a crown of calyx lobes at the top. The fruit is filled with small, juicy, red seeds that are surrounded by a tart, fleshy pulp. Pomegranates are a good source of fiber, vitamins, and minerals, and have been used for their medicinal properties for centuries."
+        "description": "La grenade est un arbre fruitier caduc originaire du Moyen-Orient, mais largement cultivé dans de nombreuses régions du monde. L'arbre produit un fruit rond, de la taille d'une pomme, avec une peau épaisse et coriace et une couronne de lobes de calice sur le dessus. Le fruit est rempli de petites graines rouges juteuses entourées d'une pulpe charnue et acidulée. Les grenades sont une bonne source de fibres, de vitamines et de minéraux, et sont utilisées depuis des siècles pour leurs propriétés médicinales."
     },
     {
         "general": {
@@ -1035,206 +1043,213 @@ export const plantsData = [
             "name": "Potato",
             "species": "Solanum tuberosum",
             "scientific_name": "Solanum tuberosum",
-            "image": require("../assets/plants/Potato.jpg")
+            "image": require("../assets/plants/Potato.jpg"),
+            "fr_name": "Pomme de terre"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun to partial shade",
-                "Well-drained soil"
+            "Type de plante": "Légume",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Plein soleil à mi-ombre",
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "60-100 cm",
-                "Spread": "45-75 cm",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "60-100 cm",
+                "Étendue": "45-75 cm",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "White",
-                    "Pink",
-                    "Blue",
-                    "Purple"
+                "Couleur de la fleur": [
+                    "Blanc",
+                    "Rose",
+                    "Bleu",
+                    "Violet"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Late summer",
-                    "Early fall"
+                "Moment de la récolte": [
+                    "Fin de l'été",
+                    "Début de l'automne"
                 ],
-                "Fruit Color": [
-                    "Brown",
-                    "Yellow",
-                    "Red",
-                    "Purple"
+                "Couleur du fruit": [
+                    "Brun",
+                    "Jaune",
+                    "Rouge",
+                    "Violet"
                 ]
             }
         },
-        "Description": "Potatoes are starchy root vegetables that are a staple food in many parts of the world. They are rich in carbohydrates, vitamins, and minerals, and are a good source of dietary fiber. Potatoes are used in a wide variety of dishes, including mashed potatoes, french fries, and potato chips."
+        "description": "La pomme de terre est un légume-racine féculent qui est un aliment de base dans de nombreuses régions du monde. Elle est riche en glucides, en vitamines et en minéraux, et constitue une bonne source de fibres alimentaires. Les pommes de terre sont utilisées dans une grande variété de plats, notamment en purée, en frites et en chips."
     },
+
     {
         "general": {
             "id": 43,
             "name": "Strawberry",
             "species": "Fragaria × ananassa",
             "scientific_name": "Fragaria × ananassa",
-            "image": require("../assets/plants/Strawberry.jpg")
+            "image": require("../assets/plants/Strawberry.jpg"),
+            "fr_name": "Fraise"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
-            "Life Span": "Perennial",
-            "Preferred Conditions": [
-                "Full sun to partial shade",
-                "Well-drained soil"
+            "Type de plante": "Fruit",
+            "Durée de vie": "Vivace",
+            "Conditions préférées": [
+                "Plein soleil à mi-ombre",
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Fall"
+            "Moment de la plantation": [
+                "Printemps",
+                "Automne"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "15-30 cm",
-                "Spread": "50-100 cm",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "15-30 cm",
+                "Étendue": "50-100 cm",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Spring",
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Printemps",
+                    "Été"
                 ],
-                "Flower Color": [
-                    "White"
+                "Couleur de la fleur": [
+                    "Blanc"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer"
+                "Moment de la récolte": [
+                    "Été"
                 ],
-                "Fruit Color": [
-                    "Red"
+                "Couleur du fruit": [
+                    "Rouge"
                 ],
-                "Shape": "Heart-shaped",
-                "Taste": "Sweet"
+                "Forme": "En forme de cœur",
+                "Goût": "Sucré"
             }
         },
-        "Description": "Strawberries are a popular fruit that are enjoyed all over the world. They are a good source of vitamin C, fiber, and antioxidants. Strawberries are typically eaten fresh, but they can also be used in a variety of desserts and drinks, such as smoothies and ice cream."
+        "description": "La fraise est un fruit populaire apprécié dans le monde entier. Elle est une bonne source de vitamine C, de fibres et d'antioxydants. Les fraises sont généralement consommées fraîches, mais elles peuvent également être utilisées dans une variété de desserts et de boissons, comme les smoothies et les glaces."
     },
+
     {
         "general": {
             "id": 50,
             "name": "Tomato",
             "species": "Solanum lycopersicum",
             "scientific_name": "Solanum lycopersicum",
-            "image": require("../assets/plants/Tomato.jpg")
+            "image": require("../assets/plants/Tomato.jpg"),
+            "fr_name": "Tomate"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
-            "life span": "Annual",
-            "preferred_conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Fruit",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Vivace",
+                "Sol bien drainé"
             ],
-            "planting_time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "mature plant": {
-                "plant height": "1-3 meters",
-                "spread": "0.5-1 meter",
-                "leaf color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "1-3 mètres",
+                "Étendue": "0,5-1 mètre",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "flower": {
-                "bloom time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "flower color": [
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Jaune"
                 ]
             },
-            "fruit": {
-                "harvest time": [
-                    "Summer",
-                    "Fall"
+            "Fruit": {
+                "Moment de la récolte": [
+                    "Été",
+                    "Automne"
                 ],
-                "fruit color": [
-                    "Red",
-                    "Yellow",
-                    "Green",
+                "Couleur du fruit": [
+                    "Rouge",
+                    "Jaune",
+                    "Vert",
                     "Orange"
                 ]
             }
         },
-        "description": "Tomatoes are a popular fruit that are commonly used in cooking and eaten raw in salads. They are a rich source of vitamins and minerals, including vitamin C and potassium. Tomatoes come in a variety of colors, shapes, and sizes, and can be grown in many different climates."
+        "description": "La tomate est un fruit populaire largement utilisé en cuisine et consommé cru dans les salades. Elle est une source riche de vitamines et de minéraux, notamment la vitamine C et le potassium. Les tomates existent dans une variété de couleurs, de formes et de tailles, et peuvent être cultivées dans de nombreux climats différents."
     },
+
     {
         "general": {
             "id": 43,
             "name": "Watermelon",
             "species": "Citrullus lanatus",
             "scientific_name": "Citrullus lanatus",
-            "image": require("../assets/plants/Watermelon.jpg")
+            "image": require("../assets/plants/Watermelon.jpg"),
+            "fr_name": "Pastèque"
         },
         "key_facts": {
-            "Plant Type": "Fruit",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Fruit",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Vivace",
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant height": "0.5-1 m",
-                "Spread": "1-2 m",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "0,5-1 mètre",
+                "Étendue": "1-2 mètres",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer"
+                "Moment de la récolte": [
+                    "Été"
                 ],
-                "Fruit Color": [
-                    "Green",
-                    "Striped",
-                    "Yellow",
-                    "Red"
+                "Couleur du fruit": [
+                    "Vert",
+                    "Rayé",
+                    "Jaune",
+                    "Rouge"
                 ],
-                "Fruit Shape": "Round or oblong",
-                "Fruit Size": "2-50 kg"
+                "Forme du fruit": "Ronde ou oblongue",
+                "Taille du fruit": "2-50 kg"
             }
         },
-        "Description": "Watermelon is a large, juicy fruit that is high in water content and low in calories. It is a good source of vitamins A and C, as well as potassium and lycopene. Watermelon is commonly eaten raw as a refreshing snack or used in salads, smoothies, and other dishes."
+        "Description": "La pastèque est un fruit volumineux et juteux, qui a une teneur élevée en eau et une faible teneur en calories. Elle est une bonne source de vitamines A et C, ainsi que de potassium et de lycopène. La pastèque est généralement consommée crue en tant que collation rafraîchissante ou utilisée dans des salades, des smoothies et d'autres plats."
     },
     {
         "general": {
@@ -1242,49 +1257,50 @@ export const plantsData = [
             "name": "Zucchini",
             "species": "Cucurbita pepo",
             "scientific_name": "Cucurbita pepo subsp. pepo",
-            "image": require("../assets/plants/Zucchini.jpg")
+            "image": require("../assets/plants/Zucchini.jpg"),
+            "fr_name": "Courgette"
         },
         "key_facts": {
-            "Plant Type": "Vegetable",
-            "Life Span": "Annual",
-            "Preferred Conditions": [
-                "Full sun",
-                "Well-drained soil"
+            "Type de plante": "Légume",
+            "Durée de vie": "Annuelle",
+            "Conditions préférées": [
+                "Vivace",
+                "Sol bien drainé"
             ],
-            "Planting Time": [
-                "Spring",
-                "Summer"
+            "Moment de la plantation": [
+                "Printemps",
+                "Été"
             ]
         },
         "characteristics": {
-            "Mature Plant": {
-                "Plant Height": "60-120 cm",
-                "Spread": "60-90 cm",
-                "Leaf Color": [
-                    "Green"
+            "Plante mature": {
+                "Hauteur de la plante": "60-120 cm",
+                "Étendue": "60-90 cm",
+                "Couleur des feuilles": [
+                    "Vert"
                 ]
             },
-            "Flower": {
-                "Bloom Time": [
-                    "Summer"
+            "Fleur": {
+                "Moment de la floraison": [
+                    "Été"
                 ],
-                "Flower Color": [
-                    "Yellow"
+                "Couleur de la fleur": [
+                    "Jaune"
                 ]
             },
             "Fruit": {
-                "Harvest Time": [
-                    "Summer",
-                    "Early Fall"
+                "Moment de la récolte": [
+                    "Été",
+                    "Début de l'automne"
                 ],
-                "Fruit Color": [
-                    "Green",
-                    "Yellow"
+                "Couleur du fruit": [
+                    "Vert",
+                    "Jaune"
                 ],
-                "Fruit Size": "15-25 cm"
+                "Taille du fruit": "15-25 cm"
             }
         },
-        "Description": "Zucchini is a summer squash that is harvested while still immature and small. It is a popular vegetable that is commonly used in cooking and is known for its mild flavor and soft texture. Zucchini is low in calories and a good source of vitamin C, fiber, and potassium."
+        "Description": "La courgette est une courge d'été récoltée lorsqu'elle est encore immature et de petite taille. C'est un légume populaire couramment utilisé en cuisine, apprécié pour sa saveur douce et sa texture tendre. La courgette est faible en calories et une bonne source de vitamine C, de fibres et de potassium."
     }
 
 ]
