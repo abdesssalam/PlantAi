@@ -8,6 +8,7 @@ import urls from '../../constants/urls';
 import { useIsFocused, useRoute } from '@react-navigation/native';
 import { getUserPlants } from '../../services/PlantsService';
 import MyPlantEmpty from '../../components/Plants/EmptyListPlant';
+import LottieView from 'lottie-react-native'
 
 export default function ListScreen({ navigation }) {
 
@@ -83,12 +84,8 @@ const DrawLoading = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
             }}>
-            <ActivityIndicator size='large' color='#000'
-                style={{
-                    width: responsive.WINDOW_WIDTH * 0.5,
-                    height: responsive.WINDOW_WIDTH * 0.5,
-                }} />
-            <Text>getiing data ...</Text>
+            <LottieView source={require('../../assets/load.json')} autoPlay loop />
+
         </View>
     )
 }
