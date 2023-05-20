@@ -26,6 +26,7 @@ export default {
     CAMERA_NAV: 'Camera Nav',
 
     ON_BOARDING_SCEEN: 'On Boardnig Screen',
-    NEW_PASSWORD: 'New Password'
+    NEW_PASSWORD: 'New Password',
+    NOTE_SCREEN: 'NOTES'
 
 }

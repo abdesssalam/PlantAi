@@ -14,8 +14,6 @@ import urls from '../../constants/urls'
 // import { BlurView } from '@react-native-community/blur'
 export default function CustomDrawer(props) {
     const user = useSelector(state => state.user)
-
-
     const dispatch = useDispatch();
     const Logout = async () => {
         try {
@@ -25,15 +23,13 @@ export default function CustomDrawer(props) {
         } catch (e) {
 
         }
-
-
     }
     return (
         <View style={styles.container}>
             <DrawerContentScrollView {...props} >
                 <View style={styles.drawerheader}>
                     <View style={styles.imageWrapper}>
-                        <Image source={user?.img ? { uri: urls.USER_URL + user?.img } : require('../../assets/no-profile.png')} style={styles.profileImage} />
+                        <Image source={user?.img ? { uri: urls.USER_URL + user.img } : require('../../assets/no-profile.png')} style={styles.profileImage} />
                     </View>
 
                     <View style={styles.info}>

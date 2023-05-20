@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const BASE_URL = 'http://10.0.2.2:8000/api'
 
 export const getHomePlants = (item) => {
-    return plantsData.filter(plant => plant.key_facts['Plant Type'].toLowerCase() === item.toLowerCase())
+    return plantsData.filter(plant => plant.key_facts['Type de plante'].toLowerCase() === item.toLowerCase())
 }
 
 export const getDiseaseData = () => {
@@ -153,3 +153,74 @@ export const removePlantFromGarden = async (id) => {
         throw new Error(error.response.data.message);
     }
 };
+
+export const add_note_service = async (plant_id, text) => {
+    console.log('start add note')
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+        const response = await axios.post(`${BASE_URL}/note`, { plant_id, text }, { headers: { Authorization: `Bearer ${token}` } })
+            .then(res => {
+                console.log("res")
+                console.log(res)
+                console.log("res")
+                return res
+            }).catch(er => {
+                console.log("er")
+                console.log(er)
+                console.log("er")
+            })
+        console.log(response?.data)
+        return response?.data;
+    } catch (ex) {
+
+    }
+}
+export const edit_note_service = async (note_id, text) => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+        const response = await axios.post(`${BASE_URL}/note/${note_id}`, { text }, { headers: { Authorization: `Bearer ${token}` } })
+        console.log('edit note')
+        console.log(response)
+        console.log('edit note')
+        return response?.data;
+    } catch (ex) {
+
+    }
+}
+export const remove_note_service = async (note_id) => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+        const response = await axios.delete(`${BASE_URL}/note/${note_id}`, { headers: { Authorization: `Bearer ${token}` } })
+        return response?.data;
+    } catch (ex) {
+
+    }
+}
+export const get_notes_service = async (plant_id) => {
+    try {
+        const token = await AsyncStorage.getItem('token');
+        if (!token) {
+            throw new Error('No token found');
+        }
+        const response = await axios.get(`${BASE_URL}/notes/${plant_id}`, { headers: { Authorization: `Bearer ${token}` } })
+            .then(res => {
+                return res
+            }).catch(er => {
+
+                console.log(er)
+                throw er
+            })
+        return response?.data;
+    } catch (ex) {
+
+    }
+}

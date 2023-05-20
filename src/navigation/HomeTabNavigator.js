@@ -17,7 +17,7 @@ export default function HomeTabNavigator() {
     return (
         <Tab.Navigator
             initialRouteName={routes.HOME_STACK}
-            screenOptions={{ headerShown: false, tabBarStyle: styles.tabBar, tabBarShowLabel: false }}>
+            screenOptions={{ headerShown: false, tabBarStyle: styles.tabBar, tabBarShowLabel: false, tabBarHideOnKeyboard: true, }}>
             <Tab.Screen name={routes.HOME_STACK} component={HomeStackNavigator} options={{
                 tabBarIcon: ({ focused }) => (
 
@@ -27,7 +27,7 @@ export default function HomeTabNavigator() {
                     </View>
                 )
             }} />
-            <Tab.Screen name={routes.PLANTS_NAV} component={PlantsNavigator} options={{
+            <Tab.Screen name={routes.PLANTS_NAV} component={GardenNavigator} options={{
                 tabBarIcon: ({ focused }) => (
                     <View style={{ alignItems: 'center' }}>
                         <FontAwesomeIcon icon={faPlantWilt} color={focused ? '#30C67F' : '#9DB2CE'} />

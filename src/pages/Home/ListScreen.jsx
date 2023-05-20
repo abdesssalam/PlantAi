@@ -1,19 +1,52 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { ActivityIndicator } from '@react-native-material/core';
 import { View, Text, FlatList, Image, Modal, TouchableOpacity, Pressable, Dimensions, BackHandler } from 'react-native'
 import responsive from '../../constants/responsive';
 import MyPlantMenu from '../../components/Plants/MyPlantMenu';
 import routes from '../../constants/routes';
 import urls from '../../constants/urls';
+import { useIsFocused, useRoute } from '@react-navigation/native';
+import { getUserPlants } from '../../services/PlantsService';
+import MyPlantEmpty from '../../components/Plants/EmptyListPlant';
 
-export default function ListScreen({ route, navigation }) {
-    const data = route.params.data
+export default function ListScreen({ navigation }) {
+
+    const route = useRoute()
+
+    // const data = route.params.data
+    const [data, setData] = useState([])
+    const isFocused = useIsFocused();
+
+    const [isLoading, setLoading] = useState(false)
+
+    async function getData() {
+        setLoading(true)
+        let plants;
+        if (route.name === routes.MY_GARDEN) {
+            plants = await getUsergarden();
+        } else {
+            plants = await getUserPlants()
+        }
+        setLoading(false)
+        setData(plants)
+
+    }
+
     const GO_TO_DETAILS = (item) => {
-
         navigation.navigate(routes.DETAILS, { item: item })
     }
-    return (
-        <FlatList style={{ width: '100%' }} data={data} renderItem={({ item }) => <DrawCard item={item} handlePress={GO_TO_DETAILS} />} />
-    )
+
+    useEffect(() => {
+        getData()
+
+    }, [isFocused])
+    if (isLoading) {
+        return <DrawLoading />
+    } else if (data.length === 0) {
+        return <MyPlantEmpty />
+    } else {
+        return <FlatList style={{ width: '100%' }} data={data} renderItem={({ item }) => <DrawCard item={item} handlePress={GO_TO_DETAILS} />} />
+    }
 }
 
 const DrawCard = ({ item, handlePress }) => {
@@ -39,5 +72,23 @@ const DrawCard = ({ item, handlePress }) => {
             </Modal>
 
         </TouchableOpacity >
+    )
+}
+
+const DrawLoading = () => {
+    return (
+        <View
+            style={{
+                flex: 1,
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
+            <ActivityIndicator size='large' color='#000'
+                style={{
+                    width: responsive.WINDOW_WIDTH * 0.5,
+                    height: responsive.WINDOW_WIDTH * 0.5,
+                }} />
+            <Text>getiing data ...</Text>
+        </View>
     )
 }

@@ -39,31 +39,33 @@ export default function HealthScreen({ route }) {
                         alignSelf: 'flex-start',
                         marginLeft: normalizeFont(10),
                         marginTop: normalizeFont(8)
-                    }}>{item.plantName}</Text>
+                    }}>{plant.Name}</Text>
 
                     <Text style={{
                         color: '#000111',
                         fontWeight: '400',
-                        fontSize: normalizeFont(18),
+                        fontSize: normalizeFont(14),
                         alignSelf: 'flex-start',
-                        marginLeft: normalizeFont(10),
+                        marginLeft: normalizeFont(5),
 
-                    }}>this plant looks {item.condition === 'Healthy' ? ' ' : 'has '}
+                        width: '100%',
+                        textAlign: 'auto'
+
+                    }}> {item.condition === 'Healthy' ? 'Cette plante semble ' : 'La plante a une maladie appelée :'}
                         <Text
                             style={{
                                 // color: '#269460',
                                 color: item.condition === 'Healthy' ? '#269460' : '#EC4F4F',
-                                fontSize: 22,
-                                fontWeight: '700'
-
+                                fontSize: normalizeFont(14),
+                                fontWeight: '700',
                             }}
                         // >Healthy</Text>
-                        >{item.condition === ' Healthy' ? 'Healthy' : item.condition.replace("_", " ")}</Text>
+                        >{item.condition === ' Healthy' ? 'en bonne santé' : plant.Condition[item.condition]['fr_name'].replace("_", " ")}</Text>
                     </Text>
                     {
                         item.condition !== 'Healthy' &&
                         Object.keys(plant.Condition[item.condition]).map((k, idx) => {
-                            if (k !== 'Care') {
+                            if (k !== 'fr_name') {
                                 return <DrawHealthSection key={k} itemKey={k} itemVal={plant.Condition[item.condition][k]} />
                             }
 
@@ -82,11 +84,13 @@ export default function HealthScreen({ route }) {
                             alignSelf: 'flex-start',
                             marginLeft: 15,
                             marginTop: 10,
-                            marginBottom: normalizeFont(15)
+                            marginBottom: normalizeFont(14),
+                            backgroundColor: '#ffee',
+                            width: '100%'
 
                         }}
                     // >Healthy</Text>
-                    >How to take care of this plant !!</Text>
+                    >Comment prendre soin de cette plante</Text>
                     {Object.keys(plant.Condition.Healthy.Care).map((k, idx) => {
 
                         return <DrawSection key={k} itemKey={k} itemVal={plant.Condition.Healthy.Care[k]} />
@@ -154,10 +158,10 @@ const DrawSection = ({ itemKey, itemVal }) => {
 const DrawHealthSection = ({ itemKey, itemVal }) => {
     let icon;
     let color;
-    if (itemKey === 'Symptoms') {
+    if (itemKey === 'Symptômes') {
         icon = <FontAwesomeIcon icon={faHeartCircleBolt} size={40} color='#FFF' />
         color = '#EC4F4F'
-    } else if (itemKey === 'Treatment') {
+    } else if (itemKey === 'Traitement') {
         color = '#269460'
         icon = <FontAwesomeIcon icon={faVial} size={40} color='#FFF' />
     } else {

@@ -1,4 +1,5 @@
 'use strict';
+import '../../../ignoreWarnings'
 import React, { Component } from 'react'
 import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { RNCamera } from 'react-native-camera';
@@ -118,9 +119,6 @@ export default class CameraScreen extends Component {
             type: mime,
         })
         try {
-
-
-
             const res = await axios({
                 method: 'POST',
                 url: urls.AI_API + '/file/upload/',

@@ -1,9 +1,14 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { MovePlantToGarden, getPlants, removePlantFromGarden } from '../../services/PlantsService'
-
+import { useNavigation } from '@react-navigation/native'
+import routes from '../../constants/routes';
 
 export default function MyPlantMenu({ hide, windowHeight, plant }) {
+
+    const navigation = useNavigation();
+
+
     console.log(plant)
     const handleMoveToGatden = async () => {
         if (plant.is_garden) {
@@ -15,6 +20,10 @@ export default function MyPlantMenu({ hide, windowHeight, plant }) {
 
 
         await hide()
+    }
+
+    const go_to_notes = () => {
+        navigation.navigate(routes.NOTE_SCREEN, { plant_id: plant.plant_id })
     }
 
     const items = [
@@ -32,9 +41,9 @@ export default function MyPlantMenu({ hide, windowHeight, plant }) {
         },
         {
             id: 3,
-            title: 'Add Notes',
+            title: 'Remarque',
             color: '#30C67F',
-            action: hide
+            action: go_to_notes
         },
         {
             id: 4,

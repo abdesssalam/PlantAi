@@ -14,8 +14,8 @@ export default
 
             {
                 id: 5,
-                title: 'Fleurs',
-                img: require('../assets/flowers.jpg')
+                title: 'Arbre',
+                img: require('../assets/tree.jpg')
             }
         ]
     }
