@@ -11,6 +11,7 @@ import { SaveUserPlant, createPlant, getSingleItem } from '../../services/Plants
 import ImageCropPicker from 'react-native-image-crop-picker';
 import routes from '../../constants/routes';
 import urls from '../../constants/urls';
+import { recordVideo } from 'react-native-camera-hooks/src/recordVideo';
 
 
 
@@ -24,7 +25,9 @@ export default class CameraScreen extends Component {
 
     }
 
-
+    componentDidMount() {
+        console.log(this.props.route.params)
+    }
 
     render() {
         return (
@@ -108,6 +111,7 @@ export default class CameraScreen extends Component {
     }
 
     uploadImage = async (url, mime) => {
+
         this.setState({ showIndicator: true })
         const formData = new FormData();
         let y = new Date()
@@ -118,30 +122,53 @@ export default class CameraScreen extends Component {
             name: name,
             type: mime,
         })
+        console.log("[+] to API 2")
+
+        //start commant senser to AI API
         try {
+
+
+            this.props.navigation.navigate(routes.CHOOSE_SCREEN, { data: res.data })
+            this.setState({ showIndicator: false })
+
             const res = await axios({
                 method: 'POST',
                 url: urls.AI_API + '/file/upload/',
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" },
+            }).then(res => {
+                console.log("resss")
+                console.log(res)
+                console.log("resss")
+                return res;
+            }).catch(er => {
+                console.log("er")
+                console.log(er)
+                console.log("er")
             })
-
-            this.setState({ showIndicator: false })
-            let item = getSingleItem(res.data.Name);
-            item = { ...item, ...res.data }
             console.log("medel data===")
             console.log(res.data)
-            if (item !== 'undefined') {
-                const plant = await createPlant(res.data.Name, res.data.Condition, res.data['image_url'])
-                console.log("plaaant API")
-                console.log(plant)
-                console.log("plaaant API")
+            console.log("medel data===")
 
-                SaveUserPlant(this.state.user.id, res.data['image_url'], item.general.name, res.data['Condition'])
-                this.props.navigation.navigate(routes.DETAILS, { item: item })
-            }
+            this.setState({ showIndicator: false })
 
-            console.log(res.data.Name)
+            //end sent to AI API
+
+            // let item = getSingleItem(res.data.Name);
+            // item = { ...item, ...res.data }
+
+
+            // if (item !== 'undefined') {
+            //     const plant = await createPlant(res.data.Name, res.data.Condition, res.data['image_url'])
+            //     console.log("plaaant API")
+            //     console.log(plant)
+            //     console.log("plaaant API")
+
+            //     SaveUserPlant(this.state.user.id, res.data['image_url'], item.general.name, res.data['Condition'])
+            //     this.props.navigation.navigate(routes.DETAILS, { item: item })
+            // }
+
+
         } catch (err) {
             console.log(err)
         }

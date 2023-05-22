@@ -27,6 +27,8 @@ export default {
 
     ON_BOARDING_SCEEN: 'On Boardnig Screen',
     NEW_PASSWORD: 'New Password',
-    NOTE_SCREEN: 'NOTES'
+    NOTE_SCREEN: 'NOTES',
+    CHOOSE_SCREEN: 'Choiser',
+    PRE_CAMERA_SCREEN:'Pre Camera screen'
 
 }

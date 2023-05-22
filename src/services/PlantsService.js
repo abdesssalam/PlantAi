@@ -75,6 +75,7 @@ export const getPlants = async () => {
 };
 
 export const createPlant = async (name, condition, img) => {
+    return { name, condition, img }
     try {
         const token = await AsyncStorage.getItem('token');
         console.log("createPlant response")
@@ -223,4 +224,11 @@ export const get_notes_service = async (plant_id) => {
     } catch (ex) {
 
     }
+}
+
+export const get_all_plants = () => {
+    return plantsData.map(pl => {
+        let obj = { name: pl.general.name, fr_name: pl.general.fr_name, img: pl.general.image }
+        return obj
+    });
 }

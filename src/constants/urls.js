@@ -4,3 +4,4 @@ export default {
     AI_API: 'https://f223-41-142-219-148.ngrok-free.app',
 
 }
+
