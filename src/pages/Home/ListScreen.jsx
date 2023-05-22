@@ -19,7 +19,9 @@ export default function ListScreen({ navigation }) {
     const isFocused = useIsFocused();
 
     const [isLoading, setLoading] = useState(false)
-
+    const notify = async () => {
+        await getData()
+    }
     async function getData() {
         setLoading(true)
         let plants;
@@ -69,7 +71,7 @@ const DrawCard = ({ item, handlePress }) => {
             </TouchableOpacity>
             <Modal visible={visible} animationType='slide' transparent={true} style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <Pressable style={{ height: responsive.WINDOW_HEIGHT * 0.55, backgroundColor: '#ddd', opacity: 0.5 }} onPress={hide} />
-                <MyPlantMenu hide={hide} windowHeight={responsive.WINDOW_HEIGHT} plant={item} />
+                <MyPlantMenu hide={hide} windowHeight={responsive.WINDOW_HEIGHT} plant={item} refresh_data={() => { }} />
             </Modal>
 
         </TouchableOpacity >

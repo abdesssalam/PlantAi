@@ -1,13 +1,14 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { MovePlantToGarden, getPlants, removePlantFromGarden } from '../../services/PlantsService'
-import { useNavigation } from '@react-navigation/native'
+import { MovePlantToGarden, deletePlant, getPlants, removePlantFromGarden } from '../../services/PlantsService'
+import { useNavigation, useRoute } from '@react-navigation/native'
 import routes from '../../constants/routes';
+import GardenNavigator from '../../navigation/GardenNavigator';
 
-export default function MyPlantMenu({ hide, windowHeight, plant }) {
+export default function MyPlantMenu({ hide, windowHeight, plant, refresh_data }) {
 
     const navigation = useNavigation();
-
+    const route = useRoute()
 
     console.log(plant)
     const handleMoveToGatden = async () => {
@@ -26,6 +27,14 @@ export default function MyPlantMenu({ hide, windowHeight, plant }) {
         navigation.navigate(routes.NOTE_SCREEN, { plant_id: plant.plant_id })
     }
 
+    const delete_plant = async () => {
+        // await deletePlant(plant.plant_id)
+        console.log("deleeet")
+        await refresh_data()
+        await hide()
+
+
+    }
     const items = [
         {
             id: 1,
@@ -49,7 +58,7 @@ export default function MyPlantMenu({ hide, windowHeight, plant }) {
             id: 4,
             title: 'Delete',
             color: '#EC4F4F',
-            action: hide
+            action: delete_plant
         },
         {
             id: 5,
