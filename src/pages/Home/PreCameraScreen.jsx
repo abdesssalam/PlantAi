@@ -23,7 +23,7 @@ export default function PreCameraScreen() {
     console.log(plants)
     const handle_press_choix_1 = (text) => {
         if (text === choix1[0].text) {
-            navigation.navigate(routes.CAMERA, { type: 'Fruit' })
+            navigation.navigate(routes.CAMERA, { type: 'fruit' })
             console.log('to camrea screen')
 
         } else {
@@ -32,7 +32,9 @@ export default function PreCameraScreen() {
 
     }
     const handle_press_choix_2 = (text) => {
-        navigation.navigate(routes.CAMERA, { type: 'Fruit', name: text })
+        setChoix("")
+        text = text.replace(" ", "-")
+        navigation.navigate(routes.CAMERA, { type: 'leaf', name: text })
 
     }
 
@@ -67,10 +69,10 @@ export default function PreCameraScreen() {
 
                 }}>
                     {choix === '' ?
-                        choix1.map(item => <DrawChooseCard val={item.text} text={item.text} img={item.img} handlePress={handle_press_choix_1} />)
+                        choix1.map(item => <DrawChooseCard key={item.text} val={item.text} text={item.text} img={item.img} handlePress={handle_press_choix_1} />)
                         :
 
-                        plants.map(item => <DrawFruitCard val={item.name} text={item.fr_name} img={item.img} handlePress={handle_press_choix_2} />)}
+                        plants.map(item => <DrawFruitCard key={item.text} val={item.name} text={item.fr_name} img={item.img} handlePress={handle_press_choix_2} />)}
                 </View>
             </ScrollView>
         </View>

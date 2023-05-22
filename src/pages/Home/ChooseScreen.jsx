@@ -5,6 +5,7 @@ import responsive, { normalizeFont } from '../../constants/responsive';
 import COLORS from '../../constants/COLORS';
 import { createPlant, getSingleItem } from '../../services/PlantsService';
 import routes from '../../constants/routes';
+import urls from '../../constants/urls';
 export default function ChooseScreen() {
     const route = useRoute();
     const navigation = useNavigation();
@@ -15,31 +16,19 @@ export default function ChooseScreen() {
         route.params.data['result_2'],
     ]
     const image_url = route.params.data['image_url']
-    console.log(results[0])
     const handlePress = (item) => {
         console.log("saving the plant")
         createPlant(item.Name, item.Condition, image_url)
-        item = { ...item, ...image_url }
-        item = { ...item, ...getSingleItem(item.Name) }
+        let item2 = getSingleItem(item.Name);
+        item2 = { ...item2, ...item }
+        item2 = { ...item2, ...{ image_url: image_url } }
+        console.log(item2)
         console.log("saving the plant")
-        navigation.navigate(routes.DETAILS, { item: item })
-    }
-    function getUniqueNames(arr) {
-        const uniqueNamesSet = new Map();
 
-        arr.forEach(obj => {
-            console.log("obj")
-            console.log(obj)
-            const { Name, Condition, Type } = obj
-            console.log(Condition)
-            uniqueNamesSet.set(Name, obj);
-        });
-
-        return Array.from(uniqueNamesSet.values());
+        navigation.navigate(routes.DETAILS, { item: item2 })
     }
-    const res_filtres = getUniqueNames(results)
-    console.log("filtred")
-    console.log(res_filtres)
+
+
     return (
         <View style={{
             flex: 1,
@@ -61,9 +50,9 @@ export default function ChooseScreen() {
                         fontFamily: 'Poppins',
                         marginBottom: normalizeFont(12)
                     }}
-                >Choiser le bon choix</Text>
+                >select one </Text>
                 <ScrollView horizontal style={{ flex: 1 }}>
-                    {res_filtres.map(item => <DrawChooseCard item={item} key={item.Condition} handlePress={handlePress} img_url={image_url} />)}
+                    {results.map(item => <DrawChooseCard item={item} key={item.Condition + item.Name} handlePress={handlePress} img_url={image_url} />)}
                     {/* <FlatList horizontal style={{ width: '95%' }} data={results} renderItem={({ item }) => <DrawChooseCard item={item} key={item.Condition} handlePress={handlePress} />} /> */}
                 </ScrollView>
             </View>
@@ -83,14 +72,14 @@ const DrawChooseCard = ({ item, handlePress, img_url }) => {
                 elevation: 10,
                 width: responsive.WINDOW_WIDTH * 0.55,
                 height: responsive.WINDOW_WIDTH * 0.55,
-                backgroundColor: COLORS.GREEN_LIGHT,
+                backgroundColor: item.Condition === 'Healthy' ? COLORS.GREEN_LIGHT : '#EC4F4F',
                 borderRadius: 10,
                 marginHorizontal: normalizeFont(15),
                 alignItems: 'center'
 
             }}
         >
-            <Image source={{ uri: img_url }} style={{
+            <Image source={{ uri: urls.AI_API + img_url }} style={{
                 borderRadius: 10,
                 width: '95%',
                 height: '40%',
@@ -105,6 +94,15 @@ const DrawChooseCard = ({ item, handlePress, img_url }) => {
                     fontFamily: 'Poppins'
                 }}
             >{item.Name}</Text>
+            <Text
+                style={{
+                    color: "#ddd",
+                    fontSize: normalizeFont(16),
+                    fontWeight: '600',
+                    fontFamily: 'Poppins',
+                    marginTop: normalizeFont(8)
+                }}
+            >{item.Condition.replace("_", " ")}</Text>
         </TouchableOpacity>
     )
 

@@ -75,7 +75,7 @@ export const getPlants = async () => {
 };
 
 export const createPlant = async (name, condition, img) => {
-    return { name, condition, img }
+
     try {
         const token = await AsyncStorage.getItem('token');
         console.log("createPlant response")

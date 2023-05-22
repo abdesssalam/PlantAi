@@ -11,7 +11,7 @@ export default function DetailScreen({ route, navigation }) {
         let itemT = {
             condition: item.Condition,
             plantName: item.general.name,
-            imgUrl: item.img
+            imgUrl: path
         }
         navigation.navigate(routes.HEALTH, { item: itemT })
 

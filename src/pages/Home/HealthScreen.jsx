@@ -15,7 +15,11 @@ import urls from '../../constants/urls'
 
 export default function HealthScreen({ route }) {
     const item = route.params.item
+    // console.log(item)
     let plant = disessData[item.plantName];
+    console.log("plaaant")
+    console.log(item)
+    console.log("plaaant")
     return (
         <View style={{ flex: 1, width: responsive.WINDOW_WIDTH, height: responsive.WINDOW_HEIGHT }}>
             <ScrollView
@@ -60,11 +64,12 @@ export default function HealthScreen({ route }) {
                                 fontWeight: '700',
                             }}
                         // >Healthy</Text>
-                        >{item.condition === ' Healthy' ? 'en bonne santé' : plant.Condition[item.condition]['fr_name'].replace("_", " ")}</Text>
+
+                        >{item.condition === 'Healthy' ? 'en bonne santé' : plant.Condition[item.condition].fr_name}</Text>
                     </Text>
                     {
                         item.condition !== 'Healthy' &&
-                        Object.keys(plant.Condition[item.condition]).map((k, idx) => {
+                        Object.keys(plant?.Condition[item.condition]).map((k, idx) => {
                             if (k !== 'fr_name') {
                                 return <DrawHealthSection key={k} itemKey={k} itemVal={plant.Condition[item.condition][k]} />
                             }

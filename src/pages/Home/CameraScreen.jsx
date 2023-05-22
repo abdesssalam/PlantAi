@@ -122,14 +122,20 @@ export default class CameraScreen extends Component {
             name: name,
             type: mime,
         })
+        formData.append("type", this.props.route.params.type)
+        if (this.props.route.params.type === "leaf") {
+            console.log("lld")
+            formData.append("name", this.props.route.params.name)
+        }
         console.log("[+] to API 2")
-
+        console.log(formData)
         //start commant senser to AI API
         try {
 
 
-            this.props.navigation.navigate(routes.CHOOSE_SCREEN, { data: res.data })
+
             this.setState({ showIndicator: false })
+            console.log(urls.AI_API + '/file/upload/')
 
             const res = await axios({
                 method: 'POST',
@@ -149,7 +155,7 @@ export default class CameraScreen extends Component {
             console.log("medel data===")
             console.log(res.data)
             console.log("medel data===")
-
+            this.props.navigation.navigate(routes.CHOOSE_SCREEN, { data: res.data })
             this.setState({ showIndicator: false })
 
             //end sent to AI API
