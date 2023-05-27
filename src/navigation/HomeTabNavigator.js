@@ -68,6 +68,7 @@ export default function HomeTabNavigator() {
                         </View>
                     )
                 ),
+
             }} />
             <Tab.Screen name={routes.GARDEN_NAV} component={GardenNavigator} options={{
                 tabBarShowLabel: false,

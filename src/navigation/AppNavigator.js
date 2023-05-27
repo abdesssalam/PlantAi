@@ -16,13 +16,13 @@ export default function AppNavigator() {
         <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}
             screenOptions={{ headerShown: false, drawerLabelStyle: styles.labels, drawerActiveBackgroundColor: '#0c9353d4', }}>
             <Drawer.Screen name={routes.HOME_NAV} component={HomeTabNavigator}
-                options={{ drawerIcon: () => <FontAwesomeIcon icon={faHouse} size={25} color="#06fe87" />, title: 'Home' }}
+                options={{ drawerIcon: () => <FontAwesomeIcon icon={faHouse} size={25} color="#06fe87" />, title: 'Accueil' }}
             />
 
             <Drawer.Screen name={routes.ACCOUNT} component={AccountScreen}
-                options={{ drawerIcon: () => <FontAwesomeIcon icon={faUser} size={25} color="#06fe87" />, title: 'Account' }} />
-            <Drawer.Screen name={routes.SETTINGS} component={SettingScreen}
-                options={{ drawerIcon: () => <FontAwesomeIcon icon={faPlantWilt} size={25} color="#06fe87" /> }} />
+                options={{ drawerIcon: () => <FontAwesomeIcon icon={faUser} size={25} color="#06fe87" />, title: 'Mon compte' }} />
+            {/* <Drawer.Screen name={routes.SETTINGS} component={SettingScreen}
+                options={{ drawerIcon: () => <FontAwesomeIcon icon={faPlantWilt} size={25} color="#06fe87" /> }} /> */}
 
             <Drawer.Screen name={routes.ABOUT} component={AboutScreen}
                 options={{ drawerIcon: () => <FontAwesomeIcon icon={faCircleInfo} size={25} color="#06fe87" /> }} />

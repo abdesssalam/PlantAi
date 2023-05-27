@@ -1,8 +1,9 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from "axios";
+import urls from '../constants/urls';
 
 
-const BASE_URL = 'http://10.0.2.2:8000/api'
+const BASE_URL = urls.USER_API
 
 
 
@@ -45,16 +46,24 @@ export const editUserService = async (user) => {
 };
 
 export const loginService = async (email, password) => {
+    // console.log("logiin")
+    // await axios.get(`${BASE_URL}/test`).then(
+    //     res => {
+    //         console.log(res)
+
+    //     }
+    // ).catch(er => console.log(er))
     const response =
         await axios.post(`${BASE_URL}/login`, { email, password })
             .then((res) => {
                 // let d = JSON.parse(res)
+                console.log(res)
                 const token = res.data.access_token;
                 AsyncStorage.setItem('token', token);
                 const user = res.data.user;
                 return { user: user, token: token };
             }).catch(er => {
-
+                console.log("r")
                 console.log(er)
             });
     await AsyncStorage.setItem('token', response.token);
@@ -64,15 +73,17 @@ export const loginService = async (email, password) => {
 
 
 export const getUserData = async () => {
-
     try {
+        console.log(`${BASE_URL}/user`)
         const token = await AsyncStorage.getItem('token');
+        console.log(token)
         if (!token) {
 
             throw new Error('No token found');
         }
         const response = await axios.get(`${BASE_URL}/user`, { headers: { Authorization: `Bearer ${token}` } }).catch(er => console.log(er));
         const user = response.data.user;
+        console.log(user)
         return user;
     } catch (error) {
         return {}
@@ -159,6 +170,7 @@ export const check_verification_service = async (email, code) => {
 }
 
 export const new_password_service = async (email, password) => {
+    console.log("new pass")
     try {
         const response = await axios.post(`${BASE_URL}/reset_password`, { email, password })
             .then(res => {

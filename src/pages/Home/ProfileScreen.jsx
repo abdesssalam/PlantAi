@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faClock, faEnvelope, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
 import urls from '../../constants/urls'
+import { normalizeFont } from '../../constants/responsive'
 
 const DrawHeader = ({ user }) => {
 
@@ -70,7 +71,7 @@ const DrawBodyItem = ({ Itemkey, val, icon }) => {
 
             <FontAwesomeIcon icon={icon} size={30} style={{ marginRight: 15 }} color='#666' />
             <Text style={{
-                fontSize: 18,
+                fontSize: normalizeFont(16),
                 textTransform: 'capitalize',
                 fontWeight: '600',
                 color: '#3a3a3a',
@@ -78,7 +79,7 @@ const DrawBodyItem = ({ Itemkey, val, icon }) => {
 
 
             }}>{Itemkey} : </Text>
-            <Text style={{ fontSize: 20, color: '#000' }}>{val} </Text>
+            <Text style={{ fontSize: normalizeFont(12), color: '#000' }}>{val} </Text>
         </View>
     )
 }
@@ -98,7 +99,7 @@ const DrawAccountBody = ({ user }) => {
         >
             <DrawBodyItem Itemkey={'Name'} val={`${user?.firstName} ${user?.lastName}`} icon={faUser} />
             <DrawBodyItem Itemkey={'email'} val={user?.email} icon={faEnvelope} />
-            <DrawBodyItem Itemkey={'Phone'} val={user?.phone} icon={faPhone} />
+            <DrawBodyItem Itemkey={'Phone'} val={"0705123456"} icon={faPhone} />
             <DrawBodyItem Itemkey={'Joined In'} val={user?.created_at.slice(0, 10)} icon={faClock} />
 
 
@@ -107,10 +108,6 @@ const DrawAccountBody = ({ user }) => {
 }
 export default function ProfileScreen({ navigation }) {
     const user = useSelector(state => state.user)
-
-
-
-
     return (
         <View style={styles.container} >
 

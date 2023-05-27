@@ -29,8 +29,10 @@ export default function SplashScreen({ navigation }) {
 
     async function CHECK_IF_CONNECTED() {
         console.log("start checking...")
+        console.log("start checking.. 11.")
         await axios.head("https://github.com/").then(res => {
             if (res.status === 200) {
+
                 setConnected(true)
             } else {
                 console.log("not connected")
@@ -43,7 +45,7 @@ export default function SplashScreen({ navigation }) {
         if (isConnected) {
 
             const user = await getUserData()
-
+            console.log("user")
             if (user.username) {
                 dispatch(loginSuccess(user))
                 console.log("redirect to app")

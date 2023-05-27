@@ -37,7 +37,10 @@ export default function LoginScreen({ navigation }) {
     }
 
     return (
-        <ScrollView>
+        <ScrollView style={{
+            flex: 1,
+            backgroundColor: '#edfaf7'
+        }}>
             <View style={styles.container}>
                 <Image
                     source={require('../../assets/LogoBlack.png')}
@@ -113,7 +116,7 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: '#edfaf7',
+
         justifyContent: 'flex-start',
         alignItems: 'center'
     },

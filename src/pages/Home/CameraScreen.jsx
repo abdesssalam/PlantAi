@@ -3,7 +3,7 @@ import '../../../ignoreWarnings'
 import React, { Component } from 'react'
 import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { RNCamera } from 'react-native-camera';
-
+import LottieView from 'lottie-react-native'
 import { store } from '../../redux/store';
 import ImagePicker from 'react-native-image-crop-picker';
 import axios from 'axios';
@@ -30,30 +30,42 @@ export default class CameraScreen extends Component {
     }
 
     render() {
+        if (this.state.showIndicator) {
+            return (
+                //scan_effect_ing
+                <View
+                    style={{
+                        flex: 1,
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}>
+                    <LottieView source={require('../../assets/scan_effect_ing.json')} autoPlay loop />
+
+                </View>
+            )
+        }
         return (
             <View style={{ flex: 1 }}>
-                {this.state.showIndicator == false &&
-                    <RNCamera
-                        ref={ref => {
-                            this.camera = ref;
-                        }}
-                        style={styles.preview}
-                        type={RNCamera.Constants.Type.back} androidCameraPermissionOptions={{
-                            title: 'Permission to use camera',
-                            message: 'We need your permission to use your camera',
-                            buttonPositive: 'Ok',
-                            buttonNegative: 'Cancel',
-                        }}
-                        androidRecordAudioPermissionOptions={{
-                            title: 'Permission to use audio recording',
-                            message: 'We need your permission to use your audio',
-                            buttonPositive: 'Ok',
-                            buttonNegative: 'Cancel',
-                        }}
+                <RNCamera
+                    ref={ref => {
+                        this.camera = ref;
+                    }}
+                    style={styles.preview}
+                    type={RNCamera.Constants.Type.back} androidCameraPermissionOptions={{
+                        title: 'Permission to use camera',
+                        message: 'We need your permission to use your camera',
+                        buttonPositive: 'Ok',
+                        buttonNegative: 'Cancel',
+                    }}
+                    androidRecordAudioPermissionOptions={{
+                        title: 'Permission to use audio recording',
+                        message: 'We need your permission to use your audio',
+                        buttonPositive: 'Ok',
+                        buttonNegative: 'Cancel',
+                    }}
 
-                    />
-                }
-                {this.state.showIndicator && <ActivityIndicator size="large" style={{ position: 'absolute', top: 150, left: 150 }} />}
+                />
+
 
                 <Image source={require('../../assets/cameraRectangle.png')} style={{ width: 350, height: 350, left: 25, position: 'absolute', top: 50 }} />
                 <View style={styles.footer}>
@@ -131,12 +143,6 @@ export default class CameraScreen extends Component {
         console.log(formData)
         //start commant senser to AI API
         try {
-
-
-
-            this.setState({ showIndicator: false })
-            console.log(urls.AI_API + '/file/upload/')
-
             const res = await axios({
                 method: 'POST',
                 url: urls.AI_API + '/file/upload/',
@@ -155,6 +161,8 @@ export default class CameraScreen extends Component {
             console.log("medel data===")
             console.log(res.data)
             console.log("medel data===")
+
+
             this.props.navigation.navigate(routes.CHOOSE_SCREEN, { data: res.data })
             this.setState({ showIndicator: false })
 

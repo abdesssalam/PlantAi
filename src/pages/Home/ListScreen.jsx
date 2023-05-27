@@ -5,17 +5,18 @@ import responsive from '../../constants/responsive';
 import MyPlantMenu from '../../components/Plants/MyPlantMenu';
 import routes from '../../constants/routes';
 import urls from '../../constants/urls';
-import { useIsFocused, useRoute } from '@react-navigation/native';
+import { useIsFocused, useNavigation, useRoute, useFocusEffect } from '@react-navigation/native';
 import { getUserPlants } from '../../services/PlantsService';
 import MyPlantEmpty from '../../components/Plants/EmptyListPlant';
 import LottieView from 'lottie-react-native'
 
-export default function ListScreen({ navigation }) {
-
+export default function ListScreen() {
+    const navigation = useNavigation();
     const route = useRoute()
-
-    // const data = route.params.data
+    console.log("cons :")
+    console.log(route.params)
     const [data, setData] = useState([])
+    const [current, setCurrent] = useState('')
     const isFocused = useIsFocused();
 
     const [isLoading, setLoading] = useState(false)
@@ -23,36 +24,62 @@ export default function ListScreen({ navigation }) {
         await getData()
     }
     async function getData() {
+        console.log(current + " ++ ")
         setLoading(true)
         let plants;
-        if (route.name === routes.MY_GARDEN) {
-            plants = await getUsergarden();
-        } else {
-            plants = await getUserPlants()
-        }
-        setLoading(false)
+        plants = await getUserPlants()
+        // if (parent === routes.MY_GARDEN) {
+        //     plants = await getUsergarden();
+        // } else {
+
+        // }
         setData(plants)
+        if (plants.length > 0) {
+            plants.sort(function (a, b) {
+                return new Date(b.created_at) - new Date(a.created_at);
+            });
+            setData(plants)
+        }
+
+        setLoading(false)
+
 
     }
 
     const GO_TO_DETAILS = (item) => {
         navigation.navigate(routes.DETAILS, { item: item })
     }
-
+    const setting_current = async () => {
+        let x = await route.params
+        await setCurrent(x.parentname)
+    }
     useEffect(() => {
+        setting_current()
+        console.log("current " + current)
         getData()
 
     }, [isFocused])
+    useEffect(() => {
+        setCurrent(prevCurrent => {
+            if (route.params?.parentname !== prevCurrent) {
+                return route.params?.parentname;
+            }
+            return prevCurrent;
+        });
+    }, [route.params?.parentname]);
+
+    // console.log('Current:', current);
+
     if (isLoading) {
         return <DrawLoading />
     } else if (data.length === 0) {
         return <MyPlantEmpty />
     } else {
-        return <FlatList style={{ width: '100%' }} data={data} renderItem={({ item }) => <DrawCard item={item} handlePress={GO_TO_DETAILS} />} />
+        return <FlatList style={{ width: '100%' }} data={data} renderItem={({ item }) => <DrawCard item={item} handlePress={GO_TO_DETAILS} notify={notify} />} />
     }
 }
 
-const DrawCard = ({ item, handlePress }) => {
+const DrawCard = ({ item, handlePress, notify }) => {
     const [visible, setVisible] = useState(false);
 
     const show = () => setVisible(true)
@@ -71,7 +98,7 @@ const DrawCard = ({ item, handlePress }) => {
             </TouchableOpacity>
             <Modal visible={visible} animationType='slide' transparent={true} style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <Pressable style={{ height: responsive.WINDOW_HEIGHT * 0.55, backgroundColor: '#ddd', opacity: 0.5 }} onPress={hide} />
-                <MyPlantMenu hide={hide} windowHeight={responsive.WINDOW_HEIGHT} plant={item} refresh_data={() => { }} />
+                <MyPlantMenu hide={hide} windowHeight={responsive.WINDOW_HEIGHT} plant={item} refresh_data={notify} />
             </Modal>
 
         </TouchableOpacity >

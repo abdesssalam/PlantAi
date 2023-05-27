@@ -5,17 +5,19 @@ import routes from '../../constants/routes'
 import { useState } from 'react'
 import { useRoute } from '@react-navigation/native'
 import { check_verification_service } from '../../services/AuthService'
+
 export default function VerifyScreen({ navigation }) {
     const [code, setCode] = useState('')
     const route = useRoute();
+    console.log(route)
     const handleInputCode = (v) => {
         setCode(v)
     }
     const handle_verify = async () => {
         try {
             const res = await check_verification_service(route.params.email, code)
-            if (res?.data?.message == "ok") {
-                if (route.params.type) navigation.navigate(routes.NEW_PASSWORD)
+            if (res === "ok") {
+                if (route.params.type === 'password') navigation.navigate(routes.NEW_PASSWORD, { email: route.params.email })
                 else navigation.navigate(routes.APP_NAV)
             }
         } catch (er) {

@@ -6,10 +6,9 @@ import MyPlantEmpty from '../../components/Plants/EmptyListPlant'
 export default function HomeListScreen({ route, navigation }) {
     const items = route.params.items
     const handleItemClicked = (item) => {
-
         navigation.navigate(routes.DETAILS, { item: item })
     }
-    if (items.lenght > 0) {
+    if (items.length > 0) {
 
         return (
             <View>

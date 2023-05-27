@@ -6,12 +6,14 @@ import ListScreen from "../pages/Home/ListScreen";
 import GardenScreen from "../pages/Home/GardenScreen";
 import NoteScreen from "../pages/Home/NoteScreen";
 const Stack = createNativeStackNavigator();
-
+import { useRoute } from "@react-navigation/native";
 export default function GardenNavigator() {
+    const route = useRoute();
+    console.log("stack navigator")
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             {/* <Stack.Screen name={routes.MY_GARDEN} component={GardenScreen} /> */}
-            <Stack.Screen name={routes.LIST} component={ListScreen} />
+            <Stack.Screen name={routes.LIST} component={ListScreen} initialParams={{ parentname: route.name }} />
             <Stack.Screen name={routes.DETAILS} component={DetailScreen} options={{ headerShown: true }} />
             <Stack.Screen name={routes.HEALTH} component={HealthScreen} />
             <Stack.Screen name={routes.NOTE_SCREEN} component={NoteScreen} />

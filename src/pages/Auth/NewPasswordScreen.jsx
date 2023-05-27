@@ -16,17 +16,19 @@ export default function NewPasswordScreen({ navigation }) {
     const route = useRoute();
 
     const handle_change_pass = async () => {
-        console.log(pass)
-        console.log(passConf)
-        if (pass == "" || passConf == "" || pass !== passConf) {
+        if (pass === "" || passConf === "" || pass !== passConf) {
             setShowSnack(true)
             setTimeout(() => {
                 setShowSnack(false)
             }, 3000)
         } else {
-            const res = await new_password_service(route.params.email, pass)
-            if (res?.message === "ok") {
-                navigation.navigate(routes.LOGIN)
+            try {
+                const res = await new_password_service(route.params?.email, pass)
+                if (res?.message === "ok") {
+                    navigation.navigate(routes.LOGIN)
+                }
+            } catch (er) {
+                console.log(er)
             }
         }
     }

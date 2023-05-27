@@ -3,12 +3,12 @@ import React from 'react'
 import { MovePlantToGarden, deletePlant, getPlants, removePlantFromGarden } from '../../services/PlantsService'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import routes from '../../constants/routes';
-import GardenNavigator from '../../navigation/GardenNavigator';
+
 
 export default function MyPlantMenu({ hide, windowHeight, plant, refresh_data }) {
 
     const navigation = useNavigation();
-    const route = useRoute()
+
 
     console.log(plant)
     const handleMoveToGatden = async () => {
@@ -28,8 +28,7 @@ export default function MyPlantMenu({ hide, windowHeight, plant, refresh_data })
     }
 
     const delete_plant = async () => {
-        // await deletePlant(plant.plant_id)
-        console.log("deleeet")
+        await deletePlant(plant.plant_id)
         await refresh_data()
         await hide()
 

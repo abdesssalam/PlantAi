@@ -8,6 +8,9 @@ import routes from '../../constants/routes';
 export default function PreCameraScreen() {
     const [choix, setChoix] = useState('')
     const navigation = useNavigation();
+
+
+
     let choix1 = [
         {
             text: 'Fruit',

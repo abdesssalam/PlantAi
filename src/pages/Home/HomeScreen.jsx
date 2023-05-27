@@ -1,4 +1,6 @@
-import { View, Dimensions, Text, StyleSheet, TextInput, FlatList, ScrollView, SafeAreaView, TouchableOpacity, ImageBackground, PixelRatio } from 'react-native'
+import {
+    View, Text, StyleSheet, TextInput, ScrollView, SafeAreaView, TouchableOpacity, ImageBackground
+} from 'react-native'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -7,21 +9,13 @@ import HomeItems from '../../data/HomeItems'
 import responsive, { normalizeFont } from '../../constants/responsive'
 import routes from '../../constants/routes'
 import { getHomePlants } from '../../services/PlantsService'
-import { useRoute } from '@react-navigation/native'
 
 
 export default function HomeScreen({ navigation }) {
     const [search, setSearch] = useState('')
 
     const user = useSelector(state => state.user)
-    var hours = new Date().getHours()
 
-    let message;
-    if (hours >= 4 && hours < 14) {
-        message = 'bonjour'
-    } else {
-        message = 'bonsoir'
-    }
     const handleSearchChange = (newVal) => {
         setSearch(newVal)
     }
@@ -67,6 +61,7 @@ export default function HomeScreen({ navigation }) {
 
                     </SafeAreaView>
                 </View>
+
             </View>
 
         </ScrollView>
@@ -102,6 +97,7 @@ const DrawCard = ({ text, width, height, imgSrc, handlePress }) => {
 
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         alignItems: 'center',

@@ -15,7 +15,9 @@ import urls from '../../constants/urls'
 
 export default function HealthScreen({ route }) {
     const item = route.params.item
-    // console.log(item)
+    console.log("health")
+    console.log(item)
+    console.log("health")
     let plant = disessData[item.plantName];
     console.log("plaaant")
     console.log(item)
