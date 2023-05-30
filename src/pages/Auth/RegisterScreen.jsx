@@ -33,10 +33,6 @@ export default function RegisterScreen({ navigation }) {
         setUser(u)
     }
     const handleRegister = async () => {
-        //validation
-        console.log("register")
-        console.log(Object.keys(user))
-        console.log("register")
         let er = false;
         Object.keys(user).forEach(k => {
             console.log(user[k])

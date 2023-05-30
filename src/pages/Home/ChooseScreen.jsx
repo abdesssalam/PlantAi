@@ -19,7 +19,7 @@ export default function ChooseScreen() {
     results = results.map(res => {
         let plant = getSingleItem(res.Name).general.fr_name;
         res = { ...res, ...{ fr_name: plant } }
-        if (res.Condition === 'Healthy') {
+        if (res.Condition !== 'Healthy') {
             let fr_state = disessData.Apple.Condition.Rot.fr_name;
             res = { ...res, ...{ fr_state: fr_state } }
         }
@@ -50,7 +50,7 @@ export default function ChooseScreen() {
             }
 
         )
-        //navigation.navigate(routes.DETAILS, { item: item2 })
+        navigation.navigate(routes.DETAILS, { item: item2 })
     }
 
 
@@ -96,8 +96,8 @@ export default function ChooseScreen() {
 const DrawChooseCard = ({ item, handlePress }) => {
     return (
         <TouchableOpacity
-            // onPress={() => { handlePress(item) }}
-            onPress={() => { }}
+            onPress={() => { handlePress(item) }}
+
             style={{
                 marginBottom: normalizeFont(10),
                 elevation: 10,
@@ -149,7 +149,7 @@ const DrawChooseCard = ({ item, handlePress }) => {
                         marginLeft: normalizeFont(10)
                     }}
                 >
-                    {item.Condition !== 'Healthy' ? ' En bonne santé' : ' ' + item.fr_state.replace("_", " ")}
+                    {item.Condition === 'Healthy' ? ' En bonne santé' : ' ' + item.fr_state.replace("_", " ")}
                 </Text>
             </Text>
 

@@ -1,15 +1,17 @@
 import { View, Text, TouchableOpacity, TextInput } from 'react-native'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import responsive, { normalizeFont } from '../../constants/responsive'
 import COLORS from '../../constants/COLORS'
 import { Snackbar } from '@react-native-material/core';
 import { new_password_service } from '../../services/AuthService';
 import { useRoute } from '@react-navigation/native';
 import routes from '../../constants/routes';
+import ToastComponent from '../../components/Toast/ToastComponent';
+import values from '../../constants/values';
 
 
 export default function NewPasswordScreen({ navigation }) {
-
+    const toastRef = useRef(null)
     const [pass, setPass] = useState('');
     const [passConf, setPassConf] = useState('');
     const [showSnack, setShowSnack] = useState(false)
@@ -25,7 +27,17 @@ export default function NewPasswordScreen({ navigation }) {
             try {
                 const res = await new_password_service(route.params?.email, pass)
                 if (res?.message === "ok") {
-                    navigation.navigate(routes.LOGIN)
+                    console.log(route.params?.type)
+                    if (route.params?.type === 'new_pass') {
+                        toastRef.current.show("Mot de passe bien changer", values.TOAST_VALUES.DURATION.SHORT);
+                        setTimeout(() => {
+
+                            navigation.navigate(routes.ACCOUNT)
+                        }, values.TOAST_VALUES.DURATION.SHORT)
+                    } else {
+
+                        navigation.navigate(routes.LOGIN)
+                    }
                 }
             } catch (er) {
                 console.log(er)
@@ -112,6 +124,7 @@ export default function NewPasswordScreen({ navigation }) {
                 </TouchableOpacity>
 
             </View>
+            <ToastComponent ref={toastRef} type={values.TOAST_VALUES.TYPE.SUCSESS} />
             {showSnack && <Snackbar
 
                 message='confirmer votre mot de passe'

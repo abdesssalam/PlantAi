@@ -74,16 +74,14 @@ export const loginService = async (email, password) => {
 
 export const getUserData = async () => {
     try {
-        console.log(`${BASE_URL}/user`)
+
         const token = await AsyncStorage.getItem('token');
-        console.log(token)
         if (!token) {
 
             throw new Error('No token found');
         }
         const response = await axios.get(`${BASE_URL}/user`, { headers: { Authorization: `Bearer ${token}` } }).catch(er => console.log(er));
         const user = response.data.user;
-        console.log(user)
         return user;
     } catch (error) {
         return {}

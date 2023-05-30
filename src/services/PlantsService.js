@@ -228,8 +228,15 @@ export const get_notes_service = async (plant_id) => {
 }
 
 export const get_all_plants = () => {
-    return plantsData.map(pl => {
+    let classes = ['Apple', 'Bell Pepper', 'Eggplant', 'Grape', 'Orange', 'Peach', 'Potato', 'Tomato', 'Mango', 'Broad Bean', 'Corn Maize']
+    let plant = plantsData.filter(pl => {
+        if (classes.includes(pl.general.name)) {
+            return pl;
+        }
+    });
+    return plant.map(pl => {
         let obj = { name: pl.general.name, fr_name: pl.general.fr_name, img: pl.general.image }
         return obj
-    });
+    })
+
 }

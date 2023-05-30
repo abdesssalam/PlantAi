@@ -97,10 +97,9 @@ const DrawAccountBody = ({ user }) => {
 
             }}
         >
-            <DrawBodyItem Itemkey={'Name'} val={`${user?.firstName} ${user?.lastName}`} icon={faUser} />
+            <DrawBodyItem Itemkey={'Nom'} val={`${user?.firstName} ${user?.lastName}`} icon={faUser} />
             <DrawBodyItem Itemkey={'email'} val={user?.email} icon={faEnvelope} />
-            <DrawBodyItem Itemkey={'Phone'} val={"0705123456"} icon={faPhone} />
-            <DrawBodyItem Itemkey={'Joined In'} val={user?.created_at.slice(0, 10)} icon={faClock} />
+            <DrawBodyItem Itemkey={'Rejoint en'} val={user?.created_at.slice(0, 10)} icon={faClock} />
 
 
         </View>

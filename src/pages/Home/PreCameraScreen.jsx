@@ -1,29 +1,34 @@
 import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 import responsive, { normalizeFont } from '../../constants/responsive';
 import COLORS from '../../constants/COLORS';
 import { get_all_plants } from '../../services/PlantsService';
 import { useNavigation } from '@react-navigation/native';
 import routes from '../../constants/routes';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faApple } from '@fortawesome/free-brands-svg-icons';
+import { faLeaf } from '@fortawesome/free-solid-svg-icons';
 export default function PreCameraScreen() {
     const [choix, setChoix] = useState('')
     const navigation = useNavigation();
 
 
-
     let choix1 = [
         {
             text: 'Fruit',
-            img: require('../../assets/fruit-logo.png')
+            icon: faApple
         },
         {
             text: 'Feuille',
-            img: require('../../assets/leaf-logo.png')
+            icon: faLeaf
         }
 
     ]
     let plants = get_all_plants();
-    console.log(plants)
+    console.log("plants")
+    console.log(plants[0])
+    console.log("plants")
     const handle_press_choix_1 = (text) => {
         if (text === choix1[0].text) {
             navigation.navigate(routes.CAMERA, { type: 'fruit' })
@@ -48,7 +53,7 @@ export default function PreCameraScreen() {
                 flex: 1,
                 alignItems: 'center',
                 paddingVertical: normalizeFont(10),
-                backgroundColor: '#f4f4f4',
+                backgroundColor: '#fff',
                 justifyContent: 'center'
             }}
         >
@@ -57,13 +62,13 @@ export default function PreCameraScreen() {
                 <Text
                     style={{
                         color: '#000',
-                        fontSize: normalizeFont(22),
+                        fontSize: normalizeFont(16),
                         fontWeight: '600',
                         fontFamily: 'Poppins',
                         marginBottom: normalizeFont(12),
                         textAlign: 'center'
                     }}
-                >choisir </Text>
+                >Cette étape pour obtenir des résultats plus spécifiques </Text>
                 <View style={{
                     flexDirection: 'row',
                     flexWrap: "wrap",
@@ -72,7 +77,16 @@ export default function PreCameraScreen() {
 
                 }}>
                     {choix === '' ?
-                        choix1.map(item => <DrawChooseCard key={item.text} val={item.text} text={item.text} img={item.img} handlePress={handle_press_choix_1} />)
+                        <View style={{ alignItems: 'center' }}>
+
+                            <Image source={require('../../assets/Focus-amico.png')} style={{
+                                width: responsive.WINDOW_WIDTH * 0.75, height: responsive.WINDOW_WIDTH * 0.75
+                            }} />
+                            <View style={{ flexDirection: 'row' }}>
+
+                                {choix1.map(item => <DrawChooseCard key={item.text} val={item.text} text={item.text} icon={item.icon} handlePress={handle_press_choix_1} />)}
+                            </View>
+                        </View>
                         :
 
                         plants.map(item => <DrawFruitCard key={item.text} val={item.name} text={item.fr_name} img={item.img} handlePress={handle_press_choix_2} />)}
@@ -118,58 +132,31 @@ const DrawFruitCard = ({ text, handlePress, val, img }) => {
     )
 
 }
-const DrawChooseCard = ({ text, handlePress, val, img }) => {
+const DrawChooseCard = ({ text, handlePress, val, icon }) => {
     return (
         <TouchableOpacity
             onPress={() => { handlePress(text) }}
             style={{
                 marginBottom: normalizeFont(10),
-                width: responsive.WINDOW_WIDTH * 0.80,
-                height: responsive.WINDOW_WIDTH * 0.30,
+                width: responsive.WINDOW_WIDTH * 0.40,
+                height: responsive.WINDOW_WIDTH * 0.40,
                 marginHorizontal: normalizeFont(15),
-                backgroundColor: '#fff'
+                backgroundColor: '#1DC662',
+                alignItems: 'center',
+                justifyContent: 'space-around',
+                borderRadius: 15
             }}
         >
-            <View style={{
-                width: '100%',
-                height: '100%',
-                alignItems: 'center',
-                flexDirection: 'row',
-                paddingLeft: normalizeFont(20),
-                borderRadius: 10,
-                // elevation: 10,
-                borderColor: '#000',
-                shadowColor: "#000",
-                shadowOffset: {
-                    width: 0,
-                    height: 1,
-                },
-                shadowOpacity: 0.25,
-                shadowRadius: 3.84,
-                borderWidth: 0.5,
+            <FontAwesomeIcon icon={icon} color='#fff' size={normalizeFont(55)} />
+            <Text
+                style={{
+                    color: '#fff',
+                    fontSize: normalizeFont(30),
+                    fontWeight: '600',
+                    fontFamily: 'Poppins',
 
-
-            }}>
-
-
-                <Image
-                    resizeMode='contain'
-                    source={img} style={{
-                        width: '20%',
-                        height: '60%',
-                    }}
-
-                />
-                <Text
-                    style={{
-                        color: COLORS.LIGHT_BLACK,
-                        fontSize: normalizeFont(30),
-                        fontWeight: '600',
-                        fontFamily: 'Poppins',
-                        marginLeft: normalizeFont(22)
-                    }}
-                >{text}</Text>
-            </View>
+                }}
+            >{text}</Text>
         </TouchableOpacity>
     )
 

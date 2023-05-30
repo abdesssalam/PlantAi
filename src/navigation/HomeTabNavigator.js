@@ -27,11 +27,11 @@ export default function HomeTabNavigator() {
                     </View>
                 )
             }} />
-            <Tab.Screen name={routes.PLANTS_NAV} component={GardenNavigator} options={{
+            <Tab.Screen name={routes.PLANTS_NAV} component={PlantsNavigator} options={{
                 tabBarIcon: ({ focused }) => (
                     <View style={{ alignItems: 'center' }}>
                         <FontAwesomeIcon icon={faPlantWilt} color={focused ? '#30C67F' : '#9DB2CE'} />
-                        <Text style={{ color: focused ? '#30C67F' : '#666666', fontWeight: '600' }} >My Plants</Text>
+                        <Text style={{ color: focused ? '#30C67F' : '#666666', fontWeight: '600' }} >Plantes</Text>
                     </View>
                 )
             }} />
@@ -75,7 +75,7 @@ export default function HomeTabNavigator() {
                 tabBarIcon: ({ focused }) => (
                     <View style={{ alignItems: 'center' }}>
                         <Image source={focused ? require('../assets/tabmyplantsClicked.png') : require('../assets/tabmyPlant.png')} />
-                        <Text style={{ color: focused ? '#30C67F' : '#666666', fontWeight: '600' }} >My Garden</Text>
+                        <Text style={{ color: focused ? '#30C67F' : '#666666', fontWeight: '600' }} >Jardin</Text>
                     </View>
                 )
             }} />

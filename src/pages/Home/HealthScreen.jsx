@@ -1,9 +1,8 @@
-import { View, Text, ScrollView, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, Image } from 'react-native'
 
 import React from 'react'
 import { disessData } from '../../data/disessData'
 import responsive, { normalizeFont } from '../../constants/responsive'
-import HelthTabs from '../../components/Plants/HelthTabs'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faHeartCircleBolt, faShieldHalved, faVial } from '@fortawesome/free-solid-svg-icons'
 import urls from '../../constants/urls'
@@ -15,13 +14,7 @@ import urls from '../../constants/urls'
 
 export default function HealthScreen({ route }) {
     const item = route.params.item
-    console.log("health")
-    console.log(item)
-    console.log("health")
     let plant = disessData[item.plantName];
-    console.log("plaaant")
-    console.log(item)
-    console.log("plaaant")
     return (
         <View style={{ flex: 1, width: responsive.WINDOW_WIDTH, height: responsive.WINDOW_HEIGHT }}>
             <ScrollView
@@ -60,12 +53,10 @@ export default function HealthScreen({ route }) {
                     }}> {item.condition === 'Healthy' ? 'Cette plante semble ' : 'La plante a une maladie appelée :'}
                         <Text
                             style={{
-                                // color: '#269460',
                                 color: item.condition === 'Healthy' ? '#269460' : '#EC4F4F',
                                 fontSize: normalizeFont(14),
                                 fontWeight: '700',
                             }}
-                        // >Healthy</Text>
 
                         >{item.condition === 'Healthy' ? 'en bonne santé' : plant.Condition[item.condition].fr_name}</Text>
                     </Text>
@@ -78,10 +69,6 @@ export default function HealthScreen({ route }) {
 
                         })
                     }
-                    {/* if not health */}
-                    {/* <View style={{ width: responsive.WINDOW_WIDTH, height: responsive.WINDOW_HEIGHT * 0.35 }}>
-                        {item.condition !== 'Healthy' && <HelthTabs disess={plant.Condition[item.condition]} />}
-                    </View> */}
                     <Text
                         style={{
                             color: '#269460',

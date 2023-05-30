@@ -9,6 +9,7 @@ import SettingScreen from '../pages/App/SettingScreen';
 import AccountScreen from '../pages/App/AccountScreen';
 import AboutScreen from '../pages/App/AboutScreen';
 import HomeTabNavigator from './HomeTabNavigator';
+import AccountNavigator from './AccountNavigator';
 const Drawer = createDrawerNavigator();
 
 export default function AppNavigator() {
@@ -19,13 +20,13 @@ export default function AppNavigator() {
                 options={{ drawerIcon: () => <FontAwesomeIcon icon={faHouse} size={25} color="#06fe87" />, title: 'Accueil' }}
             />
 
-            <Drawer.Screen name={routes.ACCOUNT} component={AccountScreen}
+            <Drawer.Screen name={routes.ACCOUNT_NAV} component={AccountNavigator}
                 options={{ drawerIcon: () => <FontAwesomeIcon icon={faUser} size={25} color="#06fe87" />, title: 'Mon compte' }} />
             {/* <Drawer.Screen name={routes.SETTINGS} component={SettingScreen}
                 options={{ drawerIcon: () => <FontAwesomeIcon icon={faPlantWilt} size={25} color="#06fe87" /> }} /> */}
 
             <Drawer.Screen name={routes.ABOUT} component={AboutScreen}
-                options={{ drawerIcon: () => <FontAwesomeIcon icon={faCircleInfo} size={25} color="#06fe87" /> }} />
+                options={{ drawerIcon: () => <FontAwesomeIcon icon={faCircleInfo} size={25} color="#06fe87" />, title: 'À propos de nous' }} />
         </Drawer.Navigator>
     )
 }

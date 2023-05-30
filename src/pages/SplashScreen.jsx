@@ -45,7 +45,6 @@ export default function SplashScreen({ navigation }) {
         if (isConnected) {
 
             const user = await getUserData()
-            console.log("user")
             if (user.username) {
                 dispatch(loginSuccess(user))
                 console.log("redirect to app")

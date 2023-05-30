@@ -8,6 +8,7 @@ import { LOGIN_FAILURE } from '../../redux/actions'
 import { userLogout } from '../../services/AuthService'
 import routes from '../../constants/routes'
 import urls from '../../constants/urls'
+import { normalizeFont } from '../../constants/responsive'
 
 
 // import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -40,7 +41,7 @@ export default function CustomDrawer(props) {
                         }}
                         >{`${user?.firstName}  ${user?.lastName}`}</Text>
                         <Text style={{
-                            fontSize: 14
+                            fontSize: normalizeFont(10)
                         }}>{user?.email}</Text>
                     </View>
                 </View>

@@ -14,7 +14,7 @@ export default function ListScreen() {
     const navigation = useNavigation();
     const route = useRoute()
     console.log("cons :")
-    console.log(route.params)
+    console.log(route.params.parentname)
     const [data, setData] = useState([])
     const [current, setCurrent] = useState('')
     const isFocused = useIsFocused();
@@ -49,29 +49,14 @@ export default function ListScreen() {
     const GO_TO_DETAILS = (item) => {
         navigation.navigate(routes.DETAILS, { item: item })
     }
-    const setting_current = async () => {
-        let x = await route.params
-        await setCurrent(x.parentname)
-    }
     useEffect(() => {
-        setting_current()
-        console.log("current " + current)
         getData()
 
     }, [isFocused])
-    useEffect(() => {
-        setCurrent(prevCurrent => {
-            if (route.params?.parentname !== prevCurrent) {
-                return route.params?.parentname;
-            }
-            return prevCurrent;
-        });
-    }, [route.params?.parentname]);
-
-    // console.log('Current:', current);
 
     if (isLoading) {
-        return <DrawLoading />
+        return <Text>hello</Text>
+        //<DrawLoading />
     } else if (data.length === 0) {
         return <MyPlantEmpty />
     } else {

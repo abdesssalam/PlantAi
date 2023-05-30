@@ -172,7 +172,25 @@ export default function AccountScreen({ navigation }) {
                 <DrawFormItem text='prénom' val={user.firstName} objKey='firstName' onChange={handleChnge} />
                 <DrawFormItem text='nom' val={user.lastName} objKey='lastName' onChange={handleChnge} />
                 <DrawFormItem text='address email' val={user.email} objKey='email' onChange={handleChnge} />
-                <DrawFormItem text='mot de pass' val={user.password} objKey='password' onChange={handleChnge} />
+                <TouchableOpacity onPress={() => { navigation.navigate(routes.NEW_PASSWORD, { email: user.email, type: 'new_pass' }) }}
+                    style={{
+                        width: responsive.WINDOW_WIDTH * 0.7,
+                        alignItems: 'flex-start',
+                        marginTop: normalizeFont(16)
+                    }}
+                >
+                    <Text
+                        style={{
+                            fontSize: normalizeFont(14),
+                            // textDecorationLine: 'underline',
+                            paddingBottom: 5,
+                            borderBottomColor: '#4267B2',
+                            borderBottomWidth: 1,
+                            color: '#4267B2',
+
+                        }}
+                    >change votre mot de passe</Text>
+                </TouchableOpacity>
 
             </View>
         </ScrollView>
