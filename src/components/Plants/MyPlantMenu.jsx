@@ -8,13 +8,11 @@ import routes from '../../constants/routes';
 export default function MyPlantMenu({ hide, windowHeight, plant, refresh_data }) {
 
     const navigation = useNavigation();
-
-
-    console.log(plant)
     const handleMoveToGatden = async () => {
         if (plant.is_garden) {
             console.log("ggg")
             await removePlantFromGarden(plant.plant_id)
+            await refresh_data()
         } else {
             await MovePlantToGarden(plant.plant_id)
         }
@@ -37,15 +35,9 @@ export default function MyPlantMenu({ hide, windowHeight, plant, refresh_data })
     const items = [
         {
             id: 1,
-            title: plant.is_garden ? 'remove from garden' : 'Save to my garden',
+            title: plant.is_garden ? 'retirer du jardin' : 'Enregistrer dans le jardin',
             color: '#30C67F',
             action: async () => { await handleMoveToGatden() }
-        },
-        {
-            id: 2,
-            title: 'Edit Name',
-            color: '#30C67F',
-            action: hide
         },
         {
             id: 3,
@@ -55,13 +47,13 @@ export default function MyPlantMenu({ hide, windowHeight, plant, refresh_data })
         },
         {
             id: 4,
-            title: 'Delete',
+            title: 'Supprimer',
             color: '#EC4F4F',
             action: delete_plant
         },
         {
             id: 5,
-            title: 'Cancel',
+            title: 'Annuler',
             color: '#30C67F',
             action: hide
         },
