@@ -14,7 +14,10 @@ import urls from '../../constants/urls'
 
 export default function HealthScreen({ route }) {
     const item = route.params.item
-    let plant = disessData[item.plantName];
+    let plant = disessData[item.plantName.replace(" ", "_")];
+    console.log("health screen")
+    console.log(item)
+    console.log("health screen")
     return (
         <View style={{ flex: 1, width: responsive.WINDOW_WIDTH, height: responsive.WINDOW_HEIGHT }}>
             <ScrollView
@@ -50,7 +53,8 @@ export default function HealthScreen({ route }) {
                         width: '100%',
                         textAlign: 'auto'
 
-                    }}> {item.condition === 'Healthy' ? 'Cette plante semble ' : 'La plante a une maladie appelée :'}
+                    }}>
+                        {item.condition === 'Healthy' ? 'Cette plante semble ' : 'La plante a une maladie appelée :'}
                         <Text
                             style={{
                                 color: item.condition === 'Healthy' ? '#269460' : '#EC4F4F',

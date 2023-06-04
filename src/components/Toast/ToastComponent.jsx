@@ -20,13 +20,14 @@ const ToastComponent = React.forwardRef((props, ref) => {
             alignItems: 'center'
         },
         textStyle: {
-            fontSize: normalizeFont(18),
+            fontSize: normalizeFont(12),
             color: '#fff',
-            textTransform: 'capitalize'
+            textAlign: 'center'
+
         }
     })
     return (
-        <Toast ref={ref} style={styles.toastStyle} textStyle={styles.textStyle} opacity={0.8} />
+        <Toast ref={ref} style={styles.toastStyle} textStyle={styles.textStyle} opacity={0.95} />
     )
 })
 

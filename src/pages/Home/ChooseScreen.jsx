@@ -28,13 +28,10 @@ export default function ChooseScreen() {
     })
     const image_url = route.params.data['image_url']
     const handlePress = (item) => {
-        console.log("saving the plant")
         createPlant(item.Name, item.Condition, image_url)
         let item2 = getSingleItem(item.Name);
         item2 = { ...item2, ...item }
         item2 = { ...item2, ...{ image_url: image_url } }
-        console.log(item2)
-        console.log("saving the plant")
         navigation.reset(
             {
                 index: 1,
@@ -50,7 +47,7 @@ export default function ChooseScreen() {
             }
 
         )
-        navigation.navigate(routes.DETAILS, { item: item2 })
+
     }
 
 

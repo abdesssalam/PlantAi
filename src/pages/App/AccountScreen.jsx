@@ -7,7 +7,8 @@ import urls from '../../constants/urls';
 import { changeProfilePicture, editUserService } from '../../services/AuthService';
 import { loginSuccess } from '../../redux/actions';
 import routes from '../../constants/routes';
-
+import ToastComponent from '../../components/Toast/ToastComponent';
+import values from '../../constants/values'
 
 
 
@@ -56,6 +57,7 @@ const DrawFormItem = ({ text, val, onChange, objKey }) => {
 export default function AccountScreen({ navigation }) {
     const userInfo = useSelector(state => state.user)
     const dispatch = useDispatch()
+    const toastRef = React.useRef(null)
     const [user, setUser] = React.useState({ ...userInfo, ...{ password: '' } })
 
 
@@ -74,8 +76,8 @@ export default function AccountScreen({ navigation }) {
         console.log("updating user")
         const UpdatedUser = await editUserService(user);
         dispatch(loginSuccess(UpdatedUser))
-        console.log("updated")
-        console.log(UpdatedUser)
+        toastRef.current.show("Vos informations ont été mises à jour avec succès ", values.TOAST_VALUES.DURATION.SHORT)
+
         // console.log(user)
     }
     const handleChangeProfile = () => {
@@ -192,6 +194,7 @@ export default function AccountScreen({ navigation }) {
                     >change votre mot de passe</Text>
                 </TouchableOpacity>
 
+                <ToastComponent ref={toastRef} type={values.TOAST_VALUES.TYPE.SUCSESS} />
             </View>
         </ScrollView>
     )

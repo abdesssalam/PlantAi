@@ -26,9 +26,6 @@ export default function PreCameraScreen() {
 
     ]
     let plants = get_all_plants();
-    console.log("plants")
-    console.log(plants[0])
-    console.log("plants")
     const handle_press_choix_1 = (text) => {
         if (text === choix1[0].text) {
             navigation.navigate(routes.CAMERA, { type: 'fruit' })
@@ -41,7 +38,7 @@ export default function PreCameraScreen() {
     }
     const handle_press_choix_2 = (text) => {
         setChoix("")
-        text = text.replace(" ", "-")
+        text = text.replace(" ", "_")
         navigation.navigate(routes.CAMERA, { type: 'leaf', name: text })
 
     }

@@ -5,6 +5,7 @@ import HealthScreen from "../pages/Home/HealthScreen";
 import CameraScreen from "../pages/Home/CameraScreen";
 import ChooseScreen from "../pages/Home/ChooseScreen";
 import PreCameraScreen from "../pages/Home/PreCameraScreen";
+import FirstResultScreen from "../pages/Home/FirstResultScreen";
 const Stack = createNativeStackNavigator();
 
 export default function CameraNavigator() {
@@ -12,6 +13,7 @@ export default function CameraNavigator() {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name={routes.PRE_CAMERA_SCREEN} component={PreCameraScreen} />
             <Stack.Screen name={routes.CAMERA} component={CameraScreen} />
+            <Stack.Screen name={routes.FIRST_RES} component={FirstResultScreen} />
             <Stack.Screen name={routes.CHOOSE_SCREEN} component={ChooseScreen} />
             <Stack.Screen name={routes.DETAILS} component={DetailScreen} options={{ headerShown: true }} />
             <Stack.Screen name={routes.HEALTH} component={HealthScreen} />

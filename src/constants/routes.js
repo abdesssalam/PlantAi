@@ -30,5 +30,6 @@ export default {
     NOTE_SCREEN: 'NOTES',
     CHOOSE_SCREEN: 'Choiser',
     PRE_CAMERA_SCREEN: 'Pre Camera screen',
-    ACCOUNT_NAV: 'Account navigator'
+    ACCOUNT_NAV: 'Account navigator',
+    FIRST_RES: 'First result'
 }

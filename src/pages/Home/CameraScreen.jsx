@@ -163,7 +163,29 @@ export default class CameraScreen extends Component {
             console.log("medel data===")
 
 
-            this.props.navigation.navigate(routes.CHOOSE_SCREEN, { data: res.data })
+            // const res = {
+            //     data:
+
+            //     {
+            //         "result_0": {
+            //             "Name": "Bell_Pepper",
+            //             "Condition": "Bacterial_Spot",
+            //             "Type": "Fruit"
+            //         },
+            //         "result_1": {
+            //             "Name": "Tomato",
+            //             "Condition": "Cracking",
+            //             "Type": "Fruit"
+            //         },
+            //         "result_2": {
+            //             "Name": "Tomato",
+            //             "Condition": "Healthy",
+            //             "Type": "Fruit"
+            //         },
+            //         "image_url": "/media/tomatoes_helios4eos_gettyimages-edit_jcpR8qR.jpeg"
+            //     }
+            // }
+            this.props.navigation.navigate(routes.FIRST_RES, { data: res.data })
             this.setState({ showIndicator: false })
 
             //end sent to AI API

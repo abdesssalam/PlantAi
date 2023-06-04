@@ -18,7 +18,7 @@ export const getUserPlants = async () => {
 
     data.forEach(d => {
 
-        let item = plantsData.find(pl => pl.general.name.toUpperCase() == d.name.toUpperCase())
+        let item = plantsData.find(pl => pl.general.name.toUpperCase() == d.name.replace("_", " ").toUpperCase())
         item = { ...item, ...{ Condition: d.condition, img: d.img, plant_id: d.id, is_garden: d.is_garden, created_at: d.created_at } }
 
         toShow.push(item)

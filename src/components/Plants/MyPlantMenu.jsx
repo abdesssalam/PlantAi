@@ -7,6 +7,7 @@ import routes from '../../constants/routes';
 
 export default function MyPlantMenu({ hide, windowHeight, plant, refresh_data }) {
 
+    console.log(plant.is_garden)
     const navigation = useNavigation();
     const handleMoveToGatden = async () => {
         if (plant.is_garden) {
@@ -35,7 +36,7 @@ export default function MyPlantMenu({ hide, windowHeight, plant, refresh_data })
     const items = [
         {
             id: 1,
-            title: plant.is_garden ? 'retirer du jardin' : 'Enregistrer dans le jardin',
+            title: plant.is_garden === 1 ? 'retirer du jardin' : 'Enregistrer dans le jardin',
             color: '#30C67F',
             action: async () => { await handleMoveToGatden() }
         },

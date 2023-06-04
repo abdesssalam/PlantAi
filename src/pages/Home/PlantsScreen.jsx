@@ -22,6 +22,7 @@ export default function PlantsScreen() {
         setLoading(true)
         let plants;
         plants = await getUserPlants()
+        console.log(plants)
         setData(plants)
         if (plants.length > 0) {
             plants.sort(function (a, b) {

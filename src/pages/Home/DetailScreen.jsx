@@ -3,10 +3,18 @@ import { useEffect } from 'react'
 import routes from '../../constants/routes'
 import responsive from '../../constants/responsive'
 import urls from '../../constants/urls'
+import { disessData } from '../../data/disessData'
 
 export default function DetailScreen({ route, navigation }) {
     const item = route.params.item
     let path = item['img'] ? item['img'] : item['image_url'];
+    console.log("item.general")
+    console.log(item)
+    console.log("item.general")
+    let plant = disessData[item.general.name.replace(" ", "_")];
+    console.log("plant")
+    console.log(plant)
+    console.log("plant")
     const handleRenderHealth = () => {
         let itemT = {
             condition: item.Condition,
@@ -43,7 +51,7 @@ export default function DetailScreen({ route, navigation }) {
                 }
 
                 <View style={styles.card}>
-                    <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>{item.general.name}</Text>
+                    <Text style={{ fontSize: 18, fontWeight: '600', color: '#000', marginBottom: 10 }}>{item.general.fr_name}</Text>
                     <Text style={{ textAlign: 'justify', fontSize: 14, lineHeight: 21, color: '#000' }}>{item.Description}</Text>
                 </View>
                 {/* plant health */}
@@ -51,18 +59,23 @@ export default function DetailScreen({ route, navigation }) {
                     item.Condition &&
 
                     <View style={styles.box}>
-                        <DrawHeader src={require('../../assets/ic_outline-monitor-heart.png')} text={'Plant Health'} />
+                        <DrawHeader src={require('../../assets/ic_outline-monitor-heart.png')} text={'la santé des plantes'} />
                         <View style={{
                             flexDirection: 'row',
                             marginVertical: 10,
                             marginRight: 10,
                         }}>
-                            <Image source={{ uri: `${urls.AI_API + path}` }} style={{ width: 100, height: 100, borderRadius: 10, marginRight: 20 }} />
-                            <View>
-                                <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 14, marginBottom: 8 }}>This plant looks {item.Condition === 'Healthy' ? '' : 'has'}  <Text style={{ color: item.Condition === 'Healthy' ? '#30C67F' : '#FF0000' }}>{item.Condition.replace("_", " ")}</Text></Text>
+                            <Image source={{ uri: `${urls.AI_API + path}` }} style={{ width: '20%', height: responsive.WINDOW_WIDTH * 0.2, borderRadius: 10, marginRight: 20 }} />
+                            <View style={{ width: '80%' }}>
+                                <Text style={{ fontWeight: 'bold', color: '#000', fontSize: 14, marginBottom: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+                                    {item.Condition === 'Healthy' ? 'Cette plante semble ' : 'La plante a une maladie appelée :'}
+                                    <Text style={{ color: item.Condition === 'Healthy' ? '#30C67F' : '#EC4F4F' }}>
+                                        {item.Condition === 'Healthy' ? 'en bonne santé' : plant.Condition[item.Condition]?.fr_name}
+                                    </Text>
+                                </Text>
 
                                 <TouchableOpacity style={styles.btn} onPress={handleRenderHealth}>
-                                    <Text style={{ color: '#30C67F' }}>Check for Solutions</Text>
+                                    <Text style={{ color: '#30C67F' }}>plus de détails</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -70,7 +83,7 @@ export default function DetailScreen({ route, navigation }) {
                 {/* end plant health*/}
                 {/* end plant health */}
                 <View style={styles.box}>
-                    <DrawHeader src={require('../../assets/ic_key_features.png')} text={'Key Facts'} />
+                    <DrawHeader src={require('../../assets/ic_key_features.png')} text={'Faits marquants'} />
                     {
                         Object.keys(item.key_facts).map((key, idx) => {
                             return <DrawFact key={idx} title={key} text={item.key_facts[key].toString()} />
@@ -78,7 +91,7 @@ export default function DetailScreen({ route, navigation }) {
                     }
                 </View>
                 <View style={styles.box}>
-                    <DrawHeader src={require('../../assets/ic_characteristics.png')} text={'Characteristics'} />
+                    <DrawHeader src={require('../../assets/ic_characteristics.png')} text={'Caractéristiques'} />
                     {
 
                         Object.keys(item.characteristics).map((key, idx) => {
