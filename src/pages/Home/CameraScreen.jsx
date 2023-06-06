@@ -147,7 +147,7 @@ export default class CameraScreen extends Component {
                 method: 'POST',
                 url: urls.AI_API + '/file/upload/',
                 data: formData,
-                headers: { "Content-Type": "multipart/form-data" },
+                headers: { "Content-Type": "multipart/form-data", 'X-API-KEY': 'plantai@wehelp' },
             }).then(res => {
                 console.log("resss")
                 console.log(res)

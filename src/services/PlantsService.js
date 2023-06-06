@@ -1,7 +1,8 @@
 import { plantsData, userPlants } from '../data/Plants'
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-const BASE_URL = 'http://10.0.2.2:8000/api'
+import urls from '../constants/urls';
+const BASE_URL = urls.USER_API
 
 export const getHomePlants = (item) => {
     return plantsData.filter(plant => plant.key_facts['Type de plante'].toLowerCase() === item.toLowerCase())
@@ -68,6 +69,7 @@ export const getPlants = async () => {
             throw new Error('No token found');
         }
         const response = await axios.get(`${BASE_URL}/plants`, { headers: { Authorization: `Bearer ${token}` } });
+        console.log(response)
         const plants = response.data.plants;
         return plants;
     } catch (error) {

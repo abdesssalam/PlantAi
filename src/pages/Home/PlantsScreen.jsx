@@ -19,19 +19,24 @@ export default function PlantsScreen() {
         await getData()
     }
     async function getData() {
-        setLoading(true)
-        let plants;
-        plants = await getUserPlants()
-        console.log(plants)
-        setData(plants)
-        if (plants.length > 0) {
-            plants.sort(function (a, b) {
-                return new Date(b.created_at) - new Date(a.created_at);
-            });
+        try {
+            setLoading(true)
+            let plants;
+            plants = await getUserPlants()
+            console.log(plants)
             setData(plants)
+            if (plants.length > 0) {
+                plants.sort(function (a, b) {
+                    return new Date(b.created_at) - new Date(a.created_at);
+                });
+                setData(plants)
+            }
+
+            setLoading(false)
+        } catch (er) {
+            console.log(er)
         }
 
-        setLoading(false)
 
 
     }
