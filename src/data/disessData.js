@@ -27,6 +27,18 @@ export const disessData = {
                 "Symptômes": "Taches brunes et molles sur le fruit qui peuvent s'agrandir rapidement et développer une croissance fongique blanche.",
                 "Traitement": "Retirez les fruits infectés et détruisez-les. Améliorez la circulation de l'air autour des plantes pour éviter l'accumulation d'humidité. Utilisez des fongicides pour prévenir l'infection.",
                 "Prévention": "Évitez la surpopulation des plantes. Assurez un bon drainage. Évitez l'excès d'arrosage.",
+            },
+            "Phytophthora_Blight": {
+                "fr_name": "La brûlure de Phytophthora",
+                "Symptômes": "La brûlure de Phytophthora sur les poivrons se manifeste généralement par l'apparition de lésions sombres imbibées d'eau sur les feuilles, qui finissent par devenir brunes et nécrotiques. Les parties de la plante infectées peuvent se flétrir et mourir. La maladie peut également affecter les fruits, provoquant l'apparition de lésions sombres ou de pourriture. Dans les cas graves, la plante entière peut s'effondrer et mourir.",
+                "Traitement": "Le traitement de la brûlure de Phytophthora sur les poivrons implique la mise en œuvre de mesures de lutte culturelle et chimique. Les pratiques culturales comprennent l'amélioration du drainage dans la zone de culture, l'évitement de l'excès d'arrosage et la rotation des cultures. Des fongicides peuvent être utilisés en prévention ou pour gérer la maladie à un stade précoce. Il est important d'utiliser des fongicides recommandés pour lutter contre la brûlure de Phytophthora et de suivre les instructions fournies par le fabricant.",
+                "Prévention": "La prévention de la brûlure de Phytophthora sur les poivrons passe par une bonne hygiène et de bonnes pratiques culturales. Cela comprend l'évitement de l'excès d'arrosage, l'amélioration du drainage du sol et le respect d'un espacement adéquat entre les plants pour favoriser une bonne circulation de l'air. L'utilisation de variétés résistantes aux maladies peut également aider à réduire le risque d'infection. La rotation des cultures, où les poivrons ne sont pas cultivés au même endroit pendant des saisons consécutives, peut contribuer à rompre le cycle de la maladie. Surveiller régulièrement les plants à la recherche de signes de maladie et agir rapidement peut empêcher la propagation de la brûlure de Phytophthora.",
+            },
+            "Powdery_Mildew": {
+                "fr_name": "L'oïdium",
+                "Symptômes": "L'oïdium sur les poivrons se manifeste sous forme d'une croissance fongique blanche et poudreuse sur les feuilles, les tiges et les fruits. Les parties de la plante affectées peuvent se déformer ou se nécroser. Au fur et à mesure que la maladie progresse, la croissance poudreuse peut couvrir des zones plus larges et provoquer un jaunissement ou un brunissement des feuilles. Dans les cas graves, les feuilles infectées peuvent se dessécher et tomber",
+                "Traitement": "Le traitement de l'oïdium sur les poivrons implique généralement l'utilisation de fongicides. Les fongicides spécialement formulés pour lutter contre l'oïdium peuvent être appliqués selon les instructions fournies. Il est important de commencer le traitement dès que les symptômes sont remarqués et de poursuivre l'application comme indiqué. Les pratiques culturales telles que la taille pour améliorer la circulation de l'air, la réduction de l'humidité et l'évitement de l'arrosage par le dessus peuvent également contribuer à la prévention et à la gestion de l'oïdium.",
+                "Prévention": "Pour prévenir l'oïdium sur les poivrons, il est important de mettre en place de bonnes pratiques culturales. Cela comprend un espacement adéquat entre les plants pour favoriser une bonne circulation de l'air, une exposition adéquate au soleil et l'évitement d'une fertilisation excessive en azote. Surveiller régulièrement les plants à la recherche de signes de maladie et agir rapidement peut contribuer à prévenir la propagation de l'oïdium. Si l'oïdium a été un problème récurrent, l'utilisation de variétés résistantes aux maladies peut être bénéfique",
             }
         }
     },
@@ -317,6 +329,27 @@ export const disessData = {
                 "Traitement": "Retirer les fruits infectés et les jeter. Appliquer un fongicide pour protéger les fruits sains.",
                 "Prévention": "Arroser les plantes à la base plutôt que par le haut pour éviter d'humidifier les fruits. Faire une rotation des cultures et éviter de planter des aubergines au même endroit pendant plusieurs années pour réduire le risque d'infection."
             }
+            ,
+            "Bacterial_Spot": {
+                "fr_name": "La tache bactérienne",
+                "Symptômes": "La tache bactérienne sur les aubergines se manifeste initialement par de petites lésions imbibées d'eau sur les feuilles, les tiges et les fruits. À mesure que la maladie progresse, les lésions deviennent sombres et enfoncées, avec une texture liégeuse et surélevée. Les zones touchées peuvent s'agrandir et développer un halo ou un jaunissement autour des lésions. Dans les cas graves, les feuilles peuvent tomber prématurément et les fruits peuvent se déformer ou présenter des lésions surélevées semblables à des croûtes.",
+                "Traitement": "Le traitement de la tache bactérienne sur les aubergines implique une combinaison de pratiques culturales et l'utilisation de fongicides à base de cuivre. Les parties de la plante infectées doivent être rapidement enlevées et détruites pour empêcher la propagation des bactéries. Les fongicides à base de cuivre peuvent être appliqués selon les instructions fournies, généralement selon un calendrier régulier tout au long de la saison de croissance. Il est important de commencer le traitement tôt et de poursuivre l'application comme indiqué.",
+                "Prévention": "Pour prévenir la tache bactérienne sur les aubergines, il est important de mettre en place de bonnes pratiques culturales. Cela comprend un espacement adéquat entre les plants pour favoriser une bonne circulation de l'air, l'évitement de l'arrosage par le dessus et le maintien d'une bonne hygiène dans le jardin. La plantation de variétés résistantes aux maladies peut également être bénéfique. De plus, éviter de travailler dans le jardin lorsque les plantes sont mouillées et pratiquer la rotation des cultures peut contribuer à réduire le risque de tache bactérienne."
+            }
+            ,
+            "Powdery_Mildew": {
+                "fr_name": "L'oïdium",
+                "Symptômes": "L'oïdium sur les aubergines se présente sous forme d'une croissance poudreuse blanche ou grise sur les feuilles, les tiges et parfois sur les fruits. Les parties de la plante touchées peuvent se déformer, et les feuilles peuvent s'enrouler ou jaunir. Dans les cas graves, la croissance poudreuse peut couvrir de grandes parties de la plante",
+                "Traitement": "Le traitement de l'oïdium sur les aubergines implique une combinaison de pratiques culturales et l'utilisation de fongicides. Les pratiques culturales comprennent l'élimination et l'élimination des parties de la plante infectées, la promotion d'une bonne circulation de l'air par un espacement adéquat et l'évitement de l'arrosage par le dessus. Les fongicides contenant des ingrédients actifs tels que le soufre ou l'huile de neem peuvent être utilisés selon les instructions fournies sur l'étiquette du produit.",
+                "Prévention": "Pour prévenir l'oïdium sur les aubergines, il est important de mettre en place de bonnes pratiques culturales. Cela comprend un espacement adéquat entre les plants pour favoriser une bonne circulation de l'air, l'évitement de l'arrosage par le dessus et le maintien d'une bonne hygiène dans le jardin. L'application de fongicides à titre préventif peut également être bénéfique, notamment dans les zones sujettes à l'oïdium. De plus, choisir des variétés résistantes aux maladies peut contribuer à réduire le risque d'oïdium."
+            }
+            ,
+            "Verticillium_Wilt": {
+                "fr_name": "Flétrissement verticillien",
+                "Symptômes": " Les aubergines atteintes de flétrissement verticillien peuvent présenter un flétrissement et un jaunissement des feuilles, en commençant par les parties inférieures de la plante. Le flétrissement peut se produire initialement d'un côté ou d'une branche de la plante et se propager progressivement à toute la plante. Les tissus vasculaires de la plante peuvent présenter une décoloration, généralement des stries ou des taches brunes.",
+                "Traitement": "Il n'existe aucun traitement curatif pour le flétrissement verticillien une fois qu'une plante est infectée. Les plantes infectées doivent être retirées et détruites pour éviter la propagation de la maladie. La rotation des cultures est essentielle, car l'agent pathogène peut survivre dans le sol. Évitez de planter des aubergines ou d'autres plantes sensibles dans la même zone pendant plusieurs années. L'utilisation de variétés résistantes peut contribuer à réduire le risque de flétrissement verticillien.",
+                "Prévention": "Pour prévenir le flétrissement verticillien des aubergines, pratiquez une bonne rotation des cultures en évitant de planter des plantes sensibles au même endroit pendant au moins trois ans. Choisissez des variétés résistantes au flétrissement verticillien. Maintenez une santé optimale des plantes en fournissant une nutrition, une irrigation et une lutte contre les mauvaises herbes appropriées. De plus, assurez-vous que le sol est bien drainé et exempt d'humidité excessive."
+            }
         }
     }
     ,
@@ -445,6 +478,12 @@ export const disessData = {
                 "Symptômes": "Les feuilles présentent des motifs de mosaïque vert clair et foncé. Les feuilles peuvent être déformées et rétrécies. Les fruits peuvent présenter des taches décolorées.",
                 "Traitement": "Il n'y a pas de remède contre ce virus. Les plantes infectées doivent être retirées et détruites pour empêcher la propagation du virus aux plantes saines.",
                 "Prévention": "Plantez des variétés résistantes, pratiquez une bonne hygiène du jardin en retirant et en détruisant les plantes infectées et utilisez des techniques de culture propres pour éviter la propagation du virus."
+            },
+            "Powdery_Mildew": {
+                "fr_name": "L'oïdium",
+                "Symptômes": "Les plants de tomates atteints d'oïdium présentent un revêtement poudreux blanc ou grisâtre sur les feuilles, les tiges et parfois même les fruits. Les parties de la plante touchées peuvent se déformer ou être rabougries. Dans les cas graves, les feuilles peuvent jaunir et tomber prématurément.",
+                "Traitement": "Pour traiter l'oïdium sur les plants de tomates, vous pouvez utiliser des fongicides spécifiquement étiquetés pour le contrôle de l'oïdium. Suivez les instructions figurant sur l'étiquette du produit. Éliminez et détruisez les parties de la plante fortement infectées pour réduire la propagation de la maladie. Assurez un espacement adéquat entre les plants pour améliorer la circulation de l'air et réduire l'humidité. Surveillez régulièrement et éliminez les mauvaises herbes qui peuvent héberger la maladie. L'application d'huiles horticoles ou de remèdes maison tels qu'un mélange de bicarbonate de soude et d'eau peut également aider à contrôler l'oïdium.",
+                "Prévention": "Pour prévenir l'oïdium sur les plants de tomates, choisissez des variétés résistantes lorsque cela est possible. Maintenez une bonne hygiène des plantes en éliminant et en éliminant les parties de la plante infectées. Assurez un espacement adéquat entre les plants pour favoriser la circulation de l'air. Arrosez les plants à la base et évitez l'arrosage par le dessus pour réduire l'humidité. Appliquez des fongicides organiques ou synthétiques de manière préventive si les conditions sont favorables au développement de l'oïdium."
             }
         }
     },
@@ -549,12 +588,20 @@ export const disessData = {
                 "Symptômes": "Taches circulaires ou irrégulières brun à noir sur les feuilles, petites taches brun noir à noir sur les fruits, les taches sur les feuilles peuvent se rejoindre, entraînant la défoliation, les taches sur les fruits peuvent devenir enfoncées et se fissurer",
                 "Traitement": "Retirer les parties infectées de la plante et les éliminer correctement, utiliser des fongicides étiquetés pour le contrôle des taches sur les pommes, maintenir la vigueur de l'arbre et éviter le stress de l'arbre",
                 "Prévention": "Planter des variétés résistantes lorsque disponibles, assurer une circulation d'air adéquate et éviter l'irrigation par le dessus, maintenir une gestion adéquate des nutriments et de l'eau, pratiquer une bonne hygiène sanitaire dans le verger"
-            },
+            }
+            ,
             "Rot": {
                 "fr_name": "Pourriture",
                 "Symptômes": "Taches brun ou noir enfoncées sur la surface du fruit, la chair du fruit devient molle et pâteuse, croissance de moisissure blanche à grisâtre sur la surface du fruit",
                 "Traitement": "Retirer les fruits infectés de l'arbre et les éliminer correctement, éviter de blesser les fruits pendant la récolte et la manipulation, conserver les fruits dans des conditions fraîches et sèches, utiliser des fongicides comme recommandé par un professionnel",
                 "Prévention": "Planter des variétés résistantes lorsque disponibles, tailler les arbres pour favoriser une bonne circulation de l'air, gérer la vigueur de l'arbre pour réduire le stress, enlever les fruits et les débris tombés du sol du verger"
+            }
+            ,
+            "Powdery_Mildew": {
+                "fr_name": "Mildiou",
+                "Symptômes": "Le mildiou poudreux sur les pommiers se manifeste sous la forme d'une croissance poudreuse blanche ou grisâtre sur les feuilles, les tiges et les fruits. Les feuilles infectées peuvent se recourber, se déformer ou être rabougries. Les fruits affectés peuvent présenter des taches, du brunissement ou une chute prématurée. Dans les cas graves, le mildiou poudreux peut couvrir de vastes zones de l'arbre et avoir un impact négatif sur la santé globale de l'arbre et sa productivité.",
+                "Traitement": "Le traitement du mildiou poudreux sur les pommiers implique généralement l'utilisation de fongicides efficaces contre les agents pathogènes du mildiou poudreux. Il est important de suivre les instructions fournies par le fabricant et d'appliquer le fongicide selon les indications. Les applications de fongicide doivent être initiées dès les premiers signes d'infection et poursuivies selon le calendrier recommandé. De plus, l'élimination et la destruction du matériel végétal infecté, l'amélioration de la circulation de l'air et le maintien d'une nutrition adéquate de l'arbre peuvent aider à gérer la maladie.",
+                "Prévention": "La prévention du mildiou poudreux sur les pommiers implique la mise en œuvre de bonnes pratiques culturales. Cela inclut la taille des arbres pour améliorer la circulation de l'air et la pénétration de la lumière du soleil, ainsi que l'élimination et la destruction du matériel végétal infecté. Surveillez régulièrement les arbres à la recherche de signes de mildiou poudreux ou d'autres maladies, et prenez les mesures appropriées dès que les symptômes sont détectés. L'application de fongicides préventifs pendant les périodes d'humidité élevée ou de conditions favorables au développement du mildiou poudreux peut également aider à réduire le risque d'infection"
             }
         }
     },
@@ -708,6 +755,12 @@ export const disessData = {
                 "Symptômes": "L'oïdium se présente sous la forme d'un revêtement blanc ou gris poudreux sur les feuilles, les pousses et les fruits des vignes. Les feuilles peuvent se recroqueviller et se déformer, et les fruits peuvent se fissurer et se décolorer. Les infections graves peuvent entraîner la défoliation et une réduction de la qualité des fruits.",
                 "Traitement": "Des fongicides peuvent être utilisés pour traiter l'oïdium, mais ils sont plus efficaces lorsqu'ils sont appliqués tôt dans la saison de croissance avant que la maladie ne devienne grave. Les feuilles et les pousses infectées doivent être enlevées et détruites pour empêcher la propagation de la maladie. Une bonne gestion de la canopée et une hygiène de la vigne adéquate peuvent également contribuer à prévenir la maladie.",
                 "Prévention": "La prévention de l'oïdium passe par une gestion adéquate de la canopée, le maintien d'une bonne hygiène de la vigne et l'utilisation de variétés de raisin résistantes. Des fongicides peuvent également être utilisés de manière préventive, mais ils doivent être utilisés en combinaison avec d'autres pratiques de gestion. Une bonne circulation de l'air dans le vignoble peut également contribuer à prévenir la maladie.",
+            },
+            "Rust": {
+                "fr_name": "Rouille",
+                "Symptômes": "La rouille sur les vignes se manifeste sous forme de taches oranges ou brun rougeâtre, ou de pustules, sur les feuilles, les tiges et les fruits. Ces taches peuvent avoir un aspect poudreux ou rouillé. Au fur et à mesure de l'évolution de l'infection, les feuilles touchées peuvent jaunir, se flétrir et tomber. Les infections graves peuvent affaiblir la vigne et affecter la production de raisin.",
+                "Traitement": "Le traitement de la rouille sur les vignes implique l'utilisation de fongicides spécifiquement formulés pour lutter contre les maladies de la rouille. Suivez les instructions fournies par le fabricant et appliquez le fongicide selon les indications. Il est important de commencer le traitement dès les premiers signes de symptômes de la rouille et de le poursuivre jusqu'à ce que l'infection soit sous contrôle. De plus, l'élimination et la destruction des parties végétales infectées peuvent aider à réduire la propagation de la maladie.",
+                "Prévention": "Pour prévenir la rouille sur les vignes, il est important de mettre en œuvre de bonnes pratiques culturales. Cela inclut la taille des vignes pour améliorer la circulation de l'air, réduire l'humidité et favoriser la pénétration de la lumière du soleil. Évitez l'irrigation par aspersion et utilisez plutôt l'irrigation goutte à goutte pour maintenir le feuillage sec. Surveillez régulièrement les vignes à la recherche de signes de rouille ou d'autres maladies, et retirez et détruisez rapidement le matériel végétal infecté. L'application de fongicides préventifs peut également être bénéfique, notamment dans les zones sujettes aux épidémies de rouille.",
             }
         }
     },
@@ -765,6 +818,13 @@ export const disessData = {
                 "Symptômes": "Les symptômes de l'oïdium sur le manguier comprennent la formation d'une substance blanche et poudreuse sur les feuilles et les tiges de l'arbre. Cette substance peut finalement entraîner la déformation ou la chute prématurée des feuilles.",
                 "Traitement": "L'oïdium sur le manguier peut être contrôlé avec des fongicides, tels que le soufre ou le bicarbonate de potassium. Il est important d'appliquer les fongicides selon les instructions du fabricant et d'utiliser un équipement de protection lors de la manipulation et de l'application.",
                 "Prévention": "Pour prévenir l'oïdium sur le manguier, enlevez et détruisez tout fruit ou branche infesté. Il peut également être utile de planter des cultures pièges, telles que la goyave ou la papaye, pour attirer et piéger le champignon.",
+
+            },
+            "Powdery_Mildew": {
+                "fr_name": "Mildiou",
+                "Symptômes": "Le mildiou duveteux sur les manguiers se manifeste sous forme de lésions jaunes ou vert pâle sur la surface supérieure des feuilles. Ces lésions peuvent devenir brunes et nécrotiques avec le temps. Le dessous des feuilles affectées peut développer une croissance fongique blanche à grisâtre. Les feuilles infectées peuvent se recourber, se flétrir et finalement tomber de l'arbre. Les infections graves peuvent également affecter les fruits, entraînant un brunissement, une pourriture et une chute prématurée des fruits.",
+                "Traitement": "Le traitement du mildiou duveteux sur les manguiers implique l'utilisation de fongicides spécifiquement efficaces contre les agents pathogènes du mildiou duveteux. Il est important de suivre les instructions fournies par le fabricant et d'appliquer le fongicide selon les indications. Les applications de fongicide doivent être initiées dès que les symptômes sont détectés et poursuivies selon le calendrier recommandé. De plus, l'amélioration de la circulation de l'air, la réduction de l'humidité et la fourniture d'un espacement adéquat entre les arbres peuvent aider à minimiser le développement de la maladie.",
+                "Traitement": "Pour prévenir le mildiou duveteux sur les manguiers, il est important de mettre en œuvre de bonnes pratiques culturales. Cela inclut la taille des arbres pour améliorer la circulation de l'air et la pénétration de la lumière du soleil. Évitez l'irrigation par aspersion et utilisez plutôt l'irrigation goutte à goutte pour maintenir le feuillage sec. Surveillez régulièrement les arbres à la recherche de signes de mildiou duveteux ou d'autres maladies, et retirez et détruisez rapidement le matériel végétal infecté. L'application de fongicides préventifs peut également être bénéfique, notamment pendant les périodes d'humidité élevée et de conditions favorables au développement du mildiou duveteux."
 
             },
             "Sooty_Mould": {
@@ -847,6 +907,20 @@ export const disessData = {
                 "Symptômes": "Lésions brunes sur les feuilles et les fruits, lésions liégeuses en relief sur les rameaux et les branches",
                 "Traitement": "Retirer les parties de la plante infectées, appliquer des fongicides à base de cuivre",
                 "Prévention": "Planter des plants exempts de maladies, élaguer les branches infectées, pratiquer une bonne hygiène",
+
+            },
+            "Sooty_Mold": {
+                "fr_name": "La fumagine",
+                "Symptômes": "La fumagine sur les oranges se manifeste sous forme d'une substance noire, poudreuse ou floconneuse à la surface des fruits. Elle est généralement accompagnée d'un résidu collant appelé miellat, sécrété par certains insectes tels que les pucerons ou les cochenilles. La moisissure ne contamine pas directement le fruit, mais se développe sur le résidu sucré laissé par ces insectes.",
+                "Traitement": "Le traitement de la fumagine sur les oranges implique le contrôle de l'infestation d'insectes sous-jacente. Utilisez des insecticides appropriés ou des prédateurs naturels pour gérer la population de pucerons ou de cochenilles. Surveillez régulièrement les arbres à la recherche de signes d'infestation et agissez immédiatement pour contrôler les insectes. À mesure que la population d'insectes diminue, la fumagine diminuera naturellement",
+                "Prévention": "Pour prévenir la fumagine sur les oranges, il est important de contrôler la population de pucerons et de cochenilles. Inspectez régulièrement les arbres à la recherche de signes d'infestation et agissez rapidement pour contrôler ces ravageurs. Mettez en place des mesures pour attirer les insectes bénéfiques qui se nourrissent des pucerons et des cochenilles. Maintenir la santé générale de l'arbre grâce à un arrosage, une fertilisation et une taille appropriés peut également contribuer à prévenir les infestations.",
+
+            },
+            "Greasy_Spot": {
+                "fr_name": "La tache grasse",
+                "Symptômes": "La tache grasse sur les oranges se manifeste sous forme de petites taches brunes à noires d'apparence grasse sur la peau du fruit. Ces taches peuvent avoir un aspect brillant ou huileux. Avec le temps, les taches peuvent s'agrandir et prendre une texture rugueuse ou soulevée. Les fruits infectés peuvent également avoir une saveur altérée ou une odeur désagréable",
+                "Traitement": "Il n'existe pas de traitement curatif pour la tache grasse une fois qu'elle infecte les oranges. Cependant, vous pouvez gérer la maladie en pratiquant une bonne hygiène des vergers. Retirez et détruisez les fruits infectés ainsi que les feuilles ou débris tombés. Une gestion appropriée de l'irrigation et une taille régulière pour améliorer la circulation de l'air peuvent également contribuer à réduire la gravité de la maladie",
+                "Prévention": "Pour prévenir la tache grasse, il est important de commencer avec du matériel végétal exempt de maladies et d'éviter d'introduire le pathogène dans le verger. Pratiquez une hygiène appropriée du verger en enlevant les feuilles et les débris tombés. Maintenez un espacement adéquat entre les arbres pour une bonne circulation de l'air. Surveillez régulièrement le verger à la recherche de signes d'infection et agissez immédiatement si la maladie est détectée",
 
             }
         }
