@@ -132,7 +132,7 @@ const FirstResultScreen = () => {
                 style={{
                     fontSize: normalizeFont(16),
                     color: COLORS.LIGHT_BLACK
-                }}>Is it correct ?</Text>
+                }}>Est-ce correct?</Text>
             <View style={{
                 flexDirection: 'row',
                 width: '90%',

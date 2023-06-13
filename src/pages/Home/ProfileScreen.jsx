@@ -36,7 +36,7 @@ const DrawHeader = ({ user }) => {
                     shadowColor: '#202020'
                 }}
             >
-                <Image source={user.img ? { uri: urls.USER_URL + user.img } : require('../../assets/no-profile.png')}
+                <Image source={user?.img ? { uri: urls.USER_URL + user.img } : require('../../assets/no-profile.png')}
                     style={{ width: '95%', height: '95%', borderRadius: 40 }}
                 />
             </View>

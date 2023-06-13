@@ -92,6 +92,7 @@ export default function NoteScreen() {
                 height: responsive.WINDOW_HEIGHT * 0.10,
 
             }}>Votre remarques </Text>
+            {notes.length === 0 && <Text style={{ fontSize: normalizeFont(16), fontFamily: 'Poppins', fontWeight: '500' }}>vous n'avez pas encore des remarques</Text>}
             <FlatList data={notes} renderItem={({ item }) => <DrawNoteCard note={item} show_update={show_update} delete_note={delete_note} />} />
 
             <View

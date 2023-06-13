@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { View, Text, FlatList, Image, Modal, TouchableOpacity, Pressable, Dimensions, BackHandler } from 'react-native'
-import responsive from '../../constants/responsive';
+import responsive, { normalizeFont } from '../../constants/responsive';
 import MyPlantMenu from '../../components/Plants/MyPlantMenu';
 import routes from '../../constants/routes';
 import urls from '../../constants/urls';
@@ -8,6 +8,7 @@ import { useIsFocused, useNavigation } from '@react-navigation/native';
 import { getUserPlants } from '../../services/PlantsService';
 import MyPlantEmpty from '../../components/Plants/EmptyListPlant';
 import LottieView from 'lottie-react-native'
+import { disessData } from '../../data/disessData';
 
 export default function PlantsScreen() {
     const navigation = useNavigation();
@@ -61,16 +62,16 @@ export default function PlantsScreen() {
 
 const DrawCard = ({ item, handlePress, notify }) => {
     const [visible, setVisible] = useState(false);
-
+    let disease_name = item.Condition === 'Healthy' ? 'bonne santé ' : disessData[item.general.name].Condition[item.Condition].fr_name
     const show = () => setVisible(true)
     const hide = () => setVisible(false)
     return (
 
-        <TouchableOpacity onPress={() => handlePress(item)} style={{ flexDirection: 'row', backgroundColor: '#fff', borderRadius: 10, width: '100%', padding: 10, marginTop: 15 }} >
-            <Image source={{ uri: urls.AI_API + item['img'] }} style={{ width: 150, height: 150 }} />
+        <TouchableOpacity onPress={() => handlePress(item)} style={{ flexDirection: 'row', backgroundColor: '#fff', borderRadius: 10, width: '95%', padding: 10, marginTop: 15, elevation: 10, marginHorizontal: normalizeFont(8) }} >
+            <Image source={{ uri: urls.AI_API + item['img'] }} style={{ width: 150, height: 150, borderRadius: 15 }} />
             <View style={{ marginLeft: 15 }}>
-                <Text style={{ flexWrap: 'wrap', fontSize: 22, color: '#30C67F', fontWeight: '800', textAlign: 'justify' }}>{item.general.name}</Text>
-                <Text style={{ fontSize: 16, color: '#A3A3A3' }}>{item.general['scientific_name']}</Text>
+                <Text style={{ flexWrap: 'wrap', fontSize: 22, color: '#30C67F', fontWeight: '800', textAlign: 'justify' }}>{item.general.fr_name}</Text>
+                <Text style={{ fontSize: 16, color: item.Condition === 'Healthy' ? '#269460' : '#EC4F4F' }}>{disease_name}</Text>
                 <Text style={{ position: 'absolute', bottom: 10, fontWeight: '600', color: '#000', fontSize: 18 }}>{item.key_facts['Plant Type']}</Text>
             </View>
             <TouchableOpacity onPress={show} style={{ position: 'absolute', top: 5, right: 5, padding: 10 }}>

@@ -12,9 +12,7 @@ const BASE_URL = urls.USER_API
 
 export const registerService = async (user) => {
     try {
-        console.log("registerService")
-        console.log(user)
-        console.log("registerService")
+
         const response = await axios.post(`${BASE_URL}/register`, user)
             .catch(er => console.log(er));
 

@@ -112,9 +112,9 @@ export default class CameraScreen extends Component {
     };
     handleOpenGallery = () => {
         ImagePicker.openPicker({
-            width: 300,
-            height: 400,
-            cropping: true
+            width: 350,
+            height: 350,
+            cropping: false
         }).then(img => {
 
             console.log('send data....')

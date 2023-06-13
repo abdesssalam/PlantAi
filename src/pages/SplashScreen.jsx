@@ -9,6 +9,7 @@ import routes from '../constants/routes';
 import { useIsFocused } from "@react-navigation/native";
 import COLORS from '../constants/COLORS';
 import responsive, { normalizeFont } from '../constants/responsive';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SHOW_ON_BOARDING_SCREEN = "SHOW_ON_BOARDING_SCREEN";
 
